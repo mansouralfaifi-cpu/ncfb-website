@@ -1,0 +1,29 @@
+---
+import { type Lang, t, href, L, SECTIONS, SERVICES, settings } from '../../lib/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+// Subject list: a general enquiry plus every service page.
+const services = SECTIONS.flatMap((s) => s.pages.filter((p) => SERVICES[`${s.id}-${p.slug}`]).map((p) => ({ id: `${s.id}-${p.slug}`, label: `${L(s.title, lang)}: ${L(p.title, lang)}` })));
+---
+<section class="sec"><div class="wrap svc">
+  <div class="main"><section><h2 class="h4" id="contact-title">{t(lang, 'writeUs')}</h2>
+    <form class="form" name="contact" method="POST" action={href(lang, 'thanks')} data-netlify="true" netlify-honeypot="bot-field" aria-labelledby="contact-title">
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="language" value={lang} />
+      <p hidden><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+      <div class="row2"><div class="field"><label for="k1">{t(lang, 'fullName')}</label><input class="input" id="k1" name="name" autocomplete="name" required /></div>
+      <div class="field"><label for="k2">{t(lang, 'email')}</label><input class="input" id="k2" name="email" type="email" dir="ltr" autocomplete="email" required /></div></div>
+      <div class="row2"><div class="field"><label for="k3">{t(lang, 'phone')} <span class="opt">({t(lang, 'optional')})</span></label><input class="input" id="k3" name="phone" type="tel" dir="ltr" autocomplete="tel" /></div>
+      <div class="field"><label for="k4">{t(lang, 'subject')}</label><select class="input" id="k4" name="subject" data-preselect="service"><option>{t(lang, 'general')}</option>{services.map((o) => <option value={o.label} data-id={o.id}>{o.label}</option>)}</select></div></div>
+      <div class="field"><label for="k5">{t(lang, 'message')}</label><textarea class="input" id="k5" name="message" required></textarea></div>
+      <div><button class="btn btn-primary" type="submit">{t(lang, 'sendMessage')}</button></div>
+    </form></section></div>
+  <aside class="aside"><h2 class="h4">{t(lang, 'email')}</h2><p class="ltr" style="text-align:start"><a href={`mailto:${settings.email}`}>{settings.email}</a></p></aside>
+</div></section>
+<script is:inline>
+(function () {
+  var s = document.querySelector('[data-preselect]'); if (!s) return;
+  var id = new URLSearchParams(location.search).get(s.dataset.preselect); if (!id) return;
+  for (var i = 0; i < s.options.length; i++) if (s.options[i].dataset.id === id) { s.selectedIndex = i; break; }
+})();
+</script>

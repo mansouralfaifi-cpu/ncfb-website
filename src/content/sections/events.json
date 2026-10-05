@@ -1,0 +1,42 @@
+{
+  "id": "events",
+  "order": 3,
+  "title": {
+    "ar": "الأنشطة والفعاليات",
+    "en": "Activities & Events"
+  },
+  "icon": "calendar-days",
+  "intro": {
+    "ar": "ملتقيات وورش ولقاءات يجمع فيها المركز الملاك والمستشارين والجهات.",
+    "en": "Forums, workshops and meetings where the Center brings together owners, advisors and institutions."
+  },
+  "photo": "street",
+  "pages": [
+    {
+      "slug": "calendar",
+      "title": {
+        "ar": "الروزنامة",
+        "en": "Calendar"
+      },
+      "icon": "calendar-range",
+      "description": {
+        "ar": "كل أنشطة المركز على تقويم شهري.",
+        "en": "All of the Center's activities on a monthly calendar."
+      },
+      "template": "calendar"
+    },
+    {
+      "slug": "list",
+      "title": {
+        "ar": "الفعاليات",
+        "en": "Events"
+      },
+      "icon": "ticket",
+      "description": {
+        "ar": "الفعاليات القادمة والسابقة والتسجيل فيها.",
+        "en": "Upcoming and past events, and registration."
+      },
+      "template": "events"
+    }
+  ]
+}

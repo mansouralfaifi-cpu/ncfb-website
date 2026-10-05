@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import home from '../content/home.json';
+import heroPhoto from '../assets/photos/hero-riyadh.jpg';
+import logo from '../assets/logo.png';
+import { type Lang, t, href, L, otherLang } from '../lib/site';
+interface Props { lang: Lang; intro?: boolean }
+const { lang, intro = false } = Astro.props;
+const h = home.hero;
+const other = otherLang(lang);
+---
+<section class={`hero on-navy${intro ? ' intro' : ''}`}>
+  {intro && <a class="intro-lang" href={href(other, 'intro')} lang={other} hreflang={other}>{t(lang, 'langSwitch')}</a>}
+  <div class="wrap"><div class="hero-copy">
+    {intro && <Image class="hero-logo" src={logo} alt={t(lang, 'logoAlt')} width={240} densities={[1, 2]} format="png" loading="eager" />}
+    <span class="eyebrow">{L(h.eyebrow, lang)}</span>
+    <h1 class="h-display">{L(h.title, lang)}</h1>
+    <p class="lead">{L(h.lead, lang)}</p>
+    <div class="cta-row"><a class="btn btn-primary" href={href(lang, 'consulting')}>{L(h.primary, lang)}</a><a class="btn btn-secondary" href={href(lang, intro ? 'home' : 'about')}>{L(h.secondary, lang)}</a></div>
+  </div></div>
+  <div class="hero-media"><Image src={heroPhoto} alt={L(h.imageAlt, lang)} widths={[480, 800, 1280, 1920]} sizes="100vw" loading="eager" fetchpriority="high" /></div>
+</section>

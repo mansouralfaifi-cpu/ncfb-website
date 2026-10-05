@@ -1,0 +1,68 @@
+{
+  "id": "consulting",
+  "order": 5,
+  "title": {
+    "ar": "الاستشارات",
+    "en": "Advisory"
+  },
+  "icon": "messages-square",
+  "intro": {
+    "ar": "خدمات استشارية تساعد المنشأة العائلية على الانتقال من الإدارة العائلية إلى المؤسسية.",
+    "en": "Advisory services that help a family business move from family management to institutional management."
+  },
+  "photo": "kingdom",
+  "pages": [
+    {
+      "slug": "charter",
+      "title": {
+        "ar": "مراجعة الميثاق العائلي",
+        "en": "Family Charter Review"
+      },
+      "icon": "file-check",
+      "description": {
+        "ar": "مراجعة الميثاق القائم وسد فجواته.",
+        "en": "Reviewing your current charter and closing its gaps."
+      },
+      "template": "service"
+    },
+    {
+      "slug": "assessment",
+      "title": {
+        "ar": "تحليل الوضع الراهن",
+        "en": "Current-State Analysis"
+      },
+      "icon": "scan-search",
+      "description": {
+        "ar": "تشخيص الحوكمة والملكية والجاهزية للتعاقب.",
+        "en": "Diagnosing governance, ownership and succession readiness."
+      },
+      "template": "service"
+    },
+    {
+      "slug": "board",
+      "title": {
+        "ar": "تقييم مجلس الإدارة",
+        "en": "Board Evaluation"
+      },
+      "icon": "clipboard-check",
+      "description": {
+        "ar": "تقييم تكوين المجلس وفاعليته.",
+        "en": "Assessing the board's composition and effectiveness."
+      },
+      "template": "service"
+    },
+    {
+      "slug": "transformation",
+      "title": {
+        "ar": "الإشراف على التحول المؤسسي",
+        "en": "Institutional Transformation Oversight"
+      },
+      "icon": "building-2",
+      "description": {
+        "ar": "مرافقة المنشأة في تنفيذ خطة التحول.",
+        "en": "Supporting the business as it carries out its transformation plan."
+      },
+      "template": "service"
+    }
+  ]
+}

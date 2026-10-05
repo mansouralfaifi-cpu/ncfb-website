@@ -1,0 +1,42 @@
+{
+  "id": "training",
+  "order": 4,
+  "title": {
+    "ar": "التدريب",
+    "en": "Training"
+  },
+  "icon": "graduation-cap",
+  "intro": {
+    "ar": "برامج تأهيل للملاك ومجالس العائلة والجيل القادم.",
+    "en": "Programs that prepare owners, family councils and the next generation."
+  },
+  "photo": "kafd",
+  "pages": [
+    {
+      "slug": "open",
+      "title": {
+        "ar": "البرامج المفتوحة",
+        "en": "Open Programs"
+      },
+      "icon": "presentation",
+      "description": {
+        "ar": "برامج بمواعيد معلنة يسجّل فيها الأفراد.",
+        "en": "Scheduled programs open to individual registration."
+      },
+      "template": "open"
+    },
+    {
+      "slug": "custom",
+      "title": {
+        "ar": "البرامج حسب الطلب",
+        "en": "Custom Programs"
+      },
+      "icon": "settings-2",
+      "description": {
+        "ar": "برامج تُصمم لعائلة أو منشأة بعينها.",
+        "en": "Programs designed for a specific family or business."
+      },
+      "template": "custom"
+    }
+  ]
+}

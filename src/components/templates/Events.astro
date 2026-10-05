@@ -1,0 +1,36 @@
+---
+import EventCard from '../EventCard.astro';
+import events from '../../content/events.json';
+import { type Lang, t } from '../../lib/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const listed = events.items.filter((e) => e.listed && e.kind === 'event');
+const up = listed.filter((e) => !e.past).sort((a, b) => a.date.localeCompare(b.date));
+const past = listed.filter((e) => e.past).sort((a, b) => b.date.localeCompare(a.date));
+---
+<section class="sec"><div class="wrap" data-tabs>
+  <div class="tabs" role="tablist" hidden><button type="button" role="tab" id="tab-up" aria-selected="true" aria-controls="panel-up" data-tab="up">{t(lang, 'upcoming')}</button><button type="button" role="tab" id="tab-past" aria-selected="false" aria-controls="panel-past" data-tab="past" tabindex="-1">{t(lang, 'past')}</button></div>
+  <h2 class="h4 sr-only" data-notabs>{t(lang, 'upcoming')}</h2>
+  <div class="cards" id="panel-up" role="tabpanel" aria-labelledby="tab-up" data-panel="up">{up.map((ev) => <EventCard lang={lang} ev={ev} />)}</div>
+  <h2 class="h4" data-notabs style="margin-block:var(--space-4) var(--space-2)">{t(lang, 'past')}</h2>
+  <div class="cards" id="panel-past" role="tabpanel" aria-labelledby="tab-past" data-panel="past">{past.map((ev) => <EventCard lang={lang} ev={ev} />)}</div>
+</div></section>
+<script is:inline>
+(function () {
+  var root = document.querySelector('[data-tabs]'); if (!root) return;
+  // With JavaScript: tabs as in the design. Without it: both lists, each under its own heading.
+  root.querySelector('[role=tablist]').hidden = false;
+  root.querySelectorAll('[data-notabs]').forEach(function (h) { h.hidden = true; });
+  var tabs = Array.prototype.slice.call(root.querySelectorAll('[data-tab]'));
+  function select(tab) {
+    tabs.forEach(function (b) { var on = b === tab; b.setAttribute('aria-selected', String(on)); b.tabIndex = on ? 0 : -1; });
+    root.querySelectorAll('[data-panel]').forEach(function (p) { p.hidden = p.dataset.panel !== tab.dataset.tab; });
+  }
+  select(tabs[0]);
+  root.addEventListener('click', function (e) { var b = e.target.closest('[data-tab]'); if (b) select(b); });
+  root.addEventListener('keydown', function (e) {
+    var i = tabs.indexOf(document.activeElement); if (i < 0) return;
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { var n = tabs[(i + 1) % tabs.length]; select(n); n.focus(); e.preventDefault(); }
+  });
+})();
+</script>

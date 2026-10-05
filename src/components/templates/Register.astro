@@ -1,0 +1,40 @@
+---
+// Registration form for an event or an open training program (Netlify Forms, works without JavaScript).
+import events from '../../content/events.json';
+import programs from '../../content/programs.json';
+import { type Lang, t, href, L, sectionById } from '../../lib/site';
+interface Props { lang: Lang; kind: 'event' | 'program' }
+const { lang, kind } = Astro.props;
+const options = kind === 'event'
+  ? events.items.filter((e) => !e.past && e.listed && e.kind === 'event').sort((a, b) => a.date.localeCompare(b.date)).map((e) => ({ id: e.id, label: `${L(e.title, lang)} (${e.date})` }))
+  : programs.items.filter((p) => p.status !== 'full').map((p) => ({ id: p.id, label: `${L(p.title, lang)} (${p.date})` }));
+const formName = kind === 'event' ? 'event-registration' : 'program-registration';
+const sec = sectionById(kind === 'event' ? 'events' : 'training')!;
+const target = sec.pages.find((p) => p.slug === (kind === 'event' ? 'calendar' : 'open')) || sec.pages[0];
+const param = kind === 'event' ? 'event' : 'program';
+---
+<section class="sec"><div class="wrap svc">
+  <div class="main"><section><h2 class="h4" id="reg-title">{t(lang, 'regDetails')}</h2>
+    <form class="form" name={formName} method="POST" action={href(lang, 'thanks')} data-netlify="true" netlify-honeypot="bot-field" aria-labelledby="reg-title">
+      <input type="hidden" name="form-name" value={formName} />
+      <input type="hidden" name="language" value={lang} />
+      <p hidden><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+      <div class="field"><label for="r0">{t(lang, kind === 'event' ? 'event' : 'program')}</label><select class="input" id="r0" name={param} required data-preselect={param}>
+        <option value="">{t(lang, 'choose')}</option>{options.map((o) => <option value={o.label} data-id={o.id}>{o.label}</option>)}</select></div>
+      <div class="row2"><div class="field"><label for="r1">{t(lang, 'fullName')}</label><input class="input" id="r1" name="name" autocomplete="name" required /></div>
+      <div class="field"><label for="r2">{t(lang, 'email')}</label><input class="input" id="r2" name="email" type="email" dir="ltr" autocomplete="email" required /></div></div>
+      <div class="row2"><div class="field"><label for="r3">{t(lang, 'phone')}</label><input class="input" id="r3" name="phone" type="tel" dir="ltr" autocomplete="tel" required /></div>
+      <div class="field"><label for="r4">{t(lang, 'organization')} <span class="opt">({t(lang, 'optional')})</span></label><input class="input" id="r4" name="organization" autocomplete="organization" /></div></div>
+      <div class="field"><label for="r5">{t(lang, 'notes')} <span class="opt">({t(lang, 'optional')})</span></label><textarea class="input" id="r5" name="notes"></textarea></div>
+      <div><button class="btn btn-primary" type="submit">{t(lang, 'submitReg')}</button></div>
+    </form></section></div>
+  <aside class="aside"><h2 class="h4">{L(sec.title, lang)}</h2><p class="small">{L(target.description, lang)}</p>
+    <a class="btn btn-secondary" href={href(lang, `${sec.id}-${target.slug}`)}>{L(target.title, lang)}</a></aside>
+</div></section>
+<script is:inline>
+(function () {
+  var s = document.querySelector('[data-preselect]'); if (!s) return;
+  var id = new URLSearchParams(location.search).get(s.dataset.preselect); if (!id) return;
+  for (var i = 0; i < s.options.length; i++) if (s.options[i].dataset.id === id) { s.selectedIndex = i; break; }
+})();
+</script>

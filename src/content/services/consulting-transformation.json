@@ -1,0 +1,81 @@
+{
+  "id": "consulting-transformation",
+  "lead": {
+    "ar": "نرافق المنشأة أثناء تنفيذ خطة التحول من الإدارة العائلية إلى الإدارة المؤسسية، ونتابع الالتزام بالجدول والقرارات.",
+    "en": "We accompany the business as it carries out its plan to move from family management to institutional management, and track adherence to the timeline and decisions."
+  },
+  "gets": [
+    {
+      "ar": "مكتب متابعة للتحول بتقارير شهرية",
+      "en": "A transformation office with monthly reports"
+    },
+    {
+      "ar": "مراجعة الهياكل والصلاحيات الجديدة",
+      "en": "Reviewing new structures and authorities"
+    },
+    {
+      "ar": "تقييم ختامي لمدى تحقق الأهداف",
+      "en": "A final assessment of how far goals were met"
+    }
+  ],
+  "steps": [
+    {
+      "title": {
+        "ar": "التأسيس",
+        "en": "Founding"
+      },
+      "text": {
+        "ar": "اعتماد خطة التحول ومؤشراتها.",
+        "en": "Approving the transformation plan and its KPIs."
+      }
+    },
+    {
+      "title": {
+        "ar": "التنفيذ",
+        "en": "Delivery"
+      },
+      "text": {
+        "ar": "متابعة شهرية للمسارات.",
+        "en": "Monthly tracking of each workstream."
+      }
+    },
+    {
+      "title": {
+        "ar": "المراجعة",
+        "en": "Review"
+      },
+      "text": {
+        "ar": "مراجعة ربعية مع المجلس.",
+        "en": "Quarterly review with the board."
+      }
+    },
+    {
+      "title": {
+        "ar": "الإغلاق",
+        "en": "Close-out"
+      },
+      "text": {
+        "ar": "تقييم ختامي وتسليم.",
+        "en": "Final assessment and handover."
+      }
+    }
+  ],
+  "audience": [
+    {
+      "ar": "منشآت أنهت تحليل الوضع الراهن",
+      "en": "Businesses that have completed a current-state analysis"
+    },
+    {
+      "ar": "منشآت تعيد هيكلة الملكية أو الإدارة",
+      "en": "Businesses restructuring ownership or management"
+    }
+  ],
+  "duration": {
+    "ar": "6 إلى 12 شهراً",
+    "en": "6 to 12 months"
+  },
+  "format": {
+    "ar": "حضوري",
+    "en": "In person"
+  }
+}

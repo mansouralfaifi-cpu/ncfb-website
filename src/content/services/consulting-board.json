@@ -1,0 +1,81 @@
+{
+  "id": "consulting-board",
+  "lead": {
+    "ar": "تقييم مستقل لتكوين مجلس الإدارة وأدائه وعلاقته بمجلس العائلة والإدارة التنفيذية.",
+    "en": "An independent evaluation of the board's composition, performance and relationship with the family council and executive management."
+  },
+  "gets": [
+    {
+      "ar": "تقييم لتكوين المجلس ومهارات أعضائه",
+      "en": "An assessment of board composition and member skills"
+    },
+    {
+      "ar": "قياس فاعلية الاجتماعات والقرارات",
+      "en": "Measuring the effectiveness of meetings and decisions"
+    },
+    {
+      "ar": "توصيات لتمثيل الأعضاء المستقلين",
+      "en": "Recommendations on independent member representation"
+    }
+  ],
+  "steps": [
+    {
+      "title": {
+        "ar": "مراجعة الوثائق",
+        "en": "Document review"
+      },
+      "text": {
+        "ar": "اللوائح ومحاضر الاجتماعات.",
+        "en": "Bylaws and meeting minutes."
+      }
+    },
+    {
+      "title": {
+        "ar": "التقييم الذاتي",
+        "en": "Self-assessment"
+      },
+      "text": {
+        "ar": "استبيان سري لأعضاء المجلس.",
+        "en": "A confidential survey of board members."
+      }
+    },
+    {
+      "title": {
+        "ar": "المقابلات",
+        "en": "Interviews"
+      },
+      "text": {
+        "ar": "لقاءات مع الرئيس والأعضاء.",
+        "en": "Meetings with the chair and members."
+      }
+    },
+    {
+      "title": {
+        "ar": "التقرير",
+        "en": "Report"
+      },
+      "text": {
+        "ar": "نتائج وخطة تطوير.",
+        "en": "Findings and a development plan."
+      }
+    }
+  ],
+  "audience": [
+    {
+      "ar": "مجالس إدارة في منشآت عائلية",
+      "en": "Boards of family businesses"
+    },
+    {
+      "ar": "مجالس تضم أعضاء من العائلة وخارجها",
+      "en": "Boards with members from inside and outside the family"
+    }
+  ],
+  "duration": {
+    "ar": "5 أسابيع",
+    "en": "5 weeks"
+  },
+  "format": {
+    "ar": "حضوري",
+    "en": "In person"
+  }
+}

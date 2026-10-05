@@ -1,0 +1,22 @@
+---
+import PubList from '../PubList.astro';
+import { type Lang, t } from '../../lib/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const chips = ['all', 'guide', 'study', 'report'];
+---
+<section class="sec"><div class="wrap">
+  <div class="chips" role="group" aria-label={t(lang, 'filterPubs')} data-chips hidden>{chips.map((c, i) => <button type="button" data-chip={c} aria-pressed={String(i === 0)}>{t(lang, c)}</button>)}</div>
+  <div id="pubsOut"><PubList lang={lang} /></div>
+</div></section>
+<script is:inline>
+(function () {
+  var g = document.querySelector('[data-chips]'); if (!g) return;
+  g.hidden = false; // filters need JavaScript; without it every publication is listed
+  g.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-chip]'); if (!b) return;
+    g.querySelectorAll('[data-chip]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+    document.querySelectorAll('#pubsOut .pub').forEach(function (p) { p.hidden = b.dataset.chip !== 'all' && p.dataset.type !== b.dataset.chip; });
+  });
+})();
+</script>

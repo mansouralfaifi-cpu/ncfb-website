@@ -1,0 +1,78 @@
+{
+  "intro": {
+    "ar": "نص نموذجي: محطات المركز منذ تأسيسه. السنوات والأحداث تُستبدل بالتاريخ الرسمي للمركز.",
+    "en": "Sample text: the Center's milestones since its founding. Years and events will be replaced with the official history."
+  },
+  "milestones": [
+    {
+      "year": {
+        "ar": "العام",
+        "en": "Year"
+      },
+      "title": {
+        "ar": "التأسيس",
+        "en": "Founding"
+      },
+      "text": {
+        "ar": "صدور قرار تأسيس المركز وتشكيل مجلس إدارته الأول.",
+        "en": "The decision to establish the Center is issued and its first board is formed."
+      }
+    },
+    {
+      "year": {
+        "ar": "العام",
+        "en": "Year"
+      },
+      "title": {
+        "ar": "أول دليل للميثاق العائلي",
+        "en": "First family charter guide"
+      },
+      "text": {
+        "ar": "إصدار الدليل المرجعي الأول للمنشآت العائلية.",
+        "en": "The first reference guide for family businesses is published."
+      }
+    },
+    {
+      "year": {
+        "ar": "العام",
+        "en": "Year"
+      },
+      "title": {
+        "ar": "إطلاق خدمات الاستشارات",
+        "en": "Advisory services launched"
+      },
+      "text": {
+        "ar": "بدء تقديم تحليل الوضع الراهن ومراجعة المواثيق.",
+        "en": "Current-state analysis and charter review services begin."
+      }
+    },
+    {
+      "year": {
+        "ar": "العام",
+        "en": "Year"
+      },
+      "title": {
+        "ar": "إطلاق برنامج بديل",
+        "en": "Badeel program launched"
+      },
+      "text": {
+        "ar": "بدء خدمتي أمانة السر والوساطة.",
+        "en": "Secretariat and mediation services begin."
+      }
+    },
+    {
+      "year": {
+        "ar": "العام",
+        "en": "Year"
+      },
+      "title": {
+        "ar": "الملتقى الوطني الأول",
+        "en": "First national forum"
+      },
+      "text": {
+        "ar": "أول ملتقى يجمع المنشآت العائلية على مستوى المملكة.",
+        "en": "The first forum bringing together family businesses from across the Kingdom."
+      }
+    }
+  ]
+}

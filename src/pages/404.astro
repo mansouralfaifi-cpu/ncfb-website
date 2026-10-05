@@ -1,0 +1,13 @@
+---
+// Not-found page (Arabic, with a link to the English site). Netlify serves dist/404.html for unknown URLs.
+import Base from '../layouts/Base.astro';
+import PageHdr from '../components/PageHdr.astro';
+import { t, href } from '../lib/site';
+---
+<Base lang="ar" routeId="home" title={t('ar', 'notFound')} description={t('ar', 'notFoundText')} noindex altHref={href('en', 'home')}>
+  <PageHdr lang="ar" title={t('ar', 'notFound')} lead={t('ar', 'notFoundText')} />
+  <section class="sec"><div class="wrap thanks">
+    <div class="cta-row"><a class="btn btn-primary" href={href('ar', 'home')}>{t('ar', 'backHome')}</a></div>
+    <p lang="en" dir="ltr" style="text-align:start">{t('en', 'notFound')}. <a href={href('en', 'home')}>{t('en', 'backHome')}</a> (English)</p>
+  </div></section>
+</Base>

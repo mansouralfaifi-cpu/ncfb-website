@@ -1,0 +1,81 @@
+{
+  "id": "consulting-assessment",
+  "lead": {
+    "ar": "تشخيص شامل لوضع المنشأة العائلية في الحوكمة والملكية والإدارة والجاهزية للتعاقب، ينتهي بخريطة أولويات واضحة.",
+    "en": "A full diagnosis of the family business across governance, ownership, management and succession readiness, ending with a clear priority map."
+  },
+  "gets": [
+    {
+      "ar": "مؤشر جاهزية من خمسة محاور",
+      "en": "A readiness index across five dimensions"
+    },
+    {
+      "ar": "خريطة أولويات للأشهر الاثني عشر القادمة",
+      "en": "A priority map for the next twelve months"
+    },
+    {
+      "ar": "ملخص تنفيذي لمجلس العائلة",
+      "en": "An executive summary for the family council"
+    }
+  ],
+  "steps": [
+    {
+      "title": {
+        "ar": "الاستبيان",
+        "en": "Survey"
+      },
+      "text": {
+        "ar": "استبيان لأفراد العائلة والإدارة.",
+        "en": "A survey of family members and management."
+      }
+    },
+    {
+      "title": {
+        "ar": "المقابلات",
+        "en": "Interviews"
+      },
+      "text": {
+        "ar": "لقاءات فردية مع الملاك والتنفيذيين.",
+        "en": "One-to-one meetings with owners and executives."
+      }
+    },
+    {
+      "title": {
+        "ar": "التحليل",
+        "en": "Analysis"
+      },
+      "text": {
+        "ar": "قياس المحاور الخمسة.",
+        "en": "Measuring the five dimensions."
+      }
+    },
+    {
+      "title": {
+        "ar": "خريطة الأولويات",
+        "en": "Priority map"
+      },
+      "text": {
+        "ar": "تقرير وجلسة عرض.",
+        "en": "Report and presentation session."
+      }
+    }
+  ],
+  "audience": [
+    {
+      "ar": "منشآت تبدأ رحلة الحوكمة",
+      "en": "Businesses starting their governance journey"
+    },
+    {
+      "ar": "عائلات تستعد لانتقال الإدارة",
+      "en": "Families preparing for a management handover"
+    }
+  ],
+  "duration": {
+    "ar": "4 إلى 6 أسابيع",
+    "en": "4 to 6 weeks"
+  },
+  "format": {
+    "ar": "حضوري",
+    "en": "In person"
+  }
+}

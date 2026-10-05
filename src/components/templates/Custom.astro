@@ -1,0 +1,28 @@
+---
+import custom from '../../content/custom-program.json';
+import { type Lang, t, href, L } from '../../lib/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const f = custom.facts;
+---
+<section class="sec"><div class="wrap svc">
+  <div class="main">
+    <section><h2 class="h3">{L(custom.heading, lang)}</h2><p>{L(custom.text, lang)}</p></section>
+    <section><h2 class="h4">{t(lang, 'howWeWork')}</h2><ol class="steps">{custom.steps.map((s) => <li><h3 class="h4">{L(s.title, lang)}</h3><p class="small muted">{L(s.text, lang)}</p></li>)}</ol></section>
+    <section><h2 class="h4" id="request-title">{t(lang, 'requestProgram')}</h2>
+      <form class="form" name="custom-program" method="POST" action={href(lang, 'thanks')} data-netlify="true" netlify-honeypot="bot-field" aria-labelledby="request-title">
+        <input type="hidden" name="form-name" value="custom-program" />
+        <input type="hidden" name="language" value={lang} />
+        <p hidden><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+        <div class="row2"><div class="field"><label for="c1">{t(lang, 'orgName')}</label><input class="input" id="c1" name="organization" autocomplete="organization" required /></div>
+        <div class="field"><label for="c2">{t(lang, 'applicant')}</label><input class="input" id="c2" name="name" autocomplete="name" required /></div></div>
+        <div class="row2"><div class="field"><label for="c3">{t(lang, 'email')}</label><input class="input" id="c3" name="email" type="email" dir="ltr" autocomplete="email" required /></div>
+        <div class="field"><label for="c4">{t(lang, 'participants')}</label><input class="input" id="c4" name="participants" inputmode="numeric" pattern="[0-9]*" dir="ltr" /></div></div>
+        <div class="field"><label for="c5">{t(lang, 'area')}</label><select class="input" id="c5" name="area">{custom.areas.map((a) => <option>{L(a, lang)}</option>)}</select></div>
+        <div class="field"><label for="c6">{t(lang, 'describe')}</label><textarea class="input" id="c6" name="need" aria-describedby="c6-hint" required></textarea><span class="hint" id="c6-hint">{L(custom.hint, lang)}</span></div>
+        <div><button class="btn btn-primary" type="submit">{t(lang, 'send')}</button></div>
+      </form></section>
+  </div>
+  <aside class="aside"><h2 class="h4">{t(lang, 'quickFacts')}</h2><dl><div><dt>{t(lang, 'duration')}</dt><dd>{L(f.duration, lang)}</dd></div><div><dt>{t(lang, 'venue')}</dt><dd>{L(f.venue, lang)}</dd></div><div><dt>{t(lang, 'language')}</dt><dd>{L(f.language, lang)}</dd></div></dl>
+    <a class="btn btn-secondary" href={href(lang, 'training-open')}>{t(lang, 'browseOpen')}</a></aside>
+</div></section>

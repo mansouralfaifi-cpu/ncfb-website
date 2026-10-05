@@ -1,0 +1,65 @@
+---
+import Icon from '../Icon.astro';
+import EventCard from '../EventCard.astro';
+import events from '../../content/events.json';
+import { type Lang, t, L } from '../../lib/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+// One month grid per month that has upcoming activities; the arrows switch between them.
+const items = events.items.filter((e) => !e.past).sort((a, b) => a.date.localeCompare(b.date));
+const ym = (d: string) => d.slice(0, 7);
+const eachDay = (e: any) => {
+  const out: string[] = []; const end = e.endDate && e.endDate >= e.date ? e.endDate : e.date;
+  for (let d = new Date(e.date + 'T00:00:00Z'); d.toISOString().slice(0, 10) <= end; d.setUTCDate(d.getUTCDate() + 1)) out.push(d.toISOString().slice(0, 10));
+  return out;
+};
+const byDay: Record<string, any[]> = {};
+for (const e of items) for (const d of eachDay(e)) (byDay[d] ||= []).push(e);
+const months = [...new Set(Object.keys(byDay).map(ym))].sort();
+const dows: string[] = t(lang, 'dows');
+const monthsLong: string[] = t(lang, 'monthsLong');
+const grids = months.map((m) => {
+  const [y, mo] = m.split('-').map(Number);
+  const first = new Date(Date.UTC(y, mo - 1, 1)).getUTCDay(); // 0 = Sunday
+  const days = new Date(Date.UTC(y, mo, 0)).getUTCDate();
+  const prevDays = new Date(Date.UTC(y, mo - 1, 0)).getUTCDate();
+  const cells: { d: number; out: boolean; evs: any[] }[] = [];
+  for (let i = first - 1; i >= 0; i--) cells.push({ d: prevDays - i, out: true, evs: [] });
+  for (let d = 1; d <= days; d++) cells.push({ d, out: false, evs: byDay[`${m}-${String(d).padStart(2, '0')}`] || [] });
+  for (let d = 1; cells.length % 7; d++) cells.push({ d, out: true, evs: [] });
+  const list = items.filter((e) => e.kind === 'event' && ym(e.date) === m);
+  return { m, y, label: monthsLong[mo - 1], cells, list };
+});
+const prevIcon = lang === 'ar' ? 'chevron-right' : 'chevron-left';
+const nextIcon = lang === 'ar' ? 'chevron-left' : 'chevron-right';
+---
+<section class="sec"><div class="wrap" data-cal>
+  {grids.map((g, i) => (
+    <div class="cal-wrap cal-month" data-month={g.m} hidden={i > 0}>
+      <div class="cal"><div class="cal-head"><button type="button" aria-label={t(lang, 'prevMonth')} data-cal-go="-1" disabled={i === 0}><Icon name={prevIcon} /></button><h2 class="h4" aria-live="polite">{g.label} {lang === 'ar' ? <span class="ltr">{g.y}</span> : <span>{g.y}</span>}</h2><button type="button" aria-label={t(lang, 'nextMonth')} data-cal-go="1" disabled={i === grids.length - 1}><Icon name={nextIcon} /></button></div>
+        <div class="cal-grid">
+          {dows.map((d) => <div class="dow">{d}</div>)}
+          {g.cells.map((c) => (
+            <div class={`day${c.out ? ' out' : ''}${c.evs.length ? ' has' : ''}`}>{c.d}{c.evs.map((e) => <><span class={`ev ${e.kind === 'training' ? 'tr' : 'w'}`}></span><span class="lbl">{L(e.calendarLabel, lang) || L(e.title, lang)}</span></>)}</div>
+          ))}
+        </div>
+        <div class="legend"><span><i></i>{t(lang, 'legendEvent')}</span><span><i class="tr"></i>{t(lang, 'legendTraining')}</span></div></div>
+      <div style="display:grid;gap:var(--space-2);align-content:start"><h2 class="h4">{t(lang, 'thisMonth')}</h2><div class="ev-list">
+        {g.list.map((ev) => <EventCard lang={lang} ev={ev} />)}
+      </div></div>
+    </div>
+  ))}
+</div></section>
+<script is:inline>
+(function () {
+  var root = document.querySelector('[data-cal]'); if (!root) return;
+  var months = Array.prototype.slice.call(root.querySelectorAll('.cal-month')), cur = 0;
+  root.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-cal-go]'); if (!b || b.disabled) return;
+    var next = cur + Number(b.dataset.calGo); if (next < 0 || next >= months.length) return;
+    months[cur].hidden = true; months[next].hidden = false; cur = next;
+    var target = months[cur].querySelector('[data-cal-go="' + b.dataset.calGo + '"]');
+    (target && !target.disabled ? target : months[cur].querySelector('[data-cal-go]:not([disabled])')).focus();
+  });
+})();
+</script>

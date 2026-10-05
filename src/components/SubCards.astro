@@ -1,0 +1,13 @@
+---
+import Icon from './Icon.astro';
+import { type Lang, type Section, t, href, L, arrowIcon } from '../lib/site';
+interface Props { lang: Lang; section: Section }
+const { lang, section } = Astro.props;
+const n = section.pages.length;
+const c = n === 4 ? 'c4' : n === 3 ? 'c3' : '';
+---
+<div class={`sub-cards ${c}`}>
+  {section.pages.map((p) => (
+    <a class="card" href={href(lang, `${section.id}-${p.slug}`)}><div class="ic"><Icon name={p.icon} class="icon-lg" /></div><h3 class="h4">{L(p.title, lang)}</h3><p>{L(p.description, lang)}</p><span class="more">{t(lang, 'details')}<Icon name={arrowIcon(lang)} /></span></a>
+  ))}
+</div>

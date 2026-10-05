@@ -1,0 +1,11 @@
+---
+import Icon from './Icon.astro';
+import { type Lang, t, href, L, arrowIcon, dateChip } from '../lib/site';
+interface Props { lang: Lang; ev: any }
+const { lang, ev } = Astro.props;
+const { day, month } = dateChip(lang, ev.date);
+const reg = `${href(lang, 'events-register')}?event=${encodeURIComponent(ev.id)}`;
+---
+<article class={`event${ev.past ? ' past' : ''}`}><div class="date"><b>{day}</b><span>{month}</span></div><div class="body"><h3 class="h4">{L(ev.title, lang)}</h3>{L(ev.location, lang) && <span class="where"><Icon name={ev.mode === 'online' ? 'monitor' : 'map-pin'} />{L(ev.location, lang)}</span>}{ev.past
+  ? <a class="btn btn-text" href={ev.recording || href(lang, 'library-videos')}>{t(lang, 'watch')}<Icon name={arrowIcon(lang)} /></a>
+  : <a class="btn btn-text" href={reg}>{t(lang, 'register')}<Icon name={arrowIcon(lang)} /></a>}</div></article>

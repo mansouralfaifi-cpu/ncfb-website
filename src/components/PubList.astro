@@ -1,0 +1,14 @@
+---
+import Icon from './Icon.astro';
+import pubs from '../content/publications.json';
+import { type Lang, t, href, L } from '../lib/site';
+interface Props { lang: Lang; limit?: number }
+const { lang, limit } = Astro.props;
+const items = [...pubs.items].sort((a, b) => b.date.localeCompare(a.date)).slice(0, limit || undefined);
+const page = href(lang, 'library-publications');
+---
+<div class="pubs">
+  {items.map((p) => (
+    <article class="pub" data-type={p.type}><div class="meta"><span class="badge">{t(lang, p.type)}</span><span class="caption muted ltr">{p.date}</span></div><h3 class="h4"><a href={p.file || page}>{L(p.title, lang)}</a></h3><a class="btn btn-text" href={p.file || page} aria-label={t(lang, 'downloadOf', { t: L(p.title, lang) })} download={p.file ? '' : undefined}><Icon name="download" />{t(lang, 'downloadPdf')}</a></article>
+  ))}
+</div>

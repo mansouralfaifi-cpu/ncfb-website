@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets';
+import { type Lang, type Section, t, href, L, PHOTO_POS } from '../lib/site';
+import kafd from '../assets/photos/hdr-kafd-day.jpg';
+import kingdom from '../assets/photos/hdr-kingdom.jpg';
+import street from '../assets/photos/hdr-street.jpg';
+interface Props {
+  lang: Lang; title: string; lead: string;
+  photoOf?: Section;  // section whose header photo is used (default photo: kafd)
+  parent?: Section;   // set on sub-pages: adds the section to the breadcrumb
+}
+const { lang, title, lead, photoOf, parent } = Astro.props;
+const PHOTOS = { kafd, kingdom, street } as const;
+const key = (photoOf?.photo && photoOf.photo in PHOTOS ? photoOf.photo : 'kafd') as keyof typeof PHOTOS;
+const widths = [480, 900, 1400].filter((w) => w < PHOTOS[key].width).concat(Math.min(PHOTOS[key].width, 1400));
+const crumbs: { label: string; href?: string }[] = [{ label: t(lang, 'home'), href: href(lang, 'home') }];
+if (parent) crumbs.push({ label: L(parent.title, lang), href: href(lang, parent.id) });
+crumbs.push({ label: title });
+---
+<section class="page-hdr"><Image class="bg" src={PHOTOS[key]} alt="" widths={widths} sizes="100vw" style={`object-position:${PHOTO_POS[key]}`} loading="eager" />
+  <div class="wrap"><nav aria-label={t(lang, 'breadcrumb')}><ol class="crumbs">
+    {crumbs.map((c) => c.href ? <li><a href={c.href}>{c.label}</a></li> : <li aria-current="page">{c.label}</li>)}
+  </ol></nav>
+  <h1 class="h1">{title}</h1>{lead && <p class="lead">{lead}</p>}</div></section>

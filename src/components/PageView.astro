@@ -1,0 +1,51 @@
+---
+// Renders any page (except the opening page) for one language. Used by both language route files.
+import Base from '../layouts/Base.astro';
+import PageHdr from './PageHdr.astro';
+import Subnav from './Subnav.astro';
+import Home from './templates/Home.astro';
+import SectionT from './templates/Section.astro';
+import Board from './templates/Board.astro';
+import Ceo from './templates/Ceo.astro';
+import History from './templates/History.astro';
+import Pubs from './templates/Pubs.astro';
+import Videos from './templates/Videos.astro';
+import Calendar from './templates/Calendar.astro';
+import Events from './templates/Events.astro';
+import Open from './templates/Open.astro';
+import Custom from './templates/Custom.astro';
+import Service from './templates/Service.astro';
+import Register from './templates/Register.astro';
+import Contact from './templates/Contact.astro';
+import Thanks from './templates/Thanks.astro';
+import Legal from './templates/Legal.astro';
+import home from '../content/home.json';
+import { type Lang, type Route, L, routeMeta, settings } from '../lib/site';
+interface Props { lang: Lang; route: Route }
+const { lang, route } = Astro.props;
+const meta = routeMeta(lang, route);
+const description = route.kind === 'home' ? L(home.description, lang) : meta.description;
+const title = route.kind === 'home' ? '' : meta.title;
+const TPL: Record<string, any> = { board: Board, ceo: Ceo, history: History, pubs: Pubs, videos: Videos, calendar: Calendar, events: Events, open: Open, custom: Custom, service: Service };
+const Tpl = route.kind === 'page' ? TPL[route.page!.template] : null;
+if (route.kind === 'page' && !Tpl) throw new Error(`Unknown template "${route.page!.template}" for ${route.id}`);
+const legal = route.id === 'privacy' || route.id === 'terms';
+---
+<Base lang={lang} routeId={route.id} title={title} description={description} sectionId={route.section?.id} noindex={route.id === 'thanks'}>
+  {route.kind === 'home' && <Home lang={lang} />}
+  {route.kind === 'section' && <SectionT lang={lang} section={route.section!} />}
+  {route.kind === 'page' && <>
+    <PageHdr lang={lang} title={meta.title} lead={meta.description} photoOf={route.section} parent={route.section} />
+    <Subnav lang={lang} section={route.section!} current={route.id} />
+    <Tpl lang={lang} section={route.section} page={route.page} />
+  </>}
+  {route.kind === 'extra' && <>
+    <PageHdr lang={lang} title={meta.title} lead={legal ? '' : meta.description} photoOf={route.section} parent={route.section} />
+    {route.section && <Subnav lang={lang} section={route.section} />}
+    {route.id === 'contact' && <Contact lang={lang} />}
+    {route.id === 'events-register' && <Register lang={lang} kind="event" />}
+    {route.id === 'training-register' && <Register lang={lang} kind="program" />}
+    {route.id === 'thanks' && <Thanks lang={lang} />}
+    {legal && <Legal lang={lang} body={settings[route.id as 'privacy' | 'terms']} />}
+  </>}
+</Base>

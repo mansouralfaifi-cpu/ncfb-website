@@ -1,0 +1,55 @@
+---
+import { Image } from 'astro:assets';
+import Icon from './Icon.astro';
+import logo from '../assets/logo.png';
+import { type Lang, t, href, L, SECTIONS, otherLang } from '../lib/site';
+interface Props { lang: Lang; sectionId?: string; routeId: string; altHref: string | null }
+const { lang, sectionId, routeId, altHref } = Astro.props;
+const other = otherLang(lang);
+---
+<header class="hdr">
+  <div class="wrap top">
+    <a class="brand" href={href(lang, 'home')} aria-label={t(lang, 'homeAria')}><Image src={logo} alt="" width={128} densities={[1, 2]} format="png" loading="eager" /></a>
+    <div class="hdr-tools">
+      {altHref && <a class="lang" href={altHref} lang={other} hreflang={other}>{t(lang, 'langSwitch')}</a>}
+      <a class="btn btn-primary" href={href(lang, 'contact')}>{t(lang, 'contact')}</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="drawer" id="menuBtn"><Icon name="menu" />{t(lang, 'menu')}</button>
+    </div>
+  </div>
+  <nav class="mainnav" aria-label={t(lang, 'mainNav')}><div class="wrap"><ul>
+    {SECTIONS.map((s) => (
+      <li>
+        <a class="top-link" href={href(lang, s.id)} aria-current={s.id === sectionId ? 'page' : undefined}>{L(s.title, lang)}<Icon name="chevron-down" /></a>
+        <div class="sub">
+          {s.pages.map((p) => <a href={href(lang, `${s.id}-${p.slug}`)} aria-current={routeId === `${s.id}-${p.slug}` ? 'page' : undefined}><Icon name={p.icon} /><b>{L(p.title, lang)}</b><span>{L(p.description, lang)}</span></a>)}
+        </div>
+      </li>
+    ))}
+  </ul></div></nav>
+  <div class="drawer" id="drawer" hidden><nav class="wrap" aria-label={t(lang, 'menu')}>
+    <a class="home-link" href={href(lang, 'home')} aria-current={routeId === 'home' ? 'page' : undefined}>{t(lang, 'home')}</a>
+    {SECTIONS.map((s) => (
+      <details open={s.id === sectionId || undefined}>
+        <summary>{L(s.title, lang)}<Icon name="chevron-down" /></summary>
+        <ul>
+          <li><a href={href(lang, s.id)} aria-current={routeId === s.id ? 'page' : undefined}>{t(lang, 'overview')}</a></li>
+          {s.pages.map((p) => <li><a href={href(lang, `${s.id}-${p.slug}`)} aria-current={routeId === `${s.id}-${p.slug}` ? 'page' : undefined}>{L(p.title, lang)}</a></li>)}
+        </ul>
+      </details>
+    ))}
+    <div class="row" style="padding-top:var(--space-3)">
+      <a class="btn btn-primary" href={href(lang, 'contact')}>{t(lang, 'contact')}</a>
+      {altHref && <a class="btn btn-secondary" href={altHref} lang={other} hreflang={other}>{t(lang, 'langSwitch')}</a>}
+    </div>
+  </nav></div>
+</header>
+<script is:inline>
+(function () {
+  var b = document.getElementById('menuBtn'), d = document.getElementById('drawer');
+  if (!b || !d) return;
+  b.addEventListener('click', function () { var open = d.hidden; d.hidden = !open; b.setAttribute('aria-expanded', String(open)); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !d.hidden) { d.hidden = true; b.setAttribute('aria-expanded', 'false'); b.focus(); }
+  });
+})();
+</script>

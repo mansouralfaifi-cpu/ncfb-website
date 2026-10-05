@@ -1,0 +1,11 @@
+---
+import history from '../../content/history.json';
+import { type Lang, L } from '../../lib/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+---
+<section class="sec"><div class="wrap" style="display:grid;gap:var(--space-4)">
+  {L(history.intro, lang) && <p class="lead" style="max-width:var(--measure)">{L(history.intro, lang)}</p>}
+  <ol class="timeline">
+    {history.milestones.map((m) => <li><span class="yr">{L(m.year, lang)}</span><h3 class="h4">{L(m.title, lang)}</h3><p class="muted">{L(m.text, lang)}</p></li>)}
+  </ol></div></section>

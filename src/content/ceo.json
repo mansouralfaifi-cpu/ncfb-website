@@ -1,0 +1,19 @@
+{
+  "name": {
+    "ar": "الاسم",
+    "en": "Name"
+  },
+  "photo": "",
+  "quote": {
+    "ar": "نص نموذجي: المنشأة العائلية أمانة بين جيلين، ودور المركز أن يجعل انتقالها مخططاً لا متروكاً للظروف.",
+    "en": "Sample text: a family business is a trust held between two generations, and the Center's role is to make its transition planned rather than left to chance."
+  },
+  "bio": {
+    "ar": "نص نموذجي: تُكتب هنا السيرة المهنية للرئيس التنفيذي في فقرتين أو ثلاث، بالمؤهلات والمناصب السابقة والخبرة في المنشآت العائلية والحوكمة.",
+    "en": "Sample text: the CEO's professional biography goes here in two or three paragraphs, covering qualifications, previous positions and experience in family businesses and governance."
+  },
+  "note": {
+    "ar": "يُستبدل هذا القسم بالكلمة والسيرة المعتمدتين.",
+    "en": "This section will be replaced with the approved message and biography."
+  }
+}

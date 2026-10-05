@@ -1,0 +1,172 @@
+{
+  "items": [
+    {
+      "id": "governance-workshop-2026-11",
+      "date": "2026-11-05",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ورشة: أساسيات حوكمة المنشأة العائلية",
+        "en": "Workshop: family business governance essentials"
+      },
+      "calendarLabel": {
+        "ar": "ورشة الحوكمة",
+        "en": "Governance workshop"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": false,
+      "listed": false
+    },
+    {
+      "id": "family-business-forum-2026",
+      "date": "2026-11-14",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ملتقى المنشآت العائلية",
+        "en": "Family Business Forum"
+      },
+      "calendarLabel": {
+        "ar": "ملتقى المنشآت العائلية",
+        "en": "Family Business Forum"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": false,
+      "listed": true
+    },
+    {
+      "id": "charter-workshop-2026-11",
+      "date": "2026-11-18",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ورشة: كتابة الميثاق العائلي",
+        "en": "Workshop: writing the family charter"
+      },
+      "calendarLabel": {
+        "ar": "ورشة الميثاق",
+        "en": "Charter workshop"
+      },
+      "location": {
+        "ar": "عن بُعد",
+        "en": "Online"
+      },
+      "mode": "online",
+      "past": false,
+      "listed": true
+    },
+    {
+      "id": "next-generation-program-2026-11",
+      "date": "2026-11-23",
+      "endDate": "2026-11-24",
+      "kind": "training",
+      "title": {
+        "ar": "برنامج الجيل القادم",
+        "en": "Next Generation Program"
+      },
+      "calendarLabel": {
+        "ar": "برنامج الجيل القادم",
+        "en": "Next Generation Program"
+      },
+      "location": {
+        "ar": "",
+        "en": ""
+      },
+      "mode": "in_person",
+      "past": false,
+      "listed": false
+    },
+    {
+      "id": "next-generation-meetup-2026-12",
+      "date": "2026-12-02",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "لقاء الجيل القادم",
+        "en": "Next generation meetup"
+      },
+      "calendarLabel": {
+        "ar": "لقاء الجيل القادم",
+        "en": "Next generation meetup"
+      },
+      "location": {
+        "ar": "جدة",
+        "en": "Jeddah"
+      },
+      "mode": "in_person",
+      "past": false,
+      "listed": true
+    },
+    {
+      "id": "mediation-seminar-2026-12",
+      "date": "2026-12-15",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ندوة: الوساطة في الخلافات العائلية",
+        "en": "Seminar: mediation in family disputes"
+      },
+      "calendarLabel": {
+        "ar": "ندوة الوساطة",
+        "en": "Mediation seminar"
+      },
+      "location": {
+        "ar": "عن بُعد",
+        "en": "Online"
+      },
+      "mode": "online",
+      "past": false,
+      "listed": true
+    },
+    {
+      "id": "family-councils-meeting-2026-09",
+      "date": "2026-09-20",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "لقاء مجالس العائلة",
+        "en": "Family councils meeting"
+      },
+      "calendarLabel": {
+        "ar": "لقاء مجالس العائلة",
+        "en": "Family councils meeting"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "board-evaluation-workshop-2026-09",
+      "date": "2026-09-08",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ورشة: تقييم مجلس الإدارة",
+        "en": "Workshop: board evaluation"
+      },
+      "calendarLabel": {
+        "ar": "ورشة: تقييم مجلس الإدارة",
+        "en": "Workshop: board evaluation"
+      },
+      "location": {
+        "ar": "عن بُعد",
+        "en": "Online"
+      },
+      "mode": "online",
+      "past": true,
+      "listed": true
+    }
+  ]
+}

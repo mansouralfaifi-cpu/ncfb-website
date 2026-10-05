@@ -1,0 +1,10 @@
+---
+import Icon from '../Icon.astro';
+import { type Lang, t, href } from '../../lib/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+---
+<section class="sec"><div class="wrap thanks">
+  <div class="alert success" role="status"><Icon name="check-circle-2" /><div><b>{t(lang, 'received')}</b><p class="small">{t(lang, 'receivedText')}</p></div></div>
+  <div class="cta-row"><a class="btn btn-primary" href={href(lang, 'home')}>{t(lang, 'backHome')}</a></div>
+</div></section>

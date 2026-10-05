@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "id": "owners-governance",
+      "title": {
+        "ar": "حوكمة المنشأة العائلية للملاك",
+        "en": "Family business governance for owners"
+      },
+      "date": "2026-11-23",
+      "duration": {
+        "ar": "يومان",
+        "en": "2 days"
+      },
+      "venue": {
+        "ar": "حضوري، الرياض",
+        "en": "In person, Riyadh"
+      },
+      "language": {
+        "ar": "العربية",
+        "en": "Arabic"
+      },
+      "status": "open"
+    },
+    {
+      "id": "next-generation-leadership",
+      "title": {
+        "ar": "إعداد الجيل القادم للقيادة",
+        "en": "Preparing the next generation to lead"
+      },
+      "date": "2026-12-07",
+      "duration": {
+        "ar": "4 أيام",
+        "en": "4 days"
+      },
+      "venue": {
+        "ar": "حضوري، جدة",
+        "en": "In person, Jeddah"
+      },
+      "language": {
+        "ar": "العربية",
+        "en": "Arabic"
+      },
+      "status": "limited"
+    },
+    {
+      "id": "effective-council-member",
+      "title": {
+        "ar": "عضو مجلس العائلة الفعّال",
+        "en": "The effective family council member"
+      },
+      "date": "2027-01-11",
+      "duration": {
+        "ar": "3 أيام",
+        "en": "3 days"
+      },
+      "venue": {
+        "ar": "عن بُعد",
+        "en": "Online"
+      },
+      "language": {
+        "ar": "العربية",
+        "en": "Arabic"
+      },
+      "status": "open"
+    },
+    {
+      "id": "board-secretary",
+      "title": {
+        "ar": "أمين سر المجلس",
+        "en": "Board secretary"
+      },
+      "date": "2027-02-01",
+      "duration": {
+        "ar": "يومان",
+        "en": "2 days"
+      },
+      "venue": {
+        "ar": "عن بُعد",
+        "en": "Online"
+      },
+      "language": {
+        "ar": "العربية",
+        "en": "Arabic"
+      },
+      "status": "full"
+    }
+  ]
+}

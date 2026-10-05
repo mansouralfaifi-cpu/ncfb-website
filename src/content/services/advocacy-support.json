@@ -1,0 +1,81 @@
+{
+  "id": "advocacy-support",
+  "lead": {
+    "ar": "يرصد المركز السياسات والأنظمة التي تمس المنشآت العائلية، ويقدّم مرئياتها إلى الجهات المختصة.",
+    "en": "The Center monitors policies and regulations that affect family businesses and submits their views to the relevant authorities."
+  },
+  "gets": [
+    {
+      "ar": "أوراق مرئيات حول الأنظمة المقترحة",
+      "en": "Position papers on proposed regulations"
+    },
+    {
+      "ar": "تمثيل المنشآت في ورش التشاور",
+      "en": "Representing businesses in consultation workshops"
+    },
+    {
+      "ar": "نشرة دورية بالمستجدات التنظيمية",
+      "en": "A regular bulletin on regulatory updates"
+    }
+  ],
+  "steps": [
+    {
+      "title": {
+        "ar": "الرصد",
+        "en": "Monitoring"
+      },
+      "text": {
+        "ar": "متابعة الأنظمة واللوائح المقترحة.",
+        "en": "Tracking proposed laws and regulations."
+      }
+    },
+    {
+      "title": {
+        "ar": "الاستطلاع",
+        "en": "Consultation"
+      },
+      "text": {
+        "ar": "جمع آراء المنشآت العائلية.",
+        "en": "Gathering the views of family businesses."
+      }
+    },
+    {
+      "title": {
+        "ar": "المرئيات",
+        "en": "Position"
+      },
+      "text": {
+        "ar": "صياغة ورقة موحدة.",
+        "en": "Drafting a single position paper."
+      }
+    },
+    {
+      "title": {
+        "ar": "التمثيل",
+        "en": "Representation"
+      },
+      "text": {
+        "ar": "تقديمها للجهات المختصة.",
+        "en": "Submitting it to the relevant authorities."
+      }
+    }
+  ],
+  "audience": [
+    {
+      "ar": "المنشآت العائلية المسجلة في المركز",
+      "en": "Family businesses registered with the Center"
+    },
+    {
+      "ar": "الجمعيات والغرف التجارية",
+      "en": "Associations and chambers of commerce"
+    }
+  ],
+  "duration": {
+    "ar": "مستمر",
+    "en": "Ongoing"
+  },
+  "format": {
+    "ar": "—",
+    "en": "—"
+  }
+}

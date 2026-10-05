@@ -1,0 +1,96 @@
+{
+  "note": {
+    "ar": "الأسماء والصور تُستبدل ببيانات المجلس المعتمدة.",
+    "en": "Names and photos will be replaced with the approved board details."
+  },
+  "members": [
+    {
+      "name": {
+        "ar": "الاسم",
+        "en": "Name"
+      },
+      "role": {
+        "ar": "رئيس مجلس الإدارة",
+        "en": "Chair"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "الاسم",
+        "en": "Name"
+      },
+      "role": {
+        "ar": "نائب رئيس مجلس الإدارة",
+        "en": "Vice Chair"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "الاسم",
+        "en": "Name"
+      },
+      "role": {
+        "ar": "عضو مجلس الإدارة",
+        "en": "Board member"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "الاسم",
+        "en": "Name"
+      },
+      "role": {
+        "ar": "عضو مجلس الإدارة",
+        "en": "Board member"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "الاسم",
+        "en": "Name"
+      },
+      "role": {
+        "ar": "عضو مجلس الإدارة",
+        "en": "Board member"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "الاسم",
+        "en": "Name"
+      },
+      "role": {
+        "ar": "عضو مجلس الإدارة",
+        "en": "Board member"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "الاسم",
+        "en": "Name"
+      },
+      "role": {
+        "ar": "عضو مجلس الإدارة",
+        "en": "Board member"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "الاسم",
+        "en": "Name"
+      },
+      "role": {
+        "ar": "عضو مستقل",
+        "en": "Independent member"
+      },
+      "photo": ""
+    }
+  ]
+}

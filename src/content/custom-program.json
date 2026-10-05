@@ -1,0 +1,92 @@
+{
+  "heading": {
+    "ar": "برنامج مصمم لعائلتك أو منشأتك",
+    "en": "A program designed for your family or business"
+  },
+  "text": {
+    "ar": "نصمم البرنامج حول احتياج محدد: تأهيل جيل قادم، أو تدريب أعضاء مجلس، أو ورشة لإعداد الميثاق. المحتوى والمدة والمكان تُحدد معك.",
+    "en": "We design the program around a specific need: preparing the next generation, training board members, or a workshop to draft the charter. Content, duration and venue are agreed with you."
+  },
+  "steps": [
+    {
+      "title": {
+        "ar": "الطلب",
+        "en": "Request"
+      },
+      "text": {
+        "ar": "تعبئة النموذج أدناه.",
+        "en": "Fill in the form below."
+      }
+    },
+    {
+      "title": {
+        "ar": "الاحتياج",
+        "en": "Needs"
+      },
+      "text": {
+        "ar": "لقاء لتحديد الأهداف والمشاركين.",
+        "en": "A meeting to set goals and participants."
+      }
+    },
+    {
+      "title": {
+        "ar": "التصميم",
+        "en": "Design"
+      },
+      "text": {
+        "ar": "مقترح برنامج ومدرّبين وجدول.",
+        "en": "A proposed program, trainers and schedule."
+      }
+    },
+    {
+      "title": {
+        "ar": "التنفيذ",
+        "en": "Delivery"
+      },
+      "text": {
+        "ar": "تقديم البرنامج وتقييمه.",
+        "en": "Delivering and evaluating the program."
+      }
+    }
+  ],
+  "areas": [
+    {
+      "ar": "الحوكمة ومجالس العائلة",
+      "en": "Governance and family councils"
+    },
+    {
+      "ar": "إعداد الجيل القادم",
+      "en": "Next generation preparation"
+    },
+    {
+      "ar": "مجلس الإدارة",
+      "en": "Board of Directors"
+    },
+    {
+      "ar": "الميثاق العائلي",
+      "en": "Family charter"
+    },
+    {
+      "ar": "مجال آخر",
+      "en": "Other"
+    }
+  ],
+  "hint": {
+    "ar": "مثال: تأهيل خمسة من الجيل الثالث قبل انضمامهم إلى مجلس العائلة.",
+    "en": "Example: preparing five third-generation members before they join the family council."
+  },
+  "facts": {
+    "duration": {
+      "ar": "تُحدد حسب الاحتياج",
+      "en": "Set according to need"
+    },
+    "venue": {
+      "ar": "مقر المنشأة أو المركز أو عن بُعد",
+      "en": "Your premises, the Center, or online"
+    },
+    "language": {
+      "ar": "العربية والإنجليزية",
+      "en": "Arabic and English"
+    }
+  }
+}

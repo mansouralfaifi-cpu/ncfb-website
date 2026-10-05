@@ -1,0 +1,18 @@
+---
+import Icon from '../Icon.astro';
+import programs from '../../content/programs.json';
+import { type Lang, t, href, L, arrowIcon } from '../../lib/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const BADGE: Record<string, string> = { open: 'success', limited: 'warning', full: 'neutral' };
+const reg = href(lang, 'training-register');
+---
+<section class="sec"><div class="wrap"><div class="programs">
+  {programs.items.map((p) => (
+    <article class="program" id={p.id}><div class="top"><h3 class="h4">{L(p.title, lang)}</h3><span class={`badge ${BADGE[p.status] || 'success'}`}>{t(lang, p.status)}</span></div>
+      <ul class="meta-list"><li><Icon name="calendar-days" /><span class="ltr">{p.date}</span></li><li><Icon name="clock" />{L(p.duration, lang)}</li><li><Icon name="map-pin" />{L(p.venue, lang)}</li><li><Icon name="languages" />{L(p.language, lang)}</li></ul>
+      <div class="actions">{p.status === 'full'
+        ? <button class="btn" type="button" disabled style="background:var(--color-action-disabled-bg);color:var(--color-action-disabled-text);cursor:not-allowed">{t(lang, 'regClosed')}</button>
+        : <a class="btn btn-primary" href={`${reg}?program=${encodeURIComponent(p.id)}`}>{t(lang, 'registerNow')}</a>}<a class="btn btn-text" href={`#${p.id}`}>{t(lang, 'programDetails')}<Icon name={arrowIcon(lang)} /></a></div></article>
+  ))}
+</div></div></section>

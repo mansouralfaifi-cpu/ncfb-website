@@ -1,0 +1,13 @@
+---
+import Icon from '../Icon.astro';
+import videos from '../../content/videos.json';
+import { type Lang, t, href, L } from '../../lib/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const page = href(lang, 'library-videos');
+---
+<section class="sec"><div class="wrap"><div class="videos">
+  {videos.items.map((v: any) => (
+    <a class="video" href={v.url || page}><div class="ph">{v.thumbnail ? <img class="thumb" src={v.thumbnail} alt="" loading="lazy" /> : <span class="tag">{t(lang, 'placeholder')}</span>}<span class="play"><Icon name="play" /></span><span class="dur ltr">{v.duration}</span></div><h3 class="h4">{L(v.title, lang)}</h3></a>
+  ))}
+</div></div></section>

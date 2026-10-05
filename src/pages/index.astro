@@ -1,0 +1,9 @@
+---
+// Opening page: the hero alone, full screen, no header or footer.
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import home from '../content/home.json';
+import { L } from '../lib/site';
+const lang = 'ar';
+---
+<Base lang={lang} routeId="intro" title="" description={L(home.hero.lead, lang)} intro><Hero lang={lang} intro /></Base>

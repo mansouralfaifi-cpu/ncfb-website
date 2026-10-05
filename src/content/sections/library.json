@@ -1,0 +1,42 @@
+{
+  "id": "library",
+  "order": 2,
+  "title": {
+    "ar": "المكتبة الرقمية",
+    "en": "Digital Library"
+  },
+  "icon": "library",
+  "intro": {
+    "ar": "إصدارات المركز وأدلته ودراساته ومقاطعه المرئية في مكان واحد.",
+    "en": "The Center's publications, guides, studies and videos in one place."
+  },
+  "photo": "kingdom",
+  "pages": [
+    {
+      "slug": "publications",
+      "title": {
+        "ar": "المنشورات",
+        "en": "Publications"
+      },
+      "icon": "file-text",
+      "description": {
+        "ar": "أدلة ودراسات وتقارير قابلة للتحميل.",
+        "en": "Downloadable guides, studies and reports."
+      },
+      "template": "pubs"
+    },
+    {
+      "slug": "videos",
+      "title": {
+        "ar": "المقاطع",
+        "en": "Videos"
+      },
+      "icon": "clapperboard",
+      "description": {
+        "ar": "لقاءات وورش ومحاضرات مسجلة.",
+        "en": "Recorded talks, workshops and lectures."
+      },
+      "template": "videos"
+    }
+  ]
+}

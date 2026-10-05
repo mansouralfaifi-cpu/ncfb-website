@@ -1,0 +1,9 @@
+---
+import PageView from '../../components/PageView.astro';
+import { allRoutes } from '../../lib/site';
+export function getStaticPaths() {
+  return allRoutes().map((route) => ({ params: { slug: route.path }, props: { route } }));
+}
+const { route } = Astro.props;
+---
+<PageView lang="en" route={route} />

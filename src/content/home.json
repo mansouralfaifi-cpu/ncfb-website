@@ -1,0 +1,85 @@
+{
+  "description": {
+    "ar": "الصفحة الرئيسية للمركز الوطني للمنشآت العائلية: الاستشارات والتدريب والفعاليات والمكتبة الرقمية.",
+    "en": "Home of the National Center for Family Businesses: advisory, training, events and the digital library."
+  },
+  "hero": {
+    "eyebrow": {
+      "ar": "المركز الوطني للمنشآت العائلية",
+      "en": "National Center for Family Businesses"
+    },
+    "title": {
+      "ar": "منشآت عائلية تُدار بحوكمة، وتمتد عبر الأجيال",
+      "en": "Family businesses run with governance, built to last for generations"
+    },
+    "lead": {
+      "ar": "نرافق الملاك ومجالس العائلة والجيل القادم في الحوكمة والتخطيط للتعاقب وحفظ إرث المنشأة.",
+      "en": "We support owners, family councils and the next generation in governance, succession planning and preserving the business's legacy."
+    },
+    "imageAlt": {
+      "ar": "أفق مدينة الرياض عند الغروب",
+      "en": "Riyadh skyline at sunset"
+    },
+    "primary": {
+      "ar": "استكشف الاستشارات",
+      "en": "Explore advisory services"
+    },
+    "secondary": {
+      "ar": "تعرّف على المركز",
+      "en": "About the Center"
+    }
+  },
+  "about": {
+    "heading": {
+      "ar": "جهة وطنية مرجعية لاستدامة المنشآت العائلية",
+      "en": "A national reference for sustainable family businesses"
+    },
+    "text": {
+      "ar": "المنشأة العائلية تُبنى في جيل، وتُحفظ بالحوكمة في الأجيال التي تليه. يعمل المركز مع الملاك والمجالس والمستشارين والجهات الحكومية على أطر واضحة تحفظ المنشأة والعائلة معاً.",
+      "en": "A family business is built in one generation and preserved through governance in the generations that follow. The Center works with owners, boards, advisors and government bodies on clear frameworks that protect both the business and the family."
+    },
+    "link": {
+      "ar": "اقرأ عن المركز",
+      "en": "Read about the Center"
+    }
+  },
+  "consulting": {
+    "heading": {
+      "ar": "من التشخيص إلى التحول المؤسسي",
+      "en": "From diagnosis to institutional transformation"
+    },
+    "button": {
+      "ar": "جميع الاستشارات",
+      "en": "All advisory services"
+    }
+  },
+  "library": {
+    "heading": {
+      "ar": "أحدث الإصدارات",
+      "en": "Latest publications"
+    },
+    "count": 3
+  },
+  "events": {
+    "heading": {
+      "ar": "فعاليات قادمة",
+      "en": "Upcoming events"
+    },
+    "count": 2
+  },
+  "band": {
+    "title": {
+      "ar": "ابدأ بتحليل الوضع الراهن لمنشأتك",
+      "en": "Start with a current-state analysis of your business"
+    },
+    "text": {
+      "ar": "تشخيص يحدد أين تقف منشأتك اليوم وما الخطوة التالية.",
+      "en": "A diagnosis that shows where your business stands today and what the next step is."
+    },
+    "button": {
+      "ar": "اطلب التحليل",
+      "en": "Request the analysis"
+    },
+    "target": "consulting-assessment"
+  }
+}

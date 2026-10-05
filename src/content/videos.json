@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "title": {
+        "ar": "كلمة افتتاح ملتقى المنشآت العائلية",
+        "en": "Opening address, Family Business Forum"
+      },
+      "duration": "12:40",
+      "url": ""
+    },
+    {
+      "title": {
+        "ar": "ورشة: كيف تكتب ميثاقك العائلي",
+        "en": "Workshop: how to write your family charter"
+      },
+      "duration": "48:15",
+      "url": ""
+    },
+    {
+      "title": {
+        "ar": "لقاء: الجيل الثاني يتحدث",
+        "en": "Conversation: the second generation speaks"
+      },
+      "duration": "25:02",
+      "url": ""
+    },
+    {
+      "title": {
+        "ar": "محاضرة: مجلس الإدارة في المنشأة العائلية",
+        "en": "Lecture: the board in a family business"
+      },
+      "duration": "36:30",
+      "url": ""
+    },
+    {
+      "title": {
+        "ar": "قصة منشأة: انتقال ناجح بين جيلين",
+        "en": "Business story: a successful handover between two generations"
+      },
+      "duration": "08:55",
+      "url": ""
+    },
+    {
+      "title": {
+        "ar": "ندوة: الوساطة في الخلافات العائلية",
+        "en": "Seminar: mediation in family disputes"
+      },
+      "duration": "41:10",
+      "url": ""
+    }
+  ]
+}

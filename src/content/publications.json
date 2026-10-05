@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "type": "guide",
+      "title": {
+        "ar": "دليل إعداد الميثاق العائلي",
+        "en": "Guide to drafting a family charter"
+      },
+      "date": "2026-09",
+      "file": ""
+    },
+    {
+      "type": "study",
+      "title": {
+        "ar": "انتقال الملكية في المنشآت العائلية: تجارب وطنية",
+        "en": "Ownership transfer in family businesses: national experiences"
+      },
+      "date": "2026-07",
+      "file": ""
+    },
+    {
+      "type": "report",
+      "title": {
+        "ar": "التقرير السنوي للمركز",
+        "en": "The Center's annual report"
+      },
+      "date": "2026-05",
+      "file": ""
+    },
+    {
+      "type": "guide",
+      "title": {
+        "ar": "دليل تشكيل مجلس العائلة",
+        "en": "Guide to forming a family council"
+      },
+      "date": "2026-03",
+      "file": ""
+    },
+    {
+      "type": "study",
+      "title": {
+        "ar": "الجيل الثاني في الإدارة: تحديات وفرص",
+        "en": "The second generation in management: challenges and opportunities"
+      },
+      "date": "2025-12",
+      "file": ""
+    },
+    {
+      "type": "report",
+      "title": {
+        "ar": "مؤشر حوكمة المنشآت العائلية",
+        "en": "Family Business Governance Index"
+      },
+      "date": "2025-10",
+      "file": ""
+    }
+  ]
+}

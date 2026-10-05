@@ -1,0 +1,81 @@
+{
+  "id": "consulting-charter",
+  "lead": {
+    "ar": "نراجع الميثاق العائلي القائم مقابل أفضل الممارسات وواقع العائلة اليوم، ونقترح التعديلات التي تجعله قابلاً للتطبيق.",
+    "en": "We review your existing family charter against best practice and the family's situation today, and propose the amendments that make it workable."
+  },
+  "gets": [
+    {
+      "ar": "تقرير فجوات مفصل لكل بند من بنود الميثاق",
+      "en": "A detailed gap report for every clause of the charter"
+    },
+    {
+      "ar": "صياغة مقترحة للبنود المعدلة",
+      "en": "Proposed wording for amended clauses"
+    },
+    {
+      "ar": "جلسة عرض للنتائج مع مجلس العائلة",
+      "en": "A results session with the family council"
+    }
+  ],
+  "steps": [
+    {
+      "title": {
+        "ar": "جمع الوثائق",
+        "en": "Gathering documents"
+      },
+      "text": {
+        "ar": "الميثاق الحالي واللوائح وقرارات المجلس.",
+        "en": "The current charter, bylaws and council decisions."
+      }
+    },
+    {
+      "title": {
+        "ar": "المقابلات",
+        "en": "Interviews"
+      },
+      "text": {
+        "ar": "لقاءات مع ممثلين من الأجيال المختلفة.",
+        "en": "Meetings with representatives of each generation."
+      }
+    },
+    {
+      "title": {
+        "ar": "التحليل",
+        "en": "Analysis"
+      },
+      "text": {
+        "ar": "مقارنة البنود بالممارسات المرجعية.",
+        "en": "Comparing clauses with reference practice."
+      }
+    },
+    {
+      "title": {
+        "ar": "التوصيات",
+        "en": "Recommendations"
+      },
+      "text": {
+        "ar": "تقرير وجلسة عرض ومسودة معدلة.",
+        "en": "A report, a presentation session and an amended draft."
+      }
+    }
+  ],
+  "audience": [
+    {
+      "ar": "عائلات لديها ميثاق مضى عليه أكثر من خمس سنوات",
+      "en": "Families whose charter is more than five years old"
+    },
+    {
+      "ar": "عائلات انضم إليها جيل جديد",
+      "en": "Families joined by a new generation"
+    }
+  ],
+  "duration": {
+    "ar": "6 إلى 8 أسابيع",
+    "en": "6 to 8 weeks"
+  },
+  "format": {
+    "ar": "حضوري وعن بُعد",
+    "en": "In person and online"
+  }
+}

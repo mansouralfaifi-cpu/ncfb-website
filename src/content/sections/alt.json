@@ -1,0 +1,42 @@
+{
+  "id": "alt",
+  "order": 6,
+  "title": {
+    "ar": "برنامج بديل",
+    "en": "Badeel Program"
+  },
+  "icon": "scale",
+  "intro": {
+    "ar": "خدمات محايدة تحفظ العلاقة بين أفراد العائلة وتنظّم أعمال مجالسها.",
+    "en": "Neutral services that protect relationships between family members and organize the work of their councils."
+  },
+  "photo": "street",
+  "pages": [
+    {
+      "slug": "secretariat",
+      "title": {
+        "ar": "أمانة السر",
+        "en": "Secretariat"
+      },
+      "icon": "notebook-pen",
+      "description": {
+        "ar": "أمانة سر محترفة لمجالس العائلة والإدارة.",
+        "en": "Professional secretariat for family councils and boards."
+      },
+      "template": "service"
+    },
+    {
+      "slug": "mediation",
+      "title": {
+        "ar": "الوساطة",
+        "en": "Mediation"
+      },
+      "icon": "handshake",
+      "description": {
+        "ar": "وساطة محايدة لتسوية الخلافات العائلية.",
+        "en": "Neutral mediation to settle family disputes."
+      },
+      "template": "service"
+    }
+  ]
+}

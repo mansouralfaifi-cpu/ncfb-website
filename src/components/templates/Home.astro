@@ -1,0 +1,46 @@
+---
+import Hero from '../Hero.astro';
+import Icon from '../Icon.astro';
+import SubCards from '../SubCards.astro';
+import PubList from '../PubList.astro';
+import EventCard from '../EventCard.astro';
+import home from '../../content/home.json';
+import events from '../../content/events.json';
+import { type Lang, href, L, SECTIONS, sectionById, arrowIcon } from '../../lib/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const arrow = arrowIcon(lang);
+const about = sectionById('about')!, consulting = sectionById('consulting')!, alt = sectionById('alt')!, training = sectionById('training')!;
+const library = sectionById('library')!, evSec = sectionById('events')!;
+const upcoming = events.items.filter((e) => !e.past && e.listed && e.kind === 'event').sort((a, b) => a.date.localeCompare(b.date)).slice(0, home.events.count);
+const features = [{ s: alt, cls: 'feature navy on-navy' }, { s: training, cls: 'feature light' }];
+---
+<Hero lang={lang} />
+<section class="sec alt" style="padding-block:var(--space-5)"><div class="wrap"><div class="quick">
+  {SECTIONS.filter((s) => s.id !== 'about').map((s) => <a href={href(lang, s.id)}><Icon name={s.icon} />{L(s.title, lang)}</a>)}
+</div></div></section>
+<section class="sec"><div class="wrap intro-grid">
+  <div class="copy"><span class="eyebrow">{L(about.title, lang)}</span><h2 class="h2">{L(home.about.heading, lang)}</h2></div>
+  <div class="copy"><p class="lead">{L(home.about.text, lang)}</p><a class="btn btn-text" href={href(lang, 'about')}>{L(home.about.link, lang)}<Icon name={arrow} /></a></div>
+</div></section>
+<section class="sec alt"><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">{L(consulting.title, lang)}</span><h2 class="h2">{L(home.consulting.heading, lang)}</h2></div><a class="btn btn-secondary" href={href(lang, 'consulting')}>{L(home.consulting.button, lang)}</a></div>
+  <SubCards lang={lang} section={consulting} />
+</div></section>
+<section class="sec"><div class="wrap duo-feature">
+  {features.map(({ s, cls }) => (
+    <div class={cls}><span class="eyebrow">{L(s.title, lang)}</span><h3 class="h3">{L(s.intro, lang)}</h3><ul>{s.pages.map((p) => <li><a href={href(lang, `${s.id}-${p.slug}`)}>{L(p.title, lang)}<Icon name={arrow} /></a></li>)}</ul></div>
+  ))}
+</div></section>
+<section class="sec alt"><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">{L(library.title, lang)}</span><h2 class="h2">{L(home.library.heading, lang)}</h2></div><a class="btn btn-text" href={href(lang, 'library')}>{L(library.title, lang)}<Icon name={arrow} /></a></div>
+  <PubList lang={lang} limit={home.library.count} />
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">{L(evSec.title, lang)}</span><h2 class="h2">{L(home.events.heading, lang)}</h2></div><a class="btn btn-text" href={href(lang, 'events-calendar')}>{L(evSec.pages.find((p) => p.slug === 'calendar')?.title, lang)}<Icon name={arrow} /></a></div>
+  <div class="cards">{upcoming.map((ev) => <EventCard lang={lang} ev={ev} />)}</div>
+</div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="band on-navy">
+  <div style="display:grid;gap:var(--space-1)"><h2 class="h3">{L(home.band.title, lang)}</h2><p>{L(home.band.text, lang)}</p></div>
+  <div class="cta-row"><a class="btn btn-primary" href={href(lang, home.band.target)}>{L(home.band.button, lang)}</a></div>
+</div></div></section>

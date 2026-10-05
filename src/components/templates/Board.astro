@@ -1,0 +1,12 @@
+---
+import Ph from '../Ph.astro';
+import board from '../../content/board.json';
+import { type Lang, t, L } from '../../lib/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+---
+<section class="sec"><div class="wrap"><div class="people">
+  {board.members.map((m) => (
+    <div class="person">{m.photo ? <img src={m.photo} alt={L(m.name, lang)} loading="lazy" width="400" height="400" /> : <Ph lang={lang} title={t(lang, 'memberPhoto')} />}<h3 class="h4">{L(m.name, lang)}</h3><span class="small muted">{L(m.role, lang)}</span></div>
+  ))}
+</div>{L(board.note, lang) && <p class="caption muted" style="margin-top:var(--space-3)">{L(board.note, lang)}</p>}</div></section>

@@ -1,0 +1,17 @@
+---
+// Inlines a Lucide icon from node_modules/lucide-static at build time (stroke-width 1.5, decorative).
+import fs from 'node:fs';
+import path from 'node:path';
+interface Props { name: string; class?: string }
+const { name, class: cls = 'icon' } = Astro.props;
+const file = path.join(process.cwd(), 'node_modules/lucide-static/icons', `${name}.svg`);
+if (!fs.existsSync(file)) throw new Error(`Unknown Lucide icon: ${name}`);
+const svg = fs.readFileSync(file, 'utf8')
+  .replace(/<!--[\s\S]*?-->/g, '')
+  .replace(/\s+/g, ' ')
+  .trim()
+  .replace(/class="[^"]*"/, `class="lucide lucide-${name} ${cls}"`)
+  .replace(/stroke-width="[^"]*"/, 'stroke-width="1.5"')
+  .replace('<svg ', '<svg aria-hidden="true" focusable="false" ');
+---
+<Fragment set:html={svg} />

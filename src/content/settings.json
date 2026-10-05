@@ -1,0 +1,23 @@
+{
+  "siteName": {
+    "ar": "المركز الوطني للمنشآت العائلية",
+    "en": "National Center for Family Businesses"
+  },
+  "tagline": {
+    "ar": "المرجع الوطني لاستدامة المنشآت العائلية وانتقالها بين الأجيال.",
+    "en": "The national reference for the sustainability of family businesses and their transition across generations."
+  },
+  "email": "info@example.sa",
+  "copyright": {
+    "ar": "© 2026 المركز الوطني للمنشآت العائلية",
+    "en": "© 2026 National Center for Family Businesses"
+  },
+  "privacy": {
+    "ar": "يُنشر هنا نص سياسة الخصوصية المعتمد للمركز.",
+    "en": "The Center's approved privacy policy will be published here."
+  },
+  "terms": {
+    "ar": "يُنشر هنا نص الشروط والأحكام المعتمد للمركز.",
+    "en": "The Center's approved terms and conditions will be published here."
+  }
+}

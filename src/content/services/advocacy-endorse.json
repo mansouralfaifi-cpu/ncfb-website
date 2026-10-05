@@ -1,0 +1,81 @@
+{
+  "id": "advocacy-endorse",
+  "lead": {
+    "ar": "يبني المركز التأييد بين الجهات الحكومية والخاصة للمبادرات التي تدعم استدامة المنشآت العائلية.",
+    "en": "The Center builds support among government and private bodies for initiatives that sustain family businesses."
+  },
+  "gets": [
+    {
+      "ar": "حملات توعوية بأهمية المنشآت العائلية",
+      "en": "Awareness campaigns on the importance of family businesses"
+    },
+    {
+      "ar": "شراكات مع جهات حكومية وخاصة",
+      "en": "Partnerships with government and private bodies"
+    },
+    {
+      "ar": "مؤشرات عن إسهام المنشآت العائلية في الاقتصاد",
+      "en": "Indicators on family businesses' contribution to the economy"
+    }
+  ],
+  "steps": [
+    {
+      "title": {
+        "ar": "تحديد القضية",
+        "en": "Defining the issue"
+      },
+      "text": {
+        "ar": "اختيار المبادرة وأهدافها.",
+        "en": "Choosing the initiative and its goals."
+      }
+    },
+    {
+      "title": {
+        "ar": "بناء التحالف",
+        "en": "Building the coalition"
+      },
+      "text": {
+        "ar": "إشراك الشركاء.",
+        "en": "Engaging partners."
+      }
+    },
+    {
+      "title": {
+        "ar": "التواصل",
+        "en": "Outreach"
+      },
+      "text": {
+        "ar": "حملات ولقاءات.",
+        "en": "Campaigns and meetings."
+      }
+    },
+    {
+      "title": {
+        "ar": "القياس",
+        "en": "Measurement"
+      },
+      "text": {
+        "ar": "متابعة الأثر.",
+        "en": "Tracking impact."
+      }
+    }
+  ],
+  "audience": [
+    {
+      "ar": "الجهات الحكومية",
+      "en": "Government bodies"
+    },
+    {
+      "ar": "الشركاء من القطاع الخاص",
+      "en": "Private-sector partners"
+    }
+  ],
+  "duration": {
+    "ar": "مستمر",
+    "en": "Ongoing"
+  },
+  "format": {
+    "ar": "—",
+    "en": "—"
+  }
+}

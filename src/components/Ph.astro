@@ -1,0 +1,7 @@
+---
+// Placeholder block ("صورة نائبة") used until a real photo is supplied.
+import { type Lang, t } from '../lib/site';
+interface Props { lang: Lang; title: string; sub?: string; cls?: string }
+const { lang, title, sub = '', cls = 'light' } = Astro.props;
+---
+<div class={`ph ${cls}`}><span class="tag">{t(lang, 'placeholder')}</span><div><b>{title}</b>{sub}</div></div>

@@ -1,0 +1,42 @@
+{
+  "id": "advocacy",
+  "order": 7,
+  "title": {
+    "ar": "كسب التأييد",
+    "en": "Advocacy"
+  },
+  "icon": "megaphone",
+  "intro": {
+    "ar": "يمثّل المركز صوت المنشآت العائلية لدى الجهات وصنّاع القرار.",
+    "en": "The Center represents the voice of family businesses to institutions and decision makers."
+  },
+  "photo": "kafd",
+  "pages": [
+    {
+      "slug": "support",
+      "title": {
+        "ar": "المناصرة",
+        "en": "Policy Advocacy"
+      },
+      "icon": "shield-check",
+      "description": {
+        "ar": "الدفاع عن مصالح المنشآت العائلية في السياسات.",
+        "en": "Defending the interests of family businesses in policy."
+      },
+      "template": "service"
+    },
+    {
+      "slug": "endorse",
+      "title": {
+        "ar": "كسب التأييد",
+        "en": "Advocacy"
+      },
+      "icon": "megaphone",
+      "description": {
+        "ar": "حشد الدعم للمبادرات والتنظيمات الداعمة.",
+        "en": "Rallying support for enabling initiatives and regulations."
+      },
+      "template": "service"
+    }
+  ]
+}

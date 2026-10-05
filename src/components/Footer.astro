@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+import { type Lang, t, href, L, SECTIONS, settings, sectionById } from '../lib/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+// Footer column groups, as in the prototype.
+const groups = [['about', 'library'], ['events', 'training'], ['consulting'], ['alt', 'advocacy']]
+  .map((g) => g.map(sectionById).filter(Boolean));
+// Sections added later through the CMS go in a final column.
+const listed = groups.flat().map((s) => s!.id);
+const extra = SECTIONS.filter((s) => !listed.includes(s.id));
+if (extra.length) groups.push(extra);
+---
+<footer class="ftr"><div class="wrap">
+  <div class="cols">
+    <div class="about">
+      <span class="plate" style="justify-self:start"><Image src={logo} alt={L(settings.siteName, lang)} width={176} densities={[1, 2]} format="png" /></span>
+      <p>{L(settings.tagline, lang)}</p>
+      <p class="ltr" style="text-align:start"><a href={`mailto:${settings.email}`}>{settings.email}</a></p>
+    </div>
+    {groups.map((g) => (
+      <div style="display:grid;gap:var(--space-3);align-content:start">
+        {g.map((s) => (
+          <div><h4><a href={href(lang, s!.id)}>{L(s!.title, lang)}</a></h4>
+            <ul>{s!.pages.map((p) => <li><a href={href(lang, `${s!.id}-${p.slug}`)}>{L(p.title, lang)}</a></li>)}</ul>
+          </div>
+        ))}
+      </div>
+    ))}
+  </div>
+  <div class="base"><span>{L(settings.copyright, lang)}</span><span><a href={href(lang, 'privacy')}>{t(lang, 'privacy')}</a> · <a href={href(lang, 'terms')}>{t(lang, 'terms')}</a></span></div>
+</div></footer>

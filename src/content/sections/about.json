@@ -1,0 +1,55 @@
+{
+  "id": "about",
+  "order": 1,
+  "title": {
+    "ar": "عن المركز",
+    "en": "About"
+  },
+  "icon": "landmark",
+  "intro": {
+    "ar": "جهة وطنية مرجعية تعمل على استدامة المنشآت العائلية وانتقالها بين الأجيال.",
+    "en": "A national reference body working for the sustainability of family businesses and their transition across generations."
+  },
+  "photo": "kafd",
+  "pages": [
+    {
+      "slug": "board",
+      "title": {
+        "ar": "مجلس الإدارة",
+        "en": "Board of Directors"
+      },
+      "icon": "users",
+      "description": {
+        "ar": "أعضاء مجلس إدارة المركز وأدوارهم.",
+        "en": "The Center's board members and their roles."
+      },
+      "template": "board"
+    },
+    {
+      "slug": "ceo",
+      "title": {
+        "ar": "الرئيس التنفيذي",
+        "en": "CEO"
+      },
+      "icon": "user-round",
+      "description": {
+        "ar": "كلمة الرئيس التنفيذي وسيرته.",
+        "en": "The CEO's message and biography."
+      },
+      "template": "ceo"
+    },
+    {
+      "slug": "history",
+      "title": {
+        "ar": "تاريخ المركز",
+        "en": "Our History"
+      },
+      "icon": "history",
+      "description": {
+        "ar": "محطات المركز منذ تأسيسه.",
+        "en": "The Center's milestones since its founding."
+      },
+      "template": "history"
+    }
+  ]
+}

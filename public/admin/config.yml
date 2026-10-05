@@ -1,0 +1,270 @@
+# Decap CMS configuration: the editing dashboard at /admin/.
+# Bilingual field shapes are defined once with YAML anchors (&name) and reused (*name).
+# Every content file lives in src/content/. Each text field has an Arabic ("ar") and an English ("en") value.
+# Saving in the dashboard commits to the `main` branch; Netlify then rebuilds and publishes the site.
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    create: 'إنشاء {{collection}} "{{slug}}" (CMS)'
+    update: 'تحديث {{collection}} "{{slug}}" (CMS)'
+    delete: 'حذف {{collection}} "{{slug}}" (CMS)'
+    uploadMedia: 'رفع "{{path}}" (CMS)'
+    deleteMedia: 'حذف "{{path}}" (CMS)'
+
+# For local editing without Netlify: run `npx decap-server` next to `npm run dev`, then open http://localhost:4321/admin/
+local_backend: true
+
+locale: ar
+site_url: https://www.example.sa   # TODO: real site URL
+display_url: https://www.example.sa
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  # ---------------- site-wide ----------------
+  - name: site
+    label: "إعدادات الموقع / Site"
+    format: json
+    editor: { preview: false }
+    files:
+      - name: settings
+        label: "إعدادات عامة وتذييل / Settings & footer"
+        file: src/content/settings.json
+        fields:
+          - { label: "اسم المركز / Site name", name: siteName, widget: object, fields: &bi_string [ { label: "العربية", name: ar, widget: string }, { label: "English", name: en, widget: string } ] }
+          - { label: "نبذة التذييل / Footer tagline", name: tagline, widget: object, fields: &bi_text [ { label: "العربية", name: ar, widget: text }, { label: "English", name: en, widget: text } ] }
+          - { label: "البريد الإلكتروني للتواصل / Contact email", name: email, widget: string }
+          - { label: "حقوق النشر / Copyright line", name: copyright, widget: object, fields: *bi_string }
+          - { label: "سياسة الخصوصية / Privacy policy (paragraphs separated by a blank line)", name: privacy, widget: object, fields: *bi_text }
+          - { label: "الشروط والأحكام / Terms (paragraphs separated by a blank line)", name: terms, widget: object, fields: *bi_text }
+      - name: home
+        label: "الصفحة الرئيسية / Home page"
+        file: src/content/home.json
+        fields:
+          - { label: "وصف الصفحة لمحركات البحث / Meta description", name: description, widget: object, fields: *bi_text }
+          - label: "الواجهة / Hero"
+            name: hero
+            widget: object
+            fields:
+              - { label: "السطر العلوي / Eyebrow", name: eyebrow, widget: object, fields: *bi_string }
+              - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
+              - { label: "الفقرة / Lead", name: lead, widget: object, fields: *bi_text }
+              - { label: "الوصف البديل للصورة / Photo alt text", name: imageAlt, widget: object, fields: *bi_string }
+              - { label: "الزر الأساسي / Primary button", name: primary, widget: object, fields: *bi_string }
+              - { label: "الزر الثانوي / Secondary button", name: secondary, widget: object, fields: *bi_string }
+          - label: "عن المركز / About block"
+            name: about
+            widget: object
+            fields:
+              - { label: "العنوان / Heading", name: heading, widget: object, fields: *bi_string }
+              - { label: "النص / Text", name: text, widget: object, fields: *bi_text }
+              - { label: "نص الرابط / Link text", name: link, widget: object, fields: *bi_string }
+          - label: "الاستشارات / Advisory block"
+            name: consulting
+            widget: object
+            fields:
+              - { label: "العنوان / Heading", name: heading, widget: object, fields: *bi_string }
+              - { label: "الزر / Button", name: button, widget: object, fields: *bi_string }
+          - label: "المكتبة / Library block"
+            name: library
+            widget: object
+            fields:
+              - { label: "العنوان / Heading", name: heading, widget: object, fields: *bi_string }
+              - { label: "عدد الإصدارات المعروضة / Items shown", name: count, widget: number, value_type: int, min: 1, max: 12 }
+          - label: "الفعاليات / Events block"
+            name: events
+            widget: object
+            fields:
+              - { label: "العنوان / Heading", name: heading, widget: object, fields: *bi_string }
+              - { label: "عدد الفعاليات المعروضة / Items shown", name: count, widget: number, value_type: int, min: 1, max: 6 }
+          - label: "شريط الدعوة / Call-to-action band"
+            name: band
+            widget: object
+            fields:
+              - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
+              - { label: "النص / Text", name: text, widget: object, fields: *bi_text }
+              - { label: "الزر / Button", name: button, widget: object, fields: *bi_string }
+              - { label: "الصفحة المستهدفة (معرّف الصفحة، مثل consulting-assessment) / Target page id", name: target, widget: string }
+
+  # ---------------- sections and their pages ----------------
+  - name: sections
+    label: "الأقسام والصفحات / Sections & pages"
+    label_singular: "قسم / Section"
+    folder: src/content/sections
+    extension: json
+    format: json
+    create: false
+    delete: false
+    identifier_field: id
+    summary: "{{id}}"
+    editor: { preview: false }
+    fields:
+      - { label: "المعرّف (لا يُغيَّر) / ID (do not change)", name: id, widget: string }
+      - { label: "الترتيب / Order", name: order, widget: number, value_type: int }
+      - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
+      - { label: "الأيقونة (اسم Lucide) / Icon (Lucide name)", name: icon, widget: string }
+      - { label: "المقدمة / Intro", name: intro, widget: object, fields: *bi_text }
+      - { label: "صورة رأس الصفحة / Header photo", name: photo, widget: select, options: [ { label: "KAFD", value: kafd }, { label: "Kingdom Centre", value: kingdom }, { label: "Riyadh street", value: street } ] }
+      - label: "صفحات القسم / Sub-pages"
+        name: pages
+        widget: list
+        allow_add: false
+        summary: "{{fields.slug}}"
+        fields:
+          - { label: "الرابط (لا يُغيَّر) / Slug (do not change)", name: slug, widget: string }
+          - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
+          - { label: "الأيقونة / Icon", name: icon, widget: string }
+          - { label: "الوصف / Description", name: description, widget: object, fields: *bi_text }
+          - { label: "القالب / Template", name: template, widget: hidden }
+
+  - name: services
+    label: "تفاصيل الخدمات / Service details"
+    label_singular: "خدمة / Service"
+    folder: src/content/services
+    extension: json
+    format: json
+    create: false
+    delete: false
+    identifier_field: id
+    summary: "{{id}}"
+    editor: { preview: false }
+    fields:
+      - { label: "المعرّف (القسم-الصفحة) / ID (section-page)", name: id, widget: string }
+      - { label: "الوصف / Description", name: lead, widget: object, fields: *bi_text }
+      - { label: "ما تحصل عليه / What you get", name: gets, widget: list, fields: *bi_string }
+      - { label: "مراحل العمل / Steps", name: steps, widget: list, fields: &steps [ { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }, { label: "الوصف / Text", name: text, widget: object, fields: *bi_string } ] }
+      - { label: "لمن هذه الخدمة / Audience", name: audience, widget: list, fields: *bi_string }
+      - { label: "المدة / Duration", name: duration, widget: object, fields: *bi_string }
+      - { label: "طريقة التقديم / Format", name: format, widget: object, fields: *bi_string }
+
+  # ---------------- about ----------------
+  - name: about
+    label: "عن المركز / About"
+    format: json
+    editor: { preview: false }
+    files:
+      - name: board
+        label: "مجلس الإدارة / Board"
+        file: src/content/board.json
+        fields:
+          - { label: "ملاحظة أسفل الصفحة / Note", name: note, widget: object, fields: &bi_optional [ { label: "العربية", name: ar, widget: string, required: false }, { label: "English", name: en, widget: string, required: false } ] }
+          - label: "الأعضاء / Members"
+            name: members
+            widget: list
+            fields:
+              - { label: "الاسم / Name", name: name, widget: object, fields: *bi_string }
+              - { label: "المنصب / Role", name: role, widget: object, fields: *bi_string }
+              - { label: "الصورة (مربعة) / Photo (square)", name: photo, widget: image, required: false }
+      - name: ceo
+        label: "الرئيس التنفيذي / CEO"
+        file: src/content/ceo.json
+        fields:
+          - { label: "الاسم / Name", name: name, widget: object, fields: *bi_string }
+          - { label: "الصورة (4:5) / Photo (4:5)", name: photo, widget: image, required: false }
+          - { label: "الكلمة / Quote", name: quote, widget: object, fields: *bi_text }
+          - { label: "السيرة (فقرات يفصلها سطر فارغ) / Biography (blank line between paragraphs)", name: bio, widget: object, fields: *bi_text }
+          - { label: "ملاحظة / Note", name: note, widget: object, fields: *bi_optional }
+      - name: history
+        label: "تاريخ المركز / History"
+        file: src/content/history.json
+        fields:
+          - { label: "مقدمة / Intro", name: intro, widget: object, fields: &bi_text_optional [ { label: "العربية", name: ar, widget: text, required: false }, { label: "English", name: en, widget: text, required: false } ] }
+          - label: "المحطات / Milestones"
+            name: milestones
+            widget: list
+            fields:
+              - { label: "السنة / Year", name: year, widget: object, fields: *bi_string }
+              - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
+              - { label: "النص / Text", name: text, widget: object, fields: *bi_text }
+
+  # ---------------- library ----------------
+  - name: library
+    label: "المكتبة الرقمية / Library"
+    format: json
+    editor: { preview: false }
+    files:
+      - name: publications
+        label: "المنشورات / Publications"
+        file: src/content/publications.json
+        fields:
+          - label: "الإصدارات / Items"
+            name: items
+            widget: list
+            summary: "{{fields.date}}"
+            fields:
+              - { label: "النوع / Type", name: type, widget: select, options: [ { label: "دليل / Guide", value: guide }, { label: "دراسة / Study", value: study }, { label: "تقرير / Report", value: report } ] }
+              - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
+              - { label: "تاريخ الإصدار (YYYY-MM) / Date", name: date, widget: string, pattern: ['^\d{4}-\d{2}$', "YYYY-MM"] }
+              - { label: "ملف PDF / PDF file", name: file, widget: file, required: false }
+      - name: videos
+        label: "المقاطع / Videos"
+        file: src/content/videos.json
+        fields:
+          - label: "المقاطع / Items"
+            name: items
+            widget: list
+            fields:
+              - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
+              - { label: "المدة (mm:ss) / Duration", name: duration, widget: string }
+              - { label: "رابط المقطع (YouTube...) / Video URL", name: url, widget: string, required: false }
+              - { label: "صورة مصغرة / Thumbnail", name: thumbnail, widget: image, required: false }
+
+  # ---------------- events and training ----------------
+  - name: activities
+    label: "الفعاليات والتدريب / Events & training"
+    format: json
+    editor: { preview: false }
+    files:
+      - name: events
+        label: "الفعاليات والروزنامة / Events & calendar"
+        file: src/content/events.json
+        fields:
+          - label: "الفعاليات / Items"
+            name: items
+            widget: list
+            summary: "{{fields.date}} — {{fields.id}}"
+            fields:
+              - { label: "المعرّف (أحرف إنجليزية وشرطات) / ID (latin letters and dashes)", name: id, widget: string, pattern: ['^[a-z0-9-]+$', "a-z, 0-9, -"] }
+              - { label: "التاريخ / Date", name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - { label: "تاريخ الانتهاء (اختياري) / End date", name: endDate, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: false }
+              - { label: "النوع / Kind", name: kind, widget: select, options: [ { label: "فعالية / Event", value: event }, { label: "برنامج تدريبي / Training", value: training } ] }
+              - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
+              - { label: "العنوان المختصر في الروزنامة / Calendar label", name: calendarLabel, widget: object, fields: *bi_optional }
+              - { label: "المكان / Location", name: location, widget: object, fields: *bi_optional }
+              - { label: "طريقة الحضور / Attendance", name: mode, widget: select, options: [ { label: "حضوري / In person", value: in_person }, { label: "عن بُعد / Online", value: online } ] }
+              - { label: "فعالية سابقة / Past event", name: past, widget: boolean, default: false }
+              - { label: "تظهر في صفحة الفعاليات / Show in events list", name: listed, widget: boolean, default: true }
+              - { label: "رابط التسجيل المرئي (للفعاليات السابقة) / Recording URL", name: recording, widget: string, required: false }
+      - name: programs
+        label: "البرامج المفتوحة / Open programs"
+        file: src/content/programs.json
+        fields:
+          - label: "البرامج / Items"
+            name: items
+            widget: list
+            summary: "{{fields.date}} — {{fields.id}}"
+            fields:
+              - { label: "المعرّف / ID", name: id, widget: string, pattern: ['^[a-z0-9-]+$', "a-z, 0-9, -"] }
+              - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
+              - { label: "تاريخ البدء / Start date", name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - { label: "المدة / Duration", name: duration, widget: object, fields: *bi_string }
+              - { label: "المكان / Venue", name: venue, widget: object, fields: *bi_string }
+              - { label: "اللغة / Language", name: language, widget: object, fields: *bi_string }
+              - { label: "حالة التسجيل / Status", name: status, widget: select, options: [ { label: "متاح / Open", value: open }, { label: "مقاعد محدودة / Limited", value: limited }, { label: "مكتمل / Full", value: full } ] }
+      - name: custom
+        label: "البرامج حسب الطلب / Custom programs"
+        file: src/content/custom-program.json
+        fields:
+          - { label: "العنوان / Heading", name: heading, widget: object, fields: *bi_string }
+          - { label: "النص / Text", name: text, widget: object, fields: *bi_text }
+          - { label: "كيف نعمل / Steps", name: steps, widget: list, fields: *steps }
+          - { label: "مجالات البرنامج في النموذج / Form: program areas", name: areas, widget: list, fields: *bi_string }
+          - { label: "تلميح حقل الاحتياج / Form: need hint", name: hint, widget: object, fields: *bi_string }
+          - label: "معلومات سريعة / Quick facts"
+            name: facts
+            widget: object
+            fields:
+              - { label: "المدة / Duration", name: duration, widget: object, fields: *bi_string }
+              - { label: "المكان / Venue", name: venue, widget: object, fields: *bi_string }
+              - { label: "اللغة / Language", name: language, widget: object, fields: *bi_string }

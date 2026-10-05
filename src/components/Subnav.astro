@@ -1,0 +1,8 @@
+---
+import { type Lang, type Section, t, href, L } from '../lib/site';
+interface Props { lang: Lang; section: Section; current?: string }
+const { lang, section, current } = Astro.props;
+---
+<nav class="subnav" aria-label={t(lang, 'pagesOf', { t: L(section.title, lang) })}><div class="wrap"><ul>
+  {section.pages.map((p) => <li><a href={href(lang, `${section.id}-${p.slug}`)} aria-current={`${section.id}-${p.slug}` === current ? 'page' : undefined}>{L(p.title, lang)}</a></li>)}
+</ul></div></nav>

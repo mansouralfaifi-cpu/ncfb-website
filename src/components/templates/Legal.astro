@@ -1,0 +1,7 @@
+---
+import { type Lang, L } from '../../lib/site';
+interface Props { lang: Lang; body: any }
+const { lang, body } = Astro.props;
+const paras = L(body, lang).split(/\n\s*\n/).filter(Boolean);
+---
+<section class="sec"><div class="wrap prose">{paras.map((p) => <p>{p}</p>)}</div></section>

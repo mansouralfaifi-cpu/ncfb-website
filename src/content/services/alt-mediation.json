@@ -1,0 +1,81 @@
+{
+  "id": "alt-mediation",
+  "lead": {
+    "ar": "وساطة محايدة وسرية تساعد أفراد العائلة على الوصول إلى تسوية تحفظ المنشأة والعلاقة، قبل اللجوء إلى القضاء.",
+    "en": "Neutral, confidential mediation that helps family members reach a settlement that protects the business and the relationship, before going to court."
+  },
+  "gets": [
+    {
+      "ar": "وسيط معتمد محايد",
+      "en": "A neutral accredited mediator"
+    },
+    {
+      "ar": "جلسات منفردة ومشتركة في سرية تامة",
+      "en": "Separate and joint sessions in full confidence"
+    },
+    {
+      "ar": "اتفاق تسوية مكتوب",
+      "en": "A written settlement agreement"
+    }
+  ],
+  "steps": [
+    {
+      "title": {
+        "ar": "الطلب",
+        "en": "Request"
+      },
+      "text": {
+        "ar": "تقديم الطلب وموافقة الأطراف.",
+        "en": "Submitting the request and agreement of all parties."
+      }
+    },
+    {
+      "title": {
+        "ar": "الجلسات المنفردة",
+        "en": "Separate sessions"
+      },
+      "text": {
+        "ar": "فهم موقف كل طرف.",
+        "en": "Understanding each party's position."
+      }
+    },
+    {
+      "title": {
+        "ar": "الجلسات المشتركة",
+        "en": "Joint sessions"
+      },
+      "text": {
+        "ar": "التفاوض بإدارة الوسيط.",
+        "en": "Negotiation led by the mediator."
+      }
+    },
+    {
+      "title": {
+        "ar": "الاتفاق",
+        "en": "Agreement"
+      },
+      "text": {
+        "ar": "صياغة اتفاق التسوية.",
+        "en": "Drafting the settlement agreement."
+      }
+    }
+  ],
+  "audience": [
+    {
+      "ar": "خلافات بين الشركاء من العائلة",
+      "en": "Disputes between family partners"
+    },
+    {
+      "ar": "خلافات حول الإدارة أو توزيع الأرباح",
+      "en": "Disputes over management or profit distribution"
+    }
+  ],
+  "duration": {
+    "ar": "حسب الحالة",
+    "en": "Case by case"
+  },
+  "format": {
+    "ar": "حضوري",
+    "en": "In person"
+  }
+}

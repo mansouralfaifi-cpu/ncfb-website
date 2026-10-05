@@ -1,0 +1,458 @@
+{
+  "siteName": {
+    "ar": "المركز الوطني للمنشآت العائلية",
+    "en": "National Center for Family Businesses"
+  },
+  "homeAria": {
+    "ar": "المركز الوطني للمنشآت العائلية، الصفحة الرئيسية",
+    "en": "National Center for Family Businesses, home page"
+  },
+  "logoAlt": {
+    "ar": "شعار المركز الوطني للمنشآت العائلية",
+    "en": "National Center for Family Businesses logo"
+  },
+  "skip": {
+    "ar": "تخطَّ إلى المحتوى",
+    "en": "Skip to content"
+  },
+  "home": {
+    "ar": "الرئيسية",
+    "en": "Home"
+  },
+  "menu": {
+    "ar": "القائمة",
+    "en": "Menu"
+  },
+  "mainNav": {
+    "ar": "القائمة الرئيسية",
+    "en": "Main menu"
+  },
+  "contact": {
+    "ar": "تواصل معنا",
+    "en": "Contact us"
+  },
+  "overview": {
+    "ar": "نظرة عامة",
+    "en": "Overview"
+  },
+  "details": {
+    "ar": "التفاصيل",
+    "en": "Details"
+  },
+  "breadcrumb": {
+    "ar": "مسار التنقل",
+    "en": "Breadcrumb"
+  },
+  "questionText": {
+    "ar": "فريق المركز يوجّهك إلى الصفحة أو الخدمة المناسبة.",
+    "en": "The Center's team will direct you to the right page or service."
+  },
+  "placeholder": {
+    "ar": "صورة نائبة",
+    "en": "Placeholder image"
+  },
+  "memberPhoto": {
+    "ar": "صورة العضو",
+    "en": "Member photo"
+  },
+  "ceo": {
+    "ar": "الرئيس التنفيذي",
+    "en": "CEO"
+  },
+  "ceoPhoto": {
+    "ar": "صورة الرئيس التنفيذي",
+    "en": "CEO photo"
+  },
+  "ceoPhotoHint": {
+    "ar": "صورة رسمية بخلفية محايدة",
+    "en": "Official portrait on a neutral background"
+  },
+  "bio": {
+    "ar": "السيرة",
+    "en": "Biography"
+  },
+  "filterPubs": {
+    "ar": "تصفية المنشورات",
+    "en": "Filter publications"
+  },
+  "all": {
+    "ar": "الكل",
+    "en": "All"
+  },
+  "guide": {
+    "ar": "دليل",
+    "en": "Guide"
+  },
+  "study": {
+    "ar": "دراسة",
+    "en": "Study"
+  },
+  "report": {
+    "ar": "تقرير",
+    "en": "Report"
+  },
+  "download": {
+    "ar": "تحميل",
+    "en": "Download"
+  },
+  "downloadPdf": {
+    "ar": "تحميل PDF",
+    "en": "Download PDF"
+  },
+  "prevMonth": {
+    "ar": "الشهر السابق",
+    "en": "Previous month"
+  },
+  "nextMonth": {
+    "ar": "الشهر التالي",
+    "en": "Next month"
+  },
+  "legendEvent": {
+    "ar": "فعالية",
+    "en": "Event"
+  },
+  "legendTraining": {
+    "ar": "برنامج تدريبي",
+    "en": "Training program"
+  },
+  "thisMonth": {
+    "ar": "في هذا الشهر",
+    "en": "This month"
+  },
+  "upcoming": {
+    "ar": "القادمة",
+    "en": "Upcoming"
+  },
+  "past": {
+    "ar": "السابقة",
+    "en": "Past"
+  },
+  "register": {
+    "ar": "سجّل حضورك",
+    "en": "Register"
+  },
+  "watch": {
+    "ar": "شاهد التسجيل",
+    "en": "Watch the recording"
+  },
+  "open": {
+    "ar": "متاح",
+    "en": "Open"
+  },
+  "limited": {
+    "ar": "مقاعد محدودة",
+    "en": "Limited seats"
+  },
+  "full": {
+    "ar": "مكتمل",
+    "en": "Full"
+  },
+  "registerNow": {
+    "ar": "سجّل الآن",
+    "en": "Register now"
+  },
+  "programDetails": {
+    "ar": "تفاصيل البرنامج",
+    "en": "Program details"
+  },
+  "regClosed": {
+    "ar": "اكتمل التسجيل",
+    "en": "Registration closed"
+  },
+  "whatYouGet": {
+    "ar": "ما تحصل عليه",
+    "en": "What you get"
+  },
+  "stages": {
+    "ar": "مراحل العمل",
+    "en": "How it works"
+  },
+  "whoFor": {
+    "ar": "لمن هذه الخدمة",
+    "en": "Who this service is for"
+  },
+  "duration": {
+    "ar": "المدة",
+    "en": "Duration"
+  },
+  "format": {
+    "ar": "طريقة التقديم",
+    "en": "Format"
+  },
+  "section": {
+    "ar": "القسم",
+    "en": "Section"
+  },
+  "requestService": {
+    "ar": "اطلب الخدمة",
+    "en": "Request this service"
+  },
+  "otherServices": {
+    "ar": "خدمات أخرى في القسم",
+    "en": "Other services in this section"
+  },
+  "howWeWork": {
+    "ar": "كيف نعمل",
+    "en": "How we work"
+  },
+  "requestProgram": {
+    "ar": "اطلب برنامجاً",
+    "en": "Request a program"
+  },
+  "quickFacts": {
+    "ar": "معلومات سريعة",
+    "en": "Quick facts"
+  },
+  "venue": {
+    "ar": "المكان",
+    "en": "Venue"
+  },
+  "language": {
+    "ar": "اللغة",
+    "en": "Language"
+  },
+  "browseOpen": {
+    "ar": "تصفّح البرامج المفتوحة",
+    "en": "Browse open programs"
+  },
+  "orgName": {
+    "ar": "اسم المنشأة أو العائلة",
+    "en": "Business or family name"
+  },
+  "applicant": {
+    "ar": "اسم مقدم الطلب",
+    "en": "Your name"
+  },
+  "email": {
+    "ar": "البريد الإلكتروني",
+    "en": "Email"
+  },
+  "participants": {
+    "ar": "عدد المشاركين المتوقع",
+    "en": "Expected number of participants"
+  },
+  "area": {
+    "ar": "مجال البرنامج",
+    "en": "Program area"
+  },
+  "describe": {
+    "ar": "صف احتياجك",
+    "en": "Describe your need"
+  },
+  "send": {
+    "ar": "أرسل الطلب",
+    "en": "Send request"
+  },
+  "privacy": {
+    "ar": "سياسة الخصوصية",
+    "en": "Privacy policy"
+  },
+  "terms": {
+    "ar": "الشروط والأحكام",
+    "en": "Terms and conditions"
+  },
+  "eventReg": {
+    "ar": "التسجيل في فعالية",
+    "en": "Event registration"
+  },
+  "eventRegDesc": {
+    "ar": "سجّل حضورك في إحدى فعاليات المركز القادمة.",
+    "en": "Register to attend one of the Center's upcoming events."
+  },
+  "programReg": {
+    "ar": "التسجيل في برنامج تدريبي",
+    "en": "Program registration"
+  },
+  "programRegDesc": {
+    "ar": "سجّل في أحد البرامج المفتوحة بمواعيدها المعلنة.",
+    "en": "Register for one of the scheduled open programs."
+  },
+  "event": {
+    "ar": "الفعالية",
+    "en": "Event"
+  },
+  "program": {
+    "ar": "البرنامج",
+    "en": "Program"
+  },
+  "fullName": {
+    "ar": "الاسم الكامل",
+    "en": "Full name"
+  },
+  "phone": {
+    "ar": "رقم الجوال",
+    "en": "Mobile number"
+  },
+  "organization": {
+    "ar": "المنشأة أو الجهة",
+    "en": "Business or organization"
+  },
+  "notes": {
+    "ar": "ملاحظات",
+    "en": "Notes"
+  },
+  "submitReg": {
+    "ar": "أرسل التسجيل",
+    "en": "Submit registration"
+  },
+  "regDetails": {
+    "ar": "بيانات التسجيل",
+    "en": "Registration details"
+  },
+  "contactDesc": {
+    "ar": "أرسل استفسارك أو طلب الخدمة، وسيتواصل معك فريق المركز.",
+    "en": "Send us your question or service request and the Center's team will get back to you."
+  },
+  "subject": {
+    "ar": "الموضوع",
+    "en": "Subject"
+  },
+  "general": {
+    "ar": "استفسار عام",
+    "en": "General enquiry"
+  },
+  "message": {
+    "ar": "رسالتك",
+    "en": "Your message"
+  },
+  "sendMessage": {
+    "ar": "أرسل الرسالة",
+    "en": "Send message"
+  },
+  "writeUs": {
+    "ar": "راسلنا",
+    "en": "Write to us"
+  },
+  "optional": {
+    "ar": "اختياري",
+    "en": "optional"
+  },
+  "choose": {
+    "ar": "اختر",
+    "en": "Choose"
+  },
+  "thanks": {
+    "ar": "شكراً لك",
+    "en": "Thank you"
+  },
+  "thanksDesc": {
+    "ar": "وصلنا ما أرسلته، وسيتواصل معك فريق المركز.",
+    "en": "We have received your submission and the Center's team will be in touch."
+  },
+  "received": {
+    "ar": "استلمنا طلبك",
+    "en": "We received your request"
+  },
+  "receivedText": {
+    "ar": "سيتواصل معك فريق المركز خلال يومي عمل.",
+    "en": "The Center's team will contact you within two working days."
+  },
+  "backHome": {
+    "ar": "العودة إلى الرئيسية",
+    "en": "Back to home"
+  },
+  "notFound": {
+    "ar": "الصفحة غير موجودة",
+    "en": "Page not found"
+  },
+  "notFoundText": {
+    "ar": "الرابط الذي فتحته غير موجود أو نُقل.",
+    "en": "The link you followed does not exist or has moved."
+  },
+  "pagesOf": {
+    "ar": "صفحات {t}",
+    "en": "{t} pages"
+  },
+  "questionAbout": {
+    "ar": "لديك سؤال عن {t}؟",
+    "en": "Have a question about {t}?"
+  },
+  "downloadOf": {
+    "ar": "تحميل {t}",
+    "en": "Download {t}"
+  },
+  "langSwitch": {
+    "ar": "English",
+    "en": "العربية"
+  },
+  "dows": {
+    "ar": [
+      "أحد",
+      "اثنين",
+      "ثلاثاء",
+      "أربعاء",
+      "خميس",
+      "جمعة",
+      "سبت"
+    ],
+    "en": [
+      "Sun",
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat"
+    ]
+  },
+  "monthsShort": {
+    "ar": [
+      "يناير",
+      "فبراير",
+      "مارس",
+      "أبريل",
+      "مايو",
+      "يونيو",
+      "يوليو",
+      "أغسطس",
+      "سبتمبر",
+      "أكتوبر",
+      "نوفمبر",
+      "ديسمبر"
+    ],
+    "en": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ]
+  },
+  "monthsLong": {
+    "ar": [
+      "يناير",
+      "فبراير",
+      "مارس",
+      "أبريل",
+      "مايو",
+      "يونيو",
+      "يوليو",
+      "أغسطس",
+      "سبتمبر",
+      "أكتوبر",
+      "نوفمبر",
+      "ديسمبر"
+    ],
+    "en": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ]
+  }
+}

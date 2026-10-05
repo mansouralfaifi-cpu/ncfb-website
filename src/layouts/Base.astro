@@ -1,0 +1,77 @@
+---
+import { getImage } from 'astro:assets';
+import '../styles/tokens.css';
+import '../styles/site.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { type Lang, t, href, otherLang, dirOf, settings, L } from '../lib/site';
+import heroPhoto from '../assets/photos/hero-riyadh.jpg';
+import mark from '../assets/mark.png';
+
+interface Props {
+  lang: Lang;
+  routeId: string;          // page id ('intro', 'home', 'about', 'about-board', ...)
+  title: string;            // page title (site name is appended)
+  description: string;
+  sectionId?: string;       // current section, for aria-current in the nav
+  intro?: boolean;          // opening page: hero only, no header/footer
+  noindex?: boolean;
+  altHref?: string | null;  // other-language URL (default: same page id); null = none
+}
+const { lang, routeId, title, description, sectionId, intro = false, noindex = false } = Astro.props;
+const siteName = L(settings.siteName, lang);
+const fullTitle = title && title !== siteName ? `${title} | ${siteName}` : siteName;
+const other = otherLang(lang);
+const altHref = Astro.props.altHref !== undefined ? Astro.props.altHref : href(other, routeId);
+const selfHref = Astro.url.pathname;
+const abs = (p: string) => new URL(p, Astro.site).href;
+const arHref = lang === 'ar' ? selfHref : altHref;
+const enHref = lang === 'en' ? selfHref : altHref;
+const og = await getImage({ src: heroPhoto, width: 1200, format: 'jpg' });
+const fav = await getImage({ src: mark, width: 64, format: 'png' });
+const favLarge = await getImage({ src: mark, width: 180, format: 'png' });
+---
+<!doctype html>
+<html lang={lang} dir={dirOf(lang)}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>{fullTitle}</title>
+  <meta name="description" content={description}>
+  {noindex && <meta name="robots" content="noindex">}
+  <link rel="canonical" href={abs(selfHref)}>
+  {!noindex && arHref && enHref && <>
+    <link rel="alternate" hreflang="ar" href={abs(arHref)}>
+    <link rel="alternate" hreflang="en" href={abs(enHref)}>
+    <link rel="alternate" hreflang="x-default" href={abs(arHref)}>
+  </>}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content={siteName}>
+  <meta property="og:title" content={fullTitle}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={abs(selfHref)}>
+  <meta property="og:image" content={abs(og.src)}>
+  <meta property="og:image:alt" content={t(lang, 'siteName')}>
+  <meta property="og:locale" content={lang === 'ar' ? 'ar_SA' : 'en_US'}>
+  <meta property="og:locale:alternate" content={lang === 'ar' ? 'en_US' : 'ar_SA'}>
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href={fav.src}>
+  <link rel="apple-touch-icon" href={favLarge.src}>
+  <link rel="sitemap" href="/sitemap-index.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&display=swap">
+  <script is:inline>
+    // Netlify Identity: invitation / password-recovery links land on the site root; hand them to the CMS.
+    if (/(invite|recovery|confirmation|email_change)_token=/.test(location.hash)) location.replace('/admin/' + location.hash);
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">{t(lang, 'skip')}</a>
+  <div class="site">
+    {!intro && <Header lang={lang} sectionId={sectionId} routeId={routeId} altHref={altHref} />}
+    <main id="main" tabindex="-1"><slot /></main>
+    {!intro && <Footer lang={lang} />}
+  </div>
+</body>
+</html>

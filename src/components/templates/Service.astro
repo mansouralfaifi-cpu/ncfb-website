@@ -1,0 +1,20 @@
+---
+import Icon from '../Icon.astro';
+import { type Lang, type Section, type SubPage, t, href, L, SERVICES } from '../../lib/site';
+interface Props { lang: Lang; section: Section; page: SubPage }
+const { lang, section, page } = Astro.props;
+const id = `${section.id}-${page.slug}`;
+const s = SERVICES[id];
+if (!s) throw new Error(`Missing service content: src/content/services/${id}.json`);
+---
+<section class="sec"><div class="wrap svc">
+  <div class="main">
+    <section><p class="lead">{L(s.lead, lang)}</p></section>
+    <section><h2 class="h3">{t(lang, 'whatYouGet')}</h2><ul class="checks">{s.gets.map((g: any) => <li><Icon name="check" /><span>{L(g, lang)}</span></li>)}</ul></section>
+    <section><h2 class="h3">{t(lang, 'stages')}</h2><ol class="steps">{s.steps.map((st: any) => <li><h3 class="h4">{L(st.title, lang)}</h3><p class="small muted">{L(st.text, lang)}</p></li>)}</ol></section>
+    <section><h2 class="h3">{t(lang, 'whoFor')}</h2><div class="tags">{s.audience.map((w: any) => <span class="badge">{L(w, lang)}</span>)}</div></section>
+  </div>
+  <aside class="aside"><h2 class="h4">{L(page.title, lang)}</h2><dl><div><dt>{t(lang, 'duration')}</dt><dd>{L(s.duration, lang)}</dd></div><div><dt>{t(lang, 'format')}</dt><dd>{L(s.format, lang)}</dd></div><div><dt>{t(lang, 'section')}</dt><dd>{L(section.title, lang)}</dd></div></dl>
+    <a class="btn btn-primary" href={`${href(lang, 'contact')}?service=${id}`}>{t(lang, 'requestService')}</a>
+    <div class="related"><span class="small muted">{t(lang, 'otherServices')}</span>{section.pages.filter((x) => x.slug !== page.slug).map((x) => <a href={href(lang, `${section.id}-${x.slug}`)}>{L(x.title, lang)}</a>)}</div></aside>
+</div></section>
