@@ -8,6 +8,8 @@ interface Props { lang: Lang; intro?: boolean }
 const { lang, intro = false } = Astro.props;
 const h = home.hero;
 const other = otherLang(lang);
+// decorative leaves for the animated intro (official 'leaf' motif): x/y from the end side, size, opacity, parallax depth, float delay
+const FX = `<div class="hero-fx" aria-hidden="true"><span class="lf lf-g" style="--x:6%;--y:20%;--s:76px;--o:0.95;--d:40;--dl:-0.0s"><i></i></span><span class="lf lf-m" style="--x:21%;--y:14%;--s:28px;--o:1;--d:70;--dl:-3.6s"><i></i></span><span class="lf lf-t" style="--x:27%;--y:38%;--s:44px;--o:0.85;--d:90;--dl:-6.3s"><i></i></span><span class="lf lf-m" style="--x:9%;--y:46%;--s:30px;--o:0.95;--d:110;--dl:-1.8s"><i></i></span><span class="lf lf-g" style="--x:37%;--y:24%;--s:16px;--o:1;--d:60;--dl:-5.4s"><i></i></span><span class="lf lf-g" style="--x:15%;--y:58%;--s:130px;--o:0.22;--d:20;--dl:-7.8s"><i></i></span><span class="lf lf-t" style="--x:40%;--y:52%;--s:22px;--o:0.9;--d:95;--dl:-0.9s"><i></i></span></div>`;
 ---
 <section class={`hero on-navy${intro ? ' intro' : ''}`}>
   {intro && <a class="intro-lang" href={href(other, 'intro')} lang={other} hreflang={other}>{t(lang, 'langSwitch')}</a>}
@@ -19,4 +21,10 @@ const other = otherLang(lang);
     <div class="cta-row"><a class="btn btn-primary" href={href(lang, 'consulting')}>{L(h.primary, lang)}</a><a class="btn btn-secondary" href={href(lang, intro ? 'home' : 'about')}>{L(h.secondary, lang)}</a></div>
   </div></div>
   <div class="hero-media"><Image src={heroPhoto} alt={L(h.imageAlt, lang)} widths={[480, 800, 1280, 1920]} sizes="100vw" loading="eager" fetchpriority="high" /></div>
+  {intro && <Fragment set:html={FX} />}
 </section>
+{intro && <script>
+  // intro hero: leaves follow the pointer (parallax); skipped when reduced motion is requested
+  const rm = matchMedia('(prefers-reduced-motion: reduce)'); let raf = 0;
+  document.addEventListener('pointermove', (e) => { if (rm.matches) return; const h = document.querySelector('.hero.intro') as HTMLElement | null; if (!h) return; cancelAnimationFrame(raf); raf = requestAnimationFrame(() => { const r = h.getBoundingClientRect(); h.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 2 - 1).toFixed(3)); h.style.setProperty('--my', ((e.clientY - r.top) / r.height * 2 - 1).toFixed(3)); }); }, { passive: true });
+</script>}

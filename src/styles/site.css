@@ -505,3 +505,27 @@ main:focus{outline:none}
 .page-hdr h1{display:flex;align-items:center;gap:.4em}
 .page-hdr h1::before{content:"";width:.55em;height:.55em;flex:none;background:var(--color-accent-fill);border-radius:38% 0 38% 0}
 .card:hover,.card:focus-within{border-color:var(--color-accent-line)}
+
+/* ---------- animated intro hero (v7, 2026-10-06): slow photo drift, floating leaves with pointer parallax, staged entrance ---------- */
+.hero.intro .hero-media img{animation:hero-drift 32s var(--easing-standard) infinite alternate;transform-origin:30% 70%}
+@keyframes hero-drift{from{transform:scale(1.02) translate3d(0,0,0)}to{transform:scale(1.14) translate3d(-2%,-1.5%,0)}}
+.hero-fx{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.hero.intro .wrap{z-index:1}
+.hero-fx .lf{position:absolute;inset-inline-end:var(--x);top:var(--y);width:var(--s);height:var(--s);opacity:var(--o);transform:translate3d(calc(var(--mx,0) * var(--d) * 1px),calc(var(--my,0) * var(--d) * .7px),0);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.hero-fx .lf i{display:block;width:100%;height:100%;border-radius:38% 0 38% 0;animation:leaf-float 9s ease-in-out infinite alternate;animation-delay:var(--dl)}
+.hero-fx .lf-g i{background:var(--color-accent-fill)}
+.hero-fx .lf-m i{background:var(--color-decor-mint)}
+.hero-fx .lf-t i{background:var(--color-decor-teal-soft)}
+@keyframes leaf-float{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-14px) rotate(6deg)}100%{transform:translateY(6px) rotate(-4deg)}}
+/* text side stays clear: leaves live on the photo side (end side on wide screens, bottom band on phones) */
+@container (max-width:1023px){.hero-fx .lf{top:auto;bottom:calc(var(--y) * .35);inset-inline-end:calc(100% - var(--x) * 2.2 - var(--s))}}
+.hero.intro .hero-copy > *{animation:hero-in .9s cubic-bezier(.2,.7,.2,1) both}
+.hero.intro .hero-copy > :nth-child(1){animation-delay:.05s}
+.hero.intro .hero-copy > :nth-child(2){animation-delay:.2s}
+.hero.intro .hero-copy > :nth-child(3){animation-delay:.35s}
+.hero.intro .hero-copy > :nth-child(4){animation-delay:.5s}
+.hero.intro .hero-copy > :nth-child(5){animation-delay:.65s}
+@keyframes hero-in{from{opacity:.001;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero.intro .hero-fx .lf{animation:leaf-in 1.4s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.4s + var(--d) * .006s)}
+@keyframes leaf-in{from{opacity:0;scale:.4}to{opacity:var(--o);scale:1}}
+@media (prefers-reduced-motion:reduce){.hero.intro .hero-media img,.hero-fx .lf i,.hero.intro .hero-copy > *,.hero.intro .hero-fx .lf{animation:none}.hero-fx .lf{transition:none;transform:none}}
