@@ -4,12 +4,14 @@ import ceo from '../../content/ceo.json';
 import { type Lang, t, L } from '../../lib/site';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
-const bio = L(ceo.bio, lang).split(/\n\s*\n/).filter(Boolean);
+const paras = (v: any) => L(v, lang).split(/\n\s*\n/).filter(Boolean);
+const bio = paras(ceo.bio), message = paras((ceo as any).message);
 ---
 <section class="sec"><div class="wrap profile">
   {ceo.photo ? <img class="photo" src={ceo.photo} alt={L(ceo.name, lang)} width="640" height="800" /> : <Ph lang={lang} title={t(lang, 'ceoPhoto')} sub={t(lang, 'ceoPhotoHint')} />}
   <div class="body"><span class="eyebrow">{t(lang, 'ceo')}</span><h2 class="h2">{L(ceo.name, lang)}</h2>
     <div class="quote"><p>{L(ceo.quote, lang)}</p></div>
+    {message.length > 0 && <><h3 class="h4">{t(lang, 'ceoMessage')}</h3>{message.map((p) => <p>{p}</p>)}</>}
     <h3 class="h4">{t(lang, 'bio')}</h3>{bio.map((p) => <p>{p}</p>)}
     {L(ceo.note, lang) && <p class="caption muted">{L(ceo.note, lang)}</p>}
   </div></div></section>

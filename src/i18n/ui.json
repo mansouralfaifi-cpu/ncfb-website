@@ -490,5 +490,9 @@
   "contactTeams": {
     "ar": "التواصل مع فرق المركز",
     "en": "Contact our teams"
+  },
+  "ceoMessage": {
+    "ar": "كلمة الرئيس التنفيذي",
+    "en": "CEO's message"
   }
 }
