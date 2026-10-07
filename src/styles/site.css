@@ -547,7 +547,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 
 /* ---------- page headers v9 (2026-10-07, owner): photo fills the whole header; navy scrim keeps white text at AA ---------- */
 .page-hdr{background:var(--color-primary-900)}
-.page-hdr .wrap{min-height:clamp(220px,32vw,340px);align-content:center}
+.page-hdr .wrap{min-height:clamp(280px,40vw,480px);align-content:center}
 .page-hdr::after{background:linear-gradient(to bottom,color-mix(in srgb,var(--color-primary-900) 70%,transparent),color-mix(in srgb,var(--color-primary-900) 62%,transparent))}
 @container (min-width:1024px){.page-hdr::after{background:linear-gradient(to left,color-mix(in srgb,var(--color-primary-900) 80%,transparent) 0%,color-mix(in srgb,var(--color-primary-900) 70%,transparent) 55%,color-mix(in srgb,var(--color-primary-900) 30%,transparent) 100%)}}
 .page-hdr h1{color:var(--color-neutral-0)}
