@@ -18,7 +18,7 @@ const crumbs: { label: string; href?: string }[] = [{ label: t(lang, 'home'), hr
 if (parent) crumbs.push({ label: L(parent.title, lang), href: href(lang, parent.id) });
 crumbs.push({ label: title });
 ---
-<section class={`page-hdr ph-${key}${key === 'kafd' || key === 'street' ? ' ph-tall' : ''}`}><Image class="bg" src={PHOTOS[key]} alt="" widths={widths} sizes="100vw" style={`object-position:${PHOTO_POS[key]}`} loading="eager" />
+<section class="page-hdr"><Image class="bg" src={PHOTOS[key]} alt="" widths={widths} sizes="100vw" style={`object-position:${PHOTO_POS[key]}`} loading="eager" />
   <div class="wrap"><nav aria-label={t(lang, 'breadcrumb')}><ol class="crumbs">
     {crumbs.map((c) => c.href ? <li><a href={c.href}>{c.label}</a></li> : <li aria-current="page">{c.label}</li>)}
   </ol></nav>

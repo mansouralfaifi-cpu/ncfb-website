@@ -557,9 +557,3 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .page-hdr .crumbs li+li::before{color:var(--color-primary-200)}
 .page-hdr .crumbs a:focus-visible{outline-color:var(--color-neutral-0)}
 @container (min-width:1024px){[dir="ltr"] .page-hdr::after{background:linear-gradient(to right,color-mix(in srgb,var(--color-primary-900) 80%,transparent) 0%,color-mix(in srgb,var(--color-primary-900) 70%,transparent) 55%,color-mix(in srgb,var(--color-primary-900) 30%,transparent) 100%)}}
-
-/* tall-tower photos (Al Faisaliah street, KAFD day): towers stay clear at the top; text sits on a darker lower band */
-.page-hdr.ph-tall .wrap{align-content:end}
-.page-hdr.ph-tall::after,[dir] .page-hdr.ph-tall::after{background:linear-gradient(to bottom,color-mix(in srgb,var(--color-primary-900) 10%,transparent) 0%,color-mix(in srgb,var(--color-primary-900) 35%,transparent) 18%,color-mix(in srgb,var(--color-primary-900) 88%,transparent) 36%,color-mix(in srgb,var(--color-primary-900) 90%,transparent) 100%)}
-@container (min-width:1024px){.page-hdr.ph-tall::after,[dir] .page-hdr.ph-tall::after{background:linear-gradient(to bottom,color-mix(in srgb,var(--color-primary-900) 10%,transparent) 0%,color-mix(in srgb,var(--color-primary-900) 40%,transparent) 32%,color-mix(in srgb,var(--color-primary-900) 86%,transparent) 52%,color-mix(in srgb,var(--color-primary-900) 90%,transparent) 100%)}}
-.page-hdr.ph-tall .wrap{min-height:clamp(400px,40vw,420px)}
