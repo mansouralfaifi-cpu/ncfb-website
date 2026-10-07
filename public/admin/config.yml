@@ -35,6 +35,13 @@ collections:
           - { label: "اسم المركز / Site name", name: siteName, widget: object, fields: &bi_string [ { label: "العربية", name: ar, widget: string }, { label: "English", name: en, widget: string } ] }
           - { label: "نبذة التذييل / Footer tagline", name: tagline, widget: object, fields: &bi_text [ { label: "العربية", name: ar, widget: text }, { label: "English", name: en, widget: text } ] }
           - { label: "البريد الإلكتروني للتواصل / Contact email", name: email, widget: string }
+          - label: "حسابات التواصل الاجتماعي / Social accounts"
+            name: social
+            widget: object
+            required: false
+            fields:
+              - { label: "رابط حساب X / X URL", name: x, widget: string, required: false }
+              - { label: "رابط لينكدإن / LinkedIn URL", name: linkedin, widget: string, required: false }
           - label: "بيانات التواصل لكل فريق / Team contacts"
             name: contacts
             widget: list

@@ -580,3 +580,14 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .contact-team h3{margin:0;color:var(--color-text);font-weight:var(--font-weight-semibold)}
 .contact-team a{justify-self:start;color:var(--color-text-link)}
 .contact-team a:hover{color:var(--color-text-link-hover)}
+/* Social links at the end of the navy nav bar (and in the mobile drawer) */
+.mainnav > .wrap{display:flex;align-items:center;gap:var(--space-2)}
+.social{display:flex;align-items:center;gap:var(--space-1);margin-inline-start:auto}
+.social a{display:inline-grid;place-items:center;width:var(--size-control-md,2.5rem);height:var(--size-control-md,2.5rem);border-radius:var(--radius-sm);color:var(--color-neutral-0);transition:color var(--duration-fast) var(--easing-standard)}
+.social a:hover{color:var(--color-text-gold-inverse)}
+.social a:focus-visible{outline:var(--focus-ring-width) solid var(--color-primary-300);outline-offset:0}
+.social svg{width:1.125rem;height:1.125rem}
+.social.on-light{margin-inline-start:0;padding-top:var(--space-2)}
+.social.on-light a{color:var(--color-primary-900);background:var(--color-bg-subtle)}
+.social.on-light a:hover{color:var(--color-text-accent)}
+@container (max-width:1199px){.mainnav .top-link{padding-inline:var(--space-1)}.social{gap:0}.social a{width:2rem;height:2rem}}

@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import Icon from './Icon.astro';
+import Social from './Social.astro';
 import logo from '../assets/logo.png';
 import { type Lang, t, href, L, SECTIONS, otherLang } from '../lib/site';
 interface Props { lang: Lang; sectionId?: string; routeId: string; altHref: string | null }
@@ -25,7 +26,7 @@ const other = otherLang(lang);
         </div>
       </li>
     ))}
-  </ul></div></nav>
+  </ul><Social lang={lang} /></div></nav>
   <div class="drawer" id="drawer" hidden><nav class="wrap" aria-label={t(lang, 'menu')}>
     <a class="home-link" href={href(lang, 'home')} aria-current={routeId === 'home' ? 'page' : undefined}>{t(lang, 'home')}</a>
     {SECTIONS.map((s) => (
@@ -41,6 +42,7 @@ const other = otherLang(lang);
       <a class="btn btn-primary" href={href(lang, 'contact')}>{t(lang, 'contact')}</a>
       {altHref && <a class="btn btn-secondary" href={altHref} lang={other} hreflang={other}>{t(lang, 'langSwitch')}</a>}
     </div>
+    <Social lang={lang} cls="social on-light" />
   </nav></div>
 </header>
 <script is:inline>
