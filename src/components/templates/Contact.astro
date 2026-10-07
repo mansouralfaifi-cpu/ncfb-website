@@ -18,7 +18,7 @@ const services = SECTIONS.flatMap((s) => s.pages.filter((p) => SERVICES[`${s.id}
       <div class="field"><label for="k5">{t(lang, 'message')}</label><textarea class="input" id="k5" name="message" required></textarea></div>
       <div><button class="btn btn-primary" type="submit">{t(lang, 'sendMessage')}</button></div>
     </form></section></div>
-  <aside class="aside"><h2 class="h4">{t(lang, 'contactTeams')}</h2>{(settings.contacts || []).map((c: any) => <div class="contact-team"><h3 class="small">{L(c.label, lang)}</h3><a dir="ltr" href={`mailto:${c.email}`}>{c.email}</a>{c.phone && <a dir="ltr" href={`tel:${c.phone}`}>{c.phone}</a>}</div>)}</aside>
+  <aside class="aside"><h2 class="h4">{t(lang, 'contactTeams')}</h2><div class="contact-team"><h3 class="small">{t(lang, 'generalEnquiries')}</h3><a dir="ltr" href={`mailto:${settings.email}`}>{settings.email}</a>{settings.emailAlt && <a dir="ltr" href={`mailto:${settings.emailAlt}`}>{settings.emailAlt}</a>}</div>{(settings.contacts || []).map((c: any) => <div class="contact-team"><h3 class="small">{L(c.label, lang)}</h3><a dir="ltr" href={`mailto:${c.email}`}>{c.email}</a>{c.phone && <a dir="ltr" href={`tel:${c.phone}`}>{c.phone}</a>}</div>)}</aside>
 </div></section>
 <script is:inline>
 (function () {

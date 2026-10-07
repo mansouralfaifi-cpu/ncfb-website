@@ -17,7 +17,15 @@ if (extra.length) groups.push(extra);
     <div class="about">
       <span class="plate" style="justify-self:start"><Image src={logo} alt={L(settings.siteName, lang)} width={176} densities={[1, 2]} format="png" /></span>
       <p>{L(settings.tagline, lang)}</p>
-      <p class="ltr" style="text-align:start"><a href={`mailto:${settings.email}`}>{settings.email}</a></p>
+      <p class="ftr-mail"><a dir="ltr" href={`mailto:${settings.email}`}>{settings.email}</a>{settings.emailAlt && <a dir="ltr" href={`mailto:${settings.emailAlt}`}>{settings.emailAlt}</a>}</p>
+      {settings.newsletter && <form class="newsletter" name="newsletter" method="POST" action={href(lang, 'thanks')} data-netlify="true" netlify-honeypot="bot-field" aria-labelledby="nl-title">
+        <input type="hidden" name="form-name" value="newsletter" />
+        <input type="hidden" name="language" value={lang} />
+        <p hidden><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+        <h4 id="nl-title">{L(settings.newsletter.title, lang)}</h4>
+        <p>{L(settings.newsletter.text, lang)}</p>
+        <div class="nl-row"><label class="sr-only" for="nl-email">{t(lang, 'email')}</label><input class="input" id="nl-email" name="email" type="email" dir="ltr" autocomplete="email" placeholder="name@example.com" required /><button class="btn btn-primary" type="submit">{L(settings.newsletter.button, lang)}</button></div>
+      </form>}
     </div>
     {groups.map((g) => (
       <div style="display:grid;gap:var(--space-3);align-content:start">

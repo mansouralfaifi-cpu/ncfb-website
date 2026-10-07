@@ -494,5 +494,9 @@
   "ceoMessage": {
     "ar": "كلمة الرئيس التنفيذي",
     "en": "CEO's message"
+  },
+  "generalEnquiries": {
+    "ar": "الاستفسارات العامة",
+    "en": "General enquiries"
   }
 }

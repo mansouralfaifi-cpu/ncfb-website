@@ -121,6 +121,56 @@
     },
     "count": 2
   },
+  "partners": {
+    "heading": {
+      "ar": "شركاؤنا في النجاح",
+      "en": "Our partners in success"
+    },
+    "items": [
+      {
+        "name": {
+          "ar": "وزارة التجارة",
+          "en": "Ministry of Commerce"
+        },
+        "logo": ""
+      },
+      {
+        "name": {
+          "ar": "المركز الوطني للتنافسية",
+          "en": "National Competitiveness Center"
+        },
+        "logo": ""
+      },
+      {
+        "name": {
+          "ar": "منشآت",
+          "en": "Monsha'at"
+        },
+        "logo": ""
+      },
+      {
+        "name": {
+          "ar": "الغرفة التجارية",
+          "en": "Chamber of Commerce"
+        },
+        "logo": ""
+      },
+      {
+        "name": {
+          "ar": "هيئة السوق المالية",
+          "en": "Capital Market Authority"
+        },
+        "logo": ""
+      },
+      {
+        "name": {
+          "ar": "صندوق التنمية الوطني",
+          "en": "National Development Fund"
+        },
+        "logo": ""
+      }
+    ]
+  },
   "band": {
     "title": {
       "ar": "ابدأ بتحليل الوضع الراهن لمنشأتك",

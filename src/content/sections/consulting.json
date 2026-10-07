@@ -94,5 +94,57 @@
         "en": "family businesses in the transformation program"
       }
     }
+  ],
+  "steps": [
+    {
+      "title": {
+        "ar": "طلب الجلسة",
+        "en": "Request a session"
+      },
+      "text": {
+        "ar": "تعبئة نموذج طلب الاستشارة.",
+        "en": "Fill in the consultation request form."
+      }
+    },
+    {
+      "title": {
+        "ar": "دراسة الاحتياج",
+        "en": "Needs study"
+      },
+      "text": {
+        "ar": "تحليل احتياج المنشأة وتحديد النطاق.",
+        "en": "Analysing the business's needs and defining the scope."
+      }
+    },
+    {
+      "title": {
+        "ar": "التشخيص",
+        "en": "Diagnosis"
+      },
+      "text": {
+        "ar": "تقييم الوضع الراهن وفق منهجية كمية.",
+        "en": "Assessing the current situation with a quantitative methodology."
+      }
+    },
+    {
+      "title": {
+        "ar": "تقديم التوصيات",
+        "en": "Recommendations"
+      },
+      "text": {
+        "ar": "خطة عمل وتوصيات قابلة للتطبيق.",
+        "en": "An action plan with practical recommendations."
+      }
+    },
+    {
+      "title": {
+        "ar": "التقييم والمتابعة",
+        "en": "Evaluation and follow-up"
+      },
+      "text": {
+        "ar": "متابعة التنفيذ وقياس الأثر.",
+        "en": "Following up on implementation and measuring impact."
+      }
+    }
   ]
 }

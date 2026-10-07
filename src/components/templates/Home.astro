@@ -42,7 +42,8 @@ const features = [{ s: alt, cls: 'feature navy on-navy' }, { s: training, cls: '
   <div class="sec-head"><div><span class="eyebrow">{L(evSec.title, lang)}</span><h2 class="h2">{L(home.events.heading, lang)}</h2></div><a class="btn btn-text" href={href(lang, 'events-calendar')}>{L(evSec.pages.find((p) => p.slug === 'calendar')?.title, lang)}<Icon name={arrow} /></a></div>
   <div class="cards">{upcoming.map((ev) => <EventCard lang={lang} ev={ev} />)}</div>
 </div></section>
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="band on-navy">
+{home.partners?.items?.length > 0 && <section class="sec alt"><div class="wrap" style="display:grid;gap:var(--space-3)"><h2 class="h3">{L(home.partners.heading, lang)}</h2><ul class="partners">{home.partners.items.map((p: any) => <li>{p.logo ? <img src={p.logo} alt={L(p.name, lang)} loading="lazy" /> : <span>{L(p.name, lang)}</span>}</li>)}</ul></div></section>}
+<section class="sec" style={home.partners?.items?.length ? undefined : 'padding-top:0'}><div class="wrap"><div class="band on-navy">
   <div style="display:grid;gap:var(--space-1)"><h2 class="h3">{L(home.band.title, lang)}</h2><p>{L(home.band.text, lang)}</p></div>
   <div class="cta-row"><a class="btn btn-primary" href={href(lang, home.band.target)}>{L(home.band.button, lang)}</a></div>
 </div></div></section>

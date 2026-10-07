@@ -7,7 +7,7 @@
     "ar": "المرجع الوطني لاستدامة المنشآت العائلية وانتقالها بين الأجيال.",
     "en": "The national reference for the sustainability of family businesses and their transition across generations."
   },
-  "email": "info@example.sa",
+  "email": "info@ncfb.org.sa",
   "social": {
     "x": "https://x.com/ncfbksa",
     "youtube": "https://www.youtube.com/channel/UCZFnZ65etSxJbJofpONbiGQ",
@@ -50,5 +50,20 @@
       "email": "adr@ncfb.org.sa",
       "phone": "0112182294"
     }
-  ]
+  ],
+  "emailAlt": "info@ncfb.info",
+  "newsletter": {
+    "title": {
+      "ar": "النشرة البريدية",
+      "en": "Newsletter"
+    },
+    "text": {
+      "ar": "اشترك ليصلك كل جديد",
+      "en": "Subscribe to receive our latest updates"
+    },
+    "button": {
+      "ar": "اشترك الآن",
+      "en": "Subscribe"
+    }
+  }
 }

@@ -592,3 +592,17 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .social.on-light a:hover{color:var(--color-text-accent)}
 @container (max-width:1279px){.mainnav .top-link{padding-inline:var(--space-1)}.social{gap:0}.social a{width:2rem;height:2rem}}
 @container (max-width:1099px){.mainnav > .wrap > ul{gap:0}.social a{width:1.75rem;height:1.75rem}.social svg{width:1rem;height:1rem}}
+/* Partners strip (home): names as text until official logos arrive */
+.partners{list-style:none;margin:0;padding:0;display:grid;gap:var(--space-2);grid-template-columns:repeat(auto-fill,minmax(10rem,1fr))}
+.partners li{display:grid;place-items:center;min-height:5.5rem;padding:var(--space-2);background:var(--color-surface-raised);border:var(--border-width-1) solid var(--color-border);border-radius:var(--radius-md);text-align:center;font-weight:var(--font-weight-semibold);color:var(--color-primary-900)}
+.partners img{max-height:3.5rem;max-width:100%;object-fit:contain}
+/* Five-step process */
+@container (min-width:1024px){.steps[data-n="5"]{grid-template-columns:repeat(5,minmax(0,1fr))}}
+/* Footer emails + newsletter */
+.ftr-mail{display:grid;gap:var(--space-1);justify-items:start}
+.newsletter{display:grid;gap:var(--space-1);margin-top:var(--space-2)}
+.newsletter h4{margin:0}
+.newsletter p{margin:0}
+.newsletter .nl-row{display:flex;gap:var(--space-1);flex-wrap:wrap}
+.newsletter .input{flex:1 1 12rem;min-width:0;background:var(--color-neutral-0);color:var(--color-neutral-900)}
+.newsletter .btn{flex:0 0 auto}

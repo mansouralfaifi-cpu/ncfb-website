@@ -35,6 +35,15 @@ collections:
           - { label: "اسم المركز / Site name", name: siteName, widget: object, fields: &bi_string [ { label: "العربية", name: ar, widget: string }, { label: "English", name: en, widget: string } ] }
           - { label: "نبذة التذييل / Footer tagline", name: tagline, widget: object, fields: &bi_text [ { label: "العربية", name: ar, widget: text }, { label: "English", name: en, widget: text } ] }
           - { label: "البريد الإلكتروني للتواصل / Contact email", name: email, widget: string }
+          - { label: "بريد إضافي (اختياري) / Second email (optional)", name: emailAlt, widget: string, required: false }
+          - label: "النشرة البريدية / Newsletter"
+            name: newsletter
+            widget: object
+            required: false
+            fields:
+              - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
+              - { label: "النص / Text", name: text, widget: object, fields: *bi_string }
+              - { label: "الزر / Button", name: button, widget: object, fields: *bi_string }
           - label: "حسابات التواصل الاجتماعي / Social accounts"
             name: social
             widget: object
@@ -109,6 +118,19 @@ collections:
             fields:
               - { label: "العنوان / Heading", name: heading, widget: object, fields: *bi_string }
               - { label: "عدد الفعاليات المعروضة / Items shown", name: count, widget: number, value_type: int, min: 1, max: 6 }
+          - label: "الشركاء / Partners"
+            name: partners
+            widget: object
+            required: false
+            fields:
+              - { label: "العنوان / Heading", name: heading, widget: object, fields: *bi_string }
+              - label: "الشركاء / Partners"
+                name: items
+                widget: list
+                summary: "{{fields.name.ar}}"
+                fields:
+                  - { label: "الاسم / Name", name: name, widget: object, fields: *bi_string }
+                  - { label: "الشعار (اختياري؛ يظهر الاسم نصاً بدونه) / Logo (optional)", name: logo, widget: image, required: false }
           - label: "شريط الدعوة / Call-to-action band"
             name: band
             widget: object
@@ -145,6 +167,14 @@ collections:
         fields: *stat_fields
       - label: "فقرات القسم (اختياري) / Text blocks (optional)"
         name: blocks
+        widget: list
+        required: false
+        summary: "{{fields.title.ar}}"
+        fields:
+          - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
+          - { label: "النص / Text", name: text, widget: object, fields: *bi_text }
+      - label: "مراحل العمل (اختياري) / Process steps (optional)"
+        name: steps
         widget: list
         required: false
         summary: "{{fields.title.ar}}"
