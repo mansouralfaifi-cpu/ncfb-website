@@ -4,13 +4,14 @@ import { type Lang, type Section, t, href, L, PHOTO_POS } from '../lib/site';
 import kafd from '../assets/photos/hdr-kafd-day.jpg';
 import kingdom from '../assets/photos/hdr-kingdom.jpg';
 import street from '../assets/photos/hdr-street.jpg';
+import kafdDusk from '../assets/photos/hdr-kafd-dusk.jpg';
 interface Props {
   lang: Lang; title: string; lead: string;
   photoOf?: Section;  // section whose header photo is used (default photo: kafd)
   parent?: Section;   // set on sub-pages: adds the section to the breadcrumb
 }
 const { lang, title, lead, photoOf, parent } = Astro.props;
-const PHOTOS = { kafd, kingdom, street } as const;
+const PHOTOS = { kafd, kafdDusk, kingdom, street } as const;
 const key = (photoOf?.photo && photoOf.photo in PHOTOS ? photoOf.photo : 'kafd') as keyof typeof PHOTOS;
 const widths = [480, 900, 1400].filter((w) => w < PHOTOS[key].width).concat(Math.min(PHOTOS[key].width, 1400));
 const crumbs: { label: string; href?: string }[] = [{ label: t(lang, 'home'), href: href(lang, 'home') }];
