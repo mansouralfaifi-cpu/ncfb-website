@@ -544,3 +544,16 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .svc-head p{color:var(--color-text-muted);max-width:32em;margin:0}
 .svc-head .btn{justify-self:start}
 @container (min-width:1024px){.svc-row{grid-template-columns:minmax(0,1fr) minmax(0,2.4fr);align-items:start}.svc-head{position:sticky;top:var(--space-10)}.svc-row .sub-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* ---------- page headers v9 (2026-10-07, owner): photo fills the whole header; navy scrim keeps white text at AA ---------- */
+.page-hdr{background:var(--color-primary-900)}
+.page-hdr .wrap{min-height:clamp(220px,32vw,340px);align-content:center}
+.page-hdr::after{background:linear-gradient(to bottom,color-mix(in srgb,var(--color-primary-900) 70%,transparent),color-mix(in srgb,var(--color-primary-900) 62%,transparent))}
+@container (min-width:1024px){.page-hdr::after{background:linear-gradient(to left,color-mix(in srgb,var(--color-primary-900) 80%,transparent) 0%,color-mix(in srgb,var(--color-primary-900) 70%,transparent) 55%,color-mix(in srgb,var(--color-primary-900) 30%,transparent) 100%)}}
+.page-hdr h1{color:var(--color-neutral-0)}
+.page-hdr .lead{color:var(--color-primary-50)}
+.page-hdr .crumbs{color:var(--color-primary-100)}
+.page-hdr .crumbs a{color:var(--color-neutral-0)}
+.page-hdr .crumbs li+li::before{color:var(--color-primary-200)}
+.page-hdr .crumbs a:focus-visible{outline-color:var(--color-neutral-0)}
+@container (min-width:1024px){[dir="ltr"] .page-hdr::after{background:linear-gradient(to right,color-mix(in srgb,var(--color-primary-900) 80%,transparent) 0%,color-mix(in srgb,var(--color-primary-900) 70%,transparent) 55%,color-mix(in srgb,var(--color-primary-900) 30%,transparent) 100%)}}
