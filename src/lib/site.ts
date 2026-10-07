@@ -8,7 +8,7 @@ export type Bi = { ar: string; en: string };
 export const LANGS: Lang[] = ['ar', 'en'];
 
 export interface SubPage { slug: string; title: Bi; icon: string; description: Bi; template: string }
-export interface Section { id: string; order: number; title: Bi; icon: string; intro: Bi; photo: 'kafd' | 'kafdDusk' | 'riyadhDusk' | 'riyadhSkyline' | 'kingdom' | 'street'; pages: SubPage[] }
+export interface Section { id: string; order: number; title: Bi; icon: string; intro: Bi; photo: 'kafd' | 'kafdDusk' | 'riyadhDusk' | 'riyadhSkyline' | 'kafdSunset' | 'kingdom' | 'street'; pages: SubPage[] }
 
 const sectionFiles = import.meta.glob<Section>('../content/sections/*.json', { eager: true, import: 'default' });
 export const SECTIONS: Section[] = Object.values(sectionFiles).sort((a, b) => a.order - b.order);
@@ -75,7 +75,7 @@ export const dirOf = (lang: Lang) => (lang === 'ar' ? 'rtl' : 'ltr');
 /** Arrow that points "forward" in the reading direction. */
 export const arrowIcon = (lang: Lang) => (lang === 'ar' ? 'arrow-left' : 'arrow-right');
 
-export const PHOTO_POS: Record<string, string> = { kafd: '50% 66%', kafdDusk: '62% 26%', riyadhDusk: '50% 40%', riyadhSkyline: '50% 45%', kingdom: '50% 78%', street: '50% 50%' };
+export const PHOTO_POS: Record<string, string> = { kafd: '50% 66%', kafdDusk: '62% 26%', riyadhDusk: '50% 40%', riyadhSkyline: '50% 45%', kafdSunset: '50% 25%', kingdom: '50% 78%', street: '50% 50%' };
 
 /** Title + description for a route (used for <title>, meta and Open Graph). */
 export function routeMeta(lang: Lang, r: Route): { title: string; description: string } {

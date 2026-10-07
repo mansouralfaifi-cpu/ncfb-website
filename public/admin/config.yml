@@ -105,7 +105,7 @@ collections:
       - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
       - { label: "الأيقونة (اسم Lucide) / Icon (Lucide name)", name: icon, widget: string }
       - { label: "المقدمة / Intro", name: intro, widget: object, fields: *bi_text }
-      - { label: "صورة رأس الصفحة / Header photo", name: photo, widget: select, options: [ { label: "KAFD (day)", value: kafd }, { label: "KAFD (dusk)", value: kafdDusk }, { label: "Riyadh (dusk, Faisaliah)", value: riyadhDusk }, { label: "Riyadh skyline (Faisaliah + Kingdom)", value: riyadhSkyline }, { label: "Kingdom Centre", value: kingdom }, { label: "Riyadh street", value: street } ] }
+      - { label: "صورة رأس الصفحة / Header photo", name: photo, widget: select, options: [ { label: "KAFD (day)", value: kafd }, { label: "KAFD (dusk)", value: kafdDusk }, { label: "Riyadh (dusk, Faisaliah)", value: riyadhDusk }, { label: "Riyadh skyline (Faisaliah + Kingdom)", value: riyadhSkyline }, { label: "KAFD (sunset)", value: kafdSunset }, { label: "Kingdom Centre", value: kingdom }, { label: "Riyadh street", value: street } ] }
       - label: "صفحات القسم / Sub-pages"
         name: pages
         widget: list
