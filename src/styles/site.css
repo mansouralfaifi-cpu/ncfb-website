@@ -47,7 +47,7 @@ p{margin:0;max-width:var(--measure)}
 .plate{background:var(--color-neutral-0);padding:var(--space-1) var(--space-2);border-radius:var(--radius-sm);display:inline-grid}
 
 /* ---------- header ---------- */
-.hdr{background:var(--color-surface-raised);border-bottom:var(--border-width-1) solid var(--color-border);position:relative;z-index:var(--z-dropdown)}
+.hdr{background:var(--color-surface-raised);position:relative;z-index:var(--z-dropdown)}
 .hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);min-height:var(--size-header)}
 .brand{display:inline-grid;border-radius:var(--radius-sm);background:var(--color-neutral-0);padding:var(--space-half) var(--space-1)}
 .brand:focus-visible{outline:var(--focus-ring-width) solid var(--color-focus-ring);outline-offset:var(--focus-ring-offset)}
