@@ -18,7 +18,7 @@ const FX = `<div class="hero-fx" aria-hidden="true"><span class="lf lf-g" style=
     <span class="eyebrow">{L(h.eyebrow, lang)}</span>
     <h1 class="h-display">{L(h.title, lang)}</h1>
     <p class="lead">{L(h.lead, lang)}</p>
-    <div class="cta-row"><a class="btn btn-primary" href={href(lang, 'consulting')}>{L(h.primary, lang)}</a><a class="btn btn-secondary" href={href(lang, intro ? 'home' : 'about')}>{L(h.secondary, lang)}</a></div>
+    <div class="cta-row"><a class="btn btn-primary" href={href(lang, 'services')}>{L(h.primary, lang)}</a><a class="btn btn-secondary" href={href(lang, intro ? 'home' : 'about')}>{L(h.secondary, lang)}</a></div>
   </div></div>
   <div class="hero-media"><Image src={heroPhoto} alt={L(h.imageAlt, lang)} widths={[480, 800, 1280, 1920]} sizes="100vw" loading="eager" fetchpriority="high" /></div>
   {intro && <Fragment set:html={FX} />}

@@ -529,3 +529,18 @@ main:focus{outline:none}
 .hero.intro .hero-fx .lf{animation:leaf-in 1.4s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.4s + var(--d) * .006s)}
 @keyframes leaf-in{from{opacity:0;scale:.4}to{opacity:var(--o);scale:1}}
 @media (prefers-reduced-motion:reduce){.hero.intro .hero-media img,.hero-fx .lf i,.hero.intro .hero-copy > *,.hero.intro .hero-fx .lf{animation:none}.hero-fx .lf{transition:none;transform:none}}
+
+/* ---------- services hub page (v8, 2026-10-07) ---------- */
+.svc-jump{background:var(--color-neutral-0);border-bottom:var(--border-width-1) solid var(--color-border);position:sticky;top:0;z-index:5}
+.svc-jump ul{list-style:none;margin:0;padding:var(--space-1) 0;display:flex;gap:var(--space-1);overflow-x:auto;scrollbar-width:none}
+.svc-jump a{display:inline-flex;align-items:center;gap:var(--space-1);white-space:nowrap;padding:var(--space-1) var(--space-2);border-radius:999px;border:var(--border-width-1) solid var(--color-border);color:var(--color-text);text-decoration:none;font-weight:var(--font-weight-medium);font-size:var(--font-size-body-sm);min-height:var(--size-control-md)}
+.svc-jump a:hover,.svc-jump a:focus-visible{border-color:var(--color-accent-line);background:var(--color-accent-bg)}
+.svc-jump a svg{width:var(--icon-size-sm);height:var(--icon-size-sm);color:var(--color-text-accent)}
+.svc-jump .n{font-size:var(--font-size-caption);background:var(--color-bg-subtle);color:var(--color-text-muted);border-radius:999px;padding:0 .55em;font-variant-numeric:tabular-nums}
+.svc-group{scroll-margin-top:var(--space-8)}
+html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.svc-row{display:grid;gap:var(--space-4)}
+.svc-head{display:grid;gap:var(--space-2);align-content:start}
+.svc-head p{color:var(--color-text-muted);max-width:32em;margin:0}
+.svc-head .btn{justify-self:start}
+@container (min-width:1024px){.svc-row{grid-template-columns:minmax(0,1fr) minmax(0,2.4fr);align-items:start}.svc-head{position:sticky;top:var(--space-10)}.svc-row .sub-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}

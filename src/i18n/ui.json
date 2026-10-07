@@ -184,8 +184,8 @@
     "en": "Section"
   },
   "requestService": {
-    "ar": "اطلب الخدمة",
-    "en": "Request this service"
+    "ar": "اطلب خدمة",
+    "en": "Request a service"
   },
   "otherServices": {
     "ar": "خدمات أخرى في القسم",
@@ -454,5 +454,37 @@
       "November",
       "December"
     ]
+  },
+  "services": {
+    "ar": "خدمات المركز",
+    "en": "Our Services"
+  },
+  "servicesDesc": {
+    "ar": "كل ما يقدمه المركز للمنشآت العائلية: استشارات، وتدريب، وخدمات محايدة، وتمثيل لدى الجهات.",
+    "en": "Everything the Center offers family businesses: advisory, training, neutral services and representation before authorities."
+  },
+  "servicesJump": {
+    "ar": "أقسام الخدمات",
+    "en": "Service sections"
+  },
+  "servicesCount": {
+    "ar": "{n} خدمات",
+    "en": "{n} services"
+  },
+  "servicesCount2": {
+    "ar": "خدمتان",
+    "en": "2 services"
+  },
+  "sectionPage": {
+    "ar": "صفحة {s}",
+    "en": "{s} page"
+  },
+  "servicesNotSure": {
+    "ar": "لا تعرف أي خدمة تناسب منشأتك؟",
+    "en": "Not sure which service fits your business?"
+  },
+  "servicesNotSureDesc": {
+    "ar": "اكتب لنا وضع منشأتك، ويقترح عليك فريق المركز الخدمة المناسبة.",
+    "en": "Tell us about your business and the Center's team will suggest the right service."
   }
 }

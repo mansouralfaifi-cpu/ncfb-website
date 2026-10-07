@@ -32,6 +32,7 @@ export const t = (lang: Lang, key: string, vars: Record<string, string> = {}): a
 
 /** Extra (non-section) pages: id -> [path, section it belongs to]. */
 const EXTRA: Record<string, [string, string | null]> = {
+  services: ['services', null],
   contact: ['contact', null],
   'events-register': ['events/register', 'events'],
   'training-register': ['training/register', 'training'],
@@ -81,6 +82,7 @@ export function routeMeta(lang: Lang, r: Route): { title: string; description: s
   if (r.kind === 'section') return { title: L(r.section!.title, lang), description: L(r.section!.intro, lang) };
   if (r.kind === 'page') return { title: L(r.page!.title, lang), description: L(r.page!.description, lang) };
   switch (r.id) {
+    case 'services': return { title: t(lang, 'services'), description: t(lang, 'servicesDesc') };
     case 'contact': return { title: t(lang, 'contact'), description: t(lang, 'contactDesc') };
     case 'events-register': return { title: t(lang, 'eventReg'), description: t(lang, 'eventRegDesc') };
     case 'training-register': return { title: t(lang, 'programReg'), description: t(lang, 'programRegDesc') };

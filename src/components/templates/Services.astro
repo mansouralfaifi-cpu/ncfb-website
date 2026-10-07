@@ -1,0 +1,28 @@
+---
+// Services hub: groups the four service sections, each with its own cards, plus a jump bar.
+import Icon from '../Icon.astro';
+import SubCards from '../SubCards.astro';
+import { type Lang, t, href, L, sectionById, arrowIcon } from '../../lib/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const groups = ['consulting', 'training', 'alt', 'advocacy'].map((id) => sectionById(id)!).filter(Boolean);
+const count = (n: number) => (n === 2 ? t(lang, 'servicesCount2') : t(lang, 'servicesCount', { n: String(n) }));
+---
+<nav class="svc-jump" aria-label={t(lang, 'servicesJump')}><div class="wrap"><ul>
+  {groups.map((g) => <li><a href={`#svc-${g.id}`}><Icon name={g.icon} />{L(g.title, lang)}<span class="n">{g.pages.length}</span></a></li>)}
+</ul></div></nav>
+{groups.map((g, i) => (
+  <section class={`sec${i % 2 ? ' alt' : ''} svc-group`} id={`svc-${g.id}`}><div class="wrap svc-row">
+    <div class="svc-head">
+      <span class="eyebrow">{String(i + 1).padStart(2, '0')} · {count(g.pages.length)}</span>
+      <h2 class="h2">{L(g.title, lang)}</h2>
+      <p>{L(g.intro, lang)}</p>
+      <a class="btn btn-text" href={href(lang, g.id)}>{t(lang, 'sectionPage', { s: L(g.title, lang) })}<Icon name={arrowIcon(lang)} /></a>
+    </div>
+    <SubCards lang={lang} section={g} />
+  </div></section>
+))}
+<section class="sec"><div class="wrap"><div class="band on-navy">
+  <div style="display:grid;gap:var(--space-1)"><h2 class="h3">{t(lang, 'servicesNotSure')}</h2><p>{t(lang, 'servicesNotSureDesc')}</p></div>
+  <div class="cta-row"><a class="btn btn-primary" href={href(lang, 'contact')}>{t(lang, 'requestService')}</a></div>
+</div></div></section>
