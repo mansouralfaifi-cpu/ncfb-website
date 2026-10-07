@@ -75,7 +75,7 @@ export const dirOf = (lang: Lang) => (lang === 'ar' ? 'rtl' : 'ltr');
 /** Arrow that points "forward" in the reading direction. */
 export const arrowIcon = (lang: Lang) => (lang === 'ar' ? 'arrow-left' : 'arrow-right');
 
-export const PHOTO_POS: Record<string, string> = { kafd: '50% 62%', kafdDusk: '62% 26%', kingdom: '50% 78%', street: '50% 50%' };
+export const PHOTO_POS: Record<string, string> = { kafd: '50% 16%', kafdDusk: '62% 26%', kingdom: '50% 78%', street: '72% 6%' };
 
 /** Title + description for a route (used for <title>, meta and Open Graph). */
 export function routeMeta(lang: Lang, r: Route): { title: string; description: string } {
