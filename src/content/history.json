@@ -1,7 +1,7 @@
 {
   "intro": {
-    "ar": "محطات المركز منذ بداياته في 2005 حتى صدور تنظيمه في 2025.",
-    "en": "The Center's milestones from its beginnings in 2005 to the approval of its organization in 2025."
+    "ar": "محطات المركز منذ بداياته في 2005 حتى صدور تنظيمه ومنحه الاستقلالية المالية والإدارية في 2025.",
+    "en": "The Center's milestones from its beginnings in 2005 to the approval of its organization and its financial and administrative independence in 2025."
   },
   "milestones": [
     {
@@ -10,12 +10,12 @@
         "en": "2025"
       },
       "title": {
-        "ar": "تنظيم المركز",
-        "en": "Center's organization approved"
+        "ar": "تنظيم المركز واستقلاله",
+        "en": "Organization and independence"
       },
       "text": {
-        "ar": "صدور الأمر السامي بالموافقة على تنظيم المركز ومنحه الاستقلالية المالية والإدارية.",
-        "en": "A Royal Order approves the Center's organization and grants it financial and administrative independence."
+        "ar": "انطلاقاً من إدراك القيادة الرشيدة لثقل قطاع المنشآت العائلية ودوره في دفع عجلة التنمية، صدر الأمر السامي بالموافقة على تنظيم المركز ومنحه الاستقلالية المالية والإدارية. ومثّل العام انتقال المركز من مرحلة التأسيس إلى مرحلة «توسيع الأثر»: أكثر من 166 وساطة، و20 برنامجاً تدريبياً، وأكثر من 78 فعالية في 27 مدينة، و25 شراكة منها 16 اتفاقية مع الغرف التجارية، وإطلاق برنامجي مستشار المنشآت العائلية المعتمد ووسيط المنشآت العائلية المعتمد، وتأسيس «وقفية المركز» وتشكيل مجلس نظارتها الأول.",
+        "en": "Reflecting the leadership's recognition of the weight of the family business sector and its role in development, a Royal Order approved the Center's organization and granted it financial and administrative independence. The year marked the Center's move from its founding stage to “expanding impact”: more than 166 mediations, 20 training programs, more than 78 events in 27 cities, 25 partnerships including 16 agreements with chambers of commerce, the launch of the Certified Family Business Advisor and Certified Family Business Mediator programs, and the founding of the Center's endowment with its first board of trustees."
       }
     },
     {
@@ -28,8 +28,22 @@
         "en": "Organizational arrangements"
       },
       "text": {
-        "ar": "رفع ترتيبات المركز التنظيمية للجهات المعنية، مبنية على الواقع المحلي وأفضل الممارسات العالمية.",
-        "en": "The Center's organizational arrangements are submitted to the relevant authorities, built on the local context and global best practice."
+        "ar": "جرى العمل على اقتراح ترتيبات المركز التنظيمية وفق استراتيجيته المبنية على الواقع المحلي وبالاسترشاد بأفضل الممارسات العالمية، ورُفعت للجهات المعنية لتمكين المركز من أداء أعماله وفق حوكمة واضحة تحدد أهدافه واختصاصاته وتجعل أعماله مستدامة.",
+        "en": "The Center's proposed organizational arrangements, based on its strategy, the local context and global best practice, were prepared and submitted to the relevant authorities, so that the Center could work under clear governance that defines its goals and remit and makes its work sustainable."
+      }
+    },
+    {
+      "year": {
+        "ar": "2023",
+        "en": "2023"
+      },
+      "title": {
+        "ar": "إطلاق استراتيجية المركز",
+        "en": "Strategy launched"
+      },
+      "text": {
+        "ar": "في مطلع العام أُطلقت استراتيجية المركز، وهدفها بناء منظومة متكاملة تضمن استدامة المنشآت العائلية وتعزز مساهمتها في التنمية الوطنية، اتساقاً مع مستهدف رفع مساهمة القطاع الخاص في الناتج المحلي الإجمالي من 40% إلى 65% بحلول 2030.",
+        "en": "Early in the year the Center launched its strategy, aimed at building an integrated ecosystem that sustains family businesses and strengthens their contribution to national development, in line with the goal of raising the private sector's share of GDP from 40% to 65% by 2030."
       }
     },
     {
@@ -42,8 +56,8 @@
         "en": "Flagship initiatives"
       },
       "text": {
-        "ar": "قدّم المركز كجهة غير هادفة للربح مبادرات نوعية لتأسيس منظومة متكاملة للمنشآت العائلية.",
-        "en": "As a non-profit body, the Center launches flagship initiatives to build an integrated ecosystem for family businesses."
+        "ar": "قدّم المركز بصفته جهة غير هادفة للربح العديد من المبادرات النوعية التي تهدف إلى تأسيس منظومة متكاملة تسهم في استدامة المنشآت العائلية.",
+        "en": "As a non-profit body, the Center launched many flagship initiatives aimed at building an integrated ecosystem that supports the sustainability of family businesses."
       }
     },
     {
@@ -56,8 +70,8 @@
         "en": "Move to Riyadh"
       },
       "text": {
-        "ar": "انتقال المركز إلى الرياض للوصول إلى المنشآت العائلية في كافة أنحاء المملكة.",
-        "en": "The Center moves to Riyadh to reach family businesses across the Kingdom."
+        "ar": "انتقل المركز إلى الرياض لتعزيز قدرته على الوصول إلى المنشآت العائلية في كافة أنحاء المملكة، محققاً العديد من المنجزات النوعية.",
+        "en": "The Center moved to Riyadh to strengthen its reach to family businesses across the Kingdom, achieving many notable milestones."
       }
     },
     {
@@ -66,12 +80,12 @@
         "en": "2018"
       },
       "title": {
-        "ar": "التدشين",
-        "en": "Official launch"
+        "ar": "التدشين في جدة",
+        "en": "Launch in Jeddah"
       },
       "text": {
-        "ar": "تدشين المركز بمقر غرفة جدة بحضور معالي وزير التجارة.",
-        "en": "The Center is launched at the Jeddah Chamber in the presence of the Minister of Commerce."
+        "ar": "في نهاية العام دُشّن المركز بمقر غرفة جدة بحضور معالي وزير التجارة الدكتور ماجد القصبي، والشيخ صالح كامل رحمه الله، ورئيس مجلس إدارة المركز معالي الدكتور غسان السليمان، وأعضاء من مجلس الإدارة.",
+        "en": "At the end of the year the Center was launched at the Jeddah Chamber in the presence of the Minister of Commerce, Dr. Majid Al-Qasabi, the late Sheikh Saleh Kamel, the Center's Chair, Dr. Ghassan Al-Sulaiman, and members of the board."
       }
     },
     {
@@ -80,12 +94,12 @@
         "en": "2012"
       },
       "title": {
-        "ar": "إعادة الافتتاح",
-        "en": "Reopening"
+        "ar": "الأمر السامي بإعادة الافتتاح",
+        "en": "Royal Order to reopen"
       },
       "text": {
-        "ar": "صدور الأمر السامي رقم 49691 بأن تقوم وزارة التجارة بالتنسيق مع مجلس الغرف بإعادة افتتاح المركز ودعمه.",
-        "en": "Royal Order No. 49691 directs the Ministry of Commerce, with the Council of Chambers, to reopen and support the Center."
+        "ar": "صدر الأمر السامي الكريم رقم (49691) وتاريخ 15 ذي القعدة 1433هـ بأن تقوم وزارة التجارة والصناعة بالتنسيق مع مجلس الغرف التجارية الصناعية بإعادة افتتاح المركز ودعمه، ووضع آليات تمويله، وافتتاح فرع له في كل غرفة تجارية.",
+        "en": "Royal Order No. 49691 of 15 Dhu al-Qadah 1433 AH directed the Ministry of Commerce and Industry, in coordination with the Council of Saudi Chambers, to reopen and support the Center, set up its funding, and open a branch in every chamber of commerce."
       }
     },
     {
@@ -98,8 +112,8 @@
         "en": "Beginnings"
       },
       "text": {
-        "ar": "بدايات المركز، ثم توقف نشاطه لتحديات منها عدم توفر مقر.",
-        "en": "The Center begins its work, then pauses due to challenges including the lack of premises."
+        "ar": "بدأ المركز عندما استشعر القطاعان الخاص والعام أهمية بذل المزيد من الجهود للحفاظ على المنشآت العائلية من الانهيار، إلا أنه لم يستمر في أنشطته لعدد من التحديات، منها عدم توفر مقر له.",
+        "en": "The Center began when the private and public sectors recognized the need to do more to protect family businesses from collapse, but its activities stopped due to several challenges, including the lack of premises."
       }
     }
   ]
