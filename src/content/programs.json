@@ -1,88 +1,25 @@
 {
   "items": [
     {
-      "id": "owners-governance",
+      "id": "international-program-2026-12",
       "title": {
-        "ar": "حوكمة المنشأة العائلية للملاك",
-        "en": "Family business governance for owners"
+        "ar": "البرنامج الدولي بالتعاون مع الشركاء",
+        "en": "International Program with our partners"
       },
-      "date": "2026-11-23",
+      "date": "2026-12-13",
       "duration": {
-        "ar": "يومان",
-        "en": "2 days"
+        "ar": "يُعلن لاحقاً",
+        "en": "To be announced"
       },
       "venue": {
         "ar": "حضوري، الرياض",
         "en": "In person, Riyadh"
       },
       "language": {
-        "ar": "العربية",
-        "en": "Arabic"
+        "ar": "يُعلن لاحقاً",
+        "en": "To be announced"
       },
       "status": "open"
-    },
-    {
-      "id": "next-generation-leadership",
-      "title": {
-        "ar": "إعداد الجيل القادم للقيادة",
-        "en": "Preparing the next generation to lead"
-      },
-      "date": "2026-12-07",
-      "duration": {
-        "ar": "4 أيام",
-        "en": "4 days"
-      },
-      "venue": {
-        "ar": "حضوري، جدة",
-        "en": "In person, Jeddah"
-      },
-      "language": {
-        "ar": "العربية",
-        "en": "Arabic"
-      },
-      "status": "limited"
-    },
-    {
-      "id": "effective-council-member",
-      "title": {
-        "ar": "عضو مجلس العائلة الفعّال",
-        "en": "The effective family council member"
-      },
-      "date": "2027-01-11",
-      "duration": {
-        "ar": "3 أيام",
-        "en": "3 days"
-      },
-      "venue": {
-        "ar": "عن بُعد",
-        "en": "Online"
-      },
-      "language": {
-        "ar": "العربية",
-        "en": "Arabic"
-      },
-      "status": "open"
-    },
-    {
-      "id": "board-secretary",
-      "title": {
-        "ar": "أمين سر المجلس",
-        "en": "Board secretary"
-      },
-      "date": "2027-02-01",
-      "duration": {
-        "ar": "يومان",
-        "en": "2 days"
-      },
-      "venue": {
-        "ar": "عن بُعد",
-        "en": "Online"
-      },
-      "language": {
-        "ar": "العربية",
-        "en": "Arabic"
-      },
-      "status": "full"
     }
   ]
 }

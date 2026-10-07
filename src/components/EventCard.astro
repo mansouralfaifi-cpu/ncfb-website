@@ -4,9 +4,10 @@ import { type Lang, t, href, L, arrowIcon, dateChip } from '../lib/site';
 interface Props { lang: Lang; ev: any }
 const { lang, ev } = Astro.props;
 // Archive entries whose exact day is unknown show the year only.
-const { day, month } = ev.yearOnly ? { day: ev.date.slice(0, 4), month: '' } : dateChip(lang, ev.date);
+// Entries with a month but no day yet show the month only.
+const { day, month } = ev.yearOnly ? { day: ev.date.slice(0, 4), month: '' } : ev.monthOnly ? { day: t(lang, 'monthsLong')[Number(ev.date.slice(5, 7)) - 1], month: '' } : dateChip(lang, ev.date);
 const reg = `${href(lang, 'events-register')}?event=${encodeURIComponent(ev.id)}`;
 ---
-<article class={`event${ev.past ? ' past' : ''}${ev.yearOnly ? ' year-only' : ''}`}><div class="date"><b>{day}</b>{month && <span>{month}</span>}</div><div class="body"><h3 class="h4">{L(ev.title, lang)}</h3>{L(ev.location, lang) && <span class="where"><Icon name={ev.mode === 'online' ? 'monitor' : 'map-pin'} />{L(ev.location, lang)}</span>}{ev.past
+<article class={`event${ev.past ? ' past' : ''}${ev.yearOnly || ev.monthOnly ? ' year-only' : ''}`}><div class="date"><b>{day}</b>{month && <span>{month}</span>}</div><div class="body"><h3 class="h4">{L(ev.title, lang)}</h3>{L(ev.location, lang) && <span class="where"><Icon name={ev.mode === 'online' ? 'monitor' : 'map-pin'} />{L(ev.location, lang)}</span>}{ev.past
   ? (ev.recording && <a class="btn btn-text" href={ev.recording}>{t(lang, 'watch')}<Icon name={arrowIcon(lang)} /></a>)
   : <a class="btn btn-text" href={reg}>{t(lang, 'register')}<Icon name={arrowIcon(lang)} /></a>}</div></article>

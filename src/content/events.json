@@ -1,80 +1,689 @@
 {
   "items": [
     {
-      "id": "governance-workshop-2026-11",
-      "date": "2026-11-05",
+      "id": "event-2026-01-07",
+      "date": "2026-01-07",
       "endDate": "",
       "kind": "event",
       "title": {
-        "ar": "ورشة: أساسيات حوكمة المنشأة العائلية",
-        "en": "Workshop: family business governance essentials"
+        "ar": "ورشة افتراضية: التخطيط الضريبي وتسوية النزاعات",
+        "en": "Virtual workshop: tax planning and dispute resolution"
       },
       "calendarLabel": {
-        "ar": "ورشة الحوكمة",
-        "en": "Governance workshop"
-      },
-      "location": {
-        "ar": "الرياض",
-        "en": "Riyadh"
-      },
-      "mode": "in_person",
-      "past": false,
-      "listed": false
-    },
-    {
-      "id": "family-business-forum-2026",
-      "date": "2026-11-14",
-      "endDate": "",
-      "kind": "event",
-      "title": {
-        "ar": "ملتقى المنشآت العائلية",
-        "en": "Family Business Forum"
-      },
-      "calendarLabel": {
-        "ar": "ملتقى المنشآت العائلية",
-        "en": "Family Business Forum"
-      },
-      "location": {
-        "ar": "الرياض",
-        "en": "Riyadh"
-      },
-      "mode": "in_person",
-      "past": false,
-      "listed": true
-    },
-    {
-      "id": "charter-workshop-2026-11",
-      "date": "2026-11-18",
-      "endDate": "",
-      "kind": "event",
-      "title": {
-        "ar": "ورشة: كتابة الميثاق العائلي",
-        "en": "Workshop: writing the family charter"
-      },
-      "calendarLabel": {
-        "ar": "ورشة الميثاق",
-        "en": "Charter workshop"
+        "ar": "ورشة افتراضية: التخطيط الضريبي وتسوية النزاعات",
+        "en": "Virtual workshop: tax planning and dispute resolution"
       },
       "location": {
         "ar": "عن بُعد",
         "en": "Online"
       },
       "mode": "online",
-      "past": false,
+      "past": true,
       "listed": true
     },
     {
-      "id": "next-generation-program-2026-11",
-      "date": "2026-11-23",
-      "endDate": "2026-11-24",
-      "kind": "training",
+      "id": "women-2026-01-21",
+      "date": "2026-01-21",
+      "endDate": "",
+      "kind": "event",
       "title": {
-        "ar": "برنامج الجيل القادم",
-        "en": "Next Generation Program"
+        "ar": "مجلس المرأة في المنشآت العائلية في المنطقة الشرقية",
+        "en": "Women in Family Business Council in Eastern Province"
       },
       "calendarLabel": {
-        "ar": "برنامج الجيل القادم",
-        "en": "Next Generation Program"
+        "ar": "مجلس المرأة في المنشآت العائلية",
+        "en": "Women in Family Business Council"
+      },
+      "location": {
+        "ar": "المنطقة الشرقية",
+        "en": "Eastern Province"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "event-2026-01-21",
+      "date": "2026-01-21",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ورشة افتراضية: ما وراء الأصول التقليدية",
+        "en": "Virtual workshop: beyond traditional assets"
+      },
+      "calendarLabel": {
+        "ar": "ورشة افتراضية: ما وراء الأصول التقليدية",
+        "en": "Virtual workshop: beyond traditional assets"
+      },
+      "location": {
+        "ar": "عن بُعد",
+        "en": "Online"
+      },
+      "mode": "online",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "day-2026-01-26",
+      "date": "2026-01-26",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "يوم المنشآت العائلية في نجران",
+        "en": "Family Business Day in Najran"
+      },
+      "calendarLabel": {
+        "ar": "يوم المنشآت العائلية",
+        "en": "Family Business Day"
+      },
+      "location": {
+        "ar": "نجران",
+        "en": "Najran"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "innov-2026-02-11",
+      "date": "2026-02-11",
+      "endDate": "",
+      "kind": "training",
+      "title": {
+        "ar": "برنامج رحلة الابتكار المستدام للشركات العائلية في المنطقة الشرقية",
+        "en": "Sustainable Innovation Journey for Family Companies in Eastern Province"
+      },
+      "calendarLabel": {
+        "ar": "برنامج رحلة الابتكار المستدام للشركات العائلية",
+        "en": "Sustainable Innovation Journey for Family Companies"
+      },
+      "location": {
+        "ar": "المنطقة الشرقية",
+        "en": "Eastern Province"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "day-2026-02-18",
+      "date": "2026-02-18",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "يوم المنشآت العائلية في ينبع",
+        "en": "Family Business Day in Yanbu"
+      },
+      "calendarLabel": {
+        "ar": "يوم المنشآت العائلية",
+        "en": "Family Business Day"
+      },
+      "location": {
+        "ar": "ينبع",
+        "en": "Yanbu"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "event-2026-02-18",
+      "date": "2026-02-18",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ورشة افتراضية: ممكنات الأوقاف العائلية",
+        "en": "Virtual workshop: enablers of family endowments"
+      },
+      "calendarLabel": {
+        "ar": "ورشة افتراضية: ممكنات الأوقاف العائلية",
+        "en": "Virtual workshop: enablers of family endowments"
+      },
+      "location": {
+        "ar": "عن بُعد",
+        "en": "Online"
+      },
+      "mode": "online",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "day-2026-02-25",
+      "date": "2026-02-25",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "يوم المنشآت العائلية في الحدود الشمالية",
+        "en": "Family Business Day in Northern Borders"
+      },
+      "calendarLabel": {
+        "ar": "يوم المنشآت العائلية",
+        "en": "Family Business Day"
+      },
+      "location": {
+        "ar": "الحدود الشمالية",
+        "en": "Northern Borders"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "diw-2026-03-04",
+      "date": "2026-03-04",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ديوانية المنشآت العائلية في تبوك",
+        "en": "Family Business Diwaniya in Tabuk"
+      },
+      "calendarLabel": {
+        "ar": "ديوانية المنشآت العائلية",
+        "en": "Family Business Diwaniya"
+      },
+      "location": {
+        "ar": "تبوك",
+        "en": "Tabuk"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "event-2026-03-04",
+      "date": "2026-03-04",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ورشة افتراضية: الوسائل البديلة لتسوية منازعات المنشآت والأوقاف العائلية",
+        "en": "Virtual workshop: alternative dispute resolution for family businesses and endowments"
+      },
+      "calendarLabel": {
+        "ar": "ورشة افتراضية: الوسائل البديلة لتسوية منازعات المنشآت والأوقاف العائلية",
+        "en": "Virtual workshop: alternative dispute resolution for family businesses and endowments"
+      },
+      "location": {
+        "ar": "عن بُعد",
+        "en": "Online"
+      },
+      "mode": "online",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "diw-2026-04-01",
+      "date": "2026-04-01",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ديوانية المنشآت العائلية في الرياض",
+        "en": "Family Business Diwaniya in Riyadh"
+      },
+      "calendarLabel": {
+        "ar": "ديوانية المنشآت العائلية",
+        "en": "Family Business Diwaniya"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "innov-2026-04-08",
+      "date": "2026-04-08",
+      "endDate": "",
+      "kind": "training",
+      "title": {
+        "ar": "برنامج رحلة الابتكار المستدام للشركات العائلية في الرياض",
+        "en": "Sustainable Innovation Journey for Family Companies in Riyadh"
+      },
+      "calendarLabel": {
+        "ar": "برنامج رحلة الابتكار المستدام للشركات العائلية",
+        "en": "Sustainable Innovation Journey for Family Companies"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "diw-2026-04-15",
+      "date": "2026-04-15",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ديوانية المنشآت العائلية في مكة المكرمة",
+        "en": "Family Business Diwaniya in Makkah"
+      },
+      "calendarLabel": {
+        "ar": "ديوانية المنشآت العائلية",
+        "en": "Family Business Diwaniya"
+      },
+      "location": {
+        "ar": "مكة المكرمة",
+        "en": "Makkah"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "succ-2026-04-22",
+      "date": "2026-04-22",
+      "endDate": "",
+      "kind": "training",
+      "title": {
+        "ar": "برنامج مختبر التعاقب القيادي في المنطقة الشرقية",
+        "en": "Leadership Succession Lab in Eastern Province"
+      },
+      "calendarLabel": {
+        "ar": "برنامج مختبر التعاقب القيادي",
+        "en": "Leadership Succession Lab"
+      },
+      "location": {
+        "ar": "المنطقة الشرقية",
+        "en": "Eastern Province"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "diw-2026-04-29",
+      "date": "2026-04-29",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ديوانية المنشآت العائلية في القصيم",
+        "en": "Family Business Diwaniya in Al-Qassim"
+      },
+      "calendarLabel": {
+        "ar": "ديوانية المنشآت العائلية",
+        "en": "Family Business Diwaniya"
+      },
+      "location": {
+        "ar": "القصيم",
+        "en": "Al-Qassim"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "diw-2026-05-13",
+      "date": "2026-05-13",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ديوانية المنشآت العائلية في المنطقة الشرقية",
+        "en": "Family Business Diwaniya in Eastern Province"
+      },
+      "calendarLabel": {
+        "ar": "ديوانية المنشآت العائلية",
+        "en": "Family Business Diwaniya"
+      },
+      "location": {
+        "ar": "المنطقة الشرقية",
+        "en": "Eastern Province"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "owner-2026-05-14",
+      "date": "2026-05-14",
+      "endDate": "",
+      "kind": "training",
+      "title": {
+        "ar": "برنامج المالك المحترف في المنطقة الشرقية",
+        "en": "The Professional Owner Program in Eastern Province"
+      },
+      "calendarLabel": {
+        "ar": "برنامج المالك المحترف",
+        "en": "The Professional Owner Program"
+      },
+      "location": {
+        "ar": "المنطقة الشرقية",
+        "en": "Eastern Province"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "diw-2026-06-10",
+      "date": "2026-06-10",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ديوانية المنشآت العائلية في الباحة",
+        "en": "Family Business Diwaniya in Al-Baha"
+      },
+      "calendarLabel": {
+        "ar": "ديوانية المنشآت العائلية",
+        "en": "Family Business Diwaniya"
+      },
+      "location": {
+        "ar": "الباحة",
+        "en": "Al-Baha"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "owner-2026-06-22",
+      "date": "2026-06-22",
+      "endDate": "",
+      "kind": "training",
+      "title": {
+        "ar": "برنامج المالك المحترف في الرياض",
+        "en": "The Professional Owner Program in Riyadh"
+      },
+      "calendarLabel": {
+        "ar": "برنامج المالك المحترف",
+        "en": "The Professional Owner Program"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "women-2026-07-05",
+      "date": "2026-07-05",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "مجلس المرأة في المنشآت العائلية في الرياض",
+        "en": "Women in Family Business Council in Riyadh"
+      },
+      "calendarLabel": {
+        "ar": "مجلس المرأة في المنشآت العائلية",
+        "en": "Women in Family Business Council"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "diw-2026-07-14",
+      "date": "2026-07-14",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ديوانية المنشآت العائلية في الرياض",
+        "en": "Family Business Diwaniya in Riyadh"
+      },
+      "calendarLabel": {
+        "ar": "ديوانية المنشآت العائلية",
+        "en": "Family Business Diwaniya"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "day-2026-08-04",
+      "date": "2026-08-04",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "يوم المنشآت العائلية في الرياض",
+        "en": "Family Business Day in Riyadh"
+      },
+      "calendarLabel": {
+        "ar": "يوم المنشآت العائلية",
+        "en": "Family Business Day"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "training-2026-08-16",
+      "date": "2026-08-16",
+      "endDate": "",
+      "kind": "training",
+      "title": {
+        "ar": "الرحلة الصيفية مع شركاء المركز الدوليين في سويسرا",
+        "en": "Summer program with the Center's international partners in Switzerland"
+      },
+      "calendarLabel": {
+        "ar": "الرحلة الصيفية مع شركاء المركز الدوليين",
+        "en": "Summer program with the Center's international partners"
+      },
+      "location": {
+        "ar": "سويسرا",
+        "en": "Switzerland"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "forum-2026-08-18",
+      "date": "2026-08-18",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ملتقى المنشآت العائلية في عسير",
+        "en": "Family Business Forum in Asir"
+      },
+      "calendarLabel": {
+        "ar": "ملتقى المنشآت العائلية",
+        "en": "Family Business Forum"
+      },
+      "location": {
+        "ar": "عسير",
+        "en": "Asir"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "event-2026-08-19",
+      "date": "2026-08-19",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ورشة افتراضية: الوسائل البديلة لتسوية منازعات الأوقاف العائلية",
+        "en": "Virtual workshop: alternative dispute resolution for family endowments"
+      },
+      "calendarLabel": {
+        "ar": "ورشة افتراضية: الوسائل البديلة لتسوية منازعات الأوقاف العائلية",
+        "en": "Virtual workshop: alternative dispute resolution for family endowments"
+      },
+      "location": {
+        "ar": "عن بُعد",
+        "en": "Online"
+      },
+      "mode": "online",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "training-2026-08-31",
+      "date": "2026-08-31",
+      "endDate": "",
+      "kind": "training",
+      "title": {
+        "ar": "برنامج إدارة المنشآت العائلية في الرياض",
+        "en": "Family Business Management Program in Riyadh"
+      },
+      "calendarLabel": {
+        "ar": "برنامج إدارة المنشآت العائلية",
+        "en": "Family Business Management Program"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "forum-2026-09-01",
+      "date": "2026-09-01",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ملتقى المنشآت العائلية في الرياض",
+        "en": "Family Business Forum in Riyadh"
+      },
+      "calendarLabel": {
+        "ar": "ملتقى المنشآت العائلية",
+        "en": "Family Business Forum"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "training-2026-09-09",
+      "date": "2026-09-09",
+      "endDate": "",
+      "kind": "training",
+      "title": {
+        "ar": "برنامج مستشار المنشآت العائلية المعتمد في الرياض",
+        "en": "Certified Family Business Advisor Program in Riyadh"
+      },
+      "calendarLabel": {
+        "ar": "برنامج مستشار المنشآت العائلية المعتمد",
+        "en": "Certified Family Business Advisor Program"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "training-2026-09-09-2",
+      "date": "2026-09-09",
+      "endDate": "",
+      "kind": "training",
+      "title": {
+        "ar": "برنامج وسيط المنشآت العائلية المعتمد في الرياض",
+        "en": "Certified Family Business Mediator Program in Riyadh"
+      },
+      "calendarLabel": {
+        "ar": "برنامج وسيط المنشآت العائلية المعتمد",
+        "en": "Certified Family Business Mediator Program"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "diw-2026-09-16",
+      "date": "2026-09-16",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ديوانية المنشآت العائلية في الخرج",
+        "en": "Family Business Diwaniya in Al-Kharj"
+      },
+      "calendarLabel": {
+        "ar": "ديوانية المنشآت العائلية",
+        "en": "Family Business Diwaniya"
+      },
+      "location": {
+        "ar": "الخرج",
+        "en": "Al-Kharj"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "succ-2026-09-30",
+      "date": "2026-09-30",
+      "endDate": "",
+      "kind": "training",
+      "title": {
+        "ar": "برنامج مختبر التعاقب القيادي في الرياض",
+        "en": "Leadership Succession Lab in Riyadh"
+      },
+      "calendarLabel": {
+        "ar": "برنامج مختبر التعاقب القيادي",
+        "en": "Leadership Succession Lab"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "training-2026-10-01",
+      "date": "2026-10-01",
+      "endDate": "",
+      "kind": "training",
+      "title": {
+        "ar": "المخيم التدريبي للأجيال القادمة في المنطقة الشرقية",
+        "en": "Next Generation Training Camp in Eastern Province"
+      },
+      "calendarLabel": {
+        "ar": "المخيم التدريبي للأجيال القادمة",
+        "en": "Next Generation Training Camp"
+      },
+      "location": {
+        "ar": "المنطقة الشرقية",
+        "en": "Eastern Province"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "event-2026-10-01",
+      "date": "2026-10-01",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "قمة المنشآت العائلية",
+        "en": "Family Business Summit"
+      },
+      "calendarLabel": {
+        "ar": "قمة المنشآت العائلية",
+        "en": "Family Business Summit"
       },
       "location": {
         "ar": "",
@@ -82,20 +691,63 @@
       },
       "mode": "in_person",
       "past": false,
-      "listed": false
+      "listed": true,
+      "monthOnly": true
     },
     {
-      "id": "next-generation-meetup-2026-12",
-      "date": "2026-12-02",
+      "id": "diw-2026-10-21",
+      "date": "2026-10-21",
       "endDate": "",
       "kind": "event",
       "title": {
-        "ar": "لقاء الجيل القادم",
-        "en": "Next generation meetup"
+        "ar": "ديوانية المنشآت العائلية في جازان",
+        "en": "Family Business Diwaniya in Jazan"
       },
       "calendarLabel": {
-        "ar": "لقاء الجيل القادم",
-        "en": "Next generation meetup"
+        "ar": "ديوانية المنشآت العائلية",
+        "en": "Family Business Diwaniya"
+      },
+      "location": {
+        "ar": "جازان",
+        "en": "Jazan"
+      },
+      "mode": "in_person",
+      "past": false,
+      "listed": true
+    },
+    {
+      "id": "diw-2026-11-04",
+      "date": "2026-11-04",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ديوانية المنشآت العائلية في المدينة المنورة",
+        "en": "Family Business Diwaniya in Madinah"
+      },
+      "calendarLabel": {
+        "ar": "ديوانية المنشآت العائلية",
+        "en": "Family Business Diwaniya"
+      },
+      "location": {
+        "ar": "المدينة المنورة",
+        "en": "Madinah"
+      },
+      "mode": "in_person",
+      "past": false,
+      "listed": true
+    },
+    {
+      "id": "women-2026-11-15",
+      "date": "2026-11-15",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "مجلس المرأة في المنشآت العائلية في جدة",
+        "en": "Women in Family Business Council in Jeddah"
+      },
+      "calendarLabel": {
+        "ar": "مجلس المرأة في المنشآت العائلية",
+        "en": "Women in Family Business Council"
       },
       "location": {
         "ar": "جدة",
@@ -106,23 +758,86 @@
       "listed": true
     },
     {
-      "id": "mediation-seminar-2026-12",
-      "date": "2026-12-15",
+      "id": "diw-2026-12-02",
+      "date": "2026-12-02",
       "endDate": "",
       "kind": "event",
       "title": {
-        "ar": "ندوة: الوساطة في الخلافات العائلية",
-        "en": "Seminar: mediation in family disputes"
+        "ar": "ديوانية المنشآت العائلية في حائل",
+        "en": "Family Business Diwaniya in Hail"
       },
       "calendarLabel": {
-        "ar": "ندوة الوساطة",
-        "en": "Mediation seminar"
+        "ar": "ديوانية المنشآت العائلية",
+        "en": "Family Business Diwaniya"
       },
       "location": {
-        "ar": "عن بُعد",
-        "en": "Online"
+        "ar": "حائل",
+        "en": "Hail"
       },
-      "mode": "online",
+      "mode": "in_person",
+      "past": false,
+      "listed": true
+    },
+    {
+      "id": "training-2026-12-13",
+      "date": "2026-12-13",
+      "endDate": "",
+      "kind": "training",
+      "title": {
+        "ar": "البرنامج الدولي بالتعاون مع الشركاء في الرياض",
+        "en": "International Program with our partners in Riyadh"
+      },
+      "calendarLabel": {
+        "ar": "البرنامج الدولي بالتعاون مع الشركاء",
+        "en": "International Program with our partners"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": false,
+      "listed": true
+    },
+    {
+      "id": "diw-2026-12-16",
+      "date": "2026-12-16",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ديوانية المنشآت العائلية في الأحساء",
+        "en": "Family Business Diwaniya in Al-Ahsa"
+      },
+      "calendarLabel": {
+        "ar": "ديوانية المنشآت العائلية",
+        "en": "Family Business Diwaniya"
+      },
+      "location": {
+        "ar": "الأحساء",
+        "en": "Al-Ahsa"
+      },
+      "mode": "in_person",
+      "past": false,
+      "listed": true
+    },
+    {
+      "id": "diw-2026-12-23",
+      "date": "2026-12-23",
+      "endDate": "",
+      "kind": "event",
+      "title": {
+        "ar": "ديوانية المنشآت العائلية في الجوف",
+        "en": "Family Business Diwaniya in Al-Jouf"
+      },
+      "calendarLabel": {
+        "ar": "ديوانية المنشآت العائلية",
+        "en": "Family Business Diwaniya"
+      },
+      "location": {
+        "ar": "الجوف",
+        "en": "Al-Jouf"
+      },
+      "mode": "in_person",
       "past": false,
       "listed": true
     },

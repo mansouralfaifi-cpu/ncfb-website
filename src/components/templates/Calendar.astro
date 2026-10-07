@@ -14,7 +14,8 @@ const eachDay = (e: any) => {
   return out;
 };
 const byDay: Record<string, any[]> = {};
-for (const e of items) for (const d of eachDay(e)) (byDay[d] ||= []).push(e);
+// Month-only entries (day not announced) appear in the month's list, not on a day.
+for (const e of items) if (!(e as any).monthOnly) for (const d of eachDay(e)) (byDay[d] ||= []).push(e);
 const months = [...new Set(Object.keys(byDay).map(ym))].sort();
 const dows: string[] = t(lang, 'dows');
 const monthsLong: string[] = t(lang, 'monthsLong');

@@ -292,6 +292,7 @@ collections:
               - { label: "طريقة الحضور / Attendance", name: mode, widget: select, options: [ { label: "حضوري / In person", value: in_person }, { label: "عن بُعد / Online", value: online } ] }
               - { label: "فعالية سابقة / Past event", name: past, widget: boolean, default: false }
               - { label: "يُعرض العام فقط (اليوم غير معروف) / Show year only", name: yearOnly, widget: boolean, default: false, required: false }
+              - { label: "يُعرض الشهر فقط (اليوم لم يُعلن) / Show month only", name: monthOnly, widget: boolean, default: false, required: false }
               - { label: "تظهر في صفحة الفعاليات / Show in events list", name: listed, widget: boolean, default: true }
               - { label: "رابط التسجيل المرئي (للفعاليات السابقة) / Recording URL", name: recording, widget: string, required: false }
       - name: programs
