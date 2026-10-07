@@ -211,7 +211,7 @@ collections:
           - { label: "الصورة (4:5) / Photo (4:5)", name: photo, widget: image, required: false }
           - { label: "الكلمة / Quote", name: quote, widget: object, fields: *bi_text }
           - { label: "الكلمة (فقرات يفصلها سطر فارغ) / Message (blank line between paragraphs)", name: message, widget: object, required: false, fields: *bi_text }
-          - { label: "السيرة (فقرات يفصلها سطر فارغ) / Biography (blank line between paragraphs)", name: bio, widget: object, fields: *bi_text }
+          - { label: "السيرة (فقرات يفصلها سطر فارغ) / Biography (blank line between paragraphs)", name: bio, widget: object, required: false, fields: [ { label: "العربية", name: ar, widget: text, required: false }, { label: "English", name: en, widget: text, required: false } ] }
           - { label: "ملاحظة / Note", name: note, widget: object, fields: *bi_optional }
       - name: history
         label: "تاريخ المركز / History"
