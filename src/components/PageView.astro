@@ -41,7 +41,7 @@ const legal = route.id === 'privacy' || route.id === 'terms';
     <Tpl lang={lang} section={route.section} page={route.page} />
   </>}
   {route.kind === 'extra' && <>
-    <PageHdr lang={lang} title={meta.title} lead={legal ? '' : meta.description} photoOf={route.id === 'services' ? sectionById('consulting') : route.section} parent={route.section} />
+    <PageHdr lang={lang} title={meta.title} lead={legal ? '' : meta.description} photoOf={route.id === 'services' ? { ...sectionById('consulting')!, photo: 'kingdom' } : route.section} parent={route.section} />
     {route.section && <Subnav lang={lang} section={route.section} />}
     {route.id === 'services' && <Services lang={lang} />}
     {route.id === 'contact' && <Contact lang={lang} />}
