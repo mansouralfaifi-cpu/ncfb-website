@@ -8,7 +8,7 @@ export type Bi = { ar: string; en: string };
 export const LANGS: Lang[] = ['ar', 'en'];
 
 export interface SubPage { slug: string; title: Bi; icon: string; description: Bi; template: string }
-export interface Section { id: string; order: number; title: Bi; icon: string; intro: Bi; photo: 'kafd' | 'kafdDusk' | 'riyadhDusk' | 'riyadhSkyline' | 'kafdSunset' | 'kafdTowers' | 'kingdom' | 'street'; pages: SubPage[] }
+export interface Section { id: string; order: number; title: Bi; icon: string; intro: Bi; photo: 'kafd' | 'kafdDusk' | 'riyadhDusk' | 'riyadhSkyline' | 'kafdSunset' | 'kafdTowers' | 'kingdom' | 'street'; pages: SubPage[]; blocks?: { title: Bi; text: Bi }[]; stats?: { value: string; label: Bi }[] }
 
 const sectionFiles = import.meta.glob<Section>('../content/sections/*.json', { eager: true, import: 'default' });
 export const SECTIONS: Section[] = Object.values(sectionFiles).sort((a, b) => a.order - b.order);

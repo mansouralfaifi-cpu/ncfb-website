@@ -7,8 +7,8 @@
   },
   "icon": "megaphone",
   "intro": {
-    "ar": "يمثّل المركز صوت المنشآت العائلية لدى الجهات وصنّاع القرار.",
-    "en": "The Center represents the voice of family businesses to institutions and decision makers."
+    "ar": "يمثّل المركز تحديات المنشآت العائلية ومقترحاتها لدى القطاع العام، ويقدّم مرئياتها لصنّاع السياسات عبر أوراق السياسات العامة.",
+    "en": "The Center represents the challenges and proposals of family businesses to the public sector, and presents their views to policymakers through public policy papers."
   },
   "photo": "kafdTowers",
   "pages": [
@@ -37,6 +37,38 @@
         "en": "Rallying support for enabling initiatives and regulations."
       },
       "template": "service"
+    }
+  ],
+  "blocks": [
+    {
+      "title": {
+        "ar": "حاوية فكرية",
+        "en": "A think tank"
+      },
+      "text": {
+        "ar": "يستجيب المركز لطلبات الجهات الحكومية حول مرئيات المنشآت العائلية في السياسات العامة.",
+        "en": "The Center responds to government requests for the views of family businesses on public policy."
+      }
+    },
+    {
+      "title": {
+        "ar": "دعم الجهات الحكومية",
+        "en": "Supporting government"
+      },
+      "text": {
+        "ar": "يساند المركز الجهات الحكومية في تحقيق أهدافها المتصلة بقطاع المنشآت العائلية.",
+        "en": "The Center supports government bodies in achieving their goals related to the family business sector."
+      }
+    },
+    {
+      "title": {
+        "ar": "المحتوى المحلي",
+        "en": "Local knowledge"
+      },
+      "text": {
+        "ar": "يبني المركز المعرفة المحلية عبر الأبحاث والدراسات عن وضع المنشآت العائلية وتحدياتها.",
+        "en": "The Center builds local knowledge through research and studies on the state of family businesses and their challenges."
+      }
     }
   ]
 }

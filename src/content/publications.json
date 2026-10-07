@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "type": "report",
+      "title": {
+        "ar": "التقرير السنوي للمركز 2025",
+        "en": "The Center's Annual Report 2025"
+      },
+      "date": "2026-04",
+      "file": "/files/ncfb-annual-report-2025.pdf"
+    },
+    {
+      "type": "study",
+      "title": {
+        "ar": "الوضع الراهن لحوكمة المنشآت العائلية في المملكة",
+        "en": "The state of family business governance in the Kingdom"
+      },
+      "date": "2025-09",
+      "file": "/files/family-business-governance-2025.pdf",
+      "summary": {
+        "ar": "شملت 143 منشأة عائلية: 45% منها لديها ميثاق عائلي، و17% فقط لديها اتفاق مكتوب حول الرؤية والقيم، و72% يقودها رئيس تنفيذي من العائلة.",
+        "en": "Covers 143 family businesses: 45% have a family charter, only 17% have a written agreement on vision and values, and 72% are led by a family-member CEO."
+      }
+    },
+    {
       "type": "guide",
       "title": {
         "ar": "دليل إعداد الميثاق العائلي",
@@ -16,15 +38,6 @@
         "en": "Ownership transfer in family businesses: national experiences"
       },
       "date": "2026-07",
-      "file": ""
-    },
-    {
-      "type": "report",
-      "title": {
-        "ar": "التقرير السنوي للمركز",
-        "en": "The Center's annual report"
-      },
-      "date": "2026-05",
       "file": ""
     },
     {

@@ -7,8 +7,8 @@
   },
   "icon": "graduation-cap",
   "intro": {
-    "ar": "برامج تأهيل للملاك ومجالس العائلة والجيل القادم.",
-    "en": "Programs that prepare owners, family councils and the next generation."
+    "ar": "برامج في الحوكمة والتخطيط للتعاقب وتطوير القيادات، تدعم استمرار المنشآت العائلية عبر الأجيال.",
+    "en": "Programs in governance, succession planning and leadership that help family businesses last across generations."
   },
   "photo": "kafdTowers",
   "pages": [
@@ -37,6 +37,77 @@
         "en": "Programs designed for a specific family or business."
       },
       "template": "custom"
+    }
+  ],
+  "blocks": [
+    {
+      "title": {
+        "ar": "ورش التحول المؤسسي",
+        "en": "Institutional transformation workshops"
+      },
+      "text": {
+        "ar": "تعزيز التوافق بين أفراد العائلة حول خطط العمل والهيكل القانوني والميثاق العائلي، عبر جلسات جماعية وفردية مع الملاك والجيل القادم.",
+        "en": "Building family consensus on business plans, legal structure and the family charter, through group and individual sessions with owners and the next generation."
+      }
+    },
+    {
+      "title": {
+        "ar": "موجز مجلس الإدارة",
+        "en": "Board briefing"
+      },
+      "text": {
+        "ar": "جلسات مكثفة لأعضاء المجالس والإدارة التنفيذية في الحوكمة والاستراتيجية والقيادة والإدارة المالية.",
+        "en": "Intensive sessions for board members and executives on governance, strategy, leadership and financial management."
+      }
+    },
+    {
+      "title": {
+        "ar": "تأهيل المستشارين",
+        "en": "Advisor accreditation"
+      },
+      "text": {
+        "ar": "تأهيل واعتماد مستشاري ووسطاء المنشآت العائلية، تُختتم بتقييم يمنح شهادات معتمدة.",
+        "en": "Preparing and accrediting family business advisors and mediators, ending with an assessment that awards accredited certificates."
+      }
+    },
+    {
+      "title": {
+        "ar": "البرامج الدولية",
+        "en": "International programs"
+      },
+      "text": {
+        "ar": "إعداد ملاك المنشآت بدراسة الحالات الواقعية، ومنها برنامج صيفي في سويسرا بالتعاون مع جامعة INSEAD.",
+        "en": "Preparing owners through real case studies, including a summer program in Switzerland with INSEAD."
+      }
+    },
+    {
+      "title": {
+        "ar": "برامج تطوير الأجيال",
+        "en": "Next generation programs"
+      },
+      "text": {
+        "ar": "تأهيل قيادات الجيل القادم، ومنها معسكر روابي ومختبر التعاقب القيادي.",
+        "en": "Preparing next-generation leaders, including the Rawabi camp and the Leadership Succession Lab."
+      }
+    },
+    {
+      "title": {
+        "ar": "حوكمة وإدارة المنشآت العائلية",
+        "en": "Family business governance and management"
+      },
+      "text": {
+        "ar": "تمكين قادة المنشآت من الابتكار المستدام وإعادة الهيكلة مالياً وقانونياً.",
+        "en": "Enabling business leaders to innovate sustainably and restructure financially and legally."
+      }
+    }
+  ],
+  "stats": [
+    {
+      "value": "20",
+      "label": {
+        "ar": "برنامجاً تدريبياً في 2025",
+        "en": "training programs in 2025"
+      }
     }
   ]
 }

@@ -557,3 +557,26 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .page-hdr .crumbs li+li::before{color:var(--color-primary-200)}
 .page-hdr .crumbs a:focus-visible{outline-color:var(--color-neutral-0)}
 @container (min-width:1024px){[dir="ltr"] .page-hdr::after{background:linear-gradient(to right,color-mix(in srgb,var(--color-primary-900) 80%,transparent) 0%,color-mix(in srgb,var(--color-primary-900) 70%,transparent) 55%,color-mix(in srgb,var(--color-primary-900) 30%,transparent) 100%)}}
+
+/* Figures strip */
+.stats{margin:0;display:grid;gap:var(--space-2);grid-template-columns:repeat(2,minmax(0,1fr))}
+@container (min-width:1024px){.stats{grid-template-columns:repeat(auto-fit,minmax(10rem,1fr))}}
+.stats div{display:grid;gap:var(--space-half);align-content:start;padding:var(--space-3);border-radius:var(--radius-md);background:var(--color-bg-subtle);border-inline-start:3px solid var(--color-primary-600)}
+.stats dt{font-family:var(--font-family-display);font-size:var(--font-size-h2);font-weight:var(--font-weight-bold);line-height:1.1;color:var(--color-primary-900);text-align:start}
+.stats dd{margin:0;color:var(--color-text-muted);font-size:var(--font-size-body-sm)}
+.sec.alt .stats div{background:var(--color-surface-raised)}
+/* Text blocks on section pages (vision, mission, program types...) */
+.blocks{display:grid;gap:var(--space-3)}
+@container (min-width:600px){.blocks{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@container (min-width:1024px){.blocks{grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))}}
+.blocks > div{display:grid;gap:var(--space-1);align-content:start;padding:var(--space-3);border-radius:var(--radius-md);background:var(--color-surface-raised);border:var(--border-width-1) solid var(--color-border)}
+.blocks p{margin:0;color:var(--color-text-muted)}
+/* Board members without a photo: name card */
+.person.no-photo{padding:var(--space-3);border-radius:var(--radius-md);background:var(--color-bg-subtle);border-inline-start:3px solid var(--color-primary-600);align-content:start}
+/* Event archive entries with a year only */
+.event.year-only .date b{font-size:var(--font-size-body)}
+/* Contact teams on the contact page */
+.contact-team{display:grid;gap:var(--space-half);padding-block:var(--space-1);border-bottom:var(--border-width-1) solid var(--color-border)}
+.contact-team h3{margin:0;color:var(--color-text);font-weight:var(--font-weight-semibold)}
+.contact-team a{justify-self:start;color:var(--color-text-link)}
+.contact-team a:hover{color:var(--color-text-link-hover)}

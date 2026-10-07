@@ -1,77 +1,105 @@
 {
   "intro": {
-    "ar": "نص نموذجي: محطات المركز منذ تأسيسه. السنوات والأحداث تُستبدل بالتاريخ الرسمي للمركز.",
-    "en": "Sample text: the Center's milestones since its founding. Years and events will be replaced with the official history."
+    "ar": "محطات المركز منذ بداياته في 2005 حتى صدور تنظيمه في 2025.",
+    "en": "The Center's milestones from its beginnings in 2005 to the approval of its organization in 2025."
   },
   "milestones": [
     {
       "year": {
-        "ar": "العام",
-        "en": "Year"
+        "ar": "2025",
+        "en": "2025"
       },
       "title": {
-        "ar": "التأسيس",
-        "en": "Founding"
+        "ar": "تنظيم المركز",
+        "en": "Center's organization approved"
       },
       "text": {
-        "ar": "صدور قرار تأسيس المركز وتشكيل مجلس إدارته الأول.",
-        "en": "The decision to establish the Center is issued and its first board is formed."
+        "ar": "صدور الأمر السامي بالموافقة على تنظيم المركز ومنحه الاستقلالية المالية والإدارية.",
+        "en": "A Royal Order approves the Center's organization and grants it financial and administrative independence."
       }
     },
     {
       "year": {
-        "ar": "العام",
-        "en": "Year"
+        "ar": "2024",
+        "en": "2024"
       },
       "title": {
-        "ar": "أول دليل للميثاق العائلي",
-        "en": "First family charter guide"
+        "ar": "الترتيبات التنظيمية",
+        "en": "Organizational arrangements"
       },
       "text": {
-        "ar": "إصدار الدليل المرجعي الأول للمنشآت العائلية.",
-        "en": "The first reference guide for family businesses is published."
+        "ar": "رفع ترتيبات المركز التنظيمية للجهات المعنية، مبنية على الواقع المحلي وأفضل الممارسات العالمية.",
+        "en": "The Center's organizational arrangements are submitted to the relevant authorities, built on the local context and global best practice."
       }
     },
     {
       "year": {
-        "ar": "العام",
-        "en": "Year"
+        "ar": "2022",
+        "en": "2022"
       },
       "title": {
-        "ar": "إطلاق خدمات الاستشارات",
-        "en": "Advisory services launched"
+        "ar": "مبادرات نوعية",
+        "en": "Flagship initiatives"
       },
       "text": {
-        "ar": "بدء تقديم تحليل الوضع الراهن ومراجعة المواثيق.",
-        "en": "Current-state analysis and charter review services begin."
+        "ar": "قدّم المركز كجهة غير هادفة للربح مبادرات نوعية لتأسيس منظومة متكاملة للمنشآت العائلية.",
+        "en": "As a non-profit body, the Center launches flagship initiatives to build an integrated ecosystem for family businesses."
       }
     },
     {
       "year": {
-        "ar": "العام",
-        "en": "Year"
+        "ar": "2019",
+        "en": "2019"
       },
       "title": {
-        "ar": "إطلاق برنامج بديل",
-        "en": "Badeel program launched"
+        "ar": "الانتقال إلى الرياض",
+        "en": "Move to Riyadh"
       },
       "text": {
-        "ar": "بدء خدمتي أمانة السر والوساطة.",
-        "en": "Secretariat and mediation services begin."
+        "ar": "انتقال المركز إلى الرياض للوصول إلى المنشآت العائلية في كافة أنحاء المملكة.",
+        "en": "The Center moves to Riyadh to reach family businesses across the Kingdom."
       }
     },
     {
       "year": {
-        "ar": "العام",
-        "en": "Year"
+        "ar": "2018",
+        "en": "2018"
       },
       "title": {
-        "ar": "الملتقى الوطني الأول",
-        "en": "First national forum"
+        "ar": "التدشين",
+        "en": "Official launch"
       },
       "text": {
-        "ar": "أول ملتقى يجمع المنشآت العائلية على مستوى المملكة.",
-        "en": "The first forum bringing together family businesses from across the Kingdom."
+        "ar": "تدشين المركز بمقر غرفة جدة بحضور معالي وزير التجارة.",
+        "en": "The Center is launched at the Jeddah Chamber in the presence of the Minister of Commerce."
+      }
+    },
+    {
+      "year": {
+        "ar": "2012",
+        "en": "2012"
+      },
+      "title": {
+        "ar": "إعادة الافتتاح",
+        "en": "Reopening"
+      },
+      "text": {
+        "ar": "صدور الأمر السامي رقم 49691 بأن تقوم وزارة التجارة بالتنسيق مع مجلس الغرف بإعادة افتتاح المركز ودعمه.",
+        "en": "Royal Order No. 49691 directs the Ministry of Commerce, with the Council of Chambers, to reopen and support the Center."
+      }
+    },
+    {
+      "year": {
+        "ar": "2005",
+        "en": "2005"
+      },
+      "title": {
+        "ar": "البدايات",
+        "en": "Beginnings"
+      },
+      "text": {
+        "ar": "بدايات المركز، ثم توقف نشاطه لتحديات منها عدم توفر مقر.",
+        "en": "The Center begins its work, then pauses due to challenges including the lack of premises."
       }
     }
   ]

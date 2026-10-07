@@ -7,8 +7,8 @@
   },
   "icon": "library",
   "intro": {
-    "ar": "إصدارات المركز وأدلته ودراساته ومقاطعه المرئية في مكان واحد.",
-    "en": "The Center's publications, guides, studies and videos in one place."
+    "ar": "إصدارات المركز من تقارير ودراسات وأدلة، ومقاطعه المرئية، في مكان واحد.",
+    "en": "The Center's reports, studies, guides and videos in one place."
   },
   "photo": "kafdSunset",
   "pages": [
@@ -37,6 +37,15 @@
         "en": "Recorded talks, workshops and lectures."
       },
       "template": "videos"
+    }
+  ],
+  "stats": [
+    {
+      "value": "52",
+      "label": {
+        "ar": "دراسة ومنشوراً ودليلاً إرشادياً",
+        "en": "studies, publications and guides"
+      }
     }
   ]
 }

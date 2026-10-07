@@ -1,12 +1,22 @@
 ---
-import Ph from '../Ph.astro';
 import board from '../../content/board.json';
-import { type Lang, t, L } from '../../lib/site';
+import { type Lang, L } from '../../lib/site';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
+// Photos are optional: a member without one is shown by name and role only.
+const groups = [{ title: '', intro: '', members: board.members }];
+if (board.council?.length) groups.push({ title: L(board.councilTitle, lang), intro: L(board.councilIntro, lang), members: board.council });
 ---
-<section class="sec"><div class="wrap"><div class="people">
-  {board.members.map((m) => (
-    <div class="person">{m.photo ? <img src={m.photo} alt={L(m.name, lang)} loading="lazy" width="400" height="400" /> : <Ph lang={lang} title={t(lang, 'memberPhoto')} />}<h3 class="h4">{L(m.name, lang)}</h3><span class="small muted">{L(m.role, lang)}</span></div>
+<section class="sec"><div class="wrap" style="display:grid;gap:var(--space-5)">
+  {groups.map((g) => (
+    <div style="display:grid;gap:var(--space-3)">
+      {g.title && <div style="display:grid;gap:var(--space-1)"><h2 class="h3">{g.title}</h2>{g.intro && <p class="muted" style="max-width:var(--measure)">{g.intro}</p>}</div>}
+      <div class="people">
+        {g.members.map((m) => (
+          <div class={`person${m.photo ? '' : ' no-photo'}`}>{m.photo && <img src={m.photo} alt={L(m.name, lang)} loading="lazy" width="400" height="400" />}<h3 class="h4">{L(m.name, lang)}</h3><span class="small muted">{L(m.role, lang)}</span></div>
+        ))}
+      </div>
+    </div>
   ))}
-</div>{L(board.note, lang) && <p class="caption muted" style="margin-top:var(--space-3)">{L(board.note, lang)}</p>}</div></section>
+  {L(board.note, lang) && <p class="caption muted">{L(board.note, lang)}</p>}
+</div></section>

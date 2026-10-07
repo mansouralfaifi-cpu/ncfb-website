@@ -7,8 +7,8 @@
   },
   "icon": "messages-square",
   "intro": {
-    "ar": "خدمات استشارية تساعد المنشأة العائلية على الانتقال من الإدارة العائلية إلى المؤسسية.",
-    "en": "Advisory services that help a family business move from family management to institutional management."
+    "ar": "برامج وخدمات استشارية للمنشآت العائلية تتناول ما يمسّها من مواضيع، وتجيب عن استفساراتها وتعالج إشكالياتها، ومنها اعتماد المنشآت العائلية في الحوكمة.",
+    "en": "Advisory programs and services for family businesses that address the issues they face, answer their questions and resolve their challenges, including family business certification in governance."
   },
   "photo": "kafdSunset",
   "pages": [
@@ -63,6 +63,36 @@
         "en": "Supporting the business as it carries out its transformation plan."
       },
       "template": "service"
+    }
+  ],
+  "stats": [
+    {
+      "value": "960",
+      "label": {
+        "ar": "ساعة إشراف على التحول المؤسسي في 2025",
+        "en": "hours supervising institutional transformation in 2025"
+      }
+    },
+    {
+      "value": "240",
+      "label": {
+        "ar": "ساعة تحليل للوضع الراهن",
+        "en": "hours of current-state analysis"
+      }
+    },
+    {
+      "value": "112",
+      "label": {
+        "ar": "ساعة مراجعة للمواثيق العائلية",
+        "en": "hours of family charter review"
+      }
+    },
+    {
+      "value": "20",
+      "label": {
+        "ar": "منشأة عائلية في برنامج التحول المؤسسي",
+        "en": "family businesses in the transformation program"
+      }
     }
   ]
 }

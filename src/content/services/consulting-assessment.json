@@ -1,8 +1,8 @@
 {
   "id": "consulting-assessment",
   "lead": {
-    "ar": "تشخيص شامل لوضع المنشأة العائلية في الحوكمة والملكية والإدارة والجاهزية للتعاقب، ينتهي بخريطة أولويات واضحة.",
-    "en": "A full diagnosis of the family business across governance, ownership, management and succession readiness, ending with a clear priority map."
+    "ar": "تحليل شامل للمنشأة العائلية يقيّم مستوى نضج الحوكمة وفق منهجية موضوعية وكمّية، ويشخّص الوضع الراهن ويحدد نقاط القوة وفرص التحسين.",
+    "en": "A comprehensive analysis that measures the maturity of a family business's governance using an objective, quantitative method, diagnosing its current state and identifying strengths and areas for improvement."
   },
   "gets": [
     {

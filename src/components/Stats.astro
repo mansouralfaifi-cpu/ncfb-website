@@ -1,0 +1,8 @@
+---
+// Figures strip: big number + short label. Used on the home page and section pages.
+import { type Lang, L } from '../lib/site';
+interface Props { lang: Lang; items: { value: string; label: any }[]; note?: string }
+const { lang, items, note } = Astro.props;
+---
+<dl class="stats">{items.map((s) => <div><dt><span dir="ltr">{s.value}</span></dt><dd>{L(s.label, lang)}</dd></div>)}</dl>
+{note && <p class="caption muted" style="margin-top:var(--space-2)">{note}</p>}

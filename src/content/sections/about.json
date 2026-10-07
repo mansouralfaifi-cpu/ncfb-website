@@ -7,8 +7,8 @@
   },
   "icon": "landmark",
   "intro": {
-    "ar": "جهة وطنية مرجعية تعمل على استدامة المنشآت العائلية وانتقالها بين الأجيال.",
-    "en": "A national reference body working for the sustainability of family businesses and their transition across generations."
+    "ar": "جهة وطنية تعمل على استدامة المنشآت العائلية وتعزيز مساهمتها في التنمية الوطنية.",
+    "en": "A national body working for the sustainability of family businesses and their contribution to national development."
   },
   "photo": "kafd",
   "pages": [
@@ -50,6 +50,48 @@
         "en": "The Center's milestones since its founding."
       },
       "template": "history"
+    }
+  ],
+  "blocks": [
+    {
+      "title": {
+        "ar": "عن المركز",
+        "en": "About the Center"
+      },
+      "text": {
+        "ar": "تم إطلاق المركز تنفيذاً للأمر السامي الكريم رقم (49691) وتاريخ 15 ذي القعدة 1433هـ، بأن تقوم وزارة التجارة بالتنسيق مع مجلس الغرف التجارية بإعادة افتتاح المركز ودعمه. ويعمل المركز على تحقيق رسالته من خلال تقديم الخدمات والتواصل الفعّال مع المنشآت العائلية والجهات الحكومية والاستشارية والمجتمع.",
+        "en": "The Center was launched under Royal Order No. 49691 of 15 Dhu al-Qadah 1433 AH, directing the Ministry of Commerce, in coordination with the Council of Saudi Chambers, to reopen and support the Center. It pursues its mission by providing services and engaging effectively with family businesses, government bodies, advisors and society."
+      }
+    },
+    {
+      "title": {
+        "ar": "رؤيتنا",
+        "en": "Our vision"
+      },
+      "text": {
+        "ar": "منشآت عائلية مستدامة تسهم في التنمية الوطنية.",
+        "en": "Sustainable family businesses that contribute to national development."
+      }
+    },
+    {
+      "title": {
+        "ar": "مهمتنا",
+        "en": "Our mission"
+      },
+      "text": {
+        "ar": "التأسيس لمنظومة متكاملة تسهم في استدامة المنشآت العائلية وتعزيز مساهمتها في التنمية الوطنية، من خلال التواصل الفعّال وتقديم الخدمات لمختلف أصحاب المصلحة.",
+        "en": "To build an integrated ecosystem that sustains family businesses and strengthens their contribution to national development, through effective engagement and services for all stakeholders."
+      }
+    },
+    {
+      "title": {
+        "ar": "من نخدم",
+        "en": "Who we serve"
+      },
+      "text": {
+        "ar": "المنشآت العائلية، والحكومة والقطاع العام، والمستشارون والمهنيون، ومؤسسات التعليم، والمجتمع المحلي، والمجتمع الدولي.",
+        "en": "Family businesses, government and the public sector, advisors and professionals, educational institutions, the local community and the international community."
+      }
     }
   ]
 }

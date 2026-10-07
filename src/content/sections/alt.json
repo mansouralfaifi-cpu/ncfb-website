@@ -7,8 +7,8 @@
   },
   "icon": "scale",
   "intro": {
-    "ar": "خدمات محايدة تحفظ العلاقة بين أفراد العائلة وتنظّم أعمال مجالسها.",
-    "en": "Neutral services that protect relationships between family members and organize the work of their councils."
+    "ar": "ينظر في خلافات المنشآت والأوقاف العائلية قبل القضاء، عبر الوساطة والمصالحة والتحكيم.",
+    "en": "Resolves disputes in family businesses and endowments before court, through mediation, reconciliation and arbitration."
   },
   "photo": "riyadhSkyline",
   "pages": [
@@ -20,8 +20,8 @@
       },
       "icon": "notebook-pen",
       "description": {
-        "ar": "أمانة سر محترفة لمجالس العائلة والإدارة.",
-        "en": "Professional secretariat for family councils and boards."
+        "ar": "تهيئة الإجراءات والتواصل للنزاعات المنظورة.",
+        "en": "Organizing proceedings and communication for disputes under review."
       },
       "template": "service"
     },
@@ -33,10 +33,72 @@
       },
       "icon": "handshake",
       "description": {
-        "ar": "وساطة محايدة لتسوية الخلافات العائلية.",
-        "en": "Neutral mediation to settle family disputes."
+        "ar": "تقريب وجهات النظر للوصول إلى حل ودي ينهي الخلاف.",
+        "en": "Bringing parties together to reach an amicable settlement."
       },
       "template": "service"
+    }
+  ],
+  "blocks": [
+    {
+      "title": {
+        "ar": "عن البرنامج",
+        "en": "About the program"
+      },
+      "text": {
+        "ar": "«برنامج بديل» هو برنامج الوسائل البديلة لتسوية منازعات المنشآت والأوقاف العائلية. يعتمد على التسوية الودية والصلح، ويتميز بالتخصص في المنشآت والأوقاف العائلية وبوسطاء ومصلحين متخصصين وشرفيين.",
+        "en": "Badeel is the Alternative Dispute Resolution Program for family businesses and endowments. It relies on amicable settlement and reconciliation, and is distinguished by its focus on family businesses and endowments and by its specialized and honorary mediators."
+      }
+    },
+    {
+      "title": {
+        "ar": "المصالحة والتحكيم",
+        "en": "Reconciliation and arbitration"
+      },
+      "text": {
+        "ar": "إلى جانب الوساطة، يتيح البرنامج المصالحة بوثيقة صلح نهائية وملزمة بالتعاون مع مركز المصالحة بوزارة العدل، والتحكيم بالتعاون مع مراكز التحكيم السعودية المعتمدة، وإعداد وثائق التسوية القابلة للتنفيذ نظامياً.",
+        "en": "Alongside mediation, the program offers reconciliation through a final, binding settlement deed with the Ministry of Justice's Reconciliation Center, arbitration with accredited Saudi arbitration centers, and drafting of legally enforceable settlement documents."
+      }
+    },
+    {
+      "title": {
+        "ar": "أبرز أنواع القضايا",
+        "en": "Common case types"
+      },
+      "text": {
+        "ar": "تنفيذ الاتفاقيات أو تعديلها، والمبالغ المستحقة، وقرارات الجمعية، ومجالات الاستثمار، وإدارة الشركات والحوكمة، وإثبات الملكية، وحقوق المساهمين، وتوزيع الأرباح، والتخارج.",
+        "en": "Enforcing or amending agreements, unpaid amounts, general assembly resolutions, investment decisions, company management and governance, proof of ownership, shareholder rights, profit distribution and exits."
+      }
+    }
+  ],
+  "stats": [
+    {
+      "value": "+166",
+      "label": {
+        "ar": "وساطة",
+        "en": "mediations"
+      }
+    },
+    {
+      "value": "45",
+      "label": {
+        "ar": "وسيطاً معتمداً",
+        "en": "accredited mediators"
+      }
+    },
+    {
+      "value": "638",
+      "label": {
+        "ar": "مليون ريال حجم القضايا المنظورة",
+        "en": "million riyals in cases handled"
+      }
+    },
+    {
+      "value": "+282",
+      "label": {
+        "ar": "مليون ريال انتهت بالصلح",
+        "en": "million riyals settled"
+      }
     }
   ]
 }

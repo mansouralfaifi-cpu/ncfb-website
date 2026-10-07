@@ -35,6 +35,15 @@ collections:
           - { label: "اسم المركز / Site name", name: siteName, widget: object, fields: &bi_string [ { label: "العربية", name: ar, widget: string }, { label: "English", name: en, widget: string } ] }
           - { label: "نبذة التذييل / Footer tagline", name: tagline, widget: object, fields: &bi_text [ { label: "العربية", name: ar, widget: text }, { label: "English", name: en, widget: text } ] }
           - { label: "البريد الإلكتروني للتواصل / Contact email", name: email, widget: string }
+          - label: "بيانات التواصل لكل فريق / Team contacts"
+            name: contacts
+            widget: list
+            required: false
+            summary: "{{fields.email}}"
+            fields:
+              - { label: "الجهة / Team", name: label, widget: object, fields: *bi_string }
+              - { label: "البريد / Email", name: email, widget: string }
+              - { label: "الهاتف / Phone", name: phone, widget: string, required: false }
           - { label: "حقوق النشر / Copyright line", name: copyright, widget: object, fields: *bi_string }
           - { label: "سياسة الخصوصية / Privacy policy (paragraphs separated by a blank line)", name: privacy, widget: object, fields: *bi_text }
           - { label: "الشروط والأحكام / Terms (paragraphs separated by a blank line)", name: terms, widget: object, fields: *bi_text }
@@ -60,6 +69,20 @@ collections:
               - { label: "العنوان / Heading", name: heading, widget: object, fields: *bi_string }
               - { label: "النص / Text", name: text, widget: object, fields: *bi_text }
               - { label: "نص الرابط / Link text", name: link, widget: object, fields: *bi_string }
+          - label: "شريط الأرقام / Figures strip"
+            name: stats
+            widget: object
+            required: false
+            fields:
+              - { label: "العنوان / Heading", name: heading, widget: object, fields: *bi_string }
+              - { label: "ملاحظة المصدر / Source note", name: note, widget: object, fields: *bi_text }
+              - label: "الأرقام / Figures"
+                name: items
+                widget: list
+                summary: "{{fields.value}}"
+                fields: &stat_fields
+                  - { label: "الرقم / Figure", name: value, widget: string }
+                  - { label: "الوصف / Label", name: label, widget: object, fields: *bi_string }
           - label: "الاستشارات / Advisory block"
             name: consulting
             widget: object
@@ -106,6 +129,20 @@ collections:
       - { label: "الأيقونة (اسم Lucide) / Icon (Lucide name)", name: icon, widget: string }
       - { label: "المقدمة / Intro", name: intro, widget: object, fields: *bi_text }
       - { label: "صورة رأس الصفحة / Header photo", name: photo, widget: select, options: [ { label: "KAFD (day)", value: kafd }, { label: "KAFD (dusk)", value: kafdDusk }, { label: "Riyadh (dusk, Faisaliah)", value: riyadhDusk }, { label: "Riyadh skyline (Faisaliah + Kingdom)", value: riyadhSkyline }, { label: "KAFD (sunset)", value: kafdSunset }, { label: "KAFD (towers)", value: kafdTowers }, { label: "Kingdom Centre", value: kingdom }, { label: "Riyadh street", value: street } ] }
+      - label: "أرقام القسم (اختياري) / Section figures (optional)"
+        name: stats
+        widget: list
+        required: false
+        summary: "{{fields.value}}"
+        fields: *stat_fields
+      - label: "فقرات القسم (اختياري) / Text blocks (optional)"
+        name: blocks
+        widget: list
+        required: false
+        summary: "{{fields.title.ar}}"
+        fields:
+          - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
+          - { label: "النص / Text", name: text, widget: object, fields: *bi_text }
       - label: "صفحات القسم / Sub-pages"
         name: pages
         widget: list
@@ -156,6 +193,16 @@ collections:
               - { label: "الاسم / Name", name: name, widget: object, fields: *bi_string }
               - { label: "المنصب / Role", name: role, widget: object, fields: *bi_string }
               - { label: "الصورة (مربعة) / Photo (square)", name: photo, widget: image, required: false }
+          - { label: "عنوان المجلس الثاني / Second council title", name: councilTitle, widget: object, fields: *bi_optional }
+          - { label: "مقدمة المجلس الثاني / Second council intro", name: councilIntro, widget: object, fields: *bi_optional }
+          - label: "أعضاء المجلس الثاني / Second council members"
+            name: council
+            widget: list
+            required: false
+            fields:
+              - { label: "الاسم / Name", name: name, widget: object, fields: *bi_string }
+              - { label: "المنصب / Role", name: role, widget: object, fields: *bi_string }
+              - { label: "الصورة (مربعة) / Photo (square)", name: photo, widget: image, required: false }
       - name: ceo
         label: "الرئيس التنفيذي / CEO"
         file: src/content/ceo.json
@@ -197,6 +244,7 @@ collections:
               - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
               - { label: "تاريخ الإصدار (YYYY-MM) / Date", name: date, widget: string, pattern: ['^\d{4}-\d{2}$', "YYYY-MM"] }
               - { label: "ملف PDF / PDF file", name: file, widget: file, required: false }
+              - { label: "ملخص قصير (اختياري) / Short summary", name: summary, widget: object, required: false, fields: *bi_text_optional }
       - name: videos
         label: "المقاطع / Videos"
         file: src/content/videos.json
@@ -234,6 +282,7 @@ collections:
               - { label: "المكان / Location", name: location, widget: object, fields: *bi_optional }
               - { label: "طريقة الحضور / Attendance", name: mode, widget: select, options: [ { label: "حضوري / In person", value: in_person }, { label: "عن بُعد / Online", value: online } ] }
               - { label: "فعالية سابقة / Past event", name: past, widget: boolean, default: false }
+              - { label: "يُعرض العام فقط (اليوم غير معروف) / Show year only", name: yearOnly, widget: boolean, default: false, required: false }
               - { label: "تظهر في صفحة الفعاليات / Show in events list", name: listed, widget: boolean, default: true }
               - { label: "رابط التسجيل المرئي (للفعاليات السابقة) / Recording URL", name: recording, widget: string, required: false }
       - name: programs

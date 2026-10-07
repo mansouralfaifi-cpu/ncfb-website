@@ -1,35 +1,24 @@
 {
   "note": {
-    "ar": "الأسماء والصور تُستبدل ببيانات المجلس المعتمدة.",
-    "en": "Names and photos will be replaced with the approved board details."
+    "ar": "",
+    "en": ""
   },
   "members": [
     {
       "name": {
-        "ar": "الاسم",
-        "en": "Name"
+        "ar": "د. غسان أحمد السليمان",
+        "en": "Dr. Ghassan Ahmed Al-Sulaiman"
       },
       "role": {
         "ar": "رئيس مجلس الإدارة",
-        "en": "Chair"
+        "en": "Chair of the Board"
       },
       "photo": ""
     },
     {
       "name": {
-        "ar": "الاسم",
-        "en": "Name"
-      },
-      "role": {
-        "ar": "نائب رئيس مجلس الإدارة",
-        "en": "Vice Chair"
-      },
-      "photo": ""
-    },
-    {
-      "name": {
-        "ar": "الاسم",
-        "en": "Name"
+        "ar": "د. إبراهيم سليمان الراجحي",
+        "en": "Dr. Ibrahim Sulaiman Al-Rajhi"
       },
       "role": {
         "ar": "عضو مجلس الإدارة",
@@ -39,8 +28,8 @@
     },
     {
       "name": {
-        "ar": "الاسم",
-        "en": "Name"
+        "ar": "م. أنس صيرفي",
+        "en": "Eng. Anas Sairafi"
       },
       "role": {
         "ar": "عضو مجلس الإدارة",
@@ -50,8 +39,8 @@
     },
     {
       "name": {
-        "ar": "الاسم",
-        "en": "Name"
+        "ar": "أسامة حسين السيد",
+        "en": "Osama Hussein Al-Sayed"
       },
       "role": {
         "ar": "عضو مجلس الإدارة",
@@ -61,8 +50,19 @@
     },
     {
       "name": {
-        "ar": "الاسم",
-        "en": "Name"
+        "ar": "بدر سليمان الرزيزاء",
+        "en": "Badr Sulaiman Al-Rezaizaa"
+      },
+      "role": {
+        "ar": "عضو مجلس الإدارة ممثلاً عن اتحاد الغرف التجارية",
+        "en": "Board member representing the Federation of Saudi Chambers"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "صالح حسن العفالق",
+        "en": "Saleh Hassan Al-Afaleq"
       },
       "role": {
         "ar": "عضو مجلس الإدارة",
@@ -72,8 +72,8 @@
     },
     {
       "name": {
-        "ar": "الاسم",
-        "en": "Name"
+        "ar": "عبدالله بن إبراهيم الخريف",
+        "en": "Abdullah bin Ibrahim Al-Khorayef"
       },
       "role": {
         "ar": "عضو مجلس الإدارة",
@@ -83,12 +83,154 @@
     },
     {
       "name": {
-        "ar": "الاسم",
-        "en": "Name"
+        "ar": "عبدالله محمد الزامل",
+        "en": "Abdullah Mohammed Al-Zamil"
       },
       "role": {
-        "ar": "عضو مستقل",
-        "en": "Independent member"
+        "ar": "عضو مجلس الإدارة",
+        "en": "Board member"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "عبدالعزيز محمد السبيعي",
+        "en": "Abdulaziz Mohammed Al-Subaie"
+      },
+      "role": {
+        "ar": "عضو مجلس الإدارة",
+        "en": "Board member"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "عصام عبدالقادر المهيدب",
+        "en": "Essam Abdulqader Al-Muhaidib"
+      },
+      "role": {
+        "ar": "عضو مجلس الإدارة",
+        "en": "Board member"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "عبدالله عبداللطيف الفوزان",
+        "en": "Abdullah Abdullatif Al-Fozan"
+      },
+      "role": {
+        "ar": "عضو مجلس الإدارة",
+        "en": "Board member"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "غزل عبدالإله بن محفوظ",
+        "en": "Ghazal Abdulelah Bin Mahfouz"
+      },
+      "role": {
+        "ar": "عضو مجلس الإدارة",
+        "en": "Board member"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "محيي الدين صالح كامل",
+        "en": "Mohieddin Saleh Kamel"
+      },
+      "role": {
+        "ar": "عضو مجلس الإدارة",
+        "en": "Board member"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "نوف عبدالعزيز التركي",
+        "en": "Nouf Abdulaziz Al-Turki"
+      },
+      "role": {
+        "ar": "عضو مجلس الإدارة",
+        "en": "Board member"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "د. وليد محمد العيسى",
+        "en": "Dr. Waleed Mohammed Al-Eissa"
+      },
+      "role": {
+        "ar": "عضو مجلس الإدارة",
+        "en": "Board member"
+      },
+      "photo": ""
+    }
+  ],
+  "councilTitle": {
+    "ar": "مجلس المنشآت العائلية",
+    "en": "Family Business Council"
+  },
+  "councilIntro": {
+    "ar": "مجلس استشاري من ممثلي المنشآت العائلية يساند المركز في فهم احتياجاتها.",
+    "en": "An advisory council of family business representatives that helps the Center understand their needs."
+  },
+  "council": [
+    {
+      "name": {
+        "ar": "بدر عبدالله العيسى",
+        "en": "Badr Abdullah Al-Eissa"
+      },
+      "role": {
+        "ar": "عضو المجلس",
+        "en": "Council member"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "مصعب سليمان المهيدب",
+        "en": "Musab Sulaiman Al-Muhaidib"
+      },
+      "role": {
+        "ar": "عضو المجلس",
+        "en": "Council member"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "عبدالله طارق القصبي",
+        "en": "Abdullah Tarek Al-Gosaibi"
+      },
+      "role": {
+        "ar": "عضو المجلس",
+        "en": "Council member"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "عمران علي رضا",
+        "en": "Omran Ali Reza"
+      },
+      "role": {
+        "ar": "عضو المجلس",
+        "en": "Council member"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "رشا خالد التركي",
+        "en": "Rasha Khaled Al-Turki"
+      },
+      "role": {
+        "ar": "عضو المجلس",
+        "en": "Council member"
       },
       "photo": ""
     }

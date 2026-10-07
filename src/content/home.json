@@ -35,13 +35,67 @@
       "en": "A national reference for sustainable family businesses"
     },
     "text": {
-      "ar": "المنشأة العائلية تُبنى في جيل، وتُحفظ بالحوكمة في الأجيال التي تليه. يعمل المركز مع الملاك والمجالس والمستشارين والجهات الحكومية على أطر واضحة تحفظ المنشأة والعائلة معاً.",
-      "en": "A family business is built in one generation and preserved through governance in the generations that follow. The Center works with owners, boards, advisors and government bodies on clear frameworks that protect both the business and the family."
+      "ar": "يعمل المركز على بناء منظومة متكاملة تجعل المنشآت العائلية مستدامة وتعزز مساهمتها في التنمية الوطنية، عبر تقديم الخدمات والتواصل مع المنشآت والجهات الحكومية والاستشارية والمجتمع.",
+      "en": "The Center builds an integrated ecosystem that makes family businesses sustainable and strengthens their contribution to national development, through its services and its engagement with businesses, government, advisors and society."
     },
     "link": {
       "ar": "اقرأ عن المركز",
       "en": "Read about the Center"
     }
+  },
+  "stats": {
+    "heading": {
+      "ar": "المنشآت العائلية والمركز بالأرقام",
+      "en": "Family businesses and the Center in numbers"
+    },
+    "note": {
+      "ar": "أرقام القطاع من دراسة المركز في 2025، وأرقام المركز حتى نهاية 2025.",
+      "en": "Sector figures from the Center's 2025 study; Center figures to the end of 2025."
+    },
+    "items": [
+      {
+        "value": "95%",
+        "label": {
+          "ar": "من منشآت القطاع الخاص منشآت عائلية",
+          "en": "of private sector businesses are family businesses"
+        }
+      },
+      {
+        "value": "48%",
+        "label": {
+          "ar": "من إجمالي القوى العاملة في المملكة",
+          "en": "of the Kingdom's total workforce"
+        }
+      },
+      {
+        "value": "+166",
+        "label": {
+          "ar": "وساطة بوسطاء معتمدين من المركز",
+          "en": "mediations by Center-accredited mediators"
+        }
+      },
+      {
+        "value": "52",
+        "label": {
+          "ar": "دراسة ومنشوراً ودليلاً إرشادياً",
+          "en": "studies, publications and guides"
+        }
+      },
+      {
+        "value": "78",
+        "label": {
+          "ar": "فعالية في 27 مدينة",
+          "en": "events in 27 cities"
+        }
+      },
+      {
+        "value": "51",
+        "label": {
+          "ar": "اتفاقية منذ 2021",
+          "en": "agreements since 2021"
+        }
+      }
+    ]
   },
   "consulting": {
     "heading": {

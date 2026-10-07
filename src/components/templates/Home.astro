@@ -3,6 +3,7 @@ import Hero from '../Hero.astro';
 import Icon from '../Icon.astro';
 import SubCards from '../SubCards.astro';
 import PubList from '../PubList.astro';
+import Stats from '../Stats.astro';
 import EventCard from '../EventCard.astro';
 import home from '../../content/home.json';
 import events from '../../content/events.json';
@@ -23,6 +24,7 @@ const features = [{ s: alt, cls: 'feature navy on-navy' }, { s: training, cls: '
   <div class="copy"><span class="eyebrow">{L(about.title, lang)}</span><h2 class="h2">{L(home.about.heading, lang)}</h2></div>
   <div class="copy"><p class="lead">{L(home.about.text, lang)}</p><a class="btn btn-text" href={href(lang, 'about')}>{L(home.about.link, lang)}<Icon name={arrow} /></a></div>
 </div></section>
+{home.stats?.items?.length > 0 && <section class="sec" style="padding-block-start:0"><div class="wrap" style="display:grid;gap:var(--space-3)"><h2 class="h3">{L(home.stats.heading, lang)}</h2><Stats lang={lang} items={home.stats.items} note={L(home.stats.note, lang)} /></div></section>}
 <section class="sec alt"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">{L(consulting.title, lang)}</span><h2 class="h2">{L(home.consulting.heading, lang)}</h2></div><a class="btn btn-secondary" href={href(lang, 'consulting')}>{L(home.consulting.button, lang)}</a></div>
   <SubCards lang={lang} section={consulting} />

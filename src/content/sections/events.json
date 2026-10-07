@@ -38,5 +38,28 @@
       },
       "template": "events"
     }
+  ],
+  "stats": [
+    {
+      "value": "78",
+      "label": {
+        "ar": "فعالية",
+        "en": "events"
+      }
+    },
+    {
+      "value": "27",
+      "label": {
+        "ar": "مدينة",
+        "en": "cities"
+      }
+    },
+    {
+      "value": "51",
+      "label": {
+        "ar": "اتفاقية منذ 2021",
+        "en": "agreements since 2021"
+      }
+    }
   ]
 }

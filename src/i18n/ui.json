@@ -486,5 +486,9 @@
   "servicesNotSureDesc": {
     "ar": "اكتب لنا وضع منشأتك، ويقترح عليك فريق المركز الخدمة المناسبة.",
     "en": "Tell us about your business and the Center's team will suggest the right service."
+  },
+  "contactTeams": {
+    "ar": "التواصل مع فرق المركز",
+    "en": "Contact our teams"
   }
 }

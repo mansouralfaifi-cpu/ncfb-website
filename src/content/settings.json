@@ -19,5 +19,31 @@
   "terms": {
     "ar": "يُنشر هنا نص الشروط والأحكام المعتمد للمركز.",
     "en": "The Center's approved terms and conditions will be published here."
-  }
+  },
+  "contacts": [
+    {
+      "label": {
+        "ar": "التدريب والفعاليات",
+        "en": "Training and events"
+      },
+      "email": "event@ncfb.org.sa",
+      "phone": "0112182206"
+    },
+    {
+      "label": {
+        "ar": "الاستشارات",
+        "en": "Advisory"
+      },
+      "email": "Advisory@ncfb.org.sa",
+      "phone": "0112182206"
+    },
+    {
+      "label": {
+        "ar": "برنامج بديل",
+        "en": "Badeel Program"
+      },
+      "email": "adr@ncfb.org.sa",
+      "phone": "0112182294"
+    }
+  ]
 }

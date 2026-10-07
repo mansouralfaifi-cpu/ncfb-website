@@ -127,17 +127,18 @@
       "listed": true
     },
     {
-      "id": "family-councils-meeting-2026-09",
-      "date": "2026-09-20",
+      "id": "boards-2025",
+      "date": "2025-01-01",
       "endDate": "",
+      "yearOnly": true,
       "kind": "event",
       "title": {
-        "ar": "لقاء مجالس العائلة",
-        "en": "Family councils meeting"
+        "ar": "تأسيس مجالس إدارة أكفأ في المنشآت العائلية",
+        "en": "Building more effective boards in family businesses"
       },
       "calendarLabel": {
-        "ar": "لقاء مجالس العائلة",
-        "en": "Family councils meeting"
+        "ar": "تأسيس مجالس إدارة أكفأ في المنشآت العائلية",
+        "en": "Building more effective boards in family businesses"
       },
       "location": {
         "ar": "الرياض",
@@ -148,23 +149,222 @@
       "listed": true
     },
     {
-      "id": "board-evaluation-workshop-2026-09",
-      "date": "2026-09-08",
+      "id": "charter-abha-2025",
+      "date": "2025-01-01",
       "endDate": "",
+      "yearOnly": true,
       "kind": "event",
       "title": {
-        "ar": "ورشة: تقييم مجلس الإدارة",
-        "en": "Workshop: board evaluation"
+        "ar": "أهمية الميثاق العائلي",
+        "en": "The importance of the family charter"
       },
       "calendarLabel": {
-        "ar": "ورشة: تقييم مجلس الإدارة",
-        "en": "Workshop: board evaluation"
+        "ar": "أهمية الميثاق العائلي",
+        "en": "The importance of the family charter"
       },
       "location": {
-        "ar": "عن بُعد",
-        "en": "Online"
+        "ar": "أبها",
+        "en": "Abha"
       },
-      "mode": "online",
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "governance-risk-2025",
+      "date": "2025-01-01",
+      "endDate": "",
+      "yearOnly": true,
+      "kind": "event",
+      "title": {
+        "ar": "خطر فشل الحوكمة",
+        "en": "The risk of governance failure"
+      },
+      "calendarLabel": {
+        "ar": "خطر فشل الحوكمة",
+        "en": "The risk of governance failure"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "founding-to-empowerment-2025",
+      "date": "2025-01-01",
+      "endDate": "",
+      "yearOnly": true,
+      "kind": "event",
+      "title": {
+        "ar": "من التأسيس إلى التمكين",
+        "en": "From founding to empowerment"
+      },
+      "calendarLabel": {
+        "ar": "من التأسيس إلى التمكين",
+        "en": "From founding to empowerment"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "succession-eastern-2025",
+      "date": "2025-01-01",
+      "endDate": "",
+      "yearOnly": true,
+      "kind": "event",
+      "title": {
+        "ar": "تخطيط التعاقب الوظيفي في المنشآت العائلية",
+        "en": "Succession planning in family businesses"
+      },
+      "calendarLabel": {
+        "ar": "تخطيط التعاقب الوظيفي في المنشآت العائلية",
+        "en": "Succession planning in family businesses"
+      },
+      "location": {
+        "ar": "المنطقة الشرقية",
+        "en": "Eastern Province"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "family-office-2025",
+      "date": "2025-01-01",
+      "endDate": "",
+      "yearOnly": true,
+      "kind": "event",
+      "title": {
+        "ar": "من الشركة العائلية إلى المكتب العائلي",
+        "en": "From family company to family office"
+      },
+      "calendarLabel": {
+        "ar": "من الشركة العائلية إلى المكتب العائلي",
+        "en": "From family company to family office"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "succession-lab-2025",
+      "date": "2025-01-01",
+      "endDate": "",
+      "yearOnly": true,
+      "kind": "event",
+      "title": {
+        "ar": "مختبر التعاقب القيادي",
+        "en": "Leadership Succession Lab"
+      },
+      "calendarLabel": {
+        "ar": "مختبر التعاقب القيادي",
+        "en": "Leadership Succession Lab"
+      },
+      "location": {
+        "ar": "الرياض والخبر",
+        "en": "Riyadh and Khobar"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "family-investments-2025",
+      "date": "2025-01-01",
+      "endDate": "",
+      "yearOnly": true,
+      "kind": "event",
+      "title": {
+        "ar": "الاستثمارات العائلية: عوائد مستدامة عبر الأجيال",
+        "en": "Family investments: sustainable returns across generations"
+      },
+      "calendarLabel": {
+        "ar": "الاستثمارات العائلية: عوائد مستدامة عبر الأجيال",
+        "en": "Family investments: sustainable returns across generations"
+      },
+      "location": {
+        "ar": "المدينة المنورة",
+        "en": "Madinah"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "fii-2025",
+      "date": "2025-01-01",
+      "endDate": "",
+      "yearOnly": true,
+      "kind": "event",
+      "title": {
+        "ar": "مؤتمر مبادرة مستقبل الاستثمار (مشاركة)",
+        "en": "Future Investment Initiative (participation)"
+      },
+      "calendarLabel": {
+        "ar": "مؤتمر مبادرة مستقبل الاستثمار (مشاركة)",
+        "en": "Future Investment Initiative (participation)"
+      },
+      "location": {
+        "ar": "الرياض",
+        "en": "Riyadh"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "fbf-abudhabi-2025",
+      "date": "2025-01-01",
+      "endDate": "",
+      "yearOnly": true,
+      "kind": "event",
+      "title": {
+        "ar": "منتدى الأعمال العائلية 2025 (مشاركة)",
+        "en": "Family Business Forum 2025 (participation)"
+      },
+      "calendarLabel": {
+        "ar": "منتدى الأعمال العائلية 2025 (مشاركة)",
+        "en": "Family Business Forum 2025 (participation)"
+      },
+      "location": {
+        "ar": "أبوظبي",
+        "en": "Abu Dhabi"
+      },
+      "mode": "in_person",
+      "past": true,
+      "listed": true
+    },
+    {
+      "id": "legacy-bahrain-2025",
+      "date": "2025-01-01",
+      "endDate": "",
+      "yearOnly": true,
+      "kind": "event",
+      "title": {
+        "ar": "منتدى الإرث للشركات العائلية (مشاركة)",
+        "en": "Legacy Forum for Family Businesses (participation)"
+      },
+      "calendarLabel": {
+        "ar": "منتدى الإرث للشركات العائلية (مشاركة)",
+        "en": "Legacy Forum for Family Businesses (participation)"
+      },
+      "location": {
+        "ar": "البحرين",
+        "en": "Bahrain"
+      },
+      "mode": "in_person",
       "past": true,
       "listed": true
     }

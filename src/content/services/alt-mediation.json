@@ -1,8 +1,8 @@
 {
   "id": "alt-mediation",
   "lead": {
-    "ar": "وساطة محايدة وسرية تساعد أفراد العائلة على الوصول إلى تسوية تحفظ المنشأة والعلاقة، قبل اللجوء إلى القضاء.",
-    "en": "Neutral, confidential mediation that helps family members reach a settlement that protects the business and the relationship, before going to court."
+    "ar": "آلية لتقريب وجهات النظر بين الأطراف للوصول إلى حل ينهي الخلاف ودياً قبل القضاء، عبر وسطاء ومصلحين معتمدين من المركز ومتخصصين في المنشآت والأوقاف العائلية.",
+    "en": "A process that brings the parties' positions closer to reach an amicable settlement before court, through mediators accredited by the Center and specialized in family businesses and endowments."
   },
   "gets": [
     {

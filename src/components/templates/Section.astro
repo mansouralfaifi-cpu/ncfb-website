@@ -1,11 +1,15 @@
 ---
 import PageHdr from '../PageHdr.astro';
 import SubCards from '../SubCards.astro';
+import Stats from '../Stats.astro';
 import { type Lang, type Section, t, href, L } from '../../lib/site';
 interface Props { lang: Lang; section: Section }
 const { lang, section } = Astro.props;
 const title = L(section.title, lang);
+const blocks = section.blocks || [], stats = section.stats || [];
 ---
 <PageHdr lang={lang} title={title} lead={L(section.intro, lang)} photoOf={section} />
+{stats.length > 0 && <section class="sec" style="padding-block-end:0"><div class="wrap"><Stats lang={lang} items={stats} /></div></section>}
 <section class="sec"><div class="wrap"><SubCards lang={lang} section={section} /></div></section>
-<section class="sec alt"><div class="wrap"><div class="band on-navy"><div style="display:grid;gap:var(--space-1)"><h2 class="h3">{t(lang, 'questionAbout', { t: title })}</h2><p>{t(lang, 'questionText')}</p></div><div class="cta-row"><a class="btn btn-primary" href={href(lang, 'contact')}>{t(lang, 'contact')}</a></div></div></div></section>
+{blocks.length > 0 && <section class="sec alt"><div class="wrap"><div class="blocks">{blocks.map((b) => <div><h2 class="h4">{L(b.title, lang)}</h2><p>{L(b.text, lang)}</p></div>)}</div></div></section>}
+<section class={`sec${blocks.length > 0 ? '' : ' alt'}`}><div class="wrap"><div class="band on-navy"><div style="display:grid;gap:var(--space-1)"><h2 class="h3">{t(lang, 'questionAbout', { t: title })}</h2><p>{t(lang, 'questionText')}</p></div><div class="cta-row"><a class="btn btn-primary" href={href(lang, 'contact')}>{t(lang, 'contact')}</a></div></div></div></section>
