@@ -41,6 +41,7 @@ collections:
             required: false
             fields:
               - { label: "رابط حساب X / X URL", name: x, widget: string, required: false }
+              - { label: "رابط قناة يوتيوب / YouTube URL", name: youtube, widget: string, required: false }
               - { label: "رابط لينكدإن / LinkedIn URL", name: linkedin, widget: string, required: false }
           - label: "بيانات التواصل لكل فريق / Team contacts"
             name: contacts

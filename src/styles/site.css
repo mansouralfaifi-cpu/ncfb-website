@@ -590,4 +590,5 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .social.on-light{margin-inline-start:0;padding-top:var(--space-2)}
 .social.on-light a{color:var(--color-primary-900);background:var(--color-bg-subtle)}
 .social.on-light a:hover{color:var(--color-text-accent)}
-@container (max-width:1199px){.mainnav .top-link{padding-inline:var(--space-1)}.social{gap:0}.social a{width:2rem;height:2rem}}
+@container (max-width:1279px){.mainnav .top-link{padding-inline:var(--space-1)}.social{gap:0}.social a{width:2rem;height:2rem}}
+@container (max-width:1099px){.mainnav > .wrap > ul{gap:0}.social a{width:1.75rem;height:1.75rem}.social svg{width:1rem;height:1rem}}
