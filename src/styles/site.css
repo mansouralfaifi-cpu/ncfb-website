@@ -482,7 +482,7 @@ main:focus{outline:none}
 .intro-lang:hover{border-color:var(--color-border-focus)}
 /* real photos replacing placeholders (board, CEO, videos) */
 .person img,.profile img.photo,.video img.thumb{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:var(--radius-md);display:block}
-.profile img.photo{aspect-ratio:4/5}
+.profile img.photo{aspect-ratio:4/5;object-position:50% 20%;border:var(--border-width-1) solid var(--color-border);background:var(--color-neutral-0)}
 .video img.thumb{position:absolute;inset:0;height:100%;border-radius:0}
 /* calendar months (one shown at a time) */
 .cal-month[hidden]{display:none}
