@@ -62,8 +62,8 @@ collections:
               - { label: "البريد / Email", name: email, widget: string }
               - { label: "الهاتف / Phone", name: phone, widget: string, required: false }
           - { label: "حقوق النشر / Copyright line", name: copyright, widget: object, fields: *bi_string }
-          - { label: "سياسة الخصوصية / Privacy policy (paragraphs separated by a blank line)", name: privacy, widget: object, fields: *bi_text }
-          - { label: "الشروط والأحكام / Terms (paragraphs separated by a blank line)", name: terms, widget: object, fields: *bi_text }
+          - { label: "سياسة الخصوصية / Privacy policy (paragraphs separated by a blank line; start a line with ## for a heading)", name: privacy, widget: object, fields: *bi_text }
+          - { label: "الشروط والأحكام / Terms (paragraphs separated by a blank line; start a line with ## for a heading)", name: terms, widget: object, fields: *bi_text }
       - name: home
         label: "الصفحة الرئيسية / Home page"
         file: src/content/home.json

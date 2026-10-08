@@ -2,6 +2,10 @@
 import { type Lang, L } from '../../lib/site';
 interface Props { lang: Lang; body: any }
 const { lang, body } = Astro.props;
-const paras = L(body, lang).split(/\n\s*\n/).filter(Boolean);
+// Blocks are separated by a blank line. A block starting with "## " opens a heading; its next lines are a paragraph.
+const blocks = L(body, lang).split(/\n\s*\n/).filter(Boolean).map((b: string) => {
+  const m = b.match(/^##\s+(.+?)(?:\n([\s\S]*))?$/);
+  return m ? { h: m[1].trim(), p: (m[2] || '').trim() } : { h: '', p: b.trim() };
+});
 ---
-<section class="sec"><div class="wrap prose">{paras.map((p) => <p>{p}</p>)}</div></section>
+<section class="sec"><div class="wrap prose">{blocks.map((b) => <>{b.h && <h2 class="h4">{b.h}</h2>}{b.p && <p>{b.p}</p>}</>)}</div></section>
