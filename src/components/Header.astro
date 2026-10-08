@@ -13,7 +13,7 @@ const other = otherLang(lang);
     <a class="brand" href={href(lang, 'home')} aria-label={t(lang, 'homeAria')}><Image src={logo} alt="" width={128} densities={[1, 2]} format="png" loading="eager" /></a>
     <div class="hdr-tools">
       {altHref && <a class="lang" href={altHref} lang={other} hreflang={other}>{t(lang, 'langSwitch')}</a>}
-      <a class="btn btn-primary" href={href(lang, 'contact')}>{t(lang, 'contact')}</a>
+      <a class="btn btn-primary hdr-cta" href={href(lang, 'contact')}>{t(lang, 'contact')}</a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="drawer" id="menuBtn"><Icon name="menu" />{t(lang, 'menu')}</button>
     </div>
   </div>

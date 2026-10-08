@@ -606,3 +606,9 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .newsletter .nl-row{display:flex;gap:var(--space-1);flex-wrap:wrap}
 .newsletter .input{flex:1 1 12rem;min-width:0;background:var(--color-neutral-0);color:var(--color-neutral-900)}
 .newsletter .btn{flex:0 0 auto}
+/* Nav social icons span exactly the width of the header «تواصل معنا» button above them, edge to edge */
+:root{--hdr-cta-w:8.5rem}
+.hdr-cta{inline-size:var(--hdr-cta-w);justify-content:center}
+.mainnav .social{inline-size:var(--hdr-cta-w);flex:none;justify-content:space-between;gap:0}
+.mainnav .social a{inline-size:auto;padding:0;block-size:2.5rem}
+@container (max-width:1099px){.mainnav .top-link{padding-inline:var(--space-half)}}
