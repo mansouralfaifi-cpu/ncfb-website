@@ -658,3 +658,11 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .page-hdr h1::before{background:var(--color-primary-900)}
 .page-hdr .crumbs a:focus-visible{outline-color:var(--color-primary-900)}
 .mainnav .social a:hover{color:var(--color-primary-700)}
+/* Page header navy under the gold nav bar (mansour 2026-10-08 «ابغى لون المستطيل هذا كحلي») */
+.page-hdr{background:var(--color-primary-900)}
+.page-hdr .pat{background:var(--color-primary-300);opacity:.10}
+.page-hdr h1,.page-hdr .crumbs a{color:var(--color-neutral-0)}
+.page-hdr .lead,.page-hdr .crumbs{color:var(--color-primary-100)}
+.page-hdr .crumbs li+li::before{color:var(--color-primary-300)}
+.page-hdr h1::before{background:var(--color-accent-fill)}
+.page-hdr .crumbs a:focus-visible{outline-color:var(--color-neutral-0)}
