@@ -100,5 +100,39 @@
         "en": "million riyals settled"
       }
     }
-  ]
+  ],
+  "highlightsTitle": {
+    "ar": "أبرز الملامح",
+    "en": "Highlights"
+  },
+  "highlights": [
+    {
+      "ar": "عدالة وقائية تعالج الخلافات المحتملة قبل وقوعها",
+      "en": "Preventive justice that deals with potential disputes before they happen"
+    },
+    {
+      "ar": "وسطاء ومصلحون معتمدون من المركز",
+      "en": "Mediators and conciliators accredited by the Center"
+    },
+    {
+      "ar": "تعاون مع مراكز التحكيم السعودية المعتمدة",
+      "en": "Cooperation with accredited Saudi arbitration centers"
+    },
+    {
+      "ar": "شراكة مع مركز المصالحة التابع لوزارة العدل",
+      "en": "Partnership with the Ministry of Justice's Reconciliation Center"
+    },
+    {
+      "ar": "اتفاقيات تسوية قابلة للتنفيذ نظامياً",
+      "en": "Settlement agreements that are legally enforceable"
+    },
+    {
+      "ar": "سرية الإجراءات وحفظ العلاقة العائلية",
+      "en": "Confidential proceedings that protect family relationships"
+    }
+  ],
+  "closing": {
+    "ar": "وبذلك تتحول إدارة النزاع من معالجة حالة قائمة إلى سياسة مؤسسية تهدف إلى حصر النزاعات في أضيق نطاق ممكن، وحماية المنشآت العائلية من الآثار الممتدة للخلافات عبر الأجيال.",
+    "en": "Dispute management thus moves from handling a case at hand to an institutional policy that keeps disputes as narrow as possible and protects family businesses from the lasting effects of conflict across generations."
+  }
 }

@@ -49,8 +49,8 @@
       "en": "Family businesses and the Center in numbers"
     },
     "note": {
-      "ar": "أرقام القطاع من دراسة المركز في 2025، وأرقام المركز حتى نهاية 2025.",
-      "en": "Sector figures from the Center's 2025 study; Center figures to the end of 2025."
+      "ar": "أرقام القطاع من دراسة المركز في 2025، وأرقام المركز من بياناته المنشورة.",
+      "en": "Sector figures from the Center's 2025 study; Center figures from its published data."
     },
     "items": [
       {
@@ -75,31 +75,31 @@
         }
       },
       {
+        "value": "+33,000",
+        "label": {
+          "ar": "مستفيد من برامج المركز",
+          "en": "beneficiaries of the Center's programs"
+        }
+      },
+      {
+        "value": "+950",
+        "label": {
+          "ar": "منشأة عائلية مستفيدة",
+          "en": "family businesses served"
+        }
+      },
+      {
+        "value": "+85",
+        "label": {
+          "ar": "شريكاً استراتيجياً",
+          "en": "strategic partners"
+        }
+      },
+      {
         "value": "+166",
         "label": {
           "ar": "وساطة بوسطاء معتمدين من المركز",
           "en": "mediations by Center-accredited mediators"
-        }
-      },
-      {
-        "value": "52",
-        "label": {
-          "ar": "دراسة ومنشوراً ودليلاً إرشادياً",
-          "en": "studies, publications and guides"
-        }
-      },
-      {
-        "value": "78",
-        "label": {
-          "ar": "فعالية في 27 مدينة",
-          "en": "events in 27 cities"
-        }
-      },
-      {
-        "value": "51",
-        "label": {
-          "ar": "اتفاقية منذ 2021",
-          "en": "agreements since 2021"
         }
       }
     ]

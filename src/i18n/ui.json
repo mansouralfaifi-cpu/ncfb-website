@@ -498,5 +498,9 @@
   "generalEnquiries": {
     "ar": "الاستفسارات العامة",
     "en": "General enquiries"
+  },
+  "tba": {
+    "ar": "يُعلن لاحقاً",
+    "en": "To be announced"
   }
 }

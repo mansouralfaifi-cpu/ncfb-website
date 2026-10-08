@@ -173,6 +173,9 @@ collections:
         fields:
           - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
           - { label: "النص / Text", name: text, widget: object, fields: *bi_text }
+      - { label: "عنوان المزايا (اختياري) / Highlights title (optional)", name: highlightsTitle, widget: object, required: false, fields: *bi_string }
+      - { label: "المزايا (اختياري) / Highlights (optional)", name: highlights, widget: list, required: false, summary: "{{fields.ar}}", fields: *bi_string }
+      - { label: "جملة ختامية (اختياري) / Closing statement (optional)", name: closing, widget: object, required: false, fields: *bi_text }
       - label: "مراحل العمل (اختياري) / Process steps (optional)"
         name: steps
         widget: list
@@ -336,7 +339,8 @@ collections:
             fields:
               - { label: "المعرّف / ID", name: id, widget: string, pattern: ['^[a-z0-9-]+$', "a-z, 0-9, -"] }
               - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
-              - { label: "تاريخ البدء / Start date", name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - { label: "نبذة (اختياري) / Summary (optional)", name: summary, widget: object, required: false, fields: *bi_string }
+              - { label: "تاريخ البدء (اتركه فارغاً إن لم يُعلن) / Start date (leave empty if TBA)", name: date, widget: datetime, required: false, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
               - { label: "المدة / Duration", name: duration, widget: object, fields: *bi_string }
               - { label: "المكان / Venue", name: venue, widget: object, fields: *bi_string }
               - { label: "اللغة / Language", name: language, widget: object, fields: *bi_string }

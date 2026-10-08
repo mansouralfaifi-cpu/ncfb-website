@@ -116,5 +116,35 @@
         "en": "training programs in 2025"
       }
     }
+  ],
+  "highlightsTitle": {
+    "ar": "مزايا البرامج التدريبية",
+    "en": "What our training offers"
+  },
+  "highlights": [
+    {
+      "ar": "برامج بالتعاون مع جهات عالمية مرموقة مثل جامعة INSEAD",
+      "en": "Programs with leading international institutions such as INSEAD"
+    },
+    {
+      "ar": "تركيز على الحالات الواقعية والأدوات العملية",
+      "en": "A focus on real cases and practical tools"
+    },
+    {
+      "ar": "تعزيز الحوكمة واستدامة المنشآت العائلية ونموها",
+      "en": "Stronger governance, sustainability and growth for family businesses"
+    },
+    {
+      "ar": "تأهيل المستشارين والوسطاء المعتمدين",
+      "en": "Preparing accredited advisors and mediators"
+    },
+    {
+      "ar": "مسارات للتعاقب القيادي وتطوير الأجيال",
+      "en": "Paths for leadership succession and developing the next generations"
+    },
+    {
+      "ar": "تغطية مختلف مناطق المملكة وخارجها",
+      "en": "Coverage across the Kingdom's regions and abroad"
+    }
   ]
 }

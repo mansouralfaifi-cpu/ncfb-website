@@ -1,6 +1,81 @@
 {
   "items": [
     {
+      "id": "insead-family-business",
+      "title": {
+        "ar": "برنامج إنسياد لإدارة الأعمال العائلية",
+        "en": "INSEAD Family Business Management Program"
+      },
+      "summary": {
+        "ar": "بالشراكة مع معهد إنسياد (INSEAD)، برعاية SNB Capital وغرفة الرياض.",
+        "en": "In partnership with INSEAD, sponsored by SNB Capital and the Riyadh Chamber."
+      },
+      "date": "",
+      "duration": {
+        "ar": "يُعلن لاحقاً",
+        "en": "To be announced"
+      },
+      "venue": {
+        "ar": "يُعلن لاحقاً",
+        "en": "To be announced"
+      },
+      "language": {
+        "ar": "يُعلن لاحقاً",
+        "en": "To be announced"
+      },
+      "status": "open"
+    },
+    {
+      "id": "family-office-leadership",
+      "title": {
+        "ar": "قيادة مكتب العائلة",
+        "en": "Family Office Leadership"
+      },
+      "summary": {
+        "ar": "حوكمة الثروة العائلية واستدامتها ونقلها عبر الأجيال، بالتعاون مع معهد IMD.",
+        "en": "Governing family wealth, sustaining it and passing it across generations, with IMD."
+      },
+      "date": "",
+      "duration": {
+        "ar": "يُعلن لاحقاً",
+        "en": "To be announced"
+      },
+      "venue": {
+        "ar": "يُعلن لاحقاً",
+        "en": "To be announced"
+      },
+      "language": {
+        "ar": "يُعلن لاحقاً",
+        "en": "To be announced"
+      },
+      "status": "open"
+    },
+    {
+      "id": "family-wealth-governance",
+      "title": {
+        "ar": "حوكمة الثروة العائلية",
+        "en": "Family Wealth Governance"
+      },
+      "summary": {
+        "ar": "برنامج تنفيذي مكثّف، برعاية غرفة الرياض.",
+        "en": "An intensive executive program, sponsored by the Riyadh Chamber."
+      },
+      "date": "",
+      "duration": {
+        "ar": "يُعلن لاحقاً",
+        "en": "To be announced"
+      },
+      "venue": {
+        "ar": "يُعلن لاحقاً",
+        "en": "To be announced"
+      },
+      "language": {
+        "ar": "يُعلن لاحقاً",
+        "en": "To be announced"
+      },
+      "status": "open"
+    },
+    {
       "id": "international-program-2026-12",
       "title": {
         "ar": "البرنامج الدولي بالتعاون مع الشركاء",

@@ -7,7 +7,7 @@ interface Props { lang: Lang; kind: 'event' | 'program' }
 const { lang, kind } = Astro.props;
 const options = kind === 'event'
   ? events.items.filter((e) => !e.past && e.listed && e.kind === 'event').sort((a, b) => a.date.localeCompare(b.date)).map((e) => ({ id: e.id, label: `${L(e.title, lang)} (${e.date})` }))
-  : programs.items.filter((p) => p.status !== 'full').map((p) => ({ id: p.id, label: `${L(p.title, lang)} (${p.date})` }));
+  : programs.items.filter((p) => p.status !== 'full').map((p) => ({ id: p.id, label: p.date ? `${L(p.title, lang)} (${p.date})` : L(p.title, lang) }));
 const formName = kind === 'event' ? 'event-registration' : 'program-registration';
 const sec = sectionById(kind === 'event' ? 'events' : 'training')!;
 const target = sec.pages.find((p) => p.slug === (kind === 'event' ? 'calendar' : 'open')) || sec.pages[0];
