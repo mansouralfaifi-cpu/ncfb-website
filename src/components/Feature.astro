@@ -1,0 +1,16 @@
+---
+// Featured program block on a section page (e.g. the Advisors and Mediators Program on Training).
+import Stats from './Stats.astro';
+import Icon from './Icon.astro';
+import { type Lang, href, L } from '../lib/site';
+interface Props { lang: Lang; f: any }
+const { lang, f } = Astro.props;
+const reg = `${href(lang, 'training-register')}?program=${encodeURIComponent(f.id)}`;
+---
+<section class="sec alt feature-prog" id={f.id}><div class="wrap" style="display:grid;gap:var(--space-5)">
+  <div class="copy" style="display:grid;gap:var(--space-2);max-width:72ch"><span class="eyebrow">{L(f.eyebrow, lang)}</span><h2 class="h2">{L(f.title, lang)}</h2><p class="lead">{L(f.intro, lang)}</p></div>
+  {f.stats?.length > 0 && <Stats lang={lang} items={f.stats} />}
+  {f.cards?.length > 0 && <div style="display:grid;gap:var(--space-3)"><h3 class="h3">{L(f.programsTitle, lang)}</h3><div class="blocks" data-n={f.cards.length}>{f.cards.map((c: any) => <div><h4 class="h4">{L(c.title, lang)}</h4><p>{L(c.text, lang)}</p></div>)}</div></div>}
+  {f.highlights?.length > 0 && <div style="display:grid;gap:var(--space-3)"><h3 class="h3">{L(f.highlightsTitle, lang)}</h3><ul class="highlights">{f.highlights.map((h: any) => <li><Icon name="check" /><span>{L(h, lang)}</span></li>)}</ul></div>}
+  <div class="band on-navy"><div style="display:grid;gap:var(--space-1)"><p class="h3" style="margin:0">{L(f.closing, lang)}</p></div><div class="cta-row"><a class="btn btn-primary" href={reg}>{L(f.cta, lang)}</a></div></div>
+</div></section>

@@ -95,6 +95,31 @@
         "en": "To be announced"
       },
       "status": "open"
+    },
+    {
+      "id": "advisors-mediators",
+      "title": {
+        "ar": "برنامج المستشارين والوسطاء (CFBA و CFBM)",
+        "en": "Advisors and Mediators Program (CFBA and CFBM)"
+      },
+      "summary": {
+        "ar": "تأهيل واعتماد مستشاري ووسطاء المنشآت العائلية. سجّل اهتمامك ليصلك موعد الدفعة القادمة.",
+        "en": "Preparing and accrediting family business advisors and mediators. Register your interest to hear about the next cohort."
+      },
+      "date": "",
+      "duration": {
+        "ar": "يُعلن لاحقاً",
+        "en": "To be announced"
+      },
+      "venue": {
+        "ar": "يُعلن لاحقاً",
+        "en": "To be announced"
+      },
+      "language": {
+        "ar": "يُعلن لاحقاً",
+        "en": "To be announced"
+      },
+      "status": "open"
     }
   ]
 }

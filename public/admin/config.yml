@@ -176,6 +176,25 @@ collections:
       - { label: "عنوان المزايا (اختياري) / Highlights title (optional)", name: highlightsTitle, widget: object, required: false, fields: *bi_string }
       - { label: "المزايا (اختياري) / Highlights (optional)", name: highlights, widget: list, required: false, summary: "{{fields.ar}}", fields: *bi_string }
       - { label: "جملة ختامية (اختياري) / Closing statement (optional)", name: closing, widget: object, required: false, fields: *bi_text }
+      - label: "برنامج مميز (اختياري) / Featured program (optional)"
+        name: feature
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { label: "معرّف البرنامج في البرامج المفتوحة / Program ID in open programs", name: id, widget: string }
+          - { label: "السطر العلوي / Eyebrow", name: eyebrow, widget: object, fields: *bi_string }
+          - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
+          - { label: "نبذة للرئيسية / Home summary", name: summary, widget: object, fields: *bi_text }
+          - { label: "المقدمة / Intro", name: intro, widget: object, fields: *bi_text }
+          - { label: "الأرقام / Figures", name: stats, widget: list, required: false, summary: "{{fields.value}}", fields: *stat_fields }
+          - { label: "عنوان البطاقات / Cards heading", name: programsTitle, widget: object, fields: *bi_string }
+          - { label: "البطاقات / Cards", name: cards, widget: list, summary: "{{fields.title.ar}}", fields: [ { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }, { label: "النص / Text", name: text, widget: object, fields: *bi_text } ] }
+          - { label: "عنوان الملامح / Highlights heading", name: highlightsTitle, widget: object, fields: *bi_string }
+          - { label: "الملامح / Highlights", name: highlights, widget: list, summary: "{{fields.ar}}", fields: *bi_string }
+          - { label: "الجملة الختامية / Closing line", name: closing, widget: object, fields: *bi_text }
+          - { label: "زر التسجيل / Register button", name: cta, widget: object, fields: *bi_string }
+          - { label: "زر التفاصيل / Details button", name: more, widget: object, fields: *bi_string }
       - label: "مراحل العمل (اختياري) / Process steps (optional)"
         name: steps
         widget: list

@@ -622,3 +622,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .highlights li{display:flex;gap:var(--space-1);align-items:flex-start;padding:var(--space-2);border-radius:var(--radius-md);background:var(--color-bg-subtle)}
 .highlights svg{flex:none;width:1.25rem;height:1.25rem;color:var(--color-text-accent);margin-top:.15em}
 .closing{margin:0;max-width:60ch;font-size:var(--font-size-body-lg,1.125rem);font-weight:var(--font-weight-semibold);color:var(--color-primary-900);border-inline-start:3px solid var(--color-primary-600);padding-inline-start:var(--space-2)}
+/* Featured program (Training page) and its home band */
+.sec.alt .highlights li{background:var(--color-surface-raised)}
+.prog-band{display:grid;gap:var(--space-3);align-items:center;padding:var(--space-5);border-radius:var(--radius-md);border:var(--border-width-1) solid var(--color-border);border-inline-start:4px solid var(--color-primary-600);background:var(--color-surface-raised)}
+@container (min-width:1024px){.prog-band{grid-template-columns:minmax(0,1fr) auto}}

@@ -3,6 +3,7 @@ import PageHdr from '../PageHdr.astro';
 import SubCards from '../SubCards.astro';
 import Stats from '../Stats.astro';
 import Icon from '../Icon.astro';
+import Feature from '../Feature.astro';
 import { type Lang, type Section, t, href, L } from '../../lib/site';
 interface Props { lang: Lang; section: Section }
 const { lang, section } = Astro.props;
@@ -15,5 +16,6 @@ const highlights = section.highlights || [];
 <section class="sec"><div class="wrap"><SubCards lang={lang} section={section} /></div></section>
 {blocks.length > 0 && <section class="sec alt"><div class="wrap"><div class="blocks" data-n={blocks.length}>{blocks.map((b) => <div><h2 class="h4">{L(b.title, lang)}</h2><p>{L(b.text, lang)}</p></div>)}</div></div></section>}
 {highlights.length > 0 && <section class="sec"><div class="wrap" style="display:grid;gap:var(--space-3)"><h2 class="h3">{L(section.highlightsTitle, lang)}</h2><ul class="highlights">{highlights.map((h) => <li><Icon name="check" /><span>{L(h, lang)}</span></li>)}</ul>{section.closing && <p class="closing">{L(section.closing, lang)}</p>}</div></section>}
+{(section as any).feature && <Feature lang={lang} f={(section as any).feature} />}
 {steps.length > 0 && <section class="sec"><div class="wrap" style="display:grid;gap:var(--space-3)"><h2 class="h3">{t(lang, 'howWeWork')}</h2><ol class="steps" data-n={steps.length}>{steps.map((st) => <li><h3 class="h4">{L(st.title, lang)}</h3><p class="small muted">{L(st.text, lang)}</p></li>)}</ol></div></section>}
 <section class={`sec${(blocks.length > 0) !== (steps.length > 0) ? '' : ' alt'}`}><div class="wrap"><div class="band on-navy"><div style="display:grid;gap:var(--space-1)"><h2 class="h3">{t(lang, 'questionAbout', { t: title })}</h2><p>{t(lang, 'questionText')}</p></div><div class="cta-row"><a class="btn btn-primary" href={href(lang, 'contact')}>{t(lang, 'contact')}</a></div></div></div></section>

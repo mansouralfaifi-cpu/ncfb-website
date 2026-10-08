@@ -62,16 +62,6 @@
     },
     {
       "title": {
-        "ar": "تأهيل المستشارين والوسطاء",
-        "en": "Advisor and mediator accreditation"
-      },
-      "text": {
-        "ar": "برنامجا «مستشار المنشآت العائلية المعتمد» (CFBA) في الحوكمة والتخطيط للخلافة وإدارة الثروات، و«وسيط المنشآت العائلية المعتمد» (CFBM) في الوساطة وحل النزاعات، ويُختتمان بتقييم يمنح شهادات معتمدة.",
-        "en": "The Certified Family Business Advisor (CFBA) program in governance, succession planning and wealth management, and the Certified Family Business Mediator (CFBM) program in mediation and dispute resolution, both ending with an assessment that awards accredited certificates."
-      }
-    },
-    {
-      "title": {
         "ar": "البرامج الدولية",
         "en": "International programs"
       },
@@ -146,5 +136,125 @@
       "ar": "تغطية مختلف مناطق المملكة وخارجها",
       "en": "Coverage across the Kingdom's regions and abroad"
     }
-  ]
+  ],
+  "feature": {
+    "id": "advisors-mediators",
+    "eyebrow": {
+      "ar": "برنامج مميز",
+      "en": "Featured program"
+    },
+    "title": {
+      "ar": "برنامج المستشارين والوسطاء",
+      "en": "Advisors and Mediators Program"
+    },
+    "summary": {
+      "ar": "برنامج متخصص لتأهيل وتطوير الكفاءات المهنية في مجال استشارات المنشآت العائلية والوساطة الأسرية وفق أفضل الممارسات العالمية.",
+      "en": "A specialist program that prepares and develops professionals in family business advisory and family mediation, in line with international best practice."
+    },
+    "intro": {
+      "ar": "برامج متخصصة تهدف إلى تأهيل واعتماد مستشاري ووسطاء المنشآت العائلية وربطهم بالمنشآت العائلية، بما يبني قاعدة مهنية وطنية قادرة على خدمة هذا القطاع.",
+      "en": "Specialist programs that prepare and accredit family business advisors and mediators and connect them with family businesses, building a national professional base able to serve the sector."
+    },
+    "stats": [
+      {
+        "value": "CFBA",
+        "label": {
+          "ar": "برنامج مستشار المنشآت العائلية المعتمد",
+          "en": "Certified Family Business Advisor program"
+        }
+      },
+      {
+        "value": "CFBM",
+        "label": {
+          "ar": "برنامج وسيط المنشآت العائلية المعتمد",
+          "en": "Certified Family Business Mediator program"
+        }
+      },
+      {
+        "value": "+166",
+        "label": {
+          "ar": "وساطة نفّذها وسطاء معتمدون من المركز",
+          "en": "mediations carried out by Center-accredited mediators"
+        }
+      }
+    ],
+    "programsTitle": {
+      "ar": "برامج الاعتماد",
+      "en": "Accreditation programs"
+    },
+    "cards": [
+      {
+        "title": {
+          "ar": "مستشار المنشآت العائلية المعتمد (CFBA)",
+          "en": "Certified Family Business Advisor (CFBA)"
+        },
+        "text": {
+          "ar": "برنامج يزوّد المستشارين بالمعارف والممارسات المهنية في مجالات الحوكمة، والتخطيط للخلافة، وإدارة الثروات، إلى جانب تنمية مهارات إعداد الميثاق العائلي، ويُختتم بتقييم نهائي يمنح المشاركين شهادة معتمدة تعكس كفاءتهم وجاهزيتهم المهنية.",
+          "en": "Gives advisors professional knowledge and practice in governance, succession planning and wealth management, and builds skills in preparing family charters. It ends with a final assessment that awards participants an accredited certificate reflecting their competence and readiness."
+        }
+      },
+      {
+        "title": {
+          "ar": "وسيط المنشآت العائلية المعتمد (CFBM)",
+          "en": "Certified Family Business Mediator (CFBM)"
+        },
+        "text": {
+          "ar": "برنامج متخصص في الوساطة وحل النزاعات داخل المنشآت العائلية، يشمل مهارات إدارة الحوار بين الأطراف وصياغة اتفاقيات الصلح، ويؤهل الوسطاء لممارسة الوساطة ضمن برنامج الوسائل البديلة في المركز.",
+          "en": "A specialist program in mediation and dispute resolution within family businesses. It covers managing dialogue between parties and drafting settlement agreements, and qualifies mediators to practise within the Center's alternative dispute resolution program."
+        }
+      },
+      {
+        "title": {
+          "ar": "ربط المهنيين بالمنشآت العائلية",
+          "en": "Connecting professionals with family businesses"
+        },
+        "text": {
+          "ar": "يسعى المركز للتواصل الفعّال مع الباحثين والاستشاريين والمهنيين، وتأهيل المستشارين المتخصصين في مجال المنشآت العائلية وربطهم بالمنشآت العائلية لتلبية احتياجاتها الفعلية.",
+          "en": "The Center works closely with researchers, consultants and professionals, preparing family business specialists and connecting them with family businesses to meet their real needs."
+        }
+      }
+    ],
+    "highlightsTitle": {
+      "ar": "أبرز الملامح",
+      "en": "Highlights"
+    },
+    "highlights": [
+      {
+        "ar": "معارف وممارسات مهنية في حوكمة المنشآت العائلية",
+        "en": "Professional knowledge and practice in family business governance"
+      },
+      {
+        "ar": "التخطيط للخلافة وإدارة الثروات",
+        "en": "Succession planning and wealth management"
+      },
+      {
+        "ar": "مهارات الوساطة وحل النزاعات",
+        "en": "Mediation and dispute resolution skills"
+      },
+      {
+        "ar": "إعداد الميثاق العائلي وصياغة اتفاقيات الصلح",
+        "en": "Preparing family charters and drafting settlement agreements"
+      },
+      {
+        "ar": "تقييم نهائي وشهادات اعتماد",
+        "en": "A final assessment and accredited certificates"
+      },
+      {
+        "ar": "ربط المعتمدين بالمنشآت العائلية المستفيدة",
+        "en": "Connecting accredited professionals with family businesses"
+      }
+    ],
+    "closing": {
+      "ar": "بناء كفاءات وطنية معتمدة هو الأساس لاستدامة المنشآت العائلية.",
+      "en": "Building accredited national expertise is the foundation of family business sustainability."
+    },
+    "cta": {
+      "ar": "سجّل اهتمامك",
+      "en": "Register your interest"
+    },
+    "more": {
+      "ar": "اكتشف البرنامج",
+      "en": "Explore the program"
+    }
+  }
 }

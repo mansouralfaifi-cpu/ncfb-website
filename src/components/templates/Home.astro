@@ -14,6 +14,7 @@ const arrow = arrowIcon(lang);
 const about = sectionById('about')!, consulting = sectionById('consulting')!, alt = sectionById('alt')!, training = sectionById('training')!;
 const library = sectionById('library')!, evSec = sectionById('events')!;
 const upcoming = events.items.filter((e) => !e.past && e.listed && e.kind === 'event').sort((a, b) => a.date.localeCompare(b.date)).slice(0, home.events.count);
+const prog = (training as any).feature;
 const features = [{ s: alt, cls: 'feature navy on-navy' }, { s: training, cls: 'feature light' }];
 ---
 <Hero lang={lang} />
@@ -34,6 +35,10 @@ const features = [{ s: alt, cls: 'feature navy on-navy' }, { s: training, cls: '
     <div class={cls}><span class="eyebrow">{L(s.title, lang)}</span><h3 class="h3">{L(s.intro, lang)}</h3><ul>{s.pages.map((p) => <li><a href={href(lang, `${s.id}-${p.slug}`)}>{L(p.title, lang)}<Icon name={arrow} /></a></li>)}</ul></div>
   ))}
 </div></section>
+{prog && <section class="sec" style="padding-top:0"><div class="wrap"><div class="prog-band">
+  <div style="display:grid;gap:var(--space-1)"><span class="eyebrow">{L(prog.eyebrow, lang)}</span><h2 class="h2">{L(prog.title, lang)}</h2><p>{L(prog.summary, lang)}</p></div>
+  <div class="cta-row"><a class="btn btn-primary" href={`${href(lang, 'training')}#${prog.id}`}>{L(prog.more, lang)}</a><a class="btn btn-secondary" href={`${href(lang, 'training-register')}?program=${encodeURIComponent(prog.id)}`}>{L(prog.cta, lang)}</a></div>
+</div></div></section>}
 <section class="sec alt"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">{L(library.title, lang)}</span><h2 class="h2">{L(home.library.heading, lang)}</h2></div><a class="btn btn-text" href={href(lang, 'library')}>{L(library.title, lang)}<Icon name={arrow} /></a></div>
   <PubList lang={lang} limit={home.library.count} />
