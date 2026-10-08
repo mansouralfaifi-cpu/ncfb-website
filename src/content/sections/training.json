@@ -103,6 +103,13 @@
   ],
   "stats": [
     {
+      "value": "59",
+      "label": {
+        "ar": "برنامجاً تدريبياً في مناطق المملكة وخارجها",
+        "en": "training programs across the Kingdom and abroad"
+      }
+    },
+    {
       "value": "20",
       "label": {
         "ar": "برنامجاً تدريبياً في 2025",

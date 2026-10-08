@@ -146,5 +146,47 @@
         "en": "Following up on implementation and measuring impact."
       }
     }
+  ],
+  "blocks": [
+    {
+      "title": {
+        "ar": "الميثاق العائلي",
+        "en": "The family charter"
+      },
+      "text": {
+        "ar": "بناء المواثيق العائلية وصياغتها صياغة مهنية متوافقة مع الأنظمة، تحدد المبادئ والقيم والاتفاقيات بين أفراد العائلة المالكة.",
+        "en": "Building and drafting family charters professionally and in line with regulations, setting out the principles, values and agreements among the owning family."
+      }
+    },
+    {
+      "title": {
+        "ar": "التعاقب القيادي وخطة الخلافة",
+        "en": "Leadership succession and succession planning"
+      },
+      "text": {
+        "ar": "معالجة غياب خطط الخلافة ببناء مسارات واضحة لانتقال الملكية والقيادة بين الأجيال.",
+        "en": "Addressing the absence of succession plans by building clear paths for passing ownership and leadership between generations."
+      }
+    },
+    {
+      "title": {
+        "ar": "الشكل القانوني الأنسب",
+        "en": "The most suitable legal form"
+      },
+      "text": {
+        "ar": "دعم المنشآت العائلية في اختيار الشكل القانوني الأنسب، وفهم آلية الانتقال بين الأشكال القانونية.",
+        "en": "Helping family businesses choose the most suitable legal form and understand how to move between legal forms."
+      }
+    },
+    {
+      "title": {
+        "ar": "الوقاية من النزاعات",
+        "en": "Preventing disputes"
+      },
+      "text": {
+        "ar": "منهجية متدرجة تبدأ بالتشخيص المبني على الدراسات الميدانية، ثم البرامج الوقائية والتأهيلية، ثم مسارات التسوية بالوسائل البديلة عند الحاجة.",
+        "en": "A step-by-step approach that starts with a diagnosis built on field studies, then preventive and qualifying programs, then settlement through alternative means when needed."
+      }
+    }
   ]
 }

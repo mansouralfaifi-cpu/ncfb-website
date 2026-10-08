@@ -612,3 +612,6 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .mainnav .social{inline-size:var(--hdr-cta-w);flex:none;justify-content:space-between;gap:0}
 .mainnav .social a{inline-size:auto;padding:0;block-size:2.5rem}
 @container (max-width:1099px){.mainnav .top-link{padding-inline:var(--space-half)}}
+/* Seven figures: three national-context figures on the first row, four Center figures on the second */
+@container (min-width:1024px){.stats[data-n="7"]{grid-template-columns:repeat(12,minmax(0,1fr))}.stats[data-n="7"] > div{grid-column:span 3}.stats[data-n="7"] > div:nth-child(-n+3){grid-column:span 4}}
+@container (min-width:1024px){.blocks[data-n="4"]{grid-template-columns:repeat(2,minmax(0,1fr))}}
