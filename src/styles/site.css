@@ -635,9 +635,8 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .page-hdr::after{background:color-mix(in srgb,var(--color-primary-900) 45%,transparent)}
 @container (min-width:1024px){.page-hdr::after{background:linear-gradient(to left,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 80%,transparent) 40%,transparent 100%)}[dir="ltr"] .page-hdr::after{background:linear-gradient(to right,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 80%,transparent) 40%,transparent 100%)}}
 .page-hdr .wrap{min-height:clamp(220px,24vw,320px)}
-/* Section headers in the deck teal so they read as separate from the navy nav bar */
-.page-hdr{background:var(--color-primary-600)}
-.page-hdr .pat{background:var(--color-primary-100);opacity:.16}
-.page-hdr::after{background:color-mix(in srgb,var(--color-primary-600) 40%,transparent)}
-@container (min-width:1024px){.page-hdr::after{background:linear-gradient(to left,var(--color-primary-600) 0%,color-mix(in srgb,var(--color-primary-600) 80%,transparent) 40%,transparent 100%)}[dir="ltr"] .page-hdr::after{background:linear-gradient(to right,var(--color-primary-600) 0%,color-mix(in srgb,var(--color-primary-600) 80%,transparent) 40%,transparent 100%)}}
+/* Section headers in the deck pattern green #005F60 so they read as separate from the navy nav bar (mansour 2026-10-08) */
+.page-hdr{background:#005F60}
+.page-hdr .pat{background:var(--color-primary-100);opacity:.14}
+.page-hdr::after{display:none}
 .page-hdr .crumbs li+li::before{color:var(--color-primary-100)}
