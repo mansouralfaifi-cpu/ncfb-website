@@ -630,3 +630,8 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .ceo-closing{display:grid;gap:var(--space-2);max-width:72ch;border-inline-start:3px solid var(--color-primary-600);padding-inline-start:var(--space-3)}
 .ceo-closing p{margin:0}
 .ceo-closing .sig{font-weight:var(--font-weight-bold);color:var(--color-primary-900)}
+/* Section headers: navy with the official star pattern from the deck (replaces photos) */
+.page-hdr .pat{display:block;position:absolute;inset:0;background:var(--color-primary-300);opacity:.32;-webkit-mask:url(/pattern-star.svg) 0 0/9rem repeat;mask:url(/pattern-star.svg) 0 0/9rem repeat}
+.page-hdr::after{background:color-mix(in srgb,var(--color-primary-900) 45%,transparent)}
+@container (min-width:1024px){.page-hdr::after{background:linear-gradient(to left,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 80%,transparent) 40%,transparent 100%)}[dir="ltr"] .page-hdr::after{background:linear-gradient(to right,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 80%,transparent) 40%,transparent 100%)}}
+.page-hdr .wrap{min-height:clamp(220px,24vw,320px)}
