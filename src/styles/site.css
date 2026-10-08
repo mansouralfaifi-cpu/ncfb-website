@@ -645,3 +645,16 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .page-hdr .crumbs a{color:var(--color-primary-600)}
 .page-hdr .crumbs li+li::before{color:var(--color-primary-400)}
 .page-hdr .crumbs a:focus-visible{outline-color:var(--color-primary-600)}
+/* Gold nav bar and page header (mansour 2026-10-08: «خل لون البار ذهبي ... ولون المستطيل نفس لون البار»). Navy text on gold = 6.05:1 */
+.mainnav{background:var(--color-accent-fill)}
+.mainnav .top-link,.mainnav .top-link svg,.mainnav .social a{color:var(--color-primary-900)}
+.mainnav li:hover .top-link,.mainnav li:focus-within .top-link,.mainnav .top-link[aria-current]{color:var(--color-primary-900)}
+.mainnav .top-link[aria-current]{box-shadow:inset 0 -3px 0 var(--color-primary-900)}
+.mainnav .top-link:focus-visible,.mainnav .social a:focus-visible{outline-color:var(--color-primary-900)}
+.page-hdr{background:var(--color-accent-fill);border-block-end:0}
+.page-hdr .pat{background:var(--color-primary-900);opacity:.07}
+.page-hdr h1,.page-hdr .lead,.page-hdr .crumbs,.page-hdr .crumbs a{color:var(--color-primary-900)}
+.page-hdr .crumbs li+li::before{color:var(--color-primary-800)}
+.page-hdr h1::before{background:var(--color-primary-900)}
+.page-hdr .crumbs a:focus-visible{outline-color:var(--color-primary-900)}
+.mainnav .social a:hover{color:var(--color-primary-700)}
