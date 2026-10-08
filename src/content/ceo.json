@@ -9,8 +9,8 @@
     "en": "We renew our commitment to be the trusted partner of every business family seeking to preserve its legacy and grow its future."
   },
   "message": {
-    "ar": "منذ إطلاق استراتيجية المركز في مطلع 2023، وضعنا نصب أعيننا بناء منظومة متكاملة تضمن استدامة المنشآت العائلية وتعزز مساهمتها في التنمية الوطنية. ومثّل عام 2025 نقطة ارتكاز في مسيرة المركز، إذ انتقلنا من مرحلة التأسيس إلى مرحلة «توسيع الأثر».\n\nوتتركز أولوياتنا على ترسيخ الإطار التنظيمي للمركز، والتوسع في الحلول الاستشارية والتدريبية، وبناء مجتمعات ومجالس للمنشآت العائلية، وتأسيس حاوية فكرية تدعم صناعة السياسات.",
-    "en": "Since launching the Center's strategy in early 2023, our aim has been to build an integrated ecosystem that sustains family businesses and strengthens their contribution to national development. 2025 was a turning point: we moved from the founding stage to the stage of \"expanding impact\".\n\nOur priorities are to strengthen the Center's regulatory framework, expand our advisory and training services, build family business communities and councils, and establish a think tank that supports policymaking."
+    "ar": "منذ إطلاق استراتيجية المركز الوطني للمنشآت العائلية في مطلع عام 2023م، وضعنا نصب أعيننا مهمة واضحة: بناء منظومة متكاملة تضمن استدامة المنشآت العائلية وتعزز مساهمتها في التنمية الوطنية. وتأتي هذه المهمة متسقة مع الرؤية الطموحة لقيادتنا الرشيدة، التي تهدف إلى رفع مساهمة القطاع الخاص في الناتج المحلي الإجمالي من 40% إلى 65% بحلول عام 2030م.\n\nإن القيمة الحقيقية للمنشآت العائلية تتجلى بوضوح في لغة الأرقام؛ إذ تشير بياناتنا إلى أن هذه المنشآت تمثل اليوم 95% من إجمالي المنشآت العاملة في المملكة، وتستوعب قرابة 48% من القوى العاملة. هذه الضخامة تجعل الحفاظ على هذه الكيانات، وتطوير حوكمتها، وضمان استدامتها ضرورة وطنية قصوى، تنعكس آثارها مباشرة على استقرار الاقتصاد الوطني وسوق العمل ونموهما.\n\nوبفضل الله، مثّل عام 2025م نقطة ارتكاز تاريخية في مسيرة المركز؛ إذ بدأنا الانتقال من مرحلة التأسيس إلى مرحلة «توسيع الأثر»، التي تُرجمت إلى منجزات ملموسة، أستعرض معكم أبرزها:",
+    "en": "Since the National Center for Family Businesses launched its strategy in early 2023, we have kept a clear mission in view: to build an integrated ecosystem that sustains family businesses and strengthens their contribution to national development. This mission is in step with our leadership's ambitious vision, which aims to raise the private sector's share of GDP from 40% to 65% by 2030.\n\nThe real value of family businesses is clear in the numbers: our data show that they make up 95% of all businesses operating in the Kingdom and employ nearly 48% of the workforce. At this scale, preserving these businesses, developing their governance and securing their sustainability is a national priority, with a direct effect on the stability and growth of the national economy and the labour market.\n\nBy the grace of God, 2025 was a historic turning point for the Center: we began moving from the founding stage to the stage of \"expanding impact\", which has translated into tangible achievements. Here are the most notable:"
   },
   "bio": {
     "ar": "",
@@ -19,5 +19,109 @@
   "note": {
     "ar": "",
     "en": ""
+  },
+  "achievementsTitle": {
+    "ar": "أبرز المنجزات",
+    "en": "Key achievements"
+  },
+  "achievements": [
+    {
+      "title": {
+        "ar": "مأسسة وتنظيم المركز",
+        "en": "Institutionalising the Center"
+      },
+      "text": {
+        "ar": "صدور الأمر السامي الكريم بمنح المركز الاستقلال المالي والإداري، والبدء في استكمال الجوانب الفنية والنظامية المرتبطة بذلك.",
+        "en": "A Royal Order granted the Center financial and administrative independence, and work began on completing the related technical and regulatory steps."
+      }
+    },
+    {
+      "title": {
+        "ar": "إثراء المحتوى العربي",
+        "en": "Enriching Arabic content"
+      },
+      "text": {
+        "ar": "نشر أكثر من 52 إصداراً ودليلاً إرشادياً متخصصاً، حظيت بمتابعة واسعة من مختلف مناطق المملكة والعالم العربي.",
+        "en": "More than 52 specialist publications and guides, widely followed across the Kingdom and the Arab world."
+      }
+    },
+    {
+      "title": {
+        "ar": "التوسع في البرامج التدريبية",
+        "en": "Expanding training"
+      },
+      "text": {
+        "ar": "تنظيم 20 برنامجاً تدريبياً طوّرها المركز داخلياً أو بالتعاون مع جهات عالمية مرموقة مثل جامعة INSEAD.",
+        "en": "20 training programs, developed in-house or with leading international institutions such as INSEAD."
+      }
+    },
+    {
+      "title": {
+        "ar": "تأهيل المستشارين والوسطاء",
+        "en": "Preparing advisors and mediators"
+      },
+      "text": {
+        "ar": "إطلاق برنامج مستشار المنشآت العائلية المعتمد (CFBA) وبرنامج وسيط المنشآت العائلية المعتمد (CFBM).",
+        "en": "Launching the Certified Family Business Advisor (CFBA) and Certified Family Business Mediator (CFBM) programs."
+      }
+    },
+    {
+      "title": {
+        "ar": "إطلاق برنامج الاستشارات",
+        "en": "Launching the advisory program"
+      },
+      "text": {
+        "ar": "تقديم خدمات تحليل الوضع الراهن، ومراجعة المواثيق العائلية، والإشراف على التحول المؤسسي لشريحة واسعة من العوائل التجارية.",
+        "en": "Current-state analysis, family charter review and oversight of institutional transformation for a wide range of business families."
+      }
+    },
+    {
+      "title": {
+        "ar": "تسوية المنازعات",
+        "en": "Settling disputes"
+      },
+      "text": {
+        "ar": "تفعيل الوسائل البديلة بإجراء أكثر من 166 وساطة بوسطاء معتمدين من المركز، أسهمت في حل قضايا تجاوزت قيمتها 282 مليون ريال.",
+        "en": "Putting alternative dispute resolution into practice through more than 166 mediations by Center-accredited mediators, helping resolve cases worth over SAR 282 million."
+      }
+    },
+    {
+      "title": {
+        "ar": "الانتشار الجغرافي",
+        "en": "Geographic reach"
+      },
+      "text": {
+        "ar": "تنظيم أكثر من 78 فعالية والمشاركة فيها، غطّت 27 مدينة داخل المملكة وخارجها، لرفع الوعي لدى كل الفئات المستهدفة.",
+        "en": "Organising and taking part in more than 78 events across 27 cities in and outside the Kingdom, raising awareness among all target groups."
+      }
+    },
+    {
+      "title": {
+        "ar": "الشراكات والتحالفات",
+        "en": "Partnerships and alliances"
+      },
+      "text": {
+        "ar": "توقيع 25 شراكة، منها 16 اتفاقية تعاون مع الغرف التجارية، مما عزز تكامل الأدوار لخدمة المنتسبين في كل المناطق.",
+        "en": "Signing 25 partnerships, including 16 cooperation agreements with chambers of commerce, strengthening joint work to serve members in every region."
+      }
+    },
+    {
+      "title": {
+        "ar": "استدامة المركز",
+        "en": "Sustaining the Center"
+      },
+      "text": {
+        "ar": "تأسيس «وقفية المركز» وتشكيل مجلس نظارتها الأول، لتكون رافداً يضمن الاستدامة المالية لأعمال المركز ومبادراته.",
+        "en": "Establishing the Center's endowment and forming its first board of trustees, to secure lasting funding for the Center's work and initiatives."
+      }
+    }
+  ],
+  "closing": {
+    "ar": "وإننا إذ نحمد الله على ما تحقق، فإن طموحاتنا تمتد للبناء على هذه المكتسبات؛ إذ نركز على ترسيخ الإطار التنظيمي للمركز، والتوسع في الحلول الاستشارية والتدريبية، وبناء مجتمعات ومجالس للمنشآت العائلية، إلى جانب تعزيز دور المركز في صناعة السياسات العامة عبر تأسيس حاوية فكرية (Think Tank)، علاوة على المبادرات الأخرى مع شركائنا.\n\nختاماً، نجدد التزامنا في المركز الوطني للمنشآت العائلية بأن نكون الشريك الموثوق لكل عائلة تجارية تسعى لصون إرثها وتنمية مستقبلها، وبأن نقود الفكر والرأي في مجال المنشآت العائلية باللغة العربية على مستوى العالم، وبأن نكون الشريك الأكثر اعتمادية مع الجهات المختلفة لتحقيق مصالح المنشآت العائلية، مساهمين بذلك في رسم ملامح اقتصاد وطني مزدهر ومستدام.",
+    "en": "As we give thanks for what has been achieved, our ambition is to build on it: strengthening the Center's regulatory framework, expanding our advisory and training services, building family business communities and councils, and strengthening the Center's role in public policymaking by establishing a think tank, alongside other initiatives with our partners.\n\nIn closing, we at the National Center for Family Businesses renew our commitment to be the trusted partner of every business family seeking to preserve its legacy and grow its future; to lead thought and opinion on family businesses in Arabic worldwide; and to be the most reliable partner for all parties in serving the interests of family businesses, helping shape a prosperous and sustainable national economy."
+  },
+  "signature": {
+    "ar": "الدكتور عائذ المبارك",
+    "en": "Dr. Ayth Al-Mubarak"
   }
 }

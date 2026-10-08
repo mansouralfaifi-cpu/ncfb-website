@@ -4,14 +4,19 @@ import ceo from '../../content/ceo.json';
 import { type Lang, t, L } from '../../lib/site';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
-const paras = (v: any) => L(v, lang).split(/\n\s*\n/).filter(Boolean);
-const bio = paras(ceo.bio), message = paras((ceo as any).message);
+const c: any = ceo;
+const paras = (v: any) => (v ? L(v, lang) : '').split(/\n\s*\n/).filter(Boolean);
+const bio = paras(c.bio), message = paras(c.message), closing = paras(c.closing);
+const achievements = c.achievements || [];
 ---
 <section class="sec"><div class="wrap profile">
-  {ceo.photo ? <img class="photo" src={ceo.photo} alt={L(ceo.name, lang)} width="640" height="800" /> : <Ph lang={lang} title={t(lang, 'ceoPhoto')} sub={t(lang, 'ceoPhotoHint')} />}
-  <div class="body"><span class="eyebrow">{t(lang, 'ceo')}</span><h2 class="h2">{L(ceo.name, lang)}</h2>
-    <div class="quote"><p>{L(ceo.quote, lang)}</p></div>
+  {c.photo ? <img class="photo" src={c.photo} alt={L(c.name, lang)} width="640" height="800" /> : <Ph lang={lang} title={t(lang, 'ceoPhoto')} sub={t(lang, 'ceoPhotoHint')} />}
+  <div class="body"><span class="eyebrow">{t(lang, 'ceo')}</span><h2 class="h2">{L(c.name, lang)}</h2>
+    <div class="quote"><p>{L(c.quote, lang)}</p></div>
     {message.length > 0 && <><h3 class="h4">{t(lang, 'ceoMessage')}</h3>{message.map((p) => <p>{p}</p>)}</>}
     {bio.length > 0 && <><h3 class="h4">{t(lang, 'bio')}</h3>{bio.map((p) => <p>{p}</p>)}</>}
-    {L(ceo.note, lang) && <p class="caption muted">{L(ceo.note, lang)}</p>}
+    {L(c.note, lang) && <p class="caption muted">{L(c.note, lang)}</p>}
   </div></div></section>
+{achievements.length > 0 && <section class="sec alt"><div class="wrap" style="display:grid;gap:var(--space-3)"><h2 class="h3">{L(c.achievementsTitle, lang)}</h2>
+  <div class="blocks">{achievements.map((a: any) => <div><h3 class="h4">{L(a.title, lang)}</h3><p>{L(a.text, lang)}</p></div>)}</div></div></section>}
+{closing.length > 0 && <section class="sec"><div class="wrap"><div class="ceo-closing">{closing.map((p) => <p>{p}</p>)}{c.signature && <p class="sig">{L(c.signature, lang)}</p>}</div></div></section>}

@@ -271,6 +271,10 @@ collections:
           - { label: "الصورة (4:5) / Photo (4:5)", name: photo, widget: image, required: false }
           - { label: "الكلمة / Quote", name: quote, widget: object, fields: *bi_text }
           - { label: "الكلمة (فقرات يفصلها سطر فارغ) / Message (blank line between paragraphs)", name: message, widget: object, required: false, fields: *bi_text }
+          - { label: "عنوان المنجزات / Achievements heading", name: achievementsTitle, widget: object, required: false, fields: *bi_string }
+          - { label: "المنجزات / Achievements", name: achievements, widget: list, required: false, summary: "{{fields.title.ar}}", fields: [ { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }, { label: "النص / Text", name: text, widget: object, fields: *bi_text } ] }
+          - { label: "الخاتمة (فقرات يفصلها سطر فارغ) / Closing (blank line between paragraphs)", name: closing, widget: object, required: false, fields: *bi_text }
+          - { label: "التوقيع / Signature", name: signature, widget: object, required: false, fields: *bi_string }
           - { label: "السيرة (فقرات يفصلها سطر فارغ) / Biography (blank line between paragraphs)", name: bio, widget: object, required: false, fields: [ { label: "العربية", name: ar, widget: text, required: false }, { label: "English", name: en, widget: text, required: false } ] }
           - { label: "ملاحظة / Note", name: note, widget: object, fields: *bi_optional }
       - name: history

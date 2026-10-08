@@ -626,3 +626,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .sec.alt .highlights li{background:var(--color-surface-raised)}
 .prog-band{display:grid;gap:var(--space-3);align-items:center;padding:var(--space-5);border-radius:var(--radius-md);border:var(--border-width-1) solid var(--color-border);border-inline-start:4px solid var(--color-primary-600);background:var(--color-surface-raised)}
 @container (min-width:1024px){.prog-band{grid-template-columns:minmax(0,1fr) auto}}
+/* CEO message closing + signature */
+.ceo-closing{display:grid;gap:var(--space-2);max-width:72ch;border-inline-start:3px solid var(--color-primary-600);padding-inline-start:var(--space-3)}
+.ceo-closing p{margin:0}
+.ceo-closing .sig{font-weight:var(--font-weight-bold);color:var(--color-primary-900)}
