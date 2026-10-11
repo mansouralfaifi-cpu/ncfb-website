@@ -510,5 +510,13 @@
   "pathHeading": {
     "ar": "اختر مسارك",
     "en": "Choose your path"
+  },
+  "themeDark": {
+    "ar": "الوضع الداكن",
+    "en": "Dark mode"
+  },
+  "themeLight": {
+    "ar": "الوضع الفاتح",
+    "en": "Light mode"
   }
 }

@@ -674,3 +674,6 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .hero-logo{width:min(15rem,70vw)}
 @container (min-width:1024px){.hero-logo{width:22.5rem}}
 .hdr .wrap.top{padding-block:var(--space-1)}
+.theme-toggle{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:.3em}
+.theme-toggle:hover{color:var(--color-neutral-0)}
+.theme-toggle:focus-visible{outline:var(--focus-ring-width) solid var(--color-primary-300);outline-offset:var(--focus-ring-offset)}
