@@ -10,7 +10,7 @@ const other = otherLang(lang);
 ---
 <header class="hdr">
   <div class="wrap top">
-    <a class="brand" href={href(lang, 'home')} aria-label={t(lang, 'homeAria')}><Image src={logo} alt="" width={128} densities={[1, 2]} format="png" loading="eager" /></a>
+    <a class="brand" href={href(lang, 'home')} aria-label={t(lang, 'homeAria')}><Image src={logo} alt="" width={176} densities={[1, 2]} format="png" loading="eager" /></a>
     <div class="hdr-tools">
       {altHref && <a class="lang" href={altHref} lang={other} hreflang={other}>{t(lang, 'langSwitch')}</a>}
       <a class="btn btn-primary hdr-cta" href={href(lang, 'contact')}>{t(lang, 'contact')}</a>

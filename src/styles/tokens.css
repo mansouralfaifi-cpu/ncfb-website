@@ -200,7 +200,7 @@
   --grid-margin: 1rem;
   --logo-min-width: 160px;
   --logo-mark-min-width: 32px;
-  --logo-header-width: 128px;  /* owner's choice 2026-10-05, below min-width-full */
+  --logo-header-width: 176px;  /* owner's choice 2026-10-05, below min-width-full */
 }
 @media (min-width: 600px) { :root { --grid-columns: 8; --grid-gutter: 1.5rem; --grid-margin: 2rem; } }
 @media (min-width: 1024px) { :root { --grid-columns: 12; --grid-gutter: 1.5rem; --grid-margin: 3rem; } }
