@@ -272,21 +272,5 @@
       "ar": "اكتشف البرنامج",
       "en": "Explore the program"
     }
-  },
-  "gallery": [
-    {
-      "src": "/uploads/program-switzerland-group.jpg",
-      "alt": {
-        "ar": "مشاركو البرنامج الصيفي الدولي للأجيال القادمة في سويسرا",
-        "en": "Participants in the international summer program for the next generation in Switzerland"
-      }
-    },
-    {
-      "src": "/uploads/program-switzerland-zurich.jpg",
-      "alt": {
-        "ar": "مشاركون في رحلة البرنامج الصيفي في زيورخ",
-        "en": "Participants on the summer program trip in Zurich"
-      }
-    }
-  ]
+  }
 }
