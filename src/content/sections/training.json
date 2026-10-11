@@ -242,6 +242,22 @@
       {
         "ar": "ربط المعتمدين بالمنشآت العائلية المستفيدة",
         "en": "Connecting accredited professionals with family businesses"
+      },
+      {
+        "ar": "رفع موثوقية المستشار عند التعاقد، وجودة مخرجاته وفرص قبولها",
+        "en": "Greater credibility when contracting, and better, more readily accepted deliverables"
+      },
+      {
+        "ar": "طلب العروض السعرية والانضمام إلى قائمة مستشاري المركز المعتمدين",
+        "en": "Request quotes and join the Center’s list of accredited advisors"
+      },
+      {
+        "ar": "تضمين برنامج بديل في شرط الوساطة والتحكيم في الميثاق، وحل نزاعات بعض العملاء من خلاله",
+        "en": "Include Badeel in the mediation and arbitration clause of the charter, and resolve some clients’ disputes through it"
+      },
+      {
+        "ar": "الاستفادة من المركز كمنصة للفكر ومن مجتمعاته، وإحالة التحديات النظامية والتشريعية إلى الجهات المختصة",
+        "en": "Use the Center as a platform for thought and its communities, and refer regulatory challenges to the competent bodies"
       }
     ],
     "closing": {
@@ -256,5 +272,21 @@
       "ar": "اكتشف البرنامج",
       "en": "Explore the program"
     }
-  }
+  },
+  "gallery": [
+    {
+      "src": "/uploads/program-switzerland-group.jpg",
+      "alt": {
+        "ar": "مشاركو البرنامج الصيفي الدولي للأجيال القادمة في سويسرا",
+        "en": "Participants in the international summer program for the next generation in Switzerland"
+      }
+    },
+    {
+      "src": "/uploads/program-switzerland-zurich.jpg",
+      "alt": {
+        "ar": "مشاركون في رحلة البرنامج الصيفي في زيورخ",
+        "en": "Participants on the summer program trip in Zurich"
+      }
+    }
+  ]
 }

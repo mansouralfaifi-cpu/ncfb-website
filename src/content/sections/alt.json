@@ -69,6 +69,36 @@
         "ar": "تنفيذ الاتفاقيات أو تعديلها، والمبالغ المستحقة، وقرارات الجمعية، ومجالات الاستثمار، وإدارة الشركات والحوكمة، وإثبات الملكية، وحقوق المساهمين، وتوزيع الأرباح، والتخارج.",
         "en": "Enforcing or amending agreements, unpaid amounts, general assembly resolutions, investment decisions, company management and governance, proof of ownership, shareholder rights, profit distribution and exits."
       }
+    },
+    {
+      "title": {
+        "ar": "ما المقصود بالنزاع؟",
+        "en": "What is a dispute?"
+      },
+      "text": {
+        "ar": "النزاع هو أي خلاف، واقعي أو متصوَّر، ينشأ بين أطراف المنشأة العائلية، سواء كان تعاقدياً أو غير تعاقدي.",
+        "en": "A dispute is any disagreement, real or perceived, between the parties of a family business, whether contractual or not."
+      }
+    },
+    {
+      "title": {
+        "ar": "كيف تؤثر النزاعات على المنشأة؟",
+        "en": "How disputes affect the business"
+      },
+      "text": {
+        "ar": "تتآكل المنشآت العائلية عندما تغيب الحلول وتقل الثقة، فيضعف كيانها وتتداعى. وتتضرر العلاقات الأسرية. وعندما ينتهي النزاع في أروقة المحاكم تُجمَّد الأصول وثروة الأسرة حتى التوصل إلى حل.",
+        "en": "Family businesses wear away when solutions are missing and trust drops: the business weakens and can fall apart, and family relationships suffer. When a dispute ends up in court, assets and family wealth are frozen until it is resolved."
+      }
+    },
+    {
+      "title": {
+        "ar": "آليات الوقاية من النزاعات",
+        "en": "Ways to prevent disputes"
+      },
+      "text": {
+        "ar": "من الآليات المختارة: الاتفاق على رؤية مشتركة للعائلة، وتوثيق القواعد في الميثاق العائلي في المسائل التي قد تثير النزاع كتوظيف أفراد العائلة وملكية الأسهم وتعاقب الإدارة، وتشجيع الحوار والتعاون، والتخطيط وصنع السياسات، واستخدام الحوكمة لرسم حدود واضحة بين الملكية والإدارة.",
+        "en": "Selected mechanisms: agreeing on a shared family vision; writing down rules in the family charter on matters that can cause disputes, such as hiring family members, share ownership and management succession; encouraging dialogue and cooperation; planning and policy-making; and using governance to draw clear lines between ownership and management."
+      }
     }
   ],
   "stats": [

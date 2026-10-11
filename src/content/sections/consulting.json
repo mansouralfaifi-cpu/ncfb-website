@@ -188,5 +188,27 @@
         "en": "A step-by-step approach that starts with a diagnosis built on field studies, then preventive and qualifying programs, then settlement through alternative means when needed."
       }
     }
-  ]
+  ],
+  "highlightsTitle": {
+    "ar": "دوافع التحول المؤسسي",
+    "en": "Why family businesses transform"
+  },
+  "highlights": [
+    {
+      "ar": "حماية العائلة: تفادي الخلافات المستقبلية بتنظيم العمليات التي قد تكون سبباً للخلاف بين أفرادها",
+      "en": "Protecting the family: avoiding future disputes by organizing the processes that can cause them"
+    },
+    {
+      "ar": "التوسع في الأعمال: بناء الشراكات واستقطاب الكفاءات النوعية للعمل في المنشأة",
+      "en": "Growing the business: building partnerships and attracting high-caliber talent"
+    },
+    {
+      "ar": "حماية أصحاب المصلحة: جودة القرارات واستدامة المنشأة لحماية حقوق الموظفين والموردين والدائنين والمستثمرين والعملاء",
+      "en": "Protecting stakeholders: better decisions and a lasting business that protects employees, suppliers, creditors, investors and customers"
+    }
+  ],
+  "closing": {
+    "ar": "التحول المؤسسي هو الانتقال بالمنشأة من الممارسات الفردية إلى الممارسات الاحترافية بما يتناسب مع حجمها وتعقيد أعمالها، وبما يعزز فرصة استمرارها سنوات طويلة. وهو يشمل حوكمة العائلة وحوكمة المنشأة وحوكمة العلاقة بينهما.",
+    "en": "Institutional transformation moves a business from individual to professional practice, in step with its size and the complexity of its work, so that it can last for many years. It covers family governance, business governance and the governance of the relationship between the two."
+  }
 }

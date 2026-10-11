@@ -666,3 +666,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .page-hdr .crumbs li+li::before{color:var(--color-primary-300)}
 .page-hdr h1::before{background:var(--color-accent-fill)}
 .page-hdr .crumbs a:focus-visible{outline-color:var(--color-neutral-0)}
+/* Photo strip on section pages (the centre's own photos) */
+.gallery{display:grid;gap:var(--space-2);grid-template-columns:1fr}
+@container (min-width:640px){.gallery[data-n="2"]{grid-template-columns:1fr 1fr}.gallery[data-n="3"]{grid-template-columns:repeat(3,1fr)}}
+.gallery img{inline-size:100%;block-size:auto;aspect-ratio:4/3;object-fit:cover;border-radius:2rem 0 2rem 0;display:block}

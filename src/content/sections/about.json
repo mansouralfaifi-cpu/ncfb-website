@@ -92,6 +92,108 @@
         "ar": "المنشآت العائلية، والحكومة والقطاع العام، والمستشارون والمهنيون، ومؤسسات التعليم، والمجتمع المحلي، والمجتمع الدولي.",
         "en": "Family businesses, government and the public sector, advisors and professionals, educational institutions, the local community and the international community."
       }
+    },
+    {
+      "title": {
+        "ar": "تعريف المنشأة العائلية",
+        "en": "What is a family business"
+      },
+      "text": {
+        "ar": "يعتمد المركز تعريفاً يتسق مع أفضل الممارسات العالمية. المنشأة العائلية هي الشركة التي تعود ملكية 50% أو أكثر من حصصها أو أسهمها ذات حقوق التصويت إلى شخص أو أكثر من العائلة، سواء كانوا من المؤسسين أو ممن تملكوا في رأس مالها أو انتقلت إليهم الملكية. وفي الشركات المدرجة في السوق المالية السعودية تكفي نسبة 25%. وتدخل المؤسسات الفردية في التعريف لأن ملكيتها تنتقل إلى الورثة. ويتسق هذا التعريف مع تعريفات معتمدة في الإمارات والمفوضية الأوروبية ومنظمة التعاون الاقتصادي والتنمية والبنك الدولي ومعهد المنشآت العائلية في المملكة المتحدة وألمانيا والنمسا وأستراليا.",
+        "en": "The Center uses a definition in line with global best practice. A family business is a company in which at least 50% of the shares or voting shares belong to one or more members of the same family, whether founders, later shareholders, or relatives who inherited the ownership. For companies listed on the Saudi capital market, 25% of voting shares is enough. Sole proprietorships are included because ownership passes to the heirs. The definition is consistent with those used in the UAE, by the European Commission, the OECD, the World Bank, the Institute for Family Business in the UK, Germany, Austria and Australia."
+      }
+    },
+    {
+      "title": {
+        "ar": "توزيع المنشآت العائلية وحجمها",
+        "en": "Where family businesses are and how big they are"
+      },
+      "text": {
+        "ar": "يتركز القسم الأكبر من المنشآت العائلية في الرياض (29.1%) ومكة المكرمة (24.3%) والمنطقة الشرقية (15.5%)، وتضم هذه المناطق مجتمعة 69% منها. وتتألف الأغلبية العظمى من منشآت متناهية الصغر وصغيرة، فنحو 89% منها فيها أقل من 50 موظفاً ولا تتجاوز إيراداتها 40 مليون ريال. المصدر: بيانات وزارة التجارة.",
+        "en": "Most family businesses are concentrated in Riyadh (29.1%), Makkah (24.3%) and the Eastern Province (15.5%), which together hold 69% of them. The great majority are micro and small businesses: about 89% have fewer than 50 employees and revenue of up to SAR 40 million. Source: Ministry of Commerce data."
+      }
     }
-  ]
+  ],
+  "stats": [
+    {
+      "value": "69%",
+      "label": {
+        "ar": "من المنشآت العائلية في الرياض ومكة المكرمة والمنطقة الشرقية",
+        "en": "of family businesses are in Riyadh, Makkah and the Eastern Province"
+      }
+    },
+    {
+      "value": "+80%",
+      "label": {
+        "ar": "من القوى العاملة في المنشآت العائلية تعمل في هذه المناطق",
+        "en": "of the family-business workforce is in these regions"
+      }
+    },
+    {
+      "value": "89%",
+      "label": {
+        "ar": "منها أقل من 50 موظفاً وإيراداتها لا تتجاوز 40 مليون ريال",
+        "en": "have fewer than 50 employees and revenue of up to SAR 40 million"
+      }
+    }
+  ],
+  "highlightsTitle": {
+    "ar": "أبرز التحديات التي تواجه المنشآت العائلية",
+    "en": "Main challenges facing family businesses"
+  },
+  "highlightsIcon": "circle-alert",
+  "highlights": [
+    {
+      "ar": "النسبة العالية من المؤسسات الفردية في هيكل الملكية",
+      "en": "A high share of sole proprietorships in the ownership structure"
+    },
+    {
+      "ar": "نقص الثقافة المالية والوعي بالتمويل البديل، وارتفاع عوائق التمويل",
+      "en": "Limited financial literacy and awareness of alternative finance, and high barriers to financing"
+    },
+    {
+      "ar": "صعوبة جذب المواهب والاحتفاظ بها",
+      "en": "Difficulty attracting and retaining talent"
+    },
+    {
+      "ar": "انخفاض الإنفاق على البحث والتطوير",
+      "en": "Low spending on research and development"
+    },
+    {
+      "ar": "عدم وضوح أطر وأدوات الحوكمة الرسمية",
+      "en": "No clear understanding of formal governance frameworks and tools"
+    },
+    {
+      "ar": "قلة الدعم في إعداد وثائق الحوكمة مثل الميثاق العائلي",
+      "en": "Little support in preparing governance documents such as the family charter"
+    },
+    {
+      "ar": "غياب برامج مخصصة للصراعات الأسرية وحل النزاعات",
+      "en": "No dedicated programs for family conflict and dispute resolution"
+    },
+    {
+      "ar": "محدودية الوعي بتخطيط الموارد البشرية والخلافة، ونقص التدريب على الإعداد لها",
+      "en": "Limited awareness of HR and succession planning, and too little training to prepare for succession"
+    },
+    {
+      "ar": "محدودية دمج الإناث وتمكينهن في المنشآت العائلية",
+      "en": "Limited inclusion and empowerment of women in family businesses"
+    },
+    {
+      "ar": "نقص الأبحاث والمعلومات والإحصائيات المتعلقة بالمنشآت العائلية",
+      "en": "A shortage of research, information and statistics on family businesses"
+    },
+    {
+      "ar": "عدم وجود فرص استثمارية واضحة وقاعدة بيانات للمستثمرين المحتملين",
+      "en": "No clear investment opportunities and no database of potential investors"
+    },
+    {
+      "ar": "بيئة غير مواتية لتكوين الثروة، وقلة التمثيل الحكومي",
+      "en": "An environment that does not favor wealth creation, and limited government representation"
+    }
+  ],
+  "closing": {
+    "ar": "رُصدت هذه التحديات في تقييم الوضع الراهن، مع تفاوت في درجة تأثير كل منها.",
+    "en": "These challenges were identified in the current-state assessment, and they differ in how much each one weighs."
+  }
 }

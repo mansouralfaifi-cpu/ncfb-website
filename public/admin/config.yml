@@ -174,7 +174,16 @@ collections:
           - { label: "النص / Text", name: text, widget: object, fields: *bi_text }
       - { label: "عنوان المزايا (اختياري) / Highlights title (optional)", name: highlightsTitle, widget: object, required: false, fields: *bi_string }
       - { label: "المزايا (اختياري) / Highlights (optional)", name: highlights, widget: list, required: false, summary: "{{fields.ar}}", fields: *bi_string }
+      - { label: "أيقونة المزايا (اسم Lucide، الافتراضي check) / Highlights icon (Lucide name, default check)", name: highlightsIcon, widget: string, required: false }
       - { label: "جملة ختامية (اختياري) / Closing statement (optional)", name: closing, widget: object, required: false, fields: *bi_text }
+      - label: "صور القسم (اختياري) / Section photos (optional)"
+        name: gallery
+        widget: list
+        required: false
+        summary: "{{fields.alt.ar}}"
+        fields:
+          - { label: "الصورة / Photo", name: src, widget: image }
+          - { label: "الوصف البديل / Alt text", name: alt, widget: object, fields: *bi_string }
       - label: "برنامج مميز (اختياري) / Featured program (optional)"
         name: feature
         widget: object
