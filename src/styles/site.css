@@ -761,3 +761,5 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   .hero.intro .hero-media::after{background:linear-gradient(to left,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 55%,transparent) 15%,transparent 40%),linear-gradient(to bottom,var(--color-primary-900) 0%,transparent 30%)}
   [dir="ltr"] .hero.intro .hero-media::after{background:linear-gradient(to right,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 55%,transparent) 15%,transparent 40%),linear-gradient(to bottom,var(--color-primary-900) 0%,transparent 30%)}
 }
+/* 2026-10-12 (owner: logo merged with the navy, no white box): reversed white logo on the intro, no plate */
+.hero.intro .hero-logo{background:none;padding:0;border-radius:0}
