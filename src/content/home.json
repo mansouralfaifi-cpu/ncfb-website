@@ -9,8 +9,12 @@
       "en": "National Center for Family Businesses"
     },
     "title": {
-      "ar": "منشآت عائلية تُدار بحوكمة، وتمتد عبر الأجيال",
-      "en": "Family businesses run with governance, built to last for generations"
+      "ar": "منشآت عائلية تُدار بحوكمة،",
+      "en": "Family businesses run with governance,"
+    },
+    "titleAccent": {
+      "ar": "وتمتد عبر الأجيال",
+      "en": "built to last for generations"
     },
     "lead": {
       "ar": "نرافق الملاك ومجالس العائلة والجيل القادم في الحوكمة والتخطيط للتعاقب وحفظ إرث المنشأة.",
@@ -59,7 +63,8 @@
           "ar": "من منشآت القطاع الخاص منشآت عائلية",
           "en": "of private sector businesses are family businesses"
         },
-        "group": "sector"
+        "group": "sector",
+        "strip": true
       },
       {
         "value": "57%",
@@ -75,7 +80,8 @@
           "ar": "من إجمالي القوى العاملة في المملكة",
           "en": "of the Kingdom's total workforce"
         },
-        "group": "sector"
+        "group": "sector",
+        "strip": true
       },
       {
         "value": "+33,000",
@@ -83,7 +89,8 @@
           "ar": "مستفيد من برامج المركز",
           "en": "beneficiaries of the Center's programs"
         },
-        "group": "center"
+        "group": "center",
+        "strip": true
       },
       {
         "value": "+950",
@@ -91,7 +98,8 @@
           "ar": "منشأة عائلية مستفيدة",
           "en": "family businesses served"
         },
-        "group": "center"
+        "group": "center",
+        "strip": true
       },
       {
         "value": "+85",
@@ -119,7 +127,71 @@
         "ar": "المركز",
         "en": "The Center"
       }
+    },
+    "stripLabel": {
+      "ar": "أبرز الأرقام",
+      "en": "Key figures"
     }
+  },
+  "audiences": {
+    "heading": {
+      "ar": "من أين تبدأ؟",
+      "en": "Where to start"
+    },
+    "browse": {
+      "ar": "أو تصفّح أقسام المركز",
+      "en": "Or browse the Center's sections"
+    },
+    "items": [
+      {
+        "label": {
+          "ar": "مالك منشأة أو عضو مجلس",
+          "en": "Owner or board member"
+        },
+        "text": {
+          "ar": "ابدأ بتشخيص الحوكمة والملكية والجاهزية للتعاقب.",
+          "en": "Start by diagnosing governance, ownership and succession readiness."
+        },
+        "target": "consulting-assessment",
+        "section": "consulting"
+      },
+      {
+        "label": {
+          "ar": "من الجيل القادم",
+          "en": "Next generation"
+        },
+        "text": {
+          "ar": "برامج في الحوكمة والتخطيط للتعاقب وتطوير القيادات.",
+          "en": "Programs in governance, succession planning and leadership."
+        },
+        "target": "training-open",
+        "section": "training"
+      },
+      {
+        "label": {
+          "ar": "عائلة تواجه خلافًا",
+          "en": "A family facing a dispute"
+        },
+        "text": {
+          "ar": "وساطة تقرّب وجهات النظر للوصول إلى حل ودي قبل القضاء.",
+          "en": "Mediation that brings parties together toward an amicable settlement before court."
+        },
+        "target": "alt-mediation",
+        "section": "alt"
+      },
+      {
+        "label": {
+          "ar": "باحث أو مهتم بالقطاع",
+          "en": "Researcher or sector follower"
+        },
+        "text": {
+          "ar": "أدلة ودراسات وتقارير قابلة للتحميل.",
+          "en": "Downloadable guides, studies and reports."
+        },
+        "target": "library-publications",
+        "section": "library"
+      }
+    ]
   },
   "consulting": {
     "heading": {

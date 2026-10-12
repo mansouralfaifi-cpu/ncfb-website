@@ -15,7 +15,11 @@ const about = sectionById('about')!, consulting = sectionById('consulting')!, li
 const PATH_ORDER = ['consulting', 'training', 'alt', 'events', 'library', 'advocacy'];
 const paths = [...PATH_ORDER.map(sectionById).filter(Boolean), ...SECTIONS.filter((s) => s.id !== 'about' && !PATH_ORDER.includes(s.id))] as typeof SECTIONS;
 // 3. Figures in two groups (home.json stats.items[].group: 'sector' | 'center').
-const statItems = (home.stats?.items || []) as any[];
+const allStats = (home.stats?.items || []) as any[];
+// Key figures (stats.items[].strip) sit in a strip under the hero; the rest stay with About.
+const stripItems = allStats.filter((s) => s.strip);
+const statItems = allStats.filter((s) => !s.strip);
+const aud = (home as any).audiences;
 const groups = (['sector', 'center'] as const).map((g) => ({ g, label: (home.stats as any).groups?.[g], items: statItems.filter((s) => (s.group || 'center') === g) })).filter((x) => x.items.length);
 // 4. Advisory services in diagnosis-first order on the home page; the nav and the consulting page keep the CMS order.
 const SVC_ORDER = ['assessment', 'charter', 'board', 'transformation'];
@@ -31,8 +35,16 @@ const contacts = ((settings as any).contacts || []) as any[];
 <div class="home">
 <Hero lang={lang} />
 
+{stripItems.length > 0 && <section class="h-strip" aria-label={L((home.stats as any).stripLabel, lang)}><div class="wrap">
+  <dl class="strip">{stripItems.map((s) => <div><dt><span dir="ltr">{s.value}</span></dt><dd>{L(s.label, lang)}</dd></div>)}</dl>
+</div></section>}
+
 <section class="sec h-paths" aria-labelledby="h-paths"><div class="wrap">
-  <div class="sec-head"><div><span class="eyebrow">{t(lang, 'pathEyebrow')}</span><h2 class="h2" id="h-paths">{t(lang, 'pathHeading')}</h2></div></div>
+  <div class="sec-head"><div><span class="eyebrow">{t(lang, 'pathEyebrow')}</span><h2 class="h2" id="h-paths">{aud ? L(aud.heading, lang) : t(lang, 'pathHeading')}</h2></div></div>
+  {aud?.items?.length > 0 && <ul class="aud">{aud.items.map((a: any) => (
+    <li><a class="aud-card" href={href(lang, a.target)}><span class="ic"><Icon name={sectionById(a.section)?.icon} class="icon-lg" /></span><h3 class="h4">{L(a.label, lang)}</h3><p>{L(a.text, lang)}</p><Icon name={arrow} class="icon go" /></a></li>
+  ))}</ul>}
+  {aud && <h3 class="h4 paths-h">{L(aud.browse, lang)}</h3>}
   <ul class="paths">{paths.map((s) => (
     <li><a class="path" href={href(lang, s.id)}><span class="ic"><Icon name={s.icon} class="icon-lg" /></span><div class="tx"><h3 class="h4">{L(s.title, lang)}<Icon name={arrow} class="icon go" /></h3><p>{L(s.intro, lang)}</p></div></a></li>
   ))}</ul>
