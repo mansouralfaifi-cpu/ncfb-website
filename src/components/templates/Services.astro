@@ -14,7 +14,7 @@ const count = (n: number) => (n === 2 ? t(lang, 'servicesCount2') : t(lang, 'ser
 {groups.map((g, i) => (
   <section class={`sec${i % 2 ? ' alt' : ''} svc-group`} id={`svc-${g.id}`}><div class="wrap svc-row">
     <div class="svc-head">
-      <span class="eyebrow">{String(i + 1).padStart(2, '0')} · {count(g.pages.length)}</span>
+      <span class="eyebrow">{count(g.pages.length)}</span>
       <h2 class="h2">{L(g.title, lang)}</h2>
       <p>{L(g.intro, lang)}</p>
       <a class="btn btn-text" href={href(lang, g.id)}>{t(lang, 'sectionPage', { s: L(g.title, lang) })}<Icon name={arrowIcon(lang)} /></a>
