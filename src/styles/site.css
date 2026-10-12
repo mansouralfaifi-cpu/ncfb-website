@@ -727,3 +727,26 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 @keyframes hdr-pat{from{opacity:0;translate:0 .75rem}to{opacity:1;translate:0 0}}
 @keyframes hdr-gold{from{opacity:0}to{opacity:1}}
 @media (max-width:47.99em){.page-hdr .pat{background:color-mix(in srgb,var(--color-primary-300) 35%,transparent)}.page-hdr::before{display:none}}
+/* 2026-10-12 (owner approved the navy home hero and its photo): the intro splash "/" follows the same design.
+   Logo sits on a white plate (identity rule until an official white logo exists). */
+.hero.intro{background:var(--color-primary-900);color:var(--color-neutral-0);border-block-end:3px solid var(--color-accent-fill)}
+.hero.intro h1{color:var(--color-neutral-0)}
+.hero.intro p{color:var(--color-primary-100)}
+.hero.intro .eyebrow{color:var(--color-accent-fill)}
+.hero.intro .hero-logo{background:var(--color-neutral-0);padding:var(--space-2) var(--space-3);border-radius:var(--radius-md);box-sizing:content-box}
+.hero.intro .btn-primary{background:var(--color-accent-fill);color:var(--color-primary-900);border-color:var(--color-accent-fill)}
+.hero.intro .btn-primary:hover{background:var(--color-accent-200);border-color:var(--color-accent-200)}
+.hero.intro .btn-secondary{background:transparent;color:var(--color-neutral-0);border-color:var(--color-primary-300)}
+.hero.intro .btn-secondary:hover{background:color-mix(in srgb,var(--color-neutral-0) 8%,transparent);border-color:var(--color-neutral-0)}
+.hero.intro .btn:focus-visible{outline-color:var(--color-accent-fill)}
+.hero.intro .intro-lang{color:var(--color-primary-900)}
+.hero.intro .hero-media::after{background:linear-gradient(to bottom,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 92%,transparent) 60%,color-mix(in srgb,var(--color-primary-900) 30%,transparent) 85%,transparent 100%)}
+.hero.intro .hero-media img{object-position:80% 70%}
+@container (min-width:1024px){
+  .hero.intro .hero-media{inset:0;inset-inline-start:auto;inline-size:50%}
+  .hero.intro .hero-copy{max-width:38rem}
+  .hero.intro .hero-media img{object-position:92% 60%}
+  [dir="ltr"] .hero.intro .hero-media img{object-position:82% 60%}
+  .hero.intro .hero-media::after{background:linear-gradient(to left,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 55%,transparent) 15%,transparent 40%),linear-gradient(to top,color-mix(in srgb,var(--color-primary-900) 45%,transparent),transparent 35%)}
+  [dir="ltr"] .hero.intro .hero-media::after{background:linear-gradient(to right,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 55%,transparent) 15%,transparent 40%),linear-gradient(to top,color-mix(in srgb,var(--color-primary-900) 45%,transparent),transparent 35%)}
+}
