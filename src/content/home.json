@@ -58,60 +58,73 @@
         "label": {
           "ar": "من منشآت القطاع الخاص منشآت عائلية",
           "en": "of private sector businesses are family businesses"
-        }
+        },
+        "group": "sector"
       },
       {
         "value": "57%",
         "label": {
           "ar": "من موظفي القطاع الخاص يعملون في منشآت عائلية",
           "en": "of private-sector employees work in family businesses"
-        }
+        },
+        "group": "sector"
       },
       {
         "value": "48%",
         "label": {
           "ar": "من إجمالي القوى العاملة في المملكة",
           "en": "of the Kingdom's total workforce"
-        }
+        },
+        "group": "sector"
       },
       {
         "value": "+33,000",
         "label": {
           "ar": "مستفيد من برامج المركز",
           "en": "beneficiaries of the Center's programs"
-        }
+        },
+        "group": "center"
       },
       {
         "value": "+950",
         "label": {
           "ar": "منشأة عائلية مستفيدة",
           "en": "family businesses served"
-        }
+        },
+        "group": "center"
       },
       {
         "value": "+85",
         "label": {
           "ar": "شريكاً استراتيجياً",
           "en": "strategic partners"
-        }
+        },
+        "group": "center"
       },
       {
         "value": "+166",
         "label": {
           "ar": "وساطة بوسطاء معتمدين من المركز",
           "en": "mediations by Center-accredited mediators"
-        }
+        },
+        "group": "center"
       }
-    ]
+    ],
+    "groups": {
+      "sector": {
+        "ar": "المنشآت العائلية",
+        "en": "Family businesses"
+      },
+      "center": {
+        "ar": "المركز",
+        "en": "The Center"
+      }
+    }
   },
   "consulting": {
     "heading": {
       "ar": "من التشخيص إلى التحول المؤسسي",
       "en": "From diagnosis to institutional transformation"
-    },
-    "button": {
-      "ar": "جميع الاستشارات",
-      "en": "All advisory services"
     }
   },
   "library": {
@@ -119,19 +132,27 @@
       "ar": "أحدث الإصدارات",
       "en": "Latest publications"
     },
-    "count": 3
+    "count": 3,
+    "link": {
+      "ar": "كل المنشورات",
+      "en": "All publications"
+    }
   },
   "events": {
     "heading": {
       "ar": "فعاليات قادمة",
       "en": "Upcoming events"
     },
-    "count": 2
+    "count": 3,
+    "link": {
+      "ar": "كل الفعاليات",
+      "en": "All events"
+    }
   },
   "partners": {
     "heading": {
-      "ar": "شركاؤنا في النجاح",
-      "en": "Our partners in success"
+      "ar": "من شركاء المركز",
+      "en": "Some of the Center's partners"
     },
     "items": [
       {

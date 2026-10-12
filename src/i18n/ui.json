@@ -368,8 +368,8 @@
     "en": "Have a question about {t}?"
   },
   "downloadOf": {
-    "ar": "تحميل {t}",
-    "en": "Download {t}"
+    "ar": "تحميل PDF: {t}",
+    "en": "Download PDF: {t}"
   },
   "langSwitch": {
     "ar": "English",

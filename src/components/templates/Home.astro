@@ -1,55 +1,87 @@
 ---
 import Hero from '../Hero.astro';
 import Icon from '../Icon.astro';
-import SubCards from '../SubCards.astro';
 import PubList from '../PubList.astro';
 import Stats from '../Stats.astro';
 import EventCard from '../EventCard.astro';
 import home from '../../content/home.json';
 import events from '../../content/events.json';
-import { type Lang, href, t, L, SECTIONS, sectionById, arrowIcon } from '../../lib/site';
+import { type Lang, href, t, L, SECTIONS, sectionById, arrowIcon, settings } from '../../lib/site';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const arrow = arrowIcon(lang);
-const about = sectionById('about')!, consulting = sectionById('consulting')!, alt = sectionById('alt')!, training = sectionById('training')!;
-const library = sectionById('library')!, evSec = sectionById('events')!;
-const upcoming = events.items.filter((e) => !e.past && e.listed && e.kind === 'event').sort((a, b) => a.date.localeCompare(b.date)).slice(0, home.events.count);
-const prog = (training as any).feature;
-const features = [{ s: alt, cls: 'feature navy on-navy' }, { s: training, cls: 'feature light' }];
+const about = sectionById('about')!, consulting = sectionById('consulting')!, library = sectionById('library')!, evSec = sectionById('events')!;
+// 2. Path index: visitor-priority order on the home page only (the nav keeps the section order); sections added later in the CMS follow.
+const PATH_ORDER = ['consulting', 'training', 'alt', 'events', 'library', 'advocacy'];
+const paths = [...PATH_ORDER.map(sectionById).filter(Boolean), ...SECTIONS.filter((s) => s.id !== 'about' && !PATH_ORDER.includes(s.id))] as typeof SECTIONS;
+// 3. Figures in two groups (home.json stats.items[].group: 'sector' | 'center').
+const statItems = (home.stats?.items || []) as any[];
+const groups = (['sector', 'center'] as const).map((g) => ({ g, label: (home.stats as any).groups?.[g], items: statItems.filter((s) => (s.group || 'center') === g) })).filter((x) => x.items.length);
+// 4. Advisory services in diagnosis-first order on the home page; the nav and the consulting page keep the CMS order.
+const SVC_ORDER = ['assessment', 'charter', 'board', 'transformation'];
+const services = [...consulting.pages].sort((a, b) => (SVC_ORDER.indexOf(a.slug) + 1 || 99) - (SVC_ORDER.indexOf(b.slug) + 1 || 99));
+const band = home.band;
+// 5. Featured program (Training)
+const prog = (sectionById('training') as any)?.feature;
+// 6. Events: month-only entries sort to the end of their month, so the first card always has a day.
+const key = (e: any) => (e.monthOnly ? `${e.date.slice(0, 7)}-99` : e.date);
+const upcoming = events.items.filter((e: any) => !e.past && e.listed && e.kind === 'event').sort((a: any, b: any) => key(a).localeCompare(key(b))).slice(0, home.events.count);
+const contacts = ((settings as any).contacts || []) as any[];
 ---
+<div class="home">
 <Hero lang={lang} />
-<section class="sec"><div class="wrap intro-grid">
-  <div class="copy"><span class="eyebrow">{L(about.title, lang)}</span><h2 class="h2">{L(home.about.heading, lang)}</h2></div>
-  <div class="copy"><p class="lead">{L(home.about.text, lang)}</p><a class="btn btn-text" href={href(lang, 'about')}>{L(home.about.link, lang)}<Icon name={arrow} /></a></div>
+
+<section class="sec h-paths" aria-labelledby="h-paths"><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">{t(lang, 'pathEyebrow')}</span><h2 class="h2" id="h-paths">{t(lang, 'pathHeading')}</h2></div></div>
+  <ul class="paths">{paths.map((s) => (
+    <li><a class="path" href={href(lang, s.id)}><span class="ic"><Icon name={s.icon} class="icon-lg" /></span><div class="tx"><h3 class="h4">{L(s.title, lang)}<Icon name={arrow} class="icon go" /></h3><p>{L(s.intro, lang)}</p></div></a></li>
+  ))}</ul>
 </div></section>
-<section class="sec" style="padding-block-start:0"><div class="wrap" style="display:grid;gap:var(--space-3)">
-  <div><span class="eyebrow">{t(lang, 'pathEyebrow')}</span><h2 class="h2">{t(lang, 'pathHeading')}</h2></div>
-  <div class="sub-cards c3">{SECTIONS.filter((s) => s.id !== 'about').map((s) => <a class="card" href={href(lang, s.id)}><div class="ic"><Icon name={s.icon} class="icon-lg" /></div><h3 class="h4">{L(s.title, lang)}</h3><p>{L(s.intro, lang)}</p><span class="more">{t(lang, 'details')}<Icon name={arrow} /></span></a>)}</div>
+
+<section class="sec h-about" aria-labelledby="h-about"><div class="wrap">
+  <div class="intro-grid">
+    <div class="copy"><span class="eyebrow">{L(about.title, lang)}</span><h2 class="h2" id="h-about">{L(home.about.heading, lang)}</h2></div>
+    <div class="copy"><p class="lead">{L(home.about.text, lang)}</p><a class="btn btn-text" href={href(lang, 'about')}>{L(home.about.link, lang)}<Icon name={arrow} /></a></div>
+  </div>
+  {groups.length > 0 && <div class="figures">
+    <h3 class="h4">{L(home.stats.heading, lang)}</h3>
+    {groups.map((x) => <div class="fig-group"><h4 class="fig-label">{L(x.label, lang)}</h4><Stats lang={lang} items={x.items} /></div>)}
+    <p class="note">{L(home.stats.note, lang)}</p>
+  </div>}
 </div></section>
-{home.stats?.items?.length > 0 && <section class="sec" style="padding-block-start:0"><div class="wrap" style="display:grid;gap:var(--space-3)"><h2 class="h3">{L(home.stats.heading, lang)}</h2><Stats lang={lang} items={home.stats.items} note={L(home.stats.note, lang)} /></div></section>}
-<section class="sec alt"><div class="wrap">
-  <div class="sec-head"><div><span class="eyebrow">{L(consulting.title, lang)}</span><h2 class="h2">{L(home.consulting.heading, lang)}</h2></div><a class="btn btn-secondary" href={href(lang, 'consulting')}>{L(home.consulting.button, lang)}</a></div>
-  <SubCards lang={lang} section={consulting} />
+
+<section class="sec h-consult" aria-labelledby="h-consult"><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">{L(consulting.title, lang)}</span><h2 class="h2" id="h-consult">{L(home.consulting.heading, lang)}</h2></div></div>
+  <ul class="svc-cards">{services.map((p) => (
+    <li><a class="card" href={href(lang, `consulting-${p.slug}`)}><span class="ic"><Icon name={p.icon} class="icon-lg" /></span><h3 class="h4">{L(p.title, lang)}<Icon name={arrow} class="icon go" /></h3><p>{L(p.description, lang)}</p></a></li>
+  ))}</ul>
+  <div class="next"><div class="copy"><h3 class="h4">{L(band.title, lang)}</h3><p>{L(band.text, lang)}</p></div><a class="btn btn-primary" href={`${href(lang, 'contact')}?service=${encodeURIComponent(band.target)}`}>{L(band.button, lang)}</a></div>
 </div></section>
-<section class="sec"><div class="wrap duo-feature">
-  {features.map(({ s, cls }) => (
-    <div class={cls}><span class="eyebrow">{L(s.title, lang)}</span><h3 class="h3">{L(s.intro, lang)}</h3><ul>{s.pages.map((p) => <li><a href={href(lang, `${s.id}-${p.slug}`)}>{L(p.title, lang)}<Icon name={arrow} /></a></li>)}</ul></div>
-  ))}
-</div></section>
-{prog && <section class="sec" style="padding-top:0"><div class="wrap"><div class="prog-band">
-  <div style="display:grid;gap:var(--space-1)"><span class="eyebrow">{L(prog.eyebrow, lang)}</span><h2 class="h2">{L(prog.title, lang)}</h2><p>{L(prog.summary, lang)}</p></div>
-  <div class="cta-row"><a class="btn btn-primary" href={`${href(lang, 'training')}#${prog.id}`}>{L(prog.more, lang)}</a><a class="btn btn-secondary" href={`${href(lang, 'training-register')}?program=${encodeURIComponent(prog.id)}`}>{L(prog.cta, lang)}</a></div>
+
+{prog && <section class="sec cont h-prog" aria-labelledby="h-prog"><div class="wrap"><div class="prog-band">
+  <div class="copy"><span class="eyebrow">{L(prog.eyebrow, lang)}</span><h2 class="h2" id="h-prog">{L(prog.title, lang)}</h2><p>{L(prog.summary, lang)}</p></div>
+  <div class="cta-row"><a class="btn btn-primary" href={`${href(lang, 'training-register')}?program=${encodeURIComponent(prog.id)}`}>{L(prog.cta, lang)}</a><a class="btn btn-secondary" href={`${href(lang, 'training')}#${prog.id}`}>{L(prog.more, lang)}</a></div>
 </div></div></section>}
-<section class="sec alt"><div class="wrap">
-  <div class="sec-head"><div><span class="eyebrow">{L(library.title, lang)}</span><h2 class="h2">{L(home.library.heading, lang)}</h2></div><a class="btn btn-text" href={href(lang, 'library')}>{L(library.title, lang)}<Icon name={arrow} /></a></div>
+
+{upcoming.length > 0 && <section class="sec alt h-events" aria-labelledby="h-events"><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">{L(evSec.title, lang)}</span><h2 class="h2" id="h-events">{L(home.events.heading, lang)}</h2></div><a class="btn btn-text" href={href(lang, 'events-list')}>{L((home.events as any).link, lang)}<Icon name={arrow} /></a></div>
+  <div class="cards ev-cards">{upcoming.map((ev) => <EventCard lang={lang} ev={ev} />)}</div>
+</div></section>}
+
+<section class="sec h-pubs" aria-labelledby="h-pubs"><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">{L(library.title, lang)}</span><h2 class="h2" id="h-pubs">{L(home.library.heading, lang)}</h2></div><a class="btn btn-text" href={href(lang, 'library-publications')}>{L((home.library as any).link, lang)}<Icon name={arrow} /></a></div>
   <PubList lang={lang} limit={home.library.count} />
 </div></section>
-<section class="sec"><div class="wrap">
-  <div class="sec-head"><div><span class="eyebrow">{L(evSec.title, lang)}</span><h2 class="h2">{L(home.events.heading, lang)}</h2></div><a class="btn btn-text" href={href(lang, 'events-calendar')}>{L(evSec.pages.find((p) => p.slug === 'calendar')?.title, lang)}<Icon name={arrow} /></a></div>
-  <div class="cards">{upcoming.map((ev) => <EventCard lang={lang} ev={ev} />)}</div>
-</div></section>
-{home.partners?.items?.length > 0 && <section class="sec alt"><div class="wrap" style="display:grid;gap:var(--space-3)"><h2 class="h3">{L(home.partners.heading, lang)}</h2><ul class="partners">{home.partners.items.map((p: any) => <li>{p.logo ? <img src={p.logo} alt={L(p.name, lang)} loading="lazy" /> : <span>{L(p.name, lang)}</span>}</li>)}</ul></div></section>}
-<section class="sec" style={home.partners?.items?.length ? undefined : 'padding-top:0'}><div class="wrap"><div class="band on-navy">
-  <div style="display:grid;gap:var(--space-1)"><h2 class="h3">{L(home.band.title, lang)}</h2><p>{L(home.band.text, lang)}</p></div>
-  <div class="cta-row"><a class="btn btn-primary" href={href(lang, home.band.target)}>{L(home.band.button, lang)}</a></div>
+
+{home.partners?.items?.length > 0 && <section class="sec cont h-partners" aria-labelledby="h-partners"><div class="wrap">
+  <h2 class="h4" id="h-partners">{L(home.partners.heading, lang)}</h2>
+  <ul class="partners">{home.partners.items.map((p: any) => <li>{p.logo ? <img src={p.logo} alt={L(p.name, lang)} loading="lazy" /> : <span>{L(p.name, lang)}</span>}</li>)}</ul>
+</div></section>}
+
+<section class="sec cont h-help" aria-labelledby="h-help"><div class="wrap"><div class="help">
+  <div class="copy"><h2 class="h3" id="h-help">{t(lang, 'servicesNotSure')}</h2><p>{t(lang, 'servicesNotSureDesc')}</p><a class="btn btn-primary" href={href(lang, 'contact')}>{t(lang, 'requestService')}</a></div>
+  {contacts.length > 0 && <div class="teams"><h3 class="h4">{t(lang, 'contactTeams')}</h3><ul>{contacts.map((c) => (
+    <li><span class="team">{L(c.label, lang)}</span>{c.phone && <a href={`tel:${c.phone}`}><Icon name="phone" /><span dir="ltr">{c.phone}</span></a>}<a href={`mailto:${c.email}`}><Icon name="mail" /><span dir="ltr">{c.email}</span></a></li>
+  ))}</ul></div>}
 </div></div></section>
+</div>

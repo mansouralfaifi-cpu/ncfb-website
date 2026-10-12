@@ -73,12 +73,12 @@ collections:
             name: hero
             widget: object
             fields:
-              - { label: "السطر العلوي / Eyebrow", name: eyebrow, widget: object, fields: *bi_string }
+              - { label: "السطر العلوي (صفحة البداية فقط) / Eyebrow (opening page only)", name: eyebrow, widget: object, fields: *bi_string }
               - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
               - { label: "الفقرة / Lead", name: lead, widget: object, fields: *bi_text }
               - { label: "الوصف البديل للصورة / Photo alt text", name: imageAlt, widget: object, fields: *bi_string }
               - { label: "الزر الأساسي / Primary button", name: primary, widget: object, fields: *bi_string }
-              - { label: "الزر الثانوي / Secondary button", name: secondary, widget: object, fields: *bi_string }
+              - { label: "الزر الثانوي (صفحة البداية فقط؛ في الرئيسية يظهر «اطلب خدمة») / Secondary button (opening page only; the home page shows «Request a service»)", name: secondary, widget: object, fields: *bi_string }
           - label: "عن المركز / About block"
             name: about
             widget: object
@@ -97,27 +97,35 @@ collections:
                 name: items
                 widget: list
                 summary: "{{fields.value}}"
-                fields: &stat_fields
-                  - { label: "الرقم / Figure", name: value, widget: string }
-                  - { label: "الوصف / Label", name: label, widget: object, fields: *bi_string }
+                fields:
+                  - &stat_value { label: "الرقم / Figure", name: value, widget: string }
+                  - &stat_label { label: "الوصف / Label", name: label, widget: object, fields: *bi_string }
+                  - { label: "المجموعة / Group", name: group, widget: select, default: center, options: [ { label: "المنشآت العائلية (أرقام القطاع) / Family businesses (sector)", value: sector }, { label: "المركز / The Center", value: center } ] }
+              - label: "عناوين مجموعتي الأرقام / Figure group labels"
+                name: groups
+                widget: object
+                fields:
+                  - { label: "أرقام القطاع / Sector figures", name: sector, widget: object, fields: *bi_string }
+                  - { label: "أرقام المركز / Center figures", name: center, widget: object, fields: *bi_string }
           - label: "الاستشارات / Advisory block"
             name: consulting
             widget: object
             fields:
               - { label: "العنوان / Heading", name: heading, widget: object, fields: *bi_string }
-              - { label: "الزر / Button", name: button, widget: object, fields: *bi_string }
           - label: "المكتبة / Library block"
             name: library
             widget: object
             fields:
               - { label: "العنوان / Heading", name: heading, widget: object, fields: *bi_string }
               - { label: "عدد الإصدارات المعروضة / Items shown", name: count, widget: number, value_type: int, min: 1, max: 12 }
+              - { label: "نص رابط «كل المنشورات» / 'All publications' link text", name: link, widget: object, fields: *bi_string }
           - label: "الفعاليات / Events block"
             name: events
             widget: object
             fields:
               - { label: "العنوان / Heading", name: heading, widget: object, fields: *bi_string }
               - { label: "عدد الفعاليات المعروضة / Items shown", name: count, widget: number, value_type: int, min: 1, max: 6 }
+              - { label: "نص رابط «كل الفعاليات» / 'All events' link text", name: link, widget: object, fields: *bi_string }
           - label: "الشركاء / Partners"
             name: partners
             widget: object
@@ -131,14 +139,14 @@ collections:
                 fields:
                   - { label: "الاسم / Name", name: name, widget: object, fields: *bi_string }
                   - { label: "الشعار (اختياري؛ يظهر الاسم نصاً بدونه) / Logo (optional)", name: logo, widget: image, required: false }
-          - label: "شريط الدعوة / Call-to-action band"
+          - label: "الخطوة الأولى في الاستشارات (أسفل بطاقات الاستشارات) / Advisory first step (under the advisory cards)"
             name: band
             widget: object
             fields:
               - { label: "العنوان / Title", name: title, widget: object, fields: *bi_string }
               - { label: "النص / Text", name: text, widget: object, fields: *bi_text }
               - { label: "الزر / Button", name: button, widget: object, fields: *bi_string }
-              - { label: "الصفحة المستهدفة (معرّف الصفحة، مثل consulting-assessment) / Target page id", name: target, widget: string }
+              - { label: "الخدمة المختارة مسبقاً في نموذج التواصل (معرّف الخدمة، مثل consulting-assessment) / Service preselected in the contact form (service id)", name: target, widget: string }
 
   # ---------------- sections and their pages ----------------
   - name: sections
@@ -163,7 +171,7 @@ collections:
         widget: list
         required: false
         summary: "{{fields.value}}"
-        fields: *stat_fields
+        fields: &stat_fields [ *stat_value, *stat_label ]
       - label: "فقرات القسم (اختياري) / Text blocks (optional)"
         name: blocks
         widget: list

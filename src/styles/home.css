@@ -1,0 +1,129 @@
+/* Home page v2. Every rule is scoped to .home (the root of Home.astro), so section pages and the intro "/" are unaffected.
+   Colours, sizes and spaces are tokens only. The one bold identity moment is the star-pattern band behind "about + figures";
+   everything else stays quiet: hairlines, the leaf on eyebrows and icon holders, one card grid, one gold-framed panel. */
+
+/* ---------- rhythm and shared bits ---------- */
+.home .sec.cont{padding-block-start:0}
+.home .btn-text{justify-self:start}
+.home .sec-head{margin-block-end:var(--space-5)}
+.home .ic{inline-size:var(--space-6);block-size:var(--space-6);flex:none;display:grid;place-items:center;border-radius:38% 0 38% 0;background:color-mix(in srgb,var(--color-accent-fill) 18%,transparent);color:var(--color-text-gold)}
+.home .go{color:var(--color-text-link);flex:none;transition:transform var(--duration-fast) var(--easing-standard)}
+.home a:hover .go{transform:translateX(calc(-1 * var(--space-half)))}
+[dir="ltr"] .home a:hover .go{transform:translateX(var(--space-half))}
+@media (prefers-reduced-motion:reduce){.home a:hover .go,[dir="ltr"] .home a:hover .go{transform:none}}
+
+/* ---------- 1. hero (home only; "/" renders the hero outside .home) ---------- */
+.home .hero .lead{text-wrap:pretty;max-width:36em}
+
+/* ---------- 2. path index: an open directory, not boxes ---------- */
+.home .paths{list-style:none;margin:0;padding:0;display:grid;column-gap:var(--space-4)}
+@container (min-width:600px){.home .paths{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@container (min-width:1200px){.home .paths{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--space-6)}}
+.home .path{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:var(--space-2);align-items:start;block-size:100%;padding-block:var(--space-3);border-block-start:var(--border-width-1) solid var(--color-border);color:inherit;text-decoration:none}
+.home .path .tx{display:grid;gap:var(--space-half)}
+.home .path h3,.home .svc-cards h3,.home .event h3,.home .figures .stats dd{text-wrap:balance}
+.home .help p,.home .next p{text-wrap:pretty}
+.home .path h3 .go,.home .svc-cards h3 .go{display:inline-block;vertical-align:middle;margin-inline-start:var(--space-1)}
+.home .path p{color:var(--color-text-muted);font-size:var(--font-size-body);line-height:var(--line-height-body)}
+.home .path:hover{border-block-start-color:var(--color-accent-line)}
+.home .path:hover h3{color:var(--color-text-link-hover)}
+
+/* ---------- 3. about + figures: the signature band (official 8-point star pattern, fading toward the text side) ---------- */
+.home .h-about{position:relative;isolation:isolate;background:var(--color-bg-subtle)}
+.home .h-about::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--color-primary-600);opacity:.14;
+  -webkit-mask:url(/pattern-star.svg) 0 0/6rem repeat,linear-gradient(to left,transparent 30%,var(--color-text) 100%);-webkit-mask-composite:source-in;
+  mask:url(/pattern-star.svg) 0 0/6rem repeat,linear-gradient(to left,transparent 30%,var(--color-text) 100%);mask-composite:intersect}
+[dir="ltr"] .home .h-about::before{-webkit-mask:url(/pattern-star.svg) 0 0/6rem repeat,linear-gradient(to right,transparent 30%,var(--color-text) 100%);-webkit-mask-composite:source-in;mask:url(/pattern-star.svg) 0 0/6rem repeat,linear-gradient(to right,transparent 30%,var(--color-text) 100%);mask-composite:intersect}
+.home .figures{display:grid;gap:var(--space-3);margin-block-start:var(--space-8)}
+.home .fig-group{display:grid;gap:var(--space-2);padding-block-start:var(--space-3);border-block-start:var(--border-width-1) solid var(--color-border-strong)}
+/* the side label column starts at 1200px: between 1024 and 1199 it would squeeze "+33,000" past its column */
+@container (min-width:1200px){.home .fig-group{grid-template-columns:10rem minmax(0,1fr);gap:var(--space-4);align-items:start}}
+.home .fig-label{font-family:var(--font-family-body);font-size:var(--font-size-label);line-height:var(--line-height-label);font-weight:var(--font-weight-semibold);color:var(--color-text-gold);padding-block-start:var(--space-1)}
+.home .figures .stats{gap:var(--space-3) 0;grid-template-columns:repeat(2,minmax(0,1fr))}
+.home .figures .stats[data-n="3"]{grid-template-columns:minmax(0,1fr)}
+@container (min-width:600px){.home .figures .stats[data-n="3"]{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@container (min-width:1024px){.home .figures .stats[data-n="4"]{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.home .figures .stats div{background:transparent;border:0;border-radius:0;padding:0 var(--space-3);gap:var(--space-1)}
+.home .figures .stats div:nth-child(odd){padding-inline-start:0}
+@container (min-width:600px){
+  .home .figures .stats div{border-inline-start:var(--border-width-1) solid var(--color-border-strong)}
+  .home .figures .stats[data-n="3"] div:first-child,.home .figures .stats[data-n="4"] div:nth-child(odd){border-inline-start:0;padding-inline-start:0}
+  .home .figures .stats[data-n="3"] div:nth-child(odd):not(:first-child){padding-inline-start:var(--space-3)}
+}
+/* at ≥1024 the 3- and 4-column groups would draw staggered vertical rules; separation comes from the column gap instead */
+@container (min-width:1024px){.home .figures .stats{column-gap:var(--space-4)}.home .figures .stats div,.home .figures .stats[data-n="3"] div:nth-child(odd):not(:first-child){border-inline-start:0;padding-inline:0}}
+@container (max-width:599px){.home .figures .stats div{padding-inline-end:0}.home .figures .stats[data-n="3"] div{padding-inline:0}.home .figures .stats[data-n="4"] div:nth-child(even){border-inline-start:var(--border-width-1) solid var(--color-border-strong)}}
+.home .figures .stats dt{font-size:var(--font-size-h1);line-height:var(--line-height-h1);font-weight:var(--font-weight-semibold);color:var(--color-text)}
+.home .figures .stats dd{font-size:var(--font-size-body);line-height:var(--line-height-body-sm);color:var(--color-text-body);max-width:24ch}
+@container (min-width:1024px){.home .figures .stats dd{max-width:none}}
+.home .figures .note{font-size:var(--font-size-body-sm);line-height:var(--line-height-body-sm);color:var(--color-text-muted)}
+
+/* ---------- 4. advisory: the page's only card grid, plus the first-step conversion ---------- */
+.home .svc-cards{list-style:none;margin:0;padding:0;display:grid;gap:var(--space-3)}
+@container (min-width:600px){.home .svc-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@container (min-width:1200px){.home .svc-cards{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.home .svc-cards .card{block-size:100%}
+@container (max-width:599px){.home .svc-cards{gap:var(--space-2)}.home .svc-cards .card{grid-template-columns:auto minmax(0,1fr);column-gap:var(--space-2);row-gap:var(--space-half);padding:var(--space-2)}.home .svc-cards .card .ic{grid-row:span 2}}
+.home .svc-cards .card p{color:var(--color-text-muted);font-size:var(--font-size-body);line-height:var(--line-height-body)}
+.home .next{display:grid;gap:var(--space-2);margin-block-start:var(--space-5);padding-block-start:var(--space-4);border-block-start:var(--border-width-1) solid var(--color-border)}
+.home .next .copy{display:grid;gap:var(--space-half)}
+.home .next p{color:var(--color-text-muted)}
+.home .next .btn{justify-self:start}
+@container (min-width:1024px){.home .next{grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:var(--space-4)}}
+
+/* ---------- 5. featured program: the deck's thin gold L-frame (frame-gold.svg), one per page ---------- */
+.home .prog-band{background:transparent;border:0;border-radius:0;border-inline-start:var(--border-width-1) solid var(--color-accent-line);border-block-end:var(--border-width-1) solid var(--color-accent-line);border-end-start-radius:var(--space-4);padding:var(--space-3) var(--space-3) var(--space-4)}
+@container (min-width:1024px){.home .prog-band{padding:var(--space-5) var(--space-6) var(--space-6)}}
+.home .prog-band .copy{display:grid;gap:var(--space-1)}
+
+/* ---------- 6. events ---------- */
+.home .ev-cards{grid-template-columns:minmax(0,1fr)}
+@container (min-width:1200px){.home .ev-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.home .event{block-size:100%}
+.home .event .date{inline-size:4.5rem;min-inline-size:0;min-block-size:4.5rem;align-content:center;padding-inline:var(--space-1)}
+/* month-only chips use the small month style, so every chip is the same square and the titles line up */
+.home .event.year-only .date b{font-family:var(--font-family-body);font-size:var(--font-size-body-sm);line-height:var(--line-height-body-sm)}
+.home .event .date span{font-size:var(--font-size-body-sm)}
+/* the register link sits on the card's bottom edge, so the three links line up across the row */
+.home .event .body{display:flex;flex-direction:column;align-items:flex-start;align-self:stretch}
+.home .event .body>.btn{margin-block-start:auto}
+
+/* ---------- 7. publications ---------- */
+.home .pub .meta .badge,.home .pub .meta .caption{font-size:var(--font-size-body-sm);line-height:var(--line-height-body-sm)}
+.home .pub h3 a{display:inline-block}
+/* home only: a wider meta column so badge and month + year stay on one line (site.css keeps its 8rem for /library/) */
+@container (min-width:1024px){.home .pub{grid-template-columns:calc(var(--space-16) + var(--space-10)) minmax(0,1fr) auto}}
+.home .pub a.btn-text{color:var(--color-text-link)}
+.home .pub a.btn-text:hover{color:var(--color-text-link-hover)}
+
+/* ---------- 8. partners: names as an open typographic row ---------- */
+.home .h-partners h2{margin-block-end:var(--space-3)}
+.home .partners{gap:0;grid-template-columns:repeat(2,minmax(0,1fr));border-block-start:var(--border-width-1) solid var(--color-border)}
+@container (min-width:600px){.home .partners{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@container (min-width:1024px){.home .partners{grid-template-columns:repeat(6,minmax(0,1fr))}}
+.home .partners li{background:transparent;border:0;border-radius:0;border-block-end:var(--border-width-1) solid var(--color-border);min-height:4.5rem;font-weight:var(--font-weight-medium);color:var(--color-text)}
+@container (min-width:1024px){.home .partners li + li{border-inline-start:var(--border-width-1) solid var(--color-border)}}
+
+/* ---------- 9. help band: last contact point, with the three direct team lines ---------- */
+.home .help{display:grid;gap:var(--space-4);background:var(--color-bg-subtle);border:var(--border-width-1) solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-4) var(--space-3)}
+@container (min-width:1200px){.home .help{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--space-8);padding:var(--space-6)}}
+.home .help .copy{display:grid;gap:var(--space-2);align-content:start}
+.home .help .copy .btn{justify-self:start}
+.home .teams{display:grid;gap:var(--space-1);align-content:start}
+.home .teams ul{list-style:none;margin:0;padding:0;display:grid;border-block-start:var(--border-width-1) solid var(--color-border)}
+.home .teams li{display:flex;flex-wrap:wrap;align-items:center;column-gap:var(--space-3);padding-block:var(--space-1);border-block-end:var(--border-width-1) solid var(--color-border)}
+.home .teams .team{flex:1 1 9rem;font-weight:var(--font-weight-semibold);color:var(--color-text)}
+.home .teams a{display:inline-flex;align-items:center;gap:var(--space-1);min-block-size:var(--size-control-md);color:var(--color-text-link);text-decoration:none;font-size:var(--font-size-body-sm)}
+.home .teams a:hover{color:var(--color-text-link-hover);text-decoration:underline;text-underline-offset:.3em}
+.home .teams a .icon{color:var(--color-text-muted)}
+/* ≥600: one shared grid (subgrid) so the phone and e-mail columns line up and every row breaks the same way */
+@container (min-width:600px){
+  .home .teams ul{grid-template-columns:minmax(0,1fr) auto auto;column-gap:var(--space-3)}
+  .home .teams li{display:grid;grid-column:1/-1;grid-template-columns:subgrid}
+  .home .teams li a[href^="mailto:"]{grid-column:3}
+}
+
+/* hero primary button, dark mode: dark.css pins it to the light palette, so its focus ring would stay mid-teal over the photo.
+   Home only; the intro "/" renders its hero outside .home. */
+:root[data-theme="dark"] .home .hero .btn-primary:focus-visible{outline-color:var(--color-primary-200)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .home .hero .btn-primary:focus-visible{outline-color:var(--color-primary-200)}}
