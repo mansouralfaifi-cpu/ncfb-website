@@ -122,3 +122,29 @@
   .home .teams li{display:grid;grid-column:1/-1;grid-template-columns:subgrid}
   .home .teams li a[href^="mailto:"]{grid-column:3}
 }
+
+/* 2026-10-12 (owner approved): navy home hero in the spirit of the page headers. Copy sits on plain navy, the Riyadh
+   photo fills the far side and melts into the navy, a faint brand pattern sits behind the copy, gold CTA, gold rule. */
+.home .hero{background:var(--color-primary-900);color:var(--color-neutral-0);border-block-end:3px solid var(--color-accent-fill);isolation:isolate}
+.home .hero h1{color:var(--color-neutral-0)}
+.home .hero p{color:var(--color-primary-100)}
+.home .hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:color-mix(in srgb,var(--color-primary-300) 16%,transparent);
+  -webkit-mask:url(/pattern-star.svg) 100% 0/10rem repeat,linear-gradient(to left,#000 0%,transparent 55%);-webkit-mask-composite:source-in;
+  mask:url(/pattern-star.svg) 100% 0/10rem repeat,linear-gradient(to left,#000 0%,transparent 55%);mask-composite:intersect}
+[dir="ltr"] .home .hero::before{-webkit-mask:url(/pattern-star.svg) 0 0/10rem repeat,linear-gradient(to right,#000 0%,transparent 55%);-webkit-mask-composite:source-in;
+  mask:url(/pattern-star.svg) 0 0/10rem repeat,linear-gradient(to right,#000 0%,transparent 55%);mask-composite:intersect}
+.home .hero .btn-primary{background:var(--color-accent-fill);color:var(--color-primary-900);border-color:var(--color-accent-fill)}
+.home .hero .btn-primary:hover{background:var(--color-accent-200);border-color:var(--color-accent-200)}
+.home .hero .btn-secondary{background:transparent;color:var(--color-neutral-0);border-color:var(--color-primary-300)}
+.home .hero .btn-secondary:hover{background:color-mix(in srgb,var(--color-neutral-0) 8%,transparent);border-color:var(--color-neutral-0)}
+.home .hero .btn:focus-visible{outline-color:var(--color-accent-fill)}
+.home .hero-media{aspect-ratio:4/3}
+.home .hero-media img{object-position:78% 70%}
+.home .hero-media::after{background:linear-gradient(to bottom,var(--color-primary-900) 0%,transparent 40%)}
+@container (min-width:1024px){
+  .home .hero-media{inset:0;inset-inline-start:auto;inline-size:55%;aspect-ratio:auto}
+  .home .hero-media img{object-position:92% 60%}
+  [dir="ltr"] .home .hero-media img{object-position:70% 60%}
+  .home .hero-media::after{background:linear-gradient(to left,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 55%,transparent) 15%,transparent 40%),linear-gradient(to top,color-mix(in srgb,var(--color-primary-900) 45%,transparent),transparent 35%)}
+  [dir="ltr"] .home .hero-media::after{background:linear-gradient(to right,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 55%,transparent) 15%,transparent 40%),linear-gradient(to top,color-mix(in srgb,var(--color-primary-900) 45%,transparent),transparent 35%)}
+}
