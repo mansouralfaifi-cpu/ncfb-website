@@ -3,7 +3,6 @@ import { getImage } from 'astro:assets';
 import '../styles/tokens.css';
 import '../styles/site.css';
 import '../styles/home.css';
-import '../styles/dark.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { type Lang, t, href, otherLang, dirOf, settings, L } from '../lib/site';
@@ -57,7 +56,6 @@ const favLarge = await getImage({ src: mark, width: 180, format: 'png' });
   <meta property="og:locale" content={lang === 'ar' ? 'ar_SA' : 'en_US'}>
   <meta property="og:locale:alternate" content={lang === 'ar' ? 'en_US' : 'ar_SA'}>
   <meta name="twitter:card" content="summary_large_image">
-  <script is:inline>try{var m=localStorage.getItem("ncfb-theme");if(m==="dark"||m==="light")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
   <link rel="icon" type="image/png" href={fav.src}>
   <link rel="apple-touch-icon" href={favLarge.src}>
   <link rel="sitemap" href="/sitemap-index.xml">
@@ -76,11 +74,5 @@ const favLarge = await getImage({ src: mark, width: 180, format: 'png' });
     <main id="main" tabindex="-1"><slot /></main>
     {!intro && <Footer lang={lang} />}
   </div>
-<script is:inline>
-(function(){var b=document.getElementById("theme-toggle");if(!b)return;var r=document.documentElement;
-function eff(){var a=r.getAttribute("data-theme");return a||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}
-function show(){var d=eff()==="dark";b.setAttribute("aria-pressed",d);b.querySelector(".t").textContent=d?b.dataset.light:b.dataset.dark}
-b.addEventListener("click",function(){var n=eff()==="dark"?"light":"dark";r.setAttribute("data-theme",n);try{localStorage.setItem("ncfb-theme",n)}catch(e){}show()});show()})();
-</script>
 </body>
 </html>

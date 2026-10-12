@@ -122,8 +122,3 @@
   .home .teams li{display:grid;grid-column:1/-1;grid-template-columns:subgrid}
   .home .teams li a[href^="mailto:"]{grid-column:3}
 }
-
-/* hero primary button, dark mode: dark.css pins it to the light palette, so its focus ring would stay mid-teal over the photo.
-   Home only; the intro "/" renders its hero outside .home. */
-:root[data-theme="dark"] .home .hero .btn-primary:focus-visible{outline-color:var(--color-primary-200)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .home .hero .btn-primary:focus-visible{outline-color:var(--color-primary-200)}}
