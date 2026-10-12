@@ -710,9 +710,20 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .page-hdr{background:var(--color-primary-900);border-block-end:3px solid var(--color-accent-fill)}
 .page-hdr::after{display:none}
 .page-hdr .pat{display:block;inset:0;inset-inline-start:auto;width:50%;height:100%;background:var(--color-primary-300);opacity:.55;
-  -webkit-mask:url(/pattern-star.svg) 0 50%/7.5rem repeat,linear-gradient(to right,#000 0%,transparent 100%);-webkit-mask-composite:source-in;
-  mask:url(/pattern-star.svg) 0 50%/7.5rem repeat,linear-gradient(to right,#000 0%,transparent 100%);mask-composite:intersect}
-[dir="ltr"] .page-hdr .pat{-webkit-mask:url(/pattern-star.svg) 100% 50%/7.5rem repeat,linear-gradient(to left,#000 0%,transparent 100%);-webkit-mask-composite:source-in;
-  mask:url(/pattern-star.svg) 100% 50%/7.5rem repeat,linear-gradient(to left,#000 0%,transparent 100%);mask-composite:intersect}
+  -webkit-mask:url(/pattern-star.svg) 0 50%/10rem repeat,linear-gradient(to right,#000 0%,transparent 100%);-webkit-mask-composite:source-in;
+  mask:url(/pattern-star.svg) 0 50%/10rem repeat,linear-gradient(to right,#000 0%,transparent 100%);mask-composite:intersect}
+[dir="ltr"] .page-hdr .pat{-webkit-mask:url(/pattern-star.svg) 100% 50%/10rem repeat,linear-gradient(to left,#000 0%,transparent 100%);-webkit-mask-composite:source-in;
+  mask:url(/pattern-star.svg) 100% 50%/10rem repeat,linear-gradient(to left,#000 0%,transparent 100%);mask-composite:intersect}
 .page-hdr .wrap > *{max-inline-size:min(44rem,100%)}
 @media (max-width:47.99em){.page-hdr .pat{opacity:.25}}
+/* 2026-10-12 (owner: "very nice, be a bit more creative"): keep the formal header and add two quiet touches.
+   One tile of the pattern is picked out in gold, and the pattern drifts in gently on load. */
+.page-hdr .pat{opacity:1;background:color-mix(in srgb,var(--color-primary-300) 55%,transparent)}
+.page-hdr::before{content:"";position:absolute;pointer-events:none;inline-size:10rem;block-size:10rem;inset-block-start:calc(50% - 5rem);inset-inline-end:10rem;border:0;border-radius:0;background:var(--color-accent-fill);-webkit-mask:url(/pattern-star.svg) center/contain no-repeat;mask:url(/pattern-star.svg) center/contain no-repeat}
+@media (prefers-reduced-motion:no-preference){
+  .page-hdr .pat{animation:hdr-pat 1.2s var(--easing-standard,ease-out) both}
+  .page-hdr::before{animation:hdr-gold .9s .6s var(--easing-standard,ease-out) both}
+}
+@keyframes hdr-pat{from{opacity:0;translate:0 .75rem}to{opacity:1;translate:0 0}}
+@keyframes hdr-gold{from{opacity:0}to{opacity:1}}
+@media (max-width:47.99em){.page-hdr .pat{background:color-mix(in srgb,var(--color-primary-300) 35%,transparent)}.page-hdr::before{display:none}}
