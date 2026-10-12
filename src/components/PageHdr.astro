@@ -11,7 +11,7 @@ if (parent) crumbs.push({ label: L(parent.title, lang), href: href(lang, parent.
 crumbs.push({ label: title });
 ---
 <section class="page-hdr"><div class="pat" aria-hidden="true"></div>
-  <div class="wrap"><div class="art" aria-hidden="true"><span class="frame"></span><span class="panel"><span class="tiles"></span><span class="emblem"></span></span><span class="dot"></span></div><nav aria-label={t(lang, 'breadcrumb')}><ol class="crumbs">
+  <div class="wrap"><nav aria-label={t(lang, 'breadcrumb')}><ol class="crumbs">
     {crumbs.map((c) => c.href ? <li><a href={c.href}>{c.label}</a></li> : <li aria-current="page">{c.label}</li>)}
   </ol></nav>
   <h1 class="h1">{title}</h1>{lead && <p class="lead">{lead}</p>}</div></section>

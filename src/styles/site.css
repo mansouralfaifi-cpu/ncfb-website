@@ -705,28 +705,14 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .page-hdr .crumbs li+li::before{color:var(--color-primary-300)}
 .page-hdr h1::before{background:var(--color-accent-fill)}
 .page-hdr .crumbs a:focus-visible{outline-color:var(--color-neutral-0)}
-/* 2026-10-12 (owner: "more creative", then "more beautiful"): navy page header with an art panel at the far edge.
-   The panel is the brand leaf shape (rounded start-start and end-end corners) filled with a deep gradient and the tiled
-   pattern, a single gold motif at its centre, a gold outline offset behind it, and a small solid gold leaf. */
-.page-hdr{background:var(--color-primary-900);isolation:isolate}
-.page-hdr .pat{display:none}
-.page-hdr::after{display:block;content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(55% 140% at 12% 50%,var(--color-primary-800) 0%,transparent 70%)}
-[dir="ltr"] .page-hdr::after{background:radial-gradient(55% 140% at 88% 50%,var(--color-primary-800) 0%,transparent 70%)}
-.page-hdr .wrap{min-height:clamp(260px,26vw,360px)}
-.page-hdr .wrap > :not(.art){max-inline-size:min(40rem,58%)}
-.page-hdr .art{position:absolute;z-index:-1;inset-block:var(--space-5);inset-inline-end:var(--space-6);aspect-ratio:6/5}
-.page-hdr .art > *{position:absolute;border-start-start-radius:42% 50%;border-end-end-radius:42% 50%}
-.page-hdr .art .frame{inset:var(--space-2) 0 0 var(--space-2);inset-inline-start:var(--space-2);inset-inline-end:0;border:var(--border-width-2) solid var(--color-accent-fill)}
-.page-hdr .art .panel{inset:0 var(--space-2) var(--space-2) 0;inset-inline-start:0;inset-inline-end:var(--space-2);overflow:hidden;
-  background:linear-gradient(150deg,var(--color-primary-600) 0%,var(--color-primary-800) 55%,var(--color-primary-950) 100%);box-shadow:0 24px 48px -20px rgba(0,0,0,.55)}
-.page-hdr .art .tiles{position:absolute;inset:0;background:var(--color-primary-200);opacity:.22;-webkit-mask:url(/pattern-star.svg) center/4.5rem repeat;mask:url(/pattern-star.svg) center/4.5rem repeat}
-.page-hdr .art .emblem{position:absolute;inset:14%;filter:drop-shadow(0 0 12px rgba(197,159,105,.35));background:var(--color-accent-fill);-webkit-mask:url(/pattern-star.svg) center/contain no-repeat;mask:url(/pattern-star.svg) center/contain no-repeat}
-.page-hdr .art .dot{inline-size:1.25rem;aspect-ratio:1;background:var(--color-accent-fill);inset-block-start:calc(-1 * var(--space-1));inset-inline-start:calc(-1 * var(--space-3))}
-@media (max-width:47.99em){
-  .page-hdr .wrap{min-height:0;padding-block-end:calc(var(--space-6) + 4.5rem)}
-  .page-hdr .wrap > :not(.art){max-inline-size:none}
-  .page-hdr .art{inset-block:auto var(--space-3);inset-inline:var(--space-2);aspect-ratio:auto;block-size:3.5rem}
-  .page-hdr .art .frame,.page-hdr .art .emblem,.page-hdr .art .dot{display:none}
-  .page-hdr .art .panel{inset:0;border-radius:0;border-start-start-radius:1.75rem;border-end-end-radius:1.75rem;box-shadow:none;border-block-start:var(--border-width-2) solid var(--color-accent-fill)}
-  .page-hdr .art .tiles{opacity:.35;-webkit-mask-size:3.5rem;mask-size:3.5rem}
-}
+/* 2026-10-12 (owner: "simple, formal, adds beauty"): calm navy page header. The brand pattern sits only at the far side
+   and fades out before the text; a thin gold rule closes the header. */
+.page-hdr{background:var(--color-primary-900);border-block-end:3px solid var(--color-accent-fill)}
+.page-hdr::after{display:none}
+.page-hdr .pat{display:block;inset:0;inset-inline-start:auto;width:50%;height:100%;background:var(--color-primary-300);opacity:.55;
+  -webkit-mask:url(/pattern-star.svg) 0 50%/7.5rem repeat,linear-gradient(to right,#000 0%,transparent 100%);-webkit-mask-composite:source-in;
+  mask:url(/pattern-star.svg) 0 50%/7.5rem repeat,linear-gradient(to right,#000 0%,transparent 100%);mask-composite:intersect}
+[dir="ltr"] .page-hdr .pat{-webkit-mask:url(/pattern-star.svg) 100% 50%/7.5rem repeat,linear-gradient(to left,#000 0%,transparent 100%);-webkit-mask-composite:source-in;
+  mask:url(/pattern-star.svg) 100% 50%/7.5rem repeat,linear-gradient(to left,#000 0%,transparent 100%);mask-composite:intersect}
+.page-hdr .wrap > *{max-inline-size:min(44rem,100%)}
+@media (max-width:47.99em){.page-hdr .pat{opacity:.25}}
