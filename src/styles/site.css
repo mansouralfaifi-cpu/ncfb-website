@@ -705,3 +705,23 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .page-hdr .crumbs li+li::before{color:var(--color-primary-300)}
 .page-hdr h1::before{background:var(--color-accent-fill)}
 .page-hdr .crumbs a:focus-visible{outline-color:var(--color-neutral-0)}
+/* 2026-10-12 (owner: "more creative"): navy page header as a composition. One oversized brand motif cropped at the far edge,
+   a gold outlined leaf (the h1 marker shape) overlapping it, a small solid gold leaf, and a soft glow behind the art. */
+.page-hdr{background:var(--color-primary-900);isolation:isolate}
+.page-hdr::after{display:block;content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 120% at 0% 50%,var(--color-primary-800) 0%,transparent 70%)}
+[dir="ltr"] .page-hdr::after{background:radial-gradient(60% 120% at 100% 50%,var(--color-primary-800) 0%,transparent 70%)}
+.page-hdr .pat{display:block;inset:auto;inset-block:-18%;inset-inline-end:-6%;inset-inline-start:auto;width:auto;height:auto;aspect-ratio:1;block-size:136%;
+  background:var(--color-primary-400);opacity:.7;-webkit-mask:url(/pattern-star.svg) center/contain no-repeat;mask:url(/pattern-star.svg) center/contain no-repeat}
+.page-hdr::before{content:"";position:absolute;z-index:0;pointer-events:none;inline-size:clamp(7rem,14vw,12rem);aspect-ratio:1;
+  inset-block-end:-2.5rem;inset-inline-end:clamp(9rem,26vw,24rem);border:var(--border-width-2) solid var(--color-accent-fill);border-radius:38% 0 38% 0}
+.page-hdr .wrap::after{content:"";position:absolute;inline-size:1.25rem;aspect-ratio:1;background:var(--color-accent-fill);border-radius:38% 0 38% 0;
+  inset-block-start:38%;inset-inline-end:clamp(16rem,30vw,27rem)}
+.page-hdr .wrap > *{max-inline-size:min(40rem,62%)}
+.page-hdr .lead{color:var(--color-primary-100)}
+.page-hdr h1{font-size:clamp(2.25rem,4.4vw,3.75rem)}
+@media (max-width:47.99em){
+  .page-hdr .pat{block-size:120%;inset-inline-end:-42%;opacity:.22}
+  .page-hdr::before{inline-size:5rem;inset-inline-end:-2rem;inset-block-end:-2.25rem}
+  .page-hdr .wrap::after{display:none}
+  .page-hdr .wrap > *{max-inline-size:none}
+}
