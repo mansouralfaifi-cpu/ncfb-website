@@ -1,9 +1,7 @@
 ---
-// Opening page: the hero alone, full screen, no header or footer.
-import Base from '../layouts/Base.astro';
-import Hero from '../components/Hero.astro';
-import home from '../content/home.json';
-import { L } from '../lib/site';
-const lang = 'ar';
+// Opening page (owner 2026-10-12): the site opens straight on the home page, header and navy hero included.
+import PageView from '../components/PageView.astro';
+import { allRoutes } from '../lib/site';
+const route = allRoutes().find((r) => r.id === 'home')!;
 ---
-<Base lang={lang} routeId="intro" title="" description={L(home.hero.lead, lang)} intro><Hero lang={lang} intro /></Base>
+<PageView lang="ar" route={route} />
