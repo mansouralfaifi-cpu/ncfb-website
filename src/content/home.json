@@ -181,14 +181,14 @@
           "ar": "هيئة السوق المالية",
           "en": "Capital Market Authority"
         },
-        "logo": ""
+        "logo": "/partners/cma.svg"
       },
       {
         "name": {
           "ar": "صندوق التنمية الوطني",
           "en": "National Development Fund"
         },
-        "logo": ""
+        "logo": "/partners/ndf.png"
       }
     ]
   },
