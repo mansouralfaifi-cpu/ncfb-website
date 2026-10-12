@@ -750,3 +750,14 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   .hero.intro .hero-media::after{background:linear-gradient(to left,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 55%,transparent) 15%,transparent 40%),linear-gradient(to top,color-mix(in srgb,var(--color-primary-900) 45%,transparent),transparent 35%)}
   [dir="ltr"] .hero.intro .hero-media::after{background:linear-gradient(to right,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 55%,transparent) 15%,transparent 40%),linear-gradient(to top,color-mix(in srgb,var(--color-primary-900) 45%,transparent),transparent 35%)}
 }
+/* 2026-10-12 (owner: same photo framing as the home hero, exactly): the intro photo keeps the home hero's crop.
+   No drift zoom; on wide screens the photo box is the home hero's height, anchored to the bottom, with navy above. */
+.hero.intro .hero-media img{animation:none;transform:none}
+@container (min-width:1024px){
+  .hero.intro .hero-media{inset-block-start:auto;block-size:var(--size-hero-min);inline-size:55%}
+  .hero.intro .hero-copy{max-width:var(--size-hero-copy)}
+  .hero.intro .hero-media img{object-position:92% 60%}
+  [dir="ltr"] .hero.intro .hero-media img{object-position:70% 60%}
+  .hero.intro .hero-media::after{background:linear-gradient(to left,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 55%,transparent) 15%,transparent 40%),linear-gradient(to bottom,var(--color-primary-900) 0%,transparent 30%)}
+  [dir="ltr"] .hero.intro .hero-media::after{background:linear-gradient(to right,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 55%,transparent) 15%,transparent 40%),linear-gradient(to bottom,var(--color-primary-900) 0%,transparent 30%)}
+}
