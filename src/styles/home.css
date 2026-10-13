@@ -176,3 +176,5 @@
 .home .aud-card:hover h3{color:var(--color-text-link-hover)}
 .home .paths-h{margin-block-end:var(--space-2);color:var(--color-text-muted)}
 @container (max-width:1023px){.home .strip > div:nth-child(n+3){border-block-start:var(--border-width-1) solid var(--color-border)}}
+/* 2026-10-13 (owner: tidy the featured-program text, «والوساطة» starts the second line): measure in em so the break holds at any font size */
+.home .prog-band .copy p{max-inline-size:36.5em}
