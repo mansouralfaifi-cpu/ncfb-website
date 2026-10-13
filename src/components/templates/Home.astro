@@ -25,7 +25,6 @@ const groups = (['sector', 'center'] as const).map((g) => ({ g, label: (home.sta
 // 2026-10-13 (owner, after DGA's service cards): featured services from several sections (home.json consulting.featured, page ids),
 // each with its section tag, a details button and a request button that preselects the service in the contact form.
 const featured = ((home.consulting as any).featured || []).map((id: string) => { const sec = SECTIONS.find((x) => id.startsWith(`${x.id}-`)); const pg = sec?.pages.find((x) => `${sec.id}-${x.slug}` === id); return sec && pg ? { id, sec, p: pg } : null; }).filter(Boolean) as { id: string; sec: (typeof SECTIONS)[number]; p: any }[];
-const band = home.band;
 // 5. Featured program (Training)
 const prog = (sectionById('training') as any)?.feature;
 // 6. Events: month-only entries sort to the end of their month, so the first card always has a day.
@@ -47,7 +46,6 @@ const contacts = ((settings as any).contacts || []) as any[];
     <li><article class="card svc-card"><div class="top"><span class="ic"><Icon name={p.icon} class="icon-lg" /></span><span class="badge">{L(sec.title, lang)}</span></div><h3 class="h4" id={`fs-${id}`}>{L(p.title, lang)}</h3><p>{L(p.description, lang)}</p>
       <div class="acts"><a class="btn btn-secondary" href={href(lang, id)} aria-describedby={`fs-${id}`}>{t(lang, 'serviceDetails')}</a><a class="btn btn-primary" href={`${href(lang, 'contact')}?service=${id}`} aria-describedby={`fs-${id}`}>{t(lang, 'requestThis')}</a></div></article></li>
   ))}</ul>
-  <div class="next"><div class="copy"><h3 class="h4">{L(band.title, lang)}</h3><p>{L(band.text, lang)}</p></div><a class="btn btn-primary" href={`${href(lang, 'contact')}?service=${encodeURIComponent(band.target)}`}>{L(band.button, lang)}</a></div>
 </div></section>
 <section class="sec cont h-paths" aria-labelledby="h-paths"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">{t(lang, 'pathEyebrow')}</span><h2 class="h2" id="h-paths">{aud ? L(aud.heading, lang) : t(lang, 'pathHeading')}</h2></div></div>
