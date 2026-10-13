@@ -10,3 +10,14 @@
   for = "/admin/*"
   [headers.values]
     X-Robots-Tag = "noindex"
+
+# 2026-10-13: the opening page was removed and the home page moved to the root.
+[[redirects]]
+  from = "/home/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/en/home/"
+  to = "/en/"
+  status = 301

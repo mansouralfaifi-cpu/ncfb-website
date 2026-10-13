@@ -44,13 +44,13 @@ const EXTRA: Record<string, [string, string | null]> = {
 export interface Route {
   id: string;
   kind: 'home' | 'section' | 'page' | 'extra';
-  path: string; // without language prefix, no leading/trailing slash ('' = intro)
+  path: string; // without language prefix, no leading/trailing slash ('' = home, at the root)
   section?: Section;
   page?: SubPage;
 }
 
 export function allRoutes(): Route[] {
-  const r: Route[] = [{ id: 'home', kind: 'home', path: 'home' }];
+  const r: Route[] = [{ id: 'home', kind: 'home', path: '' }];
   for (const s of SECTIONS) {
     r.push({ id: s.id, kind: 'section', path: s.id, section: s });
     for (const p of s.pages) r.push({ id: `${s.id}-${p.slug}`, kind: 'page', path: `${s.id}/${p.slug}`, section: s, page: p });
@@ -61,13 +61,13 @@ export function allRoutes(): Route[] {
 const ROUTES = allRoutes();
 export const routeById = (id: string) => ROUTES.find((r) => r.id === id);
 
-/** URL of a page id in a language. 'intro' is the opening page at the root. */
+/** URL of a page id in a language. The home page sits at the root (2026-10-13: the separate opening page was removed). */
 export function href(lang: Lang, id: string): string {
   const prefix = lang === 'en' ? '/en' : '';
-  if (id === 'intro') return `${prefix}/`;
+  if (id === 'intro') id = 'home';
   const r = routeById(id);
   if (!r) throw new Error(`Unknown page id: ${id}`);
-  return `${prefix}/${r.path}/`;
+  return r.path ? `${prefix}/${r.path}/` : `${prefix}/`;
 }
 
 export const otherLang = (lang: Lang): Lang => (lang === 'ar' ? 'en' : 'ar');
