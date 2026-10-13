@@ -798,3 +798,6 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 @container (min-width:720px){.hero.intro .lead{max-inline-size:28.5em}}
 /* 2026-10-13 (owner: lift the intro logo): more room between the logo and the heading, scaled to the screen height so the page still fits one view */
 @container (min-width:720px){.hero.intro .hero-logo{margin-block-end:clamp(var(--space-3),7svh,var(--space-8))}}
+/* 2026-10-13 (owner: footer logo merged with the navy, no white box): reversed white logo straight on the navy footer */
+.ftr .ftr-logo{justify-self:start;display:inline-grid}
+.ftr .ftr-logo img{display:block;width:calc(var(--logo-min-width) + var(--space-2));height:auto}

@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import logo from '../assets/logo.png';
+import logoWhite from '../assets/logo-white.png';
 import { type Lang, t, href, L, SECTIONS, settings, sectionById } from '../lib/site';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -15,7 +15,7 @@ if (extra.length) groups.push(extra);
 <footer class="ftr"><div class="wrap">
   <div class="cols">
     <div class="about">
-      <span class="plate" style="justify-self:start"><Image src={logo} alt={L(settings.siteName, lang)} width={176} densities={[1, 2]} format="png" /></span>
+      <span class="ftr-logo"><Image src={logoWhite} alt={L(settings.siteName, lang)} width={176} densities={[1, 2]} format="png" /></span>
       <p>{L(settings.tagline, lang)}</p>
       <p class="ftr-mail"><a dir="ltr" href={`mailto:${settings.email}`}>{settings.email}</a>{settings.emailAlt && <a dir="ltr" href={`mailto:${settings.emailAlt}`}>{settings.emailAlt}</a>}</p>
       {settings.newsletter && <form class="newsletter" name="newsletter" method="POST" action={href(lang, 'thanks')} data-netlify="true" netlify-honeypot="bot-field" aria-labelledby="nl-title">
