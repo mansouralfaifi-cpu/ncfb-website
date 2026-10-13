@@ -634,6 +634,9 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .ceo-closing p:has(+ .sig){margin-block-end:calc(var(--space-1) * -1)}
 .ceo-closing .sig{display:grid;gap:0.125rem}
 .ceo-closing .sig-role{font-weight:var(--font-weight-regular);font-size:var(--font-size-body-sm);color:var(--color-primary-700)}
+/* Closing reads as the continuation of the CEO letter: same column as the message above, no quote border (mansour 2026-10-13) */
+.ceo-closing{border-inline-start:0;padding-inline-start:0;gap:var(--space-3)}
+@container (min-width:1024px){.ceo-closing{max-width:none;margin-inline-start:calc((100% - var(--space-8)) * 4 / 12 + var(--space-8))}}
 /* Section headers: navy with the official star pattern from the deck (replaces photos) */
 .page-hdr .pat{display:block;position:absolute;inset:0;background:var(--color-primary-300);opacity:.32;-webkit-mask:url(/pattern-star.svg) 0 0/9rem repeat;mask:url(/pattern-star.svg) 0 0/9rem repeat}
 .page-hdr::after{background:color-mix(in srgb,var(--color-primary-900) 45%,transparent)}
