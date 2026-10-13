@@ -795,7 +795,8 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   .hero.intro .hero-fx .lf{top:var(--y);bottom:auto;inset-inline-end:calc(var(--x) * 1.8)}
 }
 /* 2026-10-13 (owner: the intro lead stays on the navy, «للتعاقب» starts the second line): the measure is set in em so the break holds at any font size */
-@container (min-width:720px){.hero.intro .lead{max-inline-size:28.5em}}
+@container (min-width:720px){.hero.intro .lead{max-inline-size:31.5em;text-wrap:wrap}}
+@container (min-width:1024px){.hero.intro .hero-media{inline-size:50%}}
 /* 2026-10-13 (owner: lift the intro logo): more room between the logo and the heading, scaled to the screen height so the page still fits one view */
 @container (min-width:720px){.hero.intro .hero-logo{margin-block-end:clamp(var(--space-3),7svh,var(--space-8))}}
 /* 2026-10-13 (owner: footer logo merged with the navy, no white box): reversed white logo straight on the navy footer */
