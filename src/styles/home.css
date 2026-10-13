@@ -180,3 +180,5 @@
 .home .prog-band .copy p{max-inline-size:40em;text-wrap:wrap}
 /* 2026-10-13 (owner: home hero lead, «والتخطيط» starts the second line): measure in em so the break holds at any font size */
 .home .hero .lead{max-inline-size:27em;text-wrap:wrap}
+/* 2026-10-13 (owner chose the shorter home hero, 400px at 1440 wide): lower height, copy centred */
+@container (min-width:1024px){.home .hero{min-height:25rem;align-items:center}.home .hero .wrap{padding-block:var(--space-6) var(--space-7)}}
