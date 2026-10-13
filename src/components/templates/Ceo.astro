@@ -19,4 +19,4 @@ const achievements = c.achievements || [];
   </div></div></section>
 {achievements.length > 0 && <section class="sec alt"><div class="wrap" style="display:grid;gap:var(--space-3)"><h2 class="h3">{L(c.achievementsTitle, lang)}</h2>
   <div class="blocks">{achievements.map((a: any) => <div><h3 class="h4">{L(a.title, lang)}</h3><p>{L(a.text, lang)}</p></div>)}</div></div></section>}
-{closing.length > 0 && <section class="sec"><div class="wrap"><div class="ceo-closing">{closing.map((p) => <p>{p}</p>)}{c.signature && <p class="sig">{L(c.signature, lang)}</p>}</div></div></section>}
+{closing.length > 0 && <section class="sec"><div class="wrap"><div class="ceo-closing">{closing.map((p) => <p>{p}</p>)}{c.signature && <p class="sig">{L(c.signature, lang)}<span class="sig-role">{t(lang, 'ceo')}</span></p>}</div></div></section>}
