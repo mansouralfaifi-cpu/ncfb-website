@@ -189,3 +189,9 @@
 .home .hero .cta-row{justify-content:center}
 /* 2026-10-13 (owner): lead and button share one block as wide as the lead, so the button centres under the paragraph itself */
 .hero .hero-sub{display:grid;gap:var(--space-3);inline-size:fit-content;max-inline-size:100%}
+/* 2026-10-13 (owner, after DGA's service cards): featured service cards carry the section tag and two actions */
+.home .svc-card{display:grid;grid-template-rows:auto auto 1fr auto;gap:var(--space-2);align-content:start}
+.home .svc-card .top{display:flex;align-items:center;justify-content:space-between;gap:var(--space-2)}
+.home .svc-card .acts{display:flex;flex-wrap:wrap;gap:var(--space-1);padding-block-start:var(--space-1)}
+.home .svc-card .acts .btn{flex:1 1 auto}
+@container (max-width:599px){.home .svc-cards .svc-card{grid-template-columns:none;padding:var(--space-3)}.home .svc-cards .svc-card .ic{grid-row:auto}}

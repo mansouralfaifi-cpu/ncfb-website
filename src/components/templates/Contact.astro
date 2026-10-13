@@ -2,8 +2,9 @@
 import { type Lang, t, href, L, SECTIONS, SERVICES, settings } from '../../lib/site';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
-// Subject list: a general enquiry plus every service page.
-const services = SECTIONS.flatMap((s) => s.pages.filter((p) => SERVICES[`${s.id}-${p.slug}`]).map((p) => ({ id: `${s.id}-${p.slug}`, label: `${L(s.title, lang)}: ${L(p.title, lang)}` })));
+// Subject list: a general enquiry plus every service page (and pages that take requests, such as custom training).
+const REQUESTABLE = ['training-custom'];
+const services = SECTIONS.flatMap((s) => s.pages.filter((p) => SERVICES[`${s.id}-${p.slug}`] || REQUESTABLE.includes(`${s.id}-${p.slug}`)).map((p) => ({ id: `${s.id}-${p.slug}`, label: `${L(s.title, lang)}: ${L(p.title, lang)}` })));
 ---
 <section class="sec"><div class="wrap svc">
   <div class="main"><section><h2 class="h4" id="contact-title">{t(lang, 'writeUs')}</h2>

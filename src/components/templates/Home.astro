@@ -21,9 +21,10 @@ const stripItems = allStats.filter((s) => s.strip);
 const statItems = allStats.filter((s) => !s.strip);
 const aud = (home as any).audiences;
 const groups = (['sector', 'center'] as const).map((g) => ({ g, label: (home.stats as any).groups?.[g], items: statItems.filter((s) => (s.group || 'center') === g) })).filter((x) => x.items.length);
-// 4. Advisory services in diagnosis-first order on the home page; the nav and the consulting page keep the CMS order.
-const SVC_ORDER = ['assessment', 'charter', 'board', 'transformation'];
-const services = [...consulting.pages].sort((a, b) => (SVC_ORDER.indexOf(a.slug) + 1 || 99) - (SVC_ORDER.indexOf(b.slug) + 1 || 99));
+// 4. Featured services.
+// 2026-10-13 (owner, after DGA's service cards): featured services from several sections (home.json consulting.featured, page ids),
+// each with its section tag, a details button and a request button that preselects the service in the contact form.
+const featured = ((home.consulting as any).featured || []).map((id: string) => { const sec = SECTIONS.find((x) => id.startsWith(`${x.id}-`)); const pg = sec?.pages.find((x) => `${sec.id}-${x.slug}` === id); return sec && pg ? { id, sec, p: pg } : null; }).filter(Boolean) as { id: string; sec: (typeof SECTIONS)[number]; p: any }[];
 const band = home.band;
 // 5. Featured program (Training)
 const prog = (sectionById('training') as any)?.feature;
@@ -63,9 +64,10 @@ const contacts = ((settings as any).contacts || []) as any[];
 </div></section>
 
 <section class="sec h-consult" aria-labelledby="h-consult"><div class="wrap">
-  <div class="sec-head"><div><span class="eyebrow">{L(consulting.title, lang)}</span><h2 class="h2" id="h-consult">{L(home.consulting.heading, lang)}</h2></div><a class="btn btn-secondary view-all" href={href(lang, 'consulting')}>{t(lang, 'allAdvisory')}<Icon name={arrow} /></a></div>
-  <ul class="svc-cards">{services.map((p) => (
-    <li><a class="card" href={href(lang, `consulting-${p.slug}`)}><span class="ic"><Icon name={p.icon} class="icon-lg" /></span><h3 class="h4">{L(p.title, lang)}<Icon name={arrow} class="icon go" /></h3><p>{L(p.description, lang)}</p></a></li>
+  <div class="sec-head"><div><span class="eyebrow">{t(lang, 'services')}</span><h2 class="h2" id="h-consult">{L(home.consulting.heading, lang)}</h2></div><a class="btn btn-secondary view-all" href={href(lang, 'services')}>{t(lang, 'allServices')}<Icon name={arrow} /></a></div>
+  <ul class="svc-cards">{featured.map(({ id, sec, p }) => (
+    <li><article class="card svc-card"><div class="top"><span class="ic"><Icon name={p.icon} class="icon-lg" /></span><span class="badge">{L(sec.title, lang)}</span></div><h3 class="h4" id={`fs-${id}`}>{L(p.title, lang)}</h3><p>{L(p.description, lang)}</p>
+      <div class="acts"><a class="btn btn-secondary" href={href(lang, id)} aria-describedby={`fs-${id}`}>{t(lang, 'serviceDetails')}</a><a class="btn btn-primary" href={`${href(lang, 'contact')}?service=${id}`} aria-describedby={`fs-${id}`}>{t(lang, 'requestThis')}</a></div></article></li>
   ))}</ul>
   <div class="next"><div class="copy"><h3 class="h4">{L(band.title, lang)}</h3><p>{L(band.text, lang)}</p></div><a class="btn btn-primary" href={`${href(lang, 'contact')}?service=${encodeURIComponent(band.target)}`}>{L(band.button, lang)}</a></div>
 </div></section>

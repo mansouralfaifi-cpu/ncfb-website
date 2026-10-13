@@ -202,9 +202,15 @@
   },
   "consulting": {
     "heading": {
-      "ar": "من التشخيص إلى التحول المؤسسي",
-      "en": "From diagnosis to institutional transformation"
-    }
+      "ar": "أبرز خدمات المركز",
+      "en": "Featured services"
+    },
+    "featured": [
+      "consulting-assessment",
+      "consulting-charter",
+      "alt-mediation",
+      "training-custom"
+    ]
   },
   "library": {
     "heading": {

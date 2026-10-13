@@ -554,5 +554,17 @@
   "allAdvisory": {
     "ar": "جميع الخدمات الاستشارية",
     "en": "All advisory services"
+  },
+  "serviceDetails": {
+    "ar": "تفاصيل الخدمة",
+    "en": "Service details"
+  },
+  "requestThis": {
+    "ar": "اطلب الخدمة",
+    "en": "Request service"
+  },
+  "allServices": {
+    "ar": "جميع الخدمات",
+    "en": "All services"
   }
 }

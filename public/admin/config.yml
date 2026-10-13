@@ -108,11 +108,12 @@ collections:
                 fields:
                   - { label: "أرقام القطاع / Sector figures", name: sector, widget: object, fields: *bi_string }
                   - { label: "أرقام المركز / Center figures", name: center, widget: object, fields: *bi_string }
-          - label: "الاستشارات / Advisory block"
+          - label: "أبرز الخدمات / Featured services block"
             name: consulting
             widget: object
             fields:
               - { label: "العنوان / Heading", name: heading, widget: object, fields: *bi_string }
+              - { label: "الخدمات المعروضة (معرّف الصفحة مثل consulting-assessment) / Services shown (page id)", name: featured, widget: list, field: { label: "المعرّف / Id", name: id, widget: string } }
           - label: "المكتبة / Library block"
             name: library
             widget: object
