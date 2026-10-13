@@ -510,5 +510,49 @@
   "pathHeading": {
     "ar": "اختر مسارك",
     "en": "Choose your path"
+  },
+  "feedbackTitle": {
+    "ar": "الاقتراحات والتعليقات",
+    "en": "Suggestions and comments"
+  },
+  "feedbackText": {
+    "ar": "لأي استفسار أو ملاحظة حول خدماتنا أو هذه الصفحة، يسعدنا أن نسمع منك.",
+    "en": "For any question or comment about our services or this page, we would be glad to hear from you."
+  },
+  "feedbackBtn": {
+    "ar": "أضف تعليقاً",
+    "en": "Add a comment"
+  },
+  "siteFeedback": {
+    "ar": "اقتراح أو ملاحظة على الموقع",
+    "en": "Suggestion or comment about the website"
+  },
+  "lastUpdated": {
+    "ar": "تاريخ آخر تحديث للموقع",
+    "en": "Website last updated"
+  },
+  "riyadhTime": {
+    "ar": "بتوقيت المملكة العربية السعودية",
+    "en": "Saudi Arabia time"
+  },
+  "a11yTools": {
+    "ar": "أدوات الإتاحة",
+    "en": "Accessibility tools"
+  },
+  "textBigger": {
+    "ar": "تكبير الخط",
+    "en": "Larger text"
+  },
+  "textSmaller": {
+    "ar": "تصغير الخط",
+    "en": "Smaller text"
+  },
+  "contrast": {
+    "ar": "التباين العالي",
+    "en": "High contrast"
+  },
+  "allAdvisory": {
+    "ar": "جميع الخدمات الاستشارية",
+    "en": "All advisory services"
   }
 }

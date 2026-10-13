@@ -14,7 +14,7 @@ const services = SECTIONS.flatMap((s) => s.pages.filter((p) => SERVICES[`${s.id}
       <div class="row2"><div class="field"><label for="k1">{t(lang, 'fullName')}</label><input class="input" id="k1" name="name" autocomplete="name" required /></div>
       <div class="field"><label for="k2">{t(lang, 'email')}</label><input class="input" id="k2" name="email" type="email" dir="ltr" autocomplete="email" required /></div></div>
       <div class="row2"><div class="field"><label for="k3">{t(lang, 'phone')} <span class="opt">({t(lang, 'optional')})</span></label><input class="input" id="k3" name="phone" type="tel" dir="ltr" autocomplete="tel" /></div>
-      <div class="field"><label for="k4">{t(lang, 'subject')}</label><select class="input" id="k4" name="subject" data-preselect="service"><option>{t(lang, 'general')}</option>{services.map((o) => <option value={o.label} data-id={o.id}>{o.label}</option>)}</select></div></div>
+      <div class="field"><label for="k4">{t(lang, 'subject')}</label><select class="input" id="k4" name="subject" data-preselect="service"><option>{t(lang, 'general')}</option><option value={t(lang, 'siteFeedback')} data-id="feedback">{t(lang, 'siteFeedback')}</option>{services.map((o) => <option value={o.label} data-id={o.id}>{o.label}</option>)}</select></div></div>
       <div class="field"><label for="k5">{t(lang, 'message')}</label><textarea class="input" id="k5" name="message" required></textarea></div>
       <div><button class="btn btn-primary" type="submit">{t(lang, 'sendMessage')}</button></div>
     </form></section></div>

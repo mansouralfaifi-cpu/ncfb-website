@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import logoWhite from '../assets/logo-white.png';
+import Icon from './Icon.astro';
 import { type Lang, t, href, L, SECTIONS, settings, sectionById } from '../lib/site';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -37,5 +38,32 @@ if (extra.length) groups.push(extra);
       </div>
     ))}
   </div>
+  <div class="a11y" role="group" aria-labelledby="a11y-title"><h4 id="a11y-title">{t(lang, 'a11yTools')}</h4>
+    <button type="button" class="a11y-btn" data-a11y="up" aria-label={t(lang, 'textBigger')} title={t(lang, 'textBigger')}><Icon name="zoom-in" /></button>
+    <button type="button" class="a11y-btn" data-a11y="down" aria-label={t(lang, 'textSmaller')} title={t(lang, 'textSmaller')}><Icon name="zoom-out" /></button>
+    <button type="button" class="a11y-btn" data-a11y="contrast" aria-pressed="false" aria-label={t(lang, 'contrast')} title={t(lang, 'contrast')}><Icon name="contrast" /></button>
+  </div>
   <div class="base"><span>{L(settings.copyright, lang)}</span><span><a href={href(lang, 'privacy')}>{t(lang, 'privacy')}</a> · <a href={href(lang, 'terms')}>{t(lang, 'terms')}</a></span></div>
 </div></footer>
+
+<script is:inline>
+// Accessibility tools: text size (3 steps) and high contrast, remembered per visitor when storage is available.
+(function () {
+  var root = document.documentElement, SIZES = ['100%', '112.5%', '125%'];
+  function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  var size = Math.min(2, Math.max(0, parseInt(get('ncfb-size') || '0', 10) || 0)), hc = get('ncfb-contrast') === '1';
+  function apply() {
+    root.style.fontSize = size ? SIZES[size] : '';
+    if (hc) root.setAttribute('data-contrast', 'high'); else root.removeAttribute('data-contrast');
+    var b = document.querySelector('[data-a11y="contrast"]'); if (b) b.setAttribute('aria-pressed', hc ? 'true' : 'false');
+  }
+  apply();
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-a11y]'); if (!b) return;
+    var a = b.getAttribute('data-a11y');
+    if (a === 'up') size = Math.min(2, size + 1); else if (a === 'down') size = Math.max(0, size - 1); else hc = !hc;
+    set('ncfb-size', String(size)); set('ncfb-contrast', hc ? '1' : '0'); apply();
+  });
+})();
+</script>

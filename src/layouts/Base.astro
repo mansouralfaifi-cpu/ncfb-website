@@ -5,6 +5,7 @@ import '../styles/site.css';
 import '../styles/home.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import PageEnd from '../components/PageEnd.astro';
 import { type Lang, t, href, otherLang, dirOf, settings, L } from '../lib/site';
 import heroPhoto from '../assets/photos/hero-riyadh.jpg';
 import mark from '../assets/mark.png';
@@ -72,6 +73,7 @@ const favLarge = await getImage({ src: mark, width: 180, format: 'png' });
   <div class="site">
     {!intro && <Header lang={lang} sectionId={sectionId} routeId={routeId} altHref={altHref} />}
     <main id="main" tabindex="-1"><slot /></main>
+    {!intro && <PageEnd lang={lang} routeId={routeId} />}
     {!intro && <Footer lang={lang} />}
   </div>
 </body>

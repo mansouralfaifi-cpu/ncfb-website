@@ -100,6 +100,7 @@ collections:
                 fields:
                   - &stat_value { label: "الرقم / Figure", name: value, widget: string }
                   - &stat_label { label: "الوصف / Label", name: label, widget: object, fields: *bi_string }
+                  - &stat_icon { label: "الأيقونة (اسم من Lucide، اختياري) / Icon (Lucide name, optional)", name: icon, widget: string, required: false }
                   - { label: "المجموعة / Group", name: group, widget: select, default: center, options: [ { label: "المنشآت العائلية (أرقام القطاع) / Family businesses (sector)", value: sector }, { label: "المركز / The Center", value: center } ] }
               - label: "عناوين مجموعتي الأرقام / Figure group labels"
                 name: groups
@@ -171,7 +172,7 @@ collections:
         widget: list
         required: false
         summary: "{{fields.value}}"
-        fields: &stat_fields [ *stat_value, *stat_label ]
+        fields: &stat_fields [ *stat_value, *stat_label, *stat_icon ]
       - label: "فقرات القسم (اختياري) / Text blocks (optional)"
         name: blocks
         widget: list

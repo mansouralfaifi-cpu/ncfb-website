@@ -97,14 +97,16 @@
       "label": {
         "ar": "برنامجاً تدريبياً في مناطق المملكة وخارجها",
         "en": "training programs across the Kingdom and abroad"
-      }
+      },
+      "icon": "graduation-cap"
     },
     {
       "value": "20",
       "label": {
         "ar": "برنامجاً تدريبياً في 2025",
         "en": "training programs in 2025"
-      }
+      },
+      "icon": "presentation"
     }
   ],
   "highlightsTitle": {
@@ -161,21 +163,24 @@
         "label": {
           "ar": "برنامج مستشار المنشآت العائلية المعتمد",
           "en": "Certified Family Business Advisor program"
-        }
+        },
+        "icon": "briefcase"
       },
       {
         "value": "CFBM",
         "label": {
           "ar": "برنامج وسيط المنشآت العائلية المعتمد",
           "en": "Certified Family Business Mediator program"
-        }
+        },
+        "icon": "scale"
       },
       {
         "value": "+166",
         "label": {
           "ar": "وساطة نفّذها وسطاء معتمدون من المركز",
           "en": "mediations carried out by Center-accredited mediators"
-        }
+        },
+        "icon": "handshake"
       }
     ],
     "programsTitle": {

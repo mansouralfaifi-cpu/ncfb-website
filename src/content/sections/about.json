@@ -120,21 +120,24 @@
       "label": {
         "ar": "من المنشآت العائلية في الرياض ومكة المكرمة والمنطقة الشرقية",
         "en": "of family businesses are in Riyadh, Makkah and the Eastern Province"
-      }
+      },
+      "icon": "map-pin"
     },
     {
       "value": "+80%",
       "label": {
         "ar": "من القوى العاملة في المنشآت العائلية تعمل في هذه المناطق",
         "en": "of the family-business workforce is in these regions"
-      }
+      },
+      "icon": "users"
     },
     {
       "value": "89%",
       "label": {
         "ar": "منها أقل من 50 موظفاً وإيراداتها لا تتجاوز 40 مليون ريال",
         "en": "have fewer than 50 employees and revenue of up to SAR 40 million"
-      }
+      },
+      "icon": "building-2"
     }
   ],
   "highlightsTitle": {

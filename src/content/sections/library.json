@@ -45,7 +45,8 @@
       "label": {
         "ar": "دراسة ومنشوراً ودليلاً إرشادياً",
         "en": "studies, publications and guides"
-      }
+      },
+      "icon": "book-open"
     }
   ]
 }

@@ -71,28 +71,32 @@
       "label": {
         "ar": "ساعة إشراف على التحول المؤسسي في 2025",
         "en": "hours supervising institutional transformation in 2025"
-      }
+      },
+      "icon": "clipboard-check"
     },
     {
       "value": "240",
       "label": {
         "ar": "ساعة تحليل للوضع الراهن",
         "en": "hours of current-state analysis"
-      }
+      },
+      "icon": "search"
     },
     {
       "value": "112",
       "label": {
         "ar": "ساعة مراجعة للمواثيق العائلية",
         "en": "hours of family charter review"
-      }
+      },
+      "icon": "file-text"
     },
     {
       "value": "20",
       "label": {
         "ar": "منشأة عائلية في برنامج التحول المؤسسي",
         "en": "family businesses in the transformation program"
-      }
+      },
+      "icon": "building-2"
     }
   ],
   "steps": [

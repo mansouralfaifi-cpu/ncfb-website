@@ -64,7 +64,8 @@
           "en": "of private sector businesses are family businesses"
         },
         "group": "sector",
-        "strip": true
+        "strip": true,
+        "icon": "building-2"
       },
       {
         "value": "57%",
@@ -72,7 +73,8 @@
           "ar": "من موظفي القطاع الخاص يعملون في منشآت عائلية",
           "en": "of private-sector employees work in family businesses"
         },
-        "group": "sector"
+        "group": "sector",
+        "icon": "users"
       },
       {
         "value": "48%",
@@ -81,7 +83,8 @@
           "en": "of the Kingdom's total workforce"
         },
         "group": "sector",
-        "strip": true
+        "strip": true,
+        "icon": "briefcase"
       },
       {
         "value": "+33,000",
@@ -90,7 +93,8 @@
           "en": "beneficiaries of the Center's programs"
         },
         "group": "center",
-        "strip": true
+        "strip": true,
+        "icon": "graduation-cap"
       },
       {
         "value": "+950",
@@ -99,7 +103,8 @@
           "en": "family businesses served"
         },
         "group": "center",
-        "strip": true
+        "strip": true,
+        "icon": "house"
       },
       {
         "value": "+85",
@@ -107,7 +112,8 @@
           "ar": "شريكاً استراتيجياً",
           "en": "strategic partners"
         },
-        "group": "center"
+        "group": "center",
+        "icon": "handshake"
       },
       {
         "value": "+166",
@@ -115,7 +121,8 @@
           "ar": "وساطة بوسطاء معتمدين من المركز",
           "en": "mediations by Center-accredited mediators"
         },
-        "group": "center"
+        "group": "center",
+        "icon": "scale"
       }
     ],
     "groups": {

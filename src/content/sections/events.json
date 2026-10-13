@@ -45,21 +45,24 @@
       "label": {
         "ar": "فعالية",
         "en": "events"
-      }
+      },
+      "icon": "calendar-days"
     },
     {
       "value": "27",
       "label": {
         "ar": "مدينة",
         "en": "cities"
-      }
+      },
+      "icon": "map-pin"
     },
     {
       "value": "51",
       "label": {
         "ar": "اتفاقية منذ 2021",
         "en": "agreements since 2021"
-      }
+      },
+      "icon": "handshake"
     }
   ]
 }

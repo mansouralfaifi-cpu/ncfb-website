@@ -833,3 +833,41 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 /* Page-header leads split into two even lines instead of a lone word on line two (mansour 2026-10-13) */
 .page-hdr .lead{text-wrap:balance}
 @container (min-width:720px){.page-hdr .lead .ln{display:block}}
+/* ===== Ideas from the Digital Government Authority site (mansour 2026-10-13) ===== */
+/* 1. "View all" buttons beside section headings */
+.sec-head .view-all{flex:none}
+/* 2. Gold band of the official leaf motif along the bottom of the hero (DGA-style ornament strip) */
+.hero .hero-band{position:absolute;inset-inline:0;inset-block-end:0;block-size:2.25rem;z-index:2;pointer-events:none;background:var(--color-accent-fill);
+  -webkit-mask:url(/leaf-band.svg) 0 50%/6rem 2.25rem repeat-x;mask:url(/leaf-band.svg) 0 50%/6rem 2.25rem repeat-x}
+/* 3 + 4. Suggestions strip and last-update line before the footer */
+.page-end{padding-block:var(--space-5) var(--space-4);border-block-start:var(--border-width-1) solid var(--color-border)}
+.page-end .wrap{display:grid;gap:var(--space-3)}
+.page-end .fb{display:grid;grid-template-columns:auto 1fr;gap:var(--space-1) var(--space-3);align-items:center;padding:var(--space-3) var(--space-4);border:var(--border-width-1) solid var(--color-border);border-radius:var(--radius-md);background:var(--color-surface-raised)}
+.page-end .fb-ic{grid-row:span 2;display:grid;place-items:center;inline-size:3rem;block-size:3rem;border-radius:50%;background:var(--color-bg-subtle);color:var(--color-primary-600)}
+.page-end .fb h2{margin:0;color:var(--color-primary-700)}
+.page-end .fb p{margin:0;color:var(--color-text-body)}
+.page-end .fb .btn{grid-column:1 / -1;justify-self:start}
+@container (min-width:1024px){.page-end .fb{grid-template-columns:auto auto 1fr auto}.page-end .fb-ic{grid-row:auto}.page-end .fb h2{padding-inline-end:var(--space-3);border-inline-end:var(--border-width-1) solid var(--color-border)}.page-end .fb .btn{grid-column:auto}}
+.page-end .updated{margin:0;font-size:var(--font-size-body-sm);color:var(--color-text-muted)}
+/* 5. Accessibility tools in the footer */
+.ftr .a11y{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2);margin-block-start:var(--space-5)}
+.ftr .a11y h4{margin:0;margin-inline-end:var(--space-1)}
+.ftr .a11y-btn{display:grid;place-items:center;inline-size:2.75rem;block-size:2.75rem;border-radius:var(--radius-md);border:var(--border-width-1) solid var(--color-primary-600);background:transparent;color:var(--color-neutral-0);cursor:pointer}
+.ftr .a11y-btn:hover{border-color:var(--color-neutral-0)}
+.ftr .a11y-btn[aria-pressed="true"]{background:var(--color-accent-fill);border-color:var(--color-accent-fill);color:var(--color-primary-900)}
+.ftr .a11y-btn:focus-visible{outline:var(--focus-ring-width) solid var(--color-accent-fill);outline-offset:var(--focus-ring-offset)}
+[data-contrast="high"]{--color-text-muted:var(--color-text);--color-text-body:var(--color-text);--color-border:var(--color-border-strong)}
+[data-contrast="high"] main a:not(.btn){text-decoration:underline}
+[data-contrast="high"] .ftr{color:var(--color-neutral-0)}
+[data-contrast="high"] .ftr a{color:var(--color-neutral-0)}
+/* 6. Figures as light cards with an icon in a circle */
+.stats div{background:var(--color-bg-subtle);border:0;border-radius:var(--radius-lg,16px);padding:var(--space-4) var(--space-3);gap:var(--space-1)}
+.sec.alt .stats div{background:var(--color-surface-raised)}
+.stats .st-ic{display:grid;place-items:center;inline-size:3rem;block-size:3rem;border-radius:50%;background:var(--color-surface-raised);color:var(--color-primary-600);margin-block-end:var(--space-1)}
+.sec.alt .stats .st-ic{background:var(--color-bg-subtle)}
+.stats dt{color:var(--color-primary-600);font-size:var(--font-size-h1)}
+.home .figures .stats div,.home .figures .stats div:nth-child(odd){background:var(--color-surface-raised);box-shadow:0 1px 0 var(--color-border);border:0;border-radius:var(--radius-lg,16px);padding:var(--space-4) var(--space-3)}
+.home .figures .stats dt{color:var(--color-primary-600)}
+.home .figures .stats .st-ic{background:var(--color-bg-subtle)}
+.home .h-about .figures .stats[data-n] > div:nth-child(n):not(.x){background:var(--color-surface-raised);border:0;border-radius:var(--radius-lg);padding:var(--space-4) var(--space-3);box-shadow:0 1px 0 var(--color-border)}
+.stats dt:has(.st-ic){display:grid;justify-items:start}

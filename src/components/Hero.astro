@@ -22,6 +22,7 @@ const FX = `<div class="hero-fx" aria-hidden="true"><span class="lf lf-g" style=
   </div></div>
   <div class="hero-media"><Image src={heroPhoto} alt={L(h.imageAlt, lang)} widths={[480, 800, 1280, 1920]} sizes="100vw" loading="eager" fetchpriority="high" /></div>
   {intro && <Fragment set:html={FX} />}
+  <div class="hero-band" aria-hidden="true"></div>
 </section>
 {intro && <script>
   // intro hero: leaves follow the pointer (parallax); skipped when reduced motion is requested

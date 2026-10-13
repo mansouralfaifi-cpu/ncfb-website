@@ -1,0 +1,20 @@
+---
+// End of every page (not the intro): a suggestions strip and the site's last-update time, after the government-site pattern (mansour 2026-10-13).
+import Icon from './Icon.astro';
+import { type Lang, t, href } from '../lib/site';
+interface Props { lang: Lang; routeId: string }
+const { lang, routeId } = Astro.props;
+const showFeedback = !['contact', 'thanks'].includes(routeId);
+// Build time in Riyadh: the site is rebuilt on every content change, so this is the last content update.
+const p = Object.fromEntries(new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Riyadh', day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date()).map((x) => [x.type, x.value]));
+const stamp = `${p.day}/${p.month}/${p.year} ${p.hour}:${p.minute}`;
+---
+<div class="page-end"><div class="wrap">
+  {showFeedback && <section class="fb" aria-labelledby="fb-title">
+    <span class="fb-ic" aria-hidden="true"><Icon name="message-square-text" /></span>
+    <h2 class="h4" id="fb-title">{t(lang, 'feedbackTitle')}</h2>
+    <p>{t(lang, 'feedbackText')}</p>
+    <a class="btn btn-primary" href={`${href(lang, 'contact')}?service=feedback`}>{t(lang, 'feedbackBtn')}</a>
+  </section>}
+  <p class="updated">{t(lang, 'lastUpdated')}: <span dir="ltr">{stamp}</span> {t(lang, 'riyadhTime')}</p>
+</div></div>

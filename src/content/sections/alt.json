@@ -107,28 +107,32 @@
       "label": {
         "ar": "وساطة",
         "en": "mediations"
-      }
+      },
+      "icon": "scale"
     },
     {
       "value": "45",
       "label": {
         "ar": "وسيطاً معتمداً",
         "en": "accredited mediators"
-      }
+      },
+      "icon": "badge-check"
     },
     {
       "value": "638",
       "label": {
         "ar": "مليون ريال حجم القضايا المنظورة",
         "en": "million riyals in cases handled"
-      }
+      },
+      "icon": "landmark"
     },
     {
       "value": "+282",
       "label": {
         "ar": "مليون ريال انتهت بالصلح",
         "en": "million riyals settled"
-      }
+      },
+      "icon": "hand-coins"
     }
   ],
   "highlightsTitle": {
