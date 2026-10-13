@@ -52,7 +52,10 @@ const contacts = ((settings as any).contacts || []) as any[];
   {aud?.items?.length > 0 && <ul class="aud">{aud.items.map((a: any) => (
     <li><a class="aud-card" href={href(lang, a.target)}><span class="ic"><Icon name={sectionById(a.section)?.icon} class="icon-lg" /></span><h3 class="h4">{L(a.label, lang)}</h3><p>{L(a.text, lang)}</p><Icon name={arrow} class="icon go" /></a></li>
   ))}</ul>}
-  {aud && <h3 class="h4 paths-h">{L(aud.browse, lang)}</h3>}
+</div></section>
+{/* 2026-10-13 (owner): section browsing split out of «اختر ما يصفك» into its own section */}
+<section class="sec cont h-secs" aria-labelledby="h-secs"><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">{t(lang, 'secsEyebrow')}</span><h2 class="h2" id="h-secs">{t(lang, 'secsHeading')}</h2></div></div>
   <ul class="paths">{paths.map((s) => (
     <li><a class="path" href={href(lang, s.id)}><span class="ic"><Icon name={s.icon} class="icon-lg" /></span><div class="tx"><h3 class="h4">{L(s.title, lang)}<Icon name={arrow} class="icon go" /></h3><p>{L(s.intro, lang)}</p></div></a></li>
   ))}</ul>

@@ -566,5 +566,13 @@
   "allServices": {
     "ar": "جميع الخدمات",
     "en": "All services"
+  },
+  "secsEyebrow": {
+    "ar": "أقسام المركز",
+    "en": "The Center's sections"
+  },
+  "secsHeading": {
+    "ar": "تصفّح أقسام المركز",
+    "en": "Browse the Center's sections"
   }
 }
