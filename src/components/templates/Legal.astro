@@ -1,11 +1,16 @@
 ---
 import { type Lang, L } from '../../lib/site';
+import Icon from '../Icon.astro';
 interface Props { lang: Lang; body: any }
 const { lang, body } = Astro.props;
 // Blocks are separated by a blank line. A block starting with "## " opens a heading; its next lines are a paragraph.
+// Untitled blocks (date, preamble) sit on top; titled blocks become an accordion, as on the DGA site (mansour 2026-10-13).
 const blocks = L(body, lang).split(/\n\s*\n/).filter(Boolean).map((b: string) => {
   const m = b.match(/^##\s+(.+?)(?:\n([\s\S]*))?$/);
   return m ? { h: m[1].trim(), p: (m[2] || '').trim() } : { h: '', p: b.trim() };
 });
 ---
-<section class="sec"><div class="wrap"><div class="prose">{blocks.map((b) => <>{b.h && <h2 class="h4">{b.h}</h2>}{b.p && <p>{b.p}</p>}</>)}</div></div></section>
+<section class="sec"><div class="wrap"><div class="legal">
+  <div class="prose">{blocks.filter((b) => !b.h).map((b) => <p>{b.p}</p>)}</div>
+  <div class="acc">{blocks.filter((b) => b.h).map((b) => <details><summary><h2 class="h4">{b.h}</h2><Icon name="chevron-down" class="icon chev" /></summary>{b.p && <p>{b.p}</p>}</details>)}</div>
+</div></div></section>

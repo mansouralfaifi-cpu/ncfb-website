@@ -871,3 +871,17 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .home .figures .stats .st-ic{background:var(--color-bg-subtle)}
 .home .h-about .figures .stats[data-n] > div:nth-child(n):not(.x){background:var(--color-surface-raised);border:0;border-radius:var(--radius-lg);padding:var(--space-4) var(--space-3);box-shadow:0 1px 0 var(--color-border)}
 .stats dt:has(.st-ic){display:grid;justify-items:start}
+/* Legal pages: preamble, then one collapsible row per clause (DGA-style accordion) */
+.legal{display:grid;gap:var(--space-5)}
+.legal .acc{border-block-start:var(--border-width-1) solid var(--color-border)}
+.legal details{border-block-end:var(--border-width-1) solid var(--color-border)}
+.legal summary{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);padding:var(--space-3) var(--space-2);cursor:pointer;list-style:none}
+.legal summary::-webkit-details-marker{display:none}
+.legal summary:hover{background:var(--color-bg-subtle)}
+.legal summary:focus-visible{outline:var(--focus-ring-width) solid var(--color-focus-ring);outline-offset:calc(var(--focus-ring-width) * -1)}
+.legal summary h2{margin:0;font-weight:var(--font-weight-medium,500)}
+.legal summary .chev{flex:none;color:var(--color-primary-600);transition:transform .2s}
+.legal details[open] summary .chev{transform:rotate(180deg)}
+.legal details[open] summary h2{color:var(--color-primary-700)}
+.legal details p{margin:0;padding:0 var(--space-2) var(--space-4);max-width:var(--measure);color:var(--color-text-body)}
+@media (prefers-reduced-motion:reduce){.legal summary .chev{transition:none}}
