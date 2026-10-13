@@ -1,6 +1,8 @@
 ---
 import Ph from '../Ph.astro';
 import ceo from '../../content/ceo.json';
+import pubs from '../../content/publications.json';
+import Icon from '../Icon.astro';
 import { type Lang, t, L } from '../../lib/site';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -8,6 +10,7 @@ const c: any = ceo;
 const paras = (v: any) => (v ? L(v, lang) : '').split(/\n\s*\n/).filter(Boolean);
 const bio = paras(c.bio), message = paras(c.message), closing = paras(c.closing);
 const achievements = c.achievements || [];
+const report: any = pubs.items.find((p: any) => p.type === 'report' && p.file);
 ---
 <section class="sec"><div class="wrap profile">
   {c.photo ? <img class="photo" src={c.photo} alt={L(c.name, lang)} width="640" height="800" /> : <Ph lang={lang} title={t(lang, 'ceoPhoto')} sub={t(lang, 'ceoPhotoHint')} />}
@@ -19,4 +22,4 @@ const achievements = c.achievements || [];
   </div></div></section>
 {achievements.length > 0 && <section class="sec alt"><div class="wrap" style="display:grid;gap:var(--space-3)"><h2 class="h3">{L(c.achievementsTitle, lang)}</h2>
   <div class="blocks">{achievements.map((a: any) => <div><h3 class="h4">{L(a.title, lang)}</h3><p>{L(a.text, lang)}</p></div>)}</div></div></section>}
-{closing.length > 0 && <section class="sec"><div class="wrap"><div class="ceo-closing">{closing.map((p) => <p>{p}</p>)}{c.signature && <p class="sig">{L(c.signature, lang)}<span class="sig-role">{t(lang, 'ceo')}</span></p>}</div></div></section>}
+{closing.length > 0 && <section class="sec"><div class="wrap profile ceo-end">{report && <aside class="report-card"><a href={report.file} download tabindex="-1" aria-hidden="true"><img src="/files/ncfb-annual-report-2025-cover.webp" alt="" width="640" height="907" loading="lazy" decoding="async" /></a><h2 class="h4">{L(report.title, lang)}</h2><a class="btn btn-secondary" href={report.file} aria-label={t(lang, 'downloadOf', { t: L(report.title, lang) })} download><Icon name="download" />{t(lang, 'downloadPdf')}</a></aside>}<div class="ceo-closing">{closing.map((p) => <p>{p}</p>)}{c.signature && <p class="sig">{L(c.signature, lang)}<span class="sig-role">{t(lang, 'ceo')}</span></p>}</div></div></section>}

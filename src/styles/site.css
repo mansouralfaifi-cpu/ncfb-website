@@ -636,7 +636,12 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .ceo-closing .sig-role{font-weight:var(--font-weight-regular);font-size:var(--font-size-body-sm);color:var(--color-primary-700)}
 /* Closing reads as the continuation of the CEO letter: same column as the message above, no quote border (mansour 2026-10-13) */
 .ceo-closing{border-inline-start:0;padding-inline-start:0;gap:var(--space-3)}
-@container (min-width:1024px){.ceo-closing{max-width:none;margin-inline-start:calc((100% - var(--space-8)) * 4 / 12 + var(--space-8))}}
+.ceo-closing{max-width:none}
+/* Annual report card in the column under the CEO photo (mansour 2026-10-13); on phones it follows the closing */
+.ceo-end .report-card{order:2;display:grid;gap:var(--space-2);justify-items:start;align-content:start;padding:var(--space-3);border:var(--border-width-1) solid var(--color-border);border-radius:var(--radius-md);background:var(--color-surface-raised);max-inline-size:16rem}
+.ceo-end .report-card img{display:block;inline-size:100%;block-size:auto;border-radius:var(--radius-sm,4px);border:var(--border-width-1) solid var(--color-border)}
+.ceo-end .report-card h2{margin:0}
+@container (min-width:1024px){.ceo-end .report-card{order:0}}
 /* Section headers: navy with the official star pattern from the deck (replaces photos) */
 .page-hdr .pat{display:block;position:absolute;inset:0;background:var(--color-primary-300);opacity:.32;-webkit-mask:url(/pattern-star.svg) 0 0/9rem repeat;mask:url(/pattern-star.svg) 0 0/9rem repeat}
 .page-hdr::after{background:color-mix(in srgb,var(--color-primary-900) 45%,transparent)}
