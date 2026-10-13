@@ -77,6 +77,15 @@
         "icon": "users"
       },
       {
+        "value": "17%",
+        "label": {
+          "ar": "من المنشآت العائلية لديها اتفاق مكتوب حول رؤيتها وقيمها",
+          "en": "of family businesses have a written agreement on their vision and values"
+        },
+        "group": "sector",
+        "icon": "file-signature"
+      },
+      {
         "value": "48%",
         "label": {
           "ar": "من إجمالي القوى العاملة في المملكة",
