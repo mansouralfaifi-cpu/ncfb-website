@@ -778,3 +778,21 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   .hero.intro .hero-logo{inline-size:auto;block-size:clamp(4.5rem,17svh,9rem)}
   .hero.intro h1{font-size:min(var(--font-size-display),6.5svh)}
 }
+/* 2026-10-13 (owner: the opening page should look the same on every screen): from tablet width up, the intro keeps the wide layout
+   (photo beside the copy) instead of the phone layout with the photo behind the text. */
+@container (min-width:720px) and (max-width:1023px){
+  .hero.intro{min-block-size:100svh;align-items:center}
+  .hero.intro .wrap{padding-block:var(--space-6)}
+  .hero.intro .wrap{width:100%}
+  .hero.intro .hero-copy{gap:var(--space-2);max-inline-size:50%}
+  .hero.intro .hero-media{inset:0;inset-inline-start:auto;inline-size:50%;block-size:auto;aspect-ratio:auto}
+  .hero.intro .hero-media img{object-position:92% 50%}
+  [dir="ltr"] .hero.intro .hero-media img{object-position:70% 50%}
+  .hero.intro .hero-media::after{background:linear-gradient(to left,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 55%,transparent) 20%,transparent 50%),linear-gradient(to top,color-mix(in srgb,var(--color-primary-900) 45%,transparent),transparent 30%)}
+  [dir="ltr"] .hero.intro .hero-media::after{background:linear-gradient(to right,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 55%,transparent) 20%,transparent 50%),linear-gradient(to top,color-mix(in srgb,var(--color-primary-900) 45%,transparent),transparent 30%)}
+  .hero.intro .hero-logo{inline-size:auto;block-size:clamp(4rem,14svh,7rem)}
+  .hero.intro .hero-fx{inset-inline-start:auto;inline-size:50%}
+  .hero.intro .hero-fx .lf{top:var(--y);bottom:auto;inset-inline-end:calc(var(--x) * 1.8)}
+}
+/* 2026-10-13 (owner: the intro lead stays on the navy, «للتعاقب» starts the second line): the measure is set in em so the break holds at any font size */
+@container (min-width:720px){.hero.intro .lead{max-inline-size:28.5em}}
