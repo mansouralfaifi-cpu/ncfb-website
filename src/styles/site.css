@@ -830,3 +830,6 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   -webkit-mask:url(/pattern-star.svg) 0 50%/10rem repeat,linear-gradient(to right,#000 0%,transparent 40%);-webkit-mask-composite:source-in;
   mask:url(/pattern-star.svg) 0 50%/10rem repeat,linear-gradient(to right,#000 0%,transparent 40%);mask-composite:intersect}
 [dir="ltr"] .band::before{-webkit-mask:url(/pattern-star.svg) 100% 50%/10rem repeat,linear-gradient(to left,#000 0%,transparent 40%);-webkit-mask-composite:source-in;mask:url(/pattern-star.svg) 100% 50%/10rem repeat,linear-gradient(to left,#000 0%,transparent 40%);mask-composite:intersect}
+/* Page-header leads split into two even lines instead of a lone word on line two (mansour 2026-10-13) */
+.page-hdr .lead{text-wrap:balance}
+@container (min-width:720px){.page-hdr .lead .ln{display:block}}

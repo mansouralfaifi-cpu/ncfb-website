@@ -9,9 +9,11 @@ const { lang, title, lead, photoOf, parent } = Astro.props;
 const crumbs: { label: string; href?: string }[] = [{ label: t(lang, 'home'), href: href(lang, 'home') }];
 if (parent) crumbs.push({ label: L(parent.title, lang), href: href(lang, parent.id) });
 crumbs.push({ label: title });
+// Split the lead at its single comma so each clause sits on its own line on wide screens (mansour 2026-10-13)
+const leadParts = typeof lead === 'string' ? (() => { const m = lead.match(/^(.+?،)\s+(.+)$/); return m && !/،/.test(m[2]) ? [m[1], m[2]] : []; })() : [];
 ---
 <section class="page-hdr"><div class="pat" aria-hidden="true"></div>
   <div class="wrap"><nav aria-label={t(lang, 'breadcrumb')}><ol class="crumbs">
     {crumbs.map((c) => c.href ? <li><a href={c.href}>{c.label}</a></li> : <li aria-current="page">{c.label}</li>)}
   </ol></nav>
-  <h1 class="h1">{title}</h1>{lead && <p class="lead">{lead}</p>}</div></section>
+  <h1 class="h1">{title}</h1>{lead && <p class="lead">{leadParts.length === 2 ? <><span class="ln">{leadParts[0]}</span> <span class="ln">{leadParts[1]}</span></> : lead}</p>}</div></section>
