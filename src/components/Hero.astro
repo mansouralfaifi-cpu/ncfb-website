@@ -17,13 +17,15 @@ const FX = `<div class="hero-fx" aria-hidden="true"><span class="lf lf-g" style=
   <div class="wrap"><div class="hero-copy">
     {intro && <Image class="hero-logo" src={logoWhite} alt={t(lang, 'logoAlt')} width={360} densities={[1, 2]} format="png" loading="eager" />}
     <h1 class="h-display">{L(h.title, lang)}{(h as any).titleAccent && <span class="accent"> {L((h as any).titleAccent, lang)}</span>}</h1>
-    <p class="lead">{L(h.lead, lang)}</p>
-    <div class="cta-row"><a class="btn btn-primary" href={href(lang, 'services')}>{L(h.primary, lang)}</a>{intro ? <a class="btn btn-secondary" href={href(lang, 'home')}>{L(h.secondary, lang)}</a> : null /* 2026-10-13 (owner): home hero keeps one button; «تواصل معنا» is already in the header */}</div>
+    <div class="hero-sub"><p class="lead">{L(h.lead, lang)}</p>
+    <div class="cta-row"><a class="btn btn-primary" href={href(lang, 'services')}>{L(h.primary, lang)}</a>{intro ? <a class="btn btn-secondary" href={href(lang, 'home')}>{L(h.secondary, lang)}</a> : null /* 2026-10-13 (owner): home hero keeps one button; «تواصل معنا» is already in the header */}</div></div>
   </div></div>
   <div class="hero-media"><Image src={heroPhoto} alt={L(h.imageAlt, lang)} widths={[480, 800, 1280, 1920]} sizes="100vw" loading="eager" fetchpriority="high" /></div>
   {intro && <Fragment set:html={FX} />}
   <div class="hero-band" aria-hidden="true"></div>
 </section>
+{/* 2026-10-13 (owner): centre the button under the lead's actual lines, not its wider box */}
+<script is:inline>(function(){var s=document.querySelector('.hero .hero-sub');if(!s)return;var l=s.querySelector('.lead'),c=s.querySelector('.cta-row');function fit(){c.style.inlineSize='';var r=document.createRange();r.selectNodeContents(l);var rs=r.getClientRects(),a=1/0,b=-1/0;for(var i=0;i<rs.length;i++){a=Math.min(a,rs[i].left);b=Math.max(b,rs[i].right)}if(b>a){c.style.inlineSize=(b-a)+'px';c.style.justifySelf='start'}}fit();if(document.fonts)document.fonts.ready.then(fit);if(window.ResizeObserver)new ResizeObserver(fit).observe(s)})();</script>
 {intro && <script>
   // intro hero: leaves follow the pointer (parallax); skipped when reduced motion is requested
   const rm = matchMedia('(prefers-reduced-motion: reduce)'); let raf = 0;
