@@ -86,7 +86,7 @@ const contacts = ((settings as any).contacts || []) as any[];
 </div></section>
 
 {home.partners?.items?.length > 0 && <section class="sec cont h-partners" aria-labelledby="h-partners"><div class="wrap">
-  <h2 class="h4" id="h-partners">{L(home.partners.heading, lang)}</h2>
+  <div class="sec-head"><div><span class="eyebrow">{L((home.partners as any).eyebrow, lang)}</span><h2 class="h2" id="h-partners">{L(home.partners.heading, lang)}</h2></div></div>
   <ul class="partners">{home.partners.items.map((p: any) => <li>{p.logo ? <img src={p.logo} alt={L(p.name, lang)} loading="lazy" /> : <span>{L(p.name, lang)}</span>}</li>)}</ul>
 </div></section>}
 

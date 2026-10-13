@@ -222,6 +222,10 @@
     }
   },
   "partners": {
+    "eyebrow": {
+      "ar": "الشركاء",
+      "en": "Partners"
+    },
     "heading": {
       "ar": "من شركاء المركز",
       "en": "Some of the Center's partners"
