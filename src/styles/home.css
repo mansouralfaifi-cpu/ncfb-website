@@ -185,3 +185,5 @@
 /* 2026-10-13 (owner): hero star pattern in gold, full at the start edge and fading out before the copy (as the CEO priorities panel) */
 .home .hero::before{background:var(--color-text-gold-inverse);-webkit-mask:url(/pattern-star.svg) 100% 0/10rem repeat,linear-gradient(to left,#000 0%,transparent 22%);-webkit-mask-composite:source-in;mask:url(/pattern-star.svg) 100% 0/10rem repeat,linear-gradient(to left,#000 0%,transparent 22%);mask-composite:intersect}
 [dir="ltr"] .home .hero::before{-webkit-mask:url(/pattern-star.svg) 0 0/10rem repeat,linear-gradient(to right,#000 0%,transparent 22%);-webkit-mask-composite:source-in;mask:url(/pattern-star.svg) 0 0/10rem repeat,linear-gradient(to right,#000 0%,transparent 22%);mask-composite:intersect}
+/* 2026-10-13 (owner): the single hero button sits centred under the copy */
+.home .hero .cta-row{justify-content:center}
