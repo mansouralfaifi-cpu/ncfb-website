@@ -796,3 +796,5 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 }
 /* 2026-10-13 (owner: the intro lead stays on the navy, «للتعاقب» starts the second line): the measure is set in em so the break holds at any font size */
 @container (min-width:720px){.hero.intro .lead{max-inline-size:28.5em}}
+/* 2026-10-13 (owner: lift the intro logo): more room between the logo and the heading, scaled to the screen height so the page still fits one view */
+@container (min-width:720px){.hero.intro .hero-logo{margin-block-end:clamp(var(--space-3),7svh,var(--space-8))}}
