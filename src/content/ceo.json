@@ -123,5 +123,29 @@
   "signature": {
     "ar": "الدكتور عائذ المبارك",
     "en": "Dr. Ayth Al-Mubarak"
+  },
+  "priorities": {
+    "title": {
+      "ar": "أولوياتنا المقبلة",
+      "en": "Our next priorities"
+    },
+    "items": [
+      {
+        "ar": "ترسيخ الإطار التنظيمي للمركز",
+        "en": "Strengthening the Center's regulatory framework"
+      },
+      {
+        "ar": "التوسع في الحلول الاستشارية والتدريبية",
+        "en": "Expanding our advisory and training services"
+      },
+      {
+        "ar": "بناء مجتمعات ومجالس للمنشآت العائلية",
+        "en": "Building family business communities and councils"
+      },
+      {
+        "ar": "تأسيس حاوية فكرية (Think Tank) تعزز دور المركز في السياسات العامة",
+        "en": "Establishing a think tank to strengthen the Center's role in public policy"
+      }
+    ]
   }
 }
