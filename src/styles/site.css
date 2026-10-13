@@ -819,3 +819,14 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 /* 2026-10-13 (owner: footer logo merged with the navy, no white box): reversed white logo straight on the navy footer */
 .ftr .ftr-logo{justify-self:start;display:inline-grid}
 .ftr .ftr-logo img{display:block;width:calc(var(--logo-min-width) + var(--space-2));height:auto}
+
+/* CEO achievements: the key figure (or an icon) large in gold at the top of each card (mansour 2026-10-13) */
+.blocks.ach .ach-fig{display:flex;align-items:center;min-block-size:2.75rem;font-size:2.25rem;line-height:1;font-weight:var(--font-weight-bold);color:var(--color-text-gold);font-variant-numeric:lining-nums;direction:ltr;justify-content:flex-end}
+[dir="ltr"] .blocks.ach .ach-fig{justify-content:flex-start}
+.blocks.ach .ach-fig svg{inline-size:2.25rem;block-size:2.25rem}
+.blocks.ach > div{border-block-start:3px solid var(--color-accent-line)}
+/* Gold star pattern on the end side of the "Have a question?" / closing bands, same treatment as the CEO priorities panel (mansour 2026-10-13) */
+.band::before{content:"";position:absolute;inset:0;pointer-events:none;background:var(--color-accent-line);
+  -webkit-mask:url(/pattern-star.svg) 0 50%/10rem repeat,linear-gradient(to right,#000 0%,transparent 40%);-webkit-mask-composite:source-in;
+  mask:url(/pattern-star.svg) 0 50%/10rem repeat,linear-gradient(to right,#000 0%,transparent 40%);mask-composite:intersect}
+[dir="ltr"] .band::before{-webkit-mask:url(/pattern-star.svg) 100% 50%/10rem repeat,linear-gradient(to left,#000 0%,transparent 40%);-webkit-mask-composite:source-in;mask:url(/pattern-star.svg) 100% 50%/10rem repeat,linear-gradient(to left,#000 0%,transparent 40%);mask-composite:intersect}

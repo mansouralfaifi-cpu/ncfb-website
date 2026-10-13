@@ -1,5 +1,6 @@
 ---
 import Ph from '../Ph.astro';
+import Icon from '../Icon.astro';
 import ceo from '../../content/ceo.json';
 import { type Lang, t, L } from '../../lib/site';
 interface Props { lang: Lang }
@@ -18,5 +19,5 @@ const achievements = c.achievements || [];
     {L(c.note, lang) && <p class="caption muted">{L(c.note, lang)}</p>}
   </div></div></section>
 {achievements.length > 0 && <section class="sec alt"><div class="wrap" style="display:grid;gap:var(--space-3)"><h2 class="h3">{L(c.achievementsTitle, lang)}</h2>
-  <div class="blocks">{achievements.map((a: any) => <div><h3 class="h4">{L(a.title, lang)}</h3><p>{L(a.text, lang)}</p></div>)}</div></div></section>}
+  <div class="blocks ach">{achievements.map((a: any) => <div>{a.figure ? <span class="ach-fig" aria-hidden="true">{a.figure}</span> : a.icon && <span class="ach-fig"><Icon name={a.icon} /></span>}<h3 class="h4">{L(a.title, lang)}</h3><p>{L(a.text, lang)}</p></div>)}</div></div></section>}
 {closing.length > 0 && <section class="sec"><div class="wrap profile ceo-end">{c.priorities && <aside class="ceo-next on-navy" aria-labelledby="ceo-next-h"><span class="pat" aria-hidden="true"></span><h2 class="h4" id="ceo-next-h">{L(c.priorities.title, lang)}</h2><ol>{c.priorities.items.map((x: any) => <li>{L(x, lang)}</li>)}</ol></aside>}<div class="ceo-closing">{closing.map((p) => <p>{p}</p>)}{c.signature && <p class="sig">{L(c.signature, lang)}<span class="sig-role">{t(lang, 'ceo')}</span></p>}</div></div></section>}

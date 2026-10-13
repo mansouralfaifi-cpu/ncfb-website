@@ -33,7 +33,8 @@
       "text": {
         "ar": "صدور الأمر السامي الكريم بمنح المركز الاستقلال المالي والإداري، والبدء في استكمال الجوانب الفنية والنظامية المرتبطة بذلك.",
         "en": "A Royal Order granted the Center financial and administrative independence, and work began on completing the related technical and regulatory steps."
-      }
+      },
+      "icon": "landmark"
     },
     {
       "title": {
@@ -43,7 +44,8 @@
       "text": {
         "ar": "نشر أكثر من 52 إصداراً ودليلاً إرشادياً متخصصاً، حظيت بمتابعة واسعة من مختلف مناطق المملكة والعالم العربي.",
         "en": "More than 52 specialist publications and guides, widely followed across the Kingdom and the Arab world."
-      }
+      },
+      "figure": "+52"
     },
     {
       "title": {
@@ -53,7 +55,8 @@
       "text": {
         "ar": "تنظيم 20 برنامجاً تدريبياً طوّرها المركز داخلياً أو بالتعاون مع جهات عالمية مرموقة مثل جامعة INSEAD.",
         "en": "20 training programs, developed in-house or with leading international institutions such as INSEAD."
-      }
+      },
+      "figure": "20"
     },
     {
       "title": {
@@ -63,7 +66,8 @@
       "text": {
         "ar": "إطلاق برنامج مستشار المنشآت العائلية المعتمد (CFBA) وبرنامج وسيط المنشآت العائلية المعتمد (CFBM).",
         "en": "Launching the Certified Family Business Advisor (CFBA) and Certified Family Business Mediator (CFBM) programs."
-      }
+      },
+      "icon": "badge-check"
     },
     {
       "title": {
@@ -73,7 +77,8 @@
       "text": {
         "ar": "تقديم خدمات تحليل الوضع الراهن، ومراجعة المواثيق العائلية، والإشراف على التحول المؤسسي لشريحة واسعة من العوائل التجارية.",
         "en": "Current-state analysis, family charter review and oversight of institutional transformation for a wide range of business families."
-      }
+      },
+      "icon": "briefcase-business"
     },
     {
       "title": {
@@ -83,7 +88,8 @@
       "text": {
         "ar": "تفعيل الوسائل البديلة بإجراء أكثر من 166 وساطة بوسطاء معتمدين من المركز، أسهمت في حل قضايا تجاوزت قيمتها 282 مليون ريال.",
         "en": "Putting alternative dispute resolution into practice through more than 166 mediations by Center-accredited mediators, helping resolve cases worth over SAR 282 million."
-      }
+      },
+      "figure": "+166"
     },
     {
       "title": {
@@ -93,7 +99,8 @@
       "text": {
         "ar": "تنظيم أكثر من 78 فعالية والمشاركة فيها، غطّت 27 مدينة داخل المملكة وخارجها، لرفع الوعي لدى كل الفئات المستهدفة.",
         "en": "Organizing and taking part in more than 78 events across 27 cities in and outside the Kingdom, raising awareness among all target groups."
-      }
+      },
+      "figure": "+78"
     },
     {
       "title": {
@@ -103,7 +110,8 @@
       "text": {
         "ar": "توقيع 25 شراكة، منها 16 اتفاقية تعاون مع الغرف التجارية، مما عزز تكامل الأدوار لخدمة المنتسبين في كل المناطق.",
         "en": "Signing 25 partnerships, including 16 cooperation agreements with chambers of commerce, strengthening joint work to serve members in every region."
-      }
+      },
+      "figure": "25"
     },
     {
       "title": {
@@ -113,7 +121,8 @@
       "text": {
         "ar": "تأسيس «وقفية المركز» وتشكيل مجلس نظارتها الأول، لتكون رافداً يضمن الاستدامة المالية لأعمال المركز ومبادراته.",
         "en": "Establishing the Center's endowment and forming its first board of trustees, to secure lasting funding for the Center's work and initiatives."
-      }
+      },
+      "icon": "hand-coins"
     }
   ],
   "closing": {
