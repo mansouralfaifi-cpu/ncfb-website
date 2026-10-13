@@ -18,7 +18,7 @@ const FX = `<div class="hero-fx" aria-hidden="true"><span class="lf lf-g" style=
     {intro && <Image class="hero-logo" src={logoWhite} alt={t(lang, 'logoAlt')} width={360} densities={[1, 2]} format="png" loading="eager" />}
     <h1 class="h-display">{L(h.title, lang)}{(h as any).titleAccent && <span class="accent"> {L((h as any).titleAccent, lang)}</span>}</h1>
     <p class="lead">{L(h.lead, lang)}</p>
-    <div class="cta-row"><a class="btn btn-primary" href={href(lang, 'services')}>{L(h.primary, lang)}</a>{intro ? <a class="btn btn-secondary" href={href(lang, 'home')}>{L(h.secondary, lang)}</a> : <a class="btn btn-secondary" href={href(lang, 'contact')}>{t(lang, 'requestService')}</a>}</div>
+    <div class="cta-row"><a class="btn btn-primary" href={href(lang, 'services')}>{L(h.primary, lang)}</a>{intro ? <a class="btn btn-secondary" href={href(lang, 'home')}>{L(h.secondary, lang)}</a> : null /* 2026-10-13 (owner): home hero keeps one button; «تواصل معنا» is already in the header */}</div>
   </div></div>
   <div class="hero-media"><Image src={heroPhoto} alt={L(h.imageAlt, lang)} widths={[480, 800, 1280, 1920]} sizes="100vw" loading="eager" fetchpriority="high" /></div>
   {intro && <Fragment set:html={FX} />}
