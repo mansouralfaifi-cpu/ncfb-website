@@ -763,3 +763,18 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 }
 /* 2026-10-12 (owner: logo merged with the navy, no white box): reversed white logo on the intro, no plate */
 .hero.intro .hero-logo{background:none;padding:0;border-radius:0}
+/* 2026-10-13 (owner: photo level with the copy, opening page fixed to the screen with no scrolling):
+   on wide screens the photo runs the full height beside the copy, and the logo and heading scale with the screen height so everything fits in one view. */
+.hero.intro{box-sizing:border-box}
+@container (min-width:1024px){
+  .hero.intro{min-block-size:100svh;align-items:center}
+  .hero.intro .wrap{padding-block:var(--space-6)}
+  .hero.intro .hero-copy{gap:var(--space-2)}
+  .hero.intro .hero-media{inset-block:0;block-size:auto}
+  .hero.intro .hero-media img{object-position:92% 50%}
+  [dir="ltr"] .hero.intro .hero-media img{object-position:70% 50%}
+  .hero.intro .hero-media::after{background:linear-gradient(to left,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 55%,transparent) 15%,transparent 40%),linear-gradient(to top,color-mix(in srgb,var(--color-primary-900) 45%,transparent),transparent 30%)}
+  [dir="ltr"] .hero.intro .hero-media::after{background:linear-gradient(to right,var(--color-primary-900) 0%,color-mix(in srgb,var(--color-primary-900) 55%,transparent) 15%,transparent 40%),linear-gradient(to top,color-mix(in srgb,var(--color-primary-900) 45%,transparent),transparent 30%)}
+  .hero.intro .hero-logo{inline-size:auto;block-size:clamp(4.5rem,17svh,9rem)}
+  .hero.intro h1{font-size:min(var(--font-size-display),6.5svh)}
+}
