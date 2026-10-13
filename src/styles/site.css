@@ -639,7 +639,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .ceo-closing{max-width:none}
 /* "Our next priorities" panel in the column under the CEO photo, summarising the closing (mansour 2026-10-13); on phones it follows the closing */
 .ceo-end .ceo-next{order:2;position:relative;overflow:hidden;display:grid;gap:var(--space-3);align-content:start;padding:var(--space-5) var(--space-4);border-radius:var(--radius-md);background:var(--color-primary-900);color:var(--color-neutral-0)}
-.ceo-end .ceo-next .pat{position:absolute;inset:0;background:var(--color-primary-300);opacity:.14;-webkit-mask:url(/pattern-star.svg) 0 0/7rem repeat;mask:url(/pattern-star.svg) 0 0/7rem repeat;pointer-events:none}
+.ceo-end .ceo-next .pat{position:absolute;inset:0;background:var(--color-text-gold-inverse);opacity:.32;-webkit-mask:url(/pattern-star.svg) 0 0/7rem repeat;mask:url(/pattern-star.svg) 0 0/7rem repeat;pointer-events:none}
 .ceo-end .ceo-next h2{position:relative;margin:0;color:var(--color-text-gold-inverse)}
 .ceo-end .ceo-next ol{position:relative;margin:0;padding:0;list-style:none;counter-reset:n;display:grid;gap:var(--space-3)}
 .ceo-end .ceo-next li{counter-increment:n;display:grid;grid-template-columns:auto 1fr;gap:var(--space-2);align-items:baseline;line-height:1.6}
