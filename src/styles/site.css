@@ -885,3 +885,6 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .legal details[open] summary h2{color:var(--color-primary-700)}
 .legal details p{margin:0;padding:0 var(--space-2) var(--space-4);max-width:var(--measure);color:var(--color-text-body)}
 @media (prefers-reduced-motion:reduce){.legal summary .chev{transition:none}}
+/* 2026-10-13 (owner): leaf band fades in from the start side (faint at the right in Arabic) and grows clearer toward the end */
+.hero .hero-band{-webkit-mask:url(/leaf-band.svg) 0 50%/6rem 2.25rem repeat-x,linear-gradient(to left,rgb(0 0 0/.12),#000 75%);-webkit-mask-composite:source-in;mask:url(/leaf-band.svg) 0 50%/6rem 2.25rem repeat-x,linear-gradient(to left,rgb(0 0 0/.12),#000 75%);mask-composite:intersect}
+[dir="ltr"] .hero .hero-band{-webkit-mask:url(/leaf-band.svg) 0 50%/6rem 2.25rem repeat-x,linear-gradient(to right,rgb(0 0 0/.12),#000 75%);-webkit-mask-composite:source-in;mask:url(/leaf-band.svg) 0 50%/6rem 2.25rem repeat-x,linear-gradient(to right,rgb(0 0 0/.12),#000 75%);mask-composite:intersect}
