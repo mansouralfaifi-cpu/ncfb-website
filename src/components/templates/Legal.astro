@@ -8,4 +8,4 @@ const blocks = L(body, lang).split(/\n\s*\n/).filter(Boolean).map((b: string) =>
   return m ? { h: m[1].trim(), p: (m[2] || '').trim() } : { h: '', p: b.trim() };
 });
 ---
-<section class="sec"><div class="wrap prose">{blocks.map((b) => <>{b.h && <h2 class="h4">{b.h}</h2>}{b.p && <p>{b.p}</p>}</>)}</div></section>
+<section class="sec"><div class="wrap"><div class="prose">{blocks.map((b) => <>{b.h && <h2 class="h4">{b.h}</h2>}{b.p && <p>{b.p}</p>}</>)}</div></div></section>
