@@ -182,3 +182,6 @@
 .home .hero .lead{max-inline-size:27em;text-wrap:wrap}
 /* 2026-10-13 (owner chose the shorter home hero, 400px at 1440 wide): lower height, copy centred */
 @container (min-width:1024px){.home .hero{min-height:25rem;align-items:center}.home .hero .wrap{padding-block:var(--space-6) var(--space-8)}}
+/* 2026-10-13 (owner): hero star pattern in gold, full at the start edge and fading out before the copy (as the CEO priorities panel) */
+.home .hero::before{background:var(--color-text-gold-inverse);-webkit-mask:url(/pattern-star.svg) 100% 0/10rem repeat,linear-gradient(to left,#000 0%,transparent 22%);-webkit-mask-composite:source-in;mask:url(/pattern-star.svg) 100% 0/10rem repeat,linear-gradient(to left,#000 0%,transparent 22%);mask-composite:intersect}
+[dir="ltr"] .home .hero::before{-webkit-mask:url(/pattern-star.svg) 0 0/10rem repeat,linear-gradient(to right,#000 0%,transparent 22%);-webkit-mask-composite:source-in;mask:url(/pattern-star.svg) 0 0/10rem repeat,linear-gradient(to right,#000 0%,transparent 22%);mask-composite:intersect}
